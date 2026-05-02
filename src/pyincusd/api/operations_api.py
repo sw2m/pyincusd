@@ -45,7 +45,7 @@ class OperationsApi:
     @validate_call
     async def operation_delete(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -63,7 +63,7 @@ class OperationsApi:
 
         Cancels the operation if supported.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -115,7 +115,7 @@ class OperationsApi:
     @validate_call
     async def operation_delete_with_http_info(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -133,7 +133,7 @@ class OperationsApi:
 
         Cancels the operation if supported.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -185,7 +185,7 @@ class OperationsApi:
     @validate_call
     async def operation_delete_without_preload_content(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -203,7 +203,7 @@ class OperationsApi:
 
         Cancels the operation if supported.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -314,7 +314,7 @@ class OperationsApi:
     @validate_call
     async def operation_get(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -332,7 +332,7 @@ class OperationsApi:
 
         Gets the operation state.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -383,7 +383,7 @@ class OperationsApi:
     @validate_call
     async def operation_get_with_http_info(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -401,7 +401,7 @@ class OperationsApi:
 
         Gets the operation state.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -452,7 +452,7 @@ class OperationsApi:
     @validate_call
     async def operation_get_without_preload_content(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -470,7 +470,7 @@ class OperationsApi:
 
         Gets the operation state.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -580,7 +580,7 @@ class OperationsApi:
     @validate_call
     async def operation_wait_get(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         timeout: Annotated[Optional[StrictInt], Field(description="Timeout in seconds (-1 means never)")] = None,
         _request_timeout: Union[
             None,
@@ -599,7 +599,7 @@ class OperationsApi:
 
         Waits for the operation to reach a final state (or timeout) and retrieve its final state.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param timeout: Timeout in seconds (-1 means never)
         :type timeout: int
@@ -653,7 +653,7 @@ class OperationsApi:
     @validate_call
     async def operation_wait_get_with_http_info(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         timeout: Annotated[Optional[StrictInt], Field(description="Timeout in seconds (-1 means never)")] = None,
         _request_timeout: Union[
             None,
@@ -672,7 +672,7 @@ class OperationsApi:
 
         Waits for the operation to reach a final state (or timeout) and retrieve its final state.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param timeout: Timeout in seconds (-1 means never)
         :type timeout: int
@@ -726,7 +726,7 @@ class OperationsApi:
     @validate_call
     async def operation_wait_get_without_preload_content(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         timeout: Annotated[Optional[StrictInt], Field(description="Timeout in seconds (-1 means never)")] = None,
         _request_timeout: Union[
             None,
@@ -745,7 +745,7 @@ class OperationsApi:
 
         Waits for the operation to reach a final state (or timeout) and retrieve its final state.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param timeout: Timeout in seconds (-1 means never)
         :type timeout: int
@@ -863,7 +863,7 @@ class OperationsApi:
     @validate_call
     async def operation_wait_get_untrusted(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         timeout: Annotated[Optional[StrictInt], Field(description="Timeout in seconds (-1 means never)")] = None,
         _request_timeout: Union[
@@ -883,7 +883,7 @@ class OperationsApi:
 
         Waits for the operation to reach a final state (or timeout) and retrieve its final state.  When accessed by an untrusted user, the secret token must be provided.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str
@@ -940,7 +940,7 @@ class OperationsApi:
     @validate_call
     async def operation_wait_get_untrusted_with_http_info(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         timeout: Annotated[Optional[StrictInt], Field(description="Timeout in seconds (-1 means never)")] = None,
         _request_timeout: Union[
@@ -960,7 +960,7 @@ class OperationsApi:
 
         Waits for the operation to reach a final state (or timeout) and retrieve its final state.  When accessed by an untrusted user, the secret token must be provided.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str
@@ -1017,7 +1017,7 @@ class OperationsApi:
     @validate_call
     async def operation_wait_get_untrusted_without_preload_content(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         timeout: Annotated[Optional[StrictInt], Field(description="Timeout in seconds (-1 means never)")] = None,
         _request_timeout: Union[
@@ -1037,7 +1037,7 @@ class OperationsApi:
 
         Waits for the operation to reach a final state (or timeout) and retrieve its final state.  When accessed by an untrusted user, the secret token must be provided.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str
@@ -1163,7 +1163,7 @@ class OperationsApi:
     @validate_call
     async def operation_websocket_get(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         _request_timeout: Union[
             None,
@@ -1182,7 +1182,7 @@ class OperationsApi:
 
         Connects to an associated websocket stream for the operation. This should almost never be done directly by a client, instead it's meant for server to server communication with the client only relaying the connection information to the servers.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str
@@ -1236,7 +1236,7 @@ class OperationsApi:
     @validate_call
     async def operation_websocket_get_with_http_info(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         _request_timeout: Union[
             None,
@@ -1255,7 +1255,7 @@ class OperationsApi:
 
         Connects to an associated websocket stream for the operation. This should almost never be done directly by a client, instead it's meant for server to server communication with the client only relaying the connection information to the servers.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str
@@ -1309,7 +1309,7 @@ class OperationsApi:
     @validate_call
     async def operation_websocket_get_without_preload_content(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         _request_timeout: Union[
             None,
@@ -1328,7 +1328,7 @@ class OperationsApi:
 
         Connects to an associated websocket stream for the operation. This should almost never be done directly by a client, instead it's meant for server to server communication with the client only relaying the connection information to the servers.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str
@@ -1446,7 +1446,7 @@ class OperationsApi:
     @validate_call
     async def operation_websocket_get_untrusted(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         _request_timeout: Union[
             None,
@@ -1465,7 +1465,7 @@ class OperationsApi:
 
         Connects to an associated websocket stream for the operation. This should almost never be done directly by a client, instead it's meant for server to server communication with the client only relaying the connection information to the servers.  The untrusted endpoint is used by the target server to connect to the source server. Authentication is performed through the secret token.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str
@@ -1519,7 +1519,7 @@ class OperationsApi:
     @validate_call
     async def operation_websocket_get_untrusted_with_http_info(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         _request_timeout: Union[
             None,
@@ -1538,7 +1538,7 @@ class OperationsApi:
 
         Connects to an associated websocket stream for the operation. This should almost never be done directly by a client, instead it's meant for server to server communication with the client only relaying the connection information to the servers.  The untrusted endpoint is used by the target server to connect to the source server. Authentication is performed through the secret token.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str
@@ -1592,7 +1592,7 @@ class OperationsApi:
     @validate_call
     async def operation_websocket_get_untrusted_without_preload_content(
         self,
-        id: Annotated[StrictStr, Field(description="Path parameter: id")],
+        id: Annotated[StrictStr, Field(description="Operation ID")],
         secret: Annotated[Optional[StrictStr], Field(description="Authentication token")] = None,
         _request_timeout: Union[
             None,
@@ -1611,7 +1611,7 @@ class OperationsApi:
 
         Connects to an associated websocket stream for the operation. This should almost never be done directly by a client, instead it's meant for server to server communication with the client only relaying the connection information to the servers.  The untrusted endpoint is used by the target server to connect to the source server. Authentication is performed through the secret token.
 
-        :param id: Path parameter: id (required)
+        :param id: Operation ID (required)
         :type id: str
         :param secret: Authentication token
         :type secret: str

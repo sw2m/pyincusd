@@ -4,14 +4,14 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**profile_delete**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesApi.md#profile_delete) | **DELETE** /1.0/profiles/{name} | Delete the profile
-[**profile_get**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesApi.md#profile_get) | **GET** /1.0/profiles/{name} | Get the profile
-[**profile_patch**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesApi.md#profile_patch) | **PATCH** /1.0/profiles/{name} | Partially update the profile
-[**profile_post**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesApi.md#profile_post) | **POST** /1.0/profiles/{name} | Rename the profile
-[**profile_put**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesApi.md#profile_put) | **PUT** /1.0/profiles/{name} | Update the profile
-[**profiles_get**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesApi.md#profiles_get) | **GET** /1.0/profiles | Get the profiles
-[**profiles_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesApi.md#profiles_get_recursion1) | **GET** /1.0/profiles?recursion&#x3D;1 | Get the profiles
-[**profiles_post**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesApi.md#profiles_post) | **POST** /1.0/profiles | Add a profile
+[**profile_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesApi.md#profile_delete) | **DELETE** /1.0/profiles/{name} | Delete the profile
+[**profile_get**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesApi.md#profile_get) | **GET** /1.0/profiles/{name} | Get the profile
+[**profile_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesApi.md#profile_patch) | **PATCH** /1.0/profiles/{name} | Partially update the profile
+[**profile_post**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesApi.md#profile_post) | **POST** /1.0/profiles/{name} | Rename the profile
+[**profile_put**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesApi.md#profile_put) | **PUT** /1.0/profiles/{name} | Update the profile
+[**profiles_get**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesApi.md#profiles_get) | **GET** /1.0/profiles | Get the profiles
+[**profiles_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesApi.md#profiles_get_recursion1) | **GET** /1.0/profiles?recursion&#x3D;1 | Get the profiles
+[**profiles_post**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesApi.md#profiles_post) | **POST** /1.0/profiles | Add a profile
 
 
 # **profile_delete**
@@ -41,7 +41,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ProfilesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Profile name
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -60,12 +60,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
+ **name** | **str**| Profile name | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ProfilesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Profile name
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -133,12 +133,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
+ **name** | **str**| Profile name | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ProfileGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfileGet200Response.md)
+[**ProfileGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfileGet200Response.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ProfilesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Profile name
     profile = pyincusd.ProfilePut() # ProfilePut | Profile configuration
     project = 'project_example' # str | Project name (optional)
 
@@ -207,13 +207,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
- **profile** | [**ProfilePut**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilePut.md)| Profile configuration | 
+ **name** | **str**| Profile name | 
+ **profile** | [**ProfilePut**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilePut.md)| Profile configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -264,7 +264,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ProfilesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Profile name
     profile = pyincusd.ProfilePost() # ProfilePost | Profile rename request
     project = 'project_example' # str | Project name (optional)
 
@@ -284,13 +284,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
- **profile** | [**ProfilePost**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilePost.md)| Profile rename request | 
+ **name** | **str**| Profile name | 
+ **profile** | [**ProfilePost**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilePost.md)| Profile rename request | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ProfilesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Profile name
     profile = pyincusd.ProfilePut() # ProfilePut | Profile configuration
     project = 'project_example' # str | Project name (optional)
 
@@ -360,13 +360,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
- **profile** | [**ProfilePut**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilePut.md)| Profile configuration | 
+ **name** | **str**| Profile name | 
+ **profile** | [**ProfilePut**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilePut.md)| Profile configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfilesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesGet200Response.md)
+[**ProfilesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesGet200Response.md)
 
 ### Authorization
 
@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfilesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesGetRecursion1200Response.md)
+[**ProfilesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -584,12 +584,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **profile** | [**ProfilesPost**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ProfilesPost.md)| Profile | 
+ **profile** | [**ProfilesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ProfilesPost.md)| Profile | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 

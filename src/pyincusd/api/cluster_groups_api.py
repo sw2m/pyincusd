@@ -46,7 +46,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_delete(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -64,7 +64,7 @@ class ClusterGroupsApi:
 
         Removes the cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -116,7 +116,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_delete_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -134,7 +134,7 @@ class ClusterGroupsApi:
 
         Removes the cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -186,7 +186,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_delete_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -204,7 +204,7 @@ class ClusterGroupsApi:
 
         Removes the cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -315,7 +315,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -333,7 +333,7 @@ class ClusterGroupsApi:
 
         Gets a specific cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -384,7 +384,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -402,7 +402,7 @@ class ClusterGroupsApi:
 
         Gets a specific cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -453,7 +453,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -471,7 +471,7 @@ class ClusterGroupsApi:
 
         Gets a specific cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -581,7 +581,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_patch(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         cluster_group: Annotated[ClusterGroupPut, Field(description="cluster group configuration")],
         _request_timeout: Union[
             None,
@@ -600,7 +600,7 @@ class ClusterGroupsApi:
 
         Updates the cluster group configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param cluster_group: cluster group configuration (required)
         :type cluster_group: ClusterGroupPut
@@ -656,7 +656,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_patch_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         cluster_group: Annotated[ClusterGroupPut, Field(description="cluster group configuration")],
         _request_timeout: Union[
             None,
@@ -675,7 +675,7 @@ class ClusterGroupsApi:
 
         Updates the cluster group configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param cluster_group: cluster group configuration (required)
         :type cluster_group: ClusterGroupPut
@@ -731,7 +731,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_patch_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         cluster_group: Annotated[ClusterGroupPut, Field(description="cluster group configuration")],
         _request_timeout: Union[
             None,
@@ -750,7 +750,7 @@ class ClusterGroupsApi:
 
         Updates the cluster group configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param cluster_group: cluster group configuration (required)
         :type cluster_group: ClusterGroupPut
@@ -881,7 +881,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_post(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         name2: Annotated[ClusterGroupPost, Field(description="Cluster group rename request")],
         _request_timeout: Union[
             None,
@@ -900,7 +900,7 @@ class ClusterGroupsApi:
 
         Renames an existing cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param name2: Cluster group rename request (required)
         :type name2: ClusterGroupPost
@@ -955,7 +955,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_post_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         name2: Annotated[ClusterGroupPost, Field(description="Cluster group rename request")],
         _request_timeout: Union[
             None,
@@ -974,7 +974,7 @@ class ClusterGroupsApi:
 
         Renames an existing cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param name2: Cluster group rename request (required)
         :type name2: ClusterGroupPost
@@ -1029,7 +1029,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_post_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         name2: Annotated[ClusterGroupPost, Field(description="Cluster group rename request")],
         _request_timeout: Union[
             None,
@@ -1048,7 +1048,7 @@ class ClusterGroupsApi:
 
         Renames an existing cluster group.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param name2: Cluster group rename request (required)
         :type name2: ClusterGroupPost
@@ -1178,7 +1178,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_put(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         cluster_group: Annotated[ClusterGroupPut, Field(description="cluster group configuration")],
         _request_timeout: Union[
             None,
@@ -1197,7 +1197,7 @@ class ClusterGroupsApi:
 
         Updates the entire cluster group configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param cluster_group: cluster group configuration (required)
         :type cluster_group: ClusterGroupPut
@@ -1253,7 +1253,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_put_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         cluster_group: Annotated[ClusterGroupPut, Field(description="cluster group configuration")],
         _request_timeout: Union[
             None,
@@ -1272,7 +1272,7 @@ class ClusterGroupsApi:
 
         Updates the entire cluster group configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param cluster_group: cluster group configuration (required)
         :type cluster_group: ClusterGroupPut
@@ -1328,7 +1328,7 @@ class ClusterGroupsApi:
     @validate_call
     async def cluster_group_put_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster group name")],
         cluster_group: Annotated[ClusterGroupPut, Field(description="cluster group configuration")],
         _request_timeout: Union[
             None,
@@ -1347,7 +1347,7 @@ class ClusterGroupsApi:
 
         Updates the entire cluster group configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster group name (required)
         :type name: str
         :param cluster_group: cluster group configuration (required)
         :type cluster_group: ClusterGroupPut

@@ -47,7 +47,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_delete(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -65,7 +65,7 @@ class CertificatesApi:
 
         Removes the certificate from the trust store.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -117,7 +117,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_delete_with_http_info(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -135,7 +135,7 @@ class CertificatesApi:
 
         Removes the certificate from the trust store.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -187,7 +187,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_delete_without_preload_content(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -205,7 +205,7 @@ class CertificatesApi:
 
         Removes the certificate from the trust store.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -316,7 +316,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_get(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -334,7 +334,7 @@ class CertificatesApi:
 
         Gets a specific certificate entry from the trust store.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -385,7 +385,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_get_with_http_info(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -403,7 +403,7 @@ class CertificatesApi:
 
         Gets a specific certificate entry from the trust store.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -454,7 +454,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_get_without_preload_content(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -472,7 +472,7 @@ class CertificatesApi:
 
         Gets a specific certificate entry from the trust store.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -582,7 +582,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_patch(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         certificate: Annotated[CertificatePut, Field(description="Certificate configuration")],
         _request_timeout: Union[
             None,
@@ -601,7 +601,7 @@ class CertificatesApi:
 
         Updates a subset of the certificate configuration.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param certificate: Certificate configuration (required)
         :type certificate: CertificatePut
@@ -657,7 +657,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_patch_with_http_info(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         certificate: Annotated[CertificatePut, Field(description="Certificate configuration")],
         _request_timeout: Union[
             None,
@@ -676,7 +676,7 @@ class CertificatesApi:
 
         Updates a subset of the certificate configuration.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param certificate: Certificate configuration (required)
         :type certificate: CertificatePut
@@ -732,7 +732,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_patch_without_preload_content(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         certificate: Annotated[CertificatePut, Field(description="Certificate configuration")],
         _request_timeout: Union[
             None,
@@ -751,7 +751,7 @@ class CertificatesApi:
 
         Updates a subset of the certificate configuration.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param certificate: Certificate configuration (required)
         :type certificate: CertificatePut
@@ -882,7 +882,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_put(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         certificate: Annotated[CertificatePut, Field(description="Certificate configuration")],
         _request_timeout: Union[
             None,
@@ -901,7 +901,7 @@ class CertificatesApi:
 
         Updates the entire certificate configuration.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param certificate: Certificate configuration (required)
         :type certificate: CertificatePut
@@ -957,7 +957,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_put_with_http_info(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         certificate: Annotated[CertificatePut, Field(description="Certificate configuration")],
         _request_timeout: Union[
             None,
@@ -976,7 +976,7 @@ class CertificatesApi:
 
         Updates the entire certificate configuration.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param certificate: Certificate configuration (required)
         :type certificate: CertificatePut
@@ -1032,7 +1032,7 @@ class CertificatesApi:
     @validate_call
     async def certificate_put_without_preload_content(
         self,
-        fingerprint: Annotated[StrictStr, Field(description="Path parameter: fingerprint")],
+        fingerprint: Annotated[StrictStr, Field(description="Fingerprint")],
         certificate: Annotated[CertificatePut, Field(description="Certificate configuration")],
         _request_timeout: Union[
             None,
@@ -1051,7 +1051,7 @@ class CertificatesApi:
 
         Updates the entire certificate configuration.
 
-        :param fingerprint: Path parameter: fingerprint (required)
+        :param fingerprint: Fingerprint (required)
         :type fingerprint: str
         :param certificate: Certificate configuration (required)
         :type certificate: CertificatePut

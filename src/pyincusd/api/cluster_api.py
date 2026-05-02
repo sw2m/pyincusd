@@ -588,7 +588,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_delete(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -606,7 +606,7 @@ class ClusterApi:
 
         Removes the member from the cluster.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -658,7 +658,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_delete_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -676,7 +676,7 @@ class ClusterApi:
 
         Removes the member from the cluster.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -728,7 +728,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_delete_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -746,7 +746,7 @@ class ClusterApi:
 
         Removes the member from the cluster.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -857,7 +857,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -875,7 +875,7 @@ class ClusterApi:
 
         Gets a specific cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -926,7 +926,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -944,7 +944,7 @@ class ClusterApi:
 
         Gets a specific cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -995,7 +995,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1013,7 +1013,7 @@ class ClusterApi:
 
         Gets a specific cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1123,7 +1123,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_patch(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPut, Field(description="Cluster member configuration")],
         _request_timeout: Union[
             None,
@@ -1142,7 +1142,7 @@ class ClusterApi:
 
         Updates a subset of the cluster member configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member configuration (required)
         :type cluster: ClusterMemberPut
@@ -1198,7 +1198,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_patch_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPut, Field(description="Cluster member configuration")],
         _request_timeout: Union[
             None,
@@ -1217,7 +1217,7 @@ class ClusterApi:
 
         Updates a subset of the cluster member configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member configuration (required)
         :type cluster: ClusterMemberPut
@@ -1273,7 +1273,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_patch_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPut, Field(description="Cluster member configuration")],
         _request_timeout: Union[
             None,
@@ -1292,7 +1292,7 @@ class ClusterApi:
 
         Updates a subset of the cluster member configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member configuration (required)
         :type cluster: ClusterMemberPut
@@ -1423,7 +1423,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_post(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPost, Field(description="Cluster member rename request")],
         _request_timeout: Union[
             None,
@@ -1442,7 +1442,7 @@ class ClusterApi:
 
         Renames an existing cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member rename request (required)
         :type cluster: ClusterMemberPost
@@ -1497,7 +1497,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_post_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPost, Field(description="Cluster member rename request")],
         _request_timeout: Union[
             None,
@@ -1516,7 +1516,7 @@ class ClusterApi:
 
         Renames an existing cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member rename request (required)
         :type cluster: ClusterMemberPost
@@ -1571,7 +1571,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_post_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPost, Field(description="Cluster member rename request")],
         _request_timeout: Union[
             None,
@@ -1590,7 +1590,7 @@ class ClusterApi:
 
         Renames an existing cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member rename request (required)
         :type cluster: ClusterMemberPost
@@ -1720,7 +1720,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_put(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPut, Field(description="Cluster member configuration")],
         _request_timeout: Union[
             None,
@@ -1739,7 +1739,7 @@ class ClusterApi:
 
         Updates the entire cluster member configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member configuration (required)
         :type cluster: ClusterMemberPut
@@ -1795,7 +1795,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_put_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPut, Field(description="Cluster member configuration")],
         _request_timeout: Union[
             None,
@@ -1814,7 +1814,7 @@ class ClusterApi:
 
         Updates the entire cluster member configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member configuration (required)
         :type cluster: ClusterMemberPut
@@ -1870,7 +1870,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_put_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberPut, Field(description="Cluster member configuration")],
         _request_timeout: Union[
             None,
@@ -1889,7 +1889,7 @@ class ClusterApi:
 
         Updates the entire cluster member configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member configuration (required)
         :type cluster: ClusterMemberPut
@@ -2020,7 +2020,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_state_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2038,7 +2038,7 @@ class ClusterApi:
 
         Gets state of a specific cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2089,7 +2089,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_state_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2107,7 +2107,7 @@ class ClusterApi:
 
         Gets state of a specific cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2158,7 +2158,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_state_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2176,7 +2176,7 @@ class ClusterApi:
 
         Gets state of a specific cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2286,7 +2286,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_state_post(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberStatePost, Field(description="Cluster member state")],
         _request_timeout: Union[
             None,
@@ -2305,7 +2305,7 @@ class ClusterApi:
 
         Evacuates or restores a cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member state (required)
         :type cluster: ClusterMemberStatePost
@@ -2360,7 +2360,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_state_post_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberStatePost, Field(description="Cluster member state")],
         _request_timeout: Union[
             None,
@@ -2379,7 +2379,7 @@ class ClusterApi:
 
         Evacuates or restores a cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member state (required)
         :type cluster: ClusterMemberStatePost
@@ -2434,7 +2434,7 @@ class ClusterApi:
     @validate_call
     async def cluster_member_state_post_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Cluster member name")],
         cluster: Annotated[ClusterMemberStatePost, Field(description="Cluster member state")],
         _request_timeout: Union[
             None,
@@ -2453,7 +2453,7 @@ class ClusterApi:
 
         Evacuates or restores a cluster member.
 
-        :param name: Path parameter: name (required)
+        :param name: Cluster member name (required)
         :type name: str
         :param cluster: Cluster member state (required)
         :type cluster: ClusterMemberStatePost

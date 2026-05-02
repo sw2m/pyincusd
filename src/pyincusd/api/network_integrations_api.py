@@ -48,7 +48,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_delete(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -66,7 +66,7 @@ class NetworkIntegrationsApi:
 
         Removes the network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -118,7 +118,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_delete_with_http_info(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -136,7 +136,7 @@ class NetworkIntegrationsApi:
 
         Removes the network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -188,7 +188,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_delete_without_preload_content(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -206,7 +206,7 @@ class NetworkIntegrationsApi:
 
         Removes the network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -317,7 +317,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_get(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -335,7 +335,7 @@ class NetworkIntegrationsApi:
 
         Gets a specific network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -386,7 +386,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_get_with_http_info(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -404,7 +404,7 @@ class NetworkIntegrationsApi:
 
         Gets a specific network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -455,7 +455,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_get_without_preload_content(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -473,7 +473,7 @@ class NetworkIntegrationsApi:
 
         Gets a specific network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -583,7 +583,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_patch(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPut, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -602,7 +602,7 @@ class NetworkIntegrationsApi:
 
         Updates a subset of the network integration configuration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPut
@@ -658,7 +658,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_patch_with_http_info(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPut, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -677,7 +677,7 @@ class NetworkIntegrationsApi:
 
         Updates a subset of the network integration configuration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPut
@@ -733,7 +733,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_patch_without_preload_content(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPut, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -752,7 +752,7 @@ class NetworkIntegrationsApi:
 
         Updates a subset of the network integration configuration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPut
@@ -883,7 +883,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_post(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPost, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -902,7 +902,7 @@ class NetworkIntegrationsApi:
 
         Renames the network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPost
@@ -957,7 +957,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_post_with_http_info(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPost, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -976,7 +976,7 @@ class NetworkIntegrationsApi:
 
         Renames the network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPost
@@ -1031,7 +1031,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_post_without_preload_content(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPost, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -1050,7 +1050,7 @@ class NetworkIntegrationsApi:
 
         Renames the network integration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPost
@@ -1167,7 +1167,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_put(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPut, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -1186,7 +1186,7 @@ class NetworkIntegrationsApi:
 
         Updates the entire network integration configuration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPut
@@ -1242,7 +1242,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_put_with_http_info(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPut, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -1261,7 +1261,7 @@ class NetworkIntegrationsApi:
 
         Updates the entire network integration configuration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPut
@@ -1317,7 +1317,7 @@ class NetworkIntegrationsApi:
     @validate_call
     async def network_integration_put_without_preload_content(
         self,
-        integration: Annotated[StrictStr, Field(description="Path parameter: integration")],
+        integration: Annotated[StrictStr, Field(description="Integration name")],
         integration2: Annotated[NetworkIntegrationPut, Field(description="integration configuration")],
         _request_timeout: Union[
             None,
@@ -1336,7 +1336,7 @@ class NetworkIntegrationsApi:
 
         Updates the entire network integration configuration.
 
-        :param integration: Path parameter: integration (required)
+        :param integration: Integration name (required)
         :type integration: str
         :param integration2: integration configuration (required)
         :type integration2: NetworkIntegrationPut

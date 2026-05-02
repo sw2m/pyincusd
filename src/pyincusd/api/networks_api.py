@@ -50,7 +50,7 @@ class NetworksApi:
     @validate_call
     async def network_delete(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -69,7 +69,7 @@ class NetworksApi:
 
         Removes the network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -124,7 +124,7 @@ class NetworksApi:
     @validate_call
     async def network_delete_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -143,7 +143,7 @@ class NetworksApi:
 
         Removes the network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -198,7 +198,7 @@ class NetworksApi:
     @validate_call
     async def network_delete_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -217,7 +217,7 @@ class NetworksApi:
 
         Removes the network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -336,7 +336,7 @@ class NetworksApi:
     @validate_call
     async def network_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -356,7 +356,7 @@ class NetworksApi:
 
         Gets a specific network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -413,7 +413,7 @@ class NetworksApi:
     @validate_call
     async def network_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -433,7 +433,7 @@ class NetworksApi:
 
         Gets a specific network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -490,7 +490,7 @@ class NetworksApi:
     @validate_call
     async def network_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -510,7 +510,7 @@ class NetworksApi:
 
         Gets a specific network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -636,7 +636,7 @@ class NetworksApi:
     @validate_call
     async def network_patch(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPut, Field(description="Network configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
@@ -657,7 +657,7 @@ class NetworksApi:
 
         Updates a subset of the network configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network configuration (required)
         :type network: NetworkPut
@@ -719,7 +719,7 @@ class NetworksApi:
     @validate_call
     async def network_patch_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPut, Field(description="Network configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
@@ -740,7 +740,7 @@ class NetworksApi:
 
         Updates a subset of the network configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network configuration (required)
         :type network: NetworkPut
@@ -802,7 +802,7 @@ class NetworksApi:
     @validate_call
     async def network_patch_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPut, Field(description="Network configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
@@ -823,7 +823,7 @@ class NetworksApi:
 
         Updates a subset of the network configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network configuration (required)
         :type network: NetworkPut
@@ -970,7 +970,7 @@ class NetworksApi:
     @validate_call
     async def network_post(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPost, Field(description="Network rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -990,7 +990,7 @@ class NetworksApi:
 
         Renames an existing network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network rename request (required)
         :type network: NetworkPost
@@ -1048,7 +1048,7 @@ class NetworksApi:
     @validate_call
     async def network_post_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPost, Field(description="Network rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1068,7 +1068,7 @@ class NetworksApi:
 
         Renames an existing network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network rename request (required)
         :type network: NetworkPost
@@ -1126,7 +1126,7 @@ class NetworksApi:
     @validate_call
     async def network_post_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPost, Field(description="Network rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1146,7 +1146,7 @@ class NetworksApi:
 
         Renames an existing network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network rename request (required)
         :type network: NetworkPost
@@ -1284,7 +1284,7 @@ class NetworksApi:
     @validate_call
     async def network_put(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPut, Field(description="Network configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
@@ -1305,7 +1305,7 @@ class NetworksApi:
 
         Updates the entire network configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network configuration (required)
         :type network: NetworkPut
@@ -1367,7 +1367,7 @@ class NetworksApi:
     @validate_call
     async def network_put_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPut, Field(description="Network configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
@@ -1388,7 +1388,7 @@ class NetworksApi:
 
         Updates the entire network configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network configuration (required)
         :type network: NetworkPut
@@ -1450,7 +1450,7 @@ class NetworksApi:
     @validate_call
     async def network_put_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         network: Annotated[NetworkPut, Field(description="Network configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
@@ -1471,7 +1471,7 @@ class NetworksApi:
 
         Updates the entire network configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param network: Network configuration (required)
         :type network: NetworkPut
@@ -2222,7 +2222,7 @@ class NetworksApi:
     @validate_call
     async def networks_leases_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -2242,7 +2242,7 @@ class NetworksApi:
 
         Returns a list of DHCP leases for the network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -2299,7 +2299,7 @@ class NetworksApi:
     @validate_call
     async def networks_leases_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -2319,7 +2319,7 @@ class NetworksApi:
 
         Returns a list of DHCP leases for the network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -2376,7 +2376,7 @@ class NetworksApi:
     @validate_call
     async def networks_leases_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -2396,7 +2396,7 @@ class NetworksApi:
 
         Returns a list of DHCP leases for the network.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -2838,7 +2838,7 @@ class NetworksApi:
     @validate_call
     async def networks_state_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -2858,7 +2858,7 @@ class NetworksApi:
 
         Returns the current network state information.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -2915,7 +2915,7 @@ class NetworksApi:
     @validate_call
     async def networks_state_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -2935,7 +2935,7 @@ class NetworksApi:
 
         Returns the current network state information.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -2992,7 +2992,7 @@ class NetworksApi:
     @validate_call
     async def networks_state_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -3012,7 +3012,7 @@ class NetworksApi:
 
         Returns the current network state information.
 
-        :param name: Path parameter: name (required)
+        :param name: Network name (required)
         :type name: str
         :param project: Project name
         :type project: str

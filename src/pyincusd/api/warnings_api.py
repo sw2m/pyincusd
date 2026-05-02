@@ -46,7 +46,7 @@ class WarningsApi:
     @validate_call
     async def warning_delete(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -64,7 +64,7 @@ class WarningsApi:
 
         Removes the warning.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -114,7 +114,7 @@ class WarningsApi:
     @validate_call
     async def warning_delete_with_http_info(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -132,7 +132,7 @@ class WarningsApi:
 
         Removes the warning.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -182,7 +182,7 @@ class WarningsApi:
     @validate_call
     async def warning_delete_without_preload_content(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -200,7 +200,7 @@ class WarningsApi:
 
         Removes the warning.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -309,7 +309,7 @@ class WarningsApi:
     @validate_call
     async def warning_get(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -327,7 +327,7 @@ class WarningsApi:
 
         Gets a specific warning.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -378,7 +378,7 @@ class WarningsApi:
     @validate_call
     async def warning_get_with_http_info(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -396,7 +396,7 @@ class WarningsApi:
 
         Gets a specific warning.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -447,7 +447,7 @@ class WarningsApi:
     @validate_call
     async def warning_get_without_preload_content(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -465,7 +465,7 @@ class WarningsApi:
 
         Gets a specific warning.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -575,7 +575,7 @@ class WarningsApi:
     @validate_call
     async def warning_patch(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         warning: Annotated[WarningPut, Field(description="Warning status")],
         _request_timeout: Union[
             None,
@@ -594,7 +594,7 @@ class WarningsApi:
 
         Updates a subset of the warning status.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param warning: Warning status (required)
         :type warning: WarningPut
@@ -649,7 +649,7 @@ class WarningsApi:
     @validate_call
     async def warning_patch_with_http_info(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         warning: Annotated[WarningPut, Field(description="Warning status")],
         _request_timeout: Union[
             None,
@@ -668,7 +668,7 @@ class WarningsApi:
 
         Updates a subset of the warning status.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param warning: Warning status (required)
         :type warning: WarningPut
@@ -723,7 +723,7 @@ class WarningsApi:
     @validate_call
     async def warning_patch_without_preload_content(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         warning: Annotated[WarningPut, Field(description="Warning status")],
         _request_timeout: Union[
             None,
@@ -742,7 +742,7 @@ class WarningsApi:
 
         Updates a subset of the warning status.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param warning: Warning status (required)
         :type warning: WarningPut
@@ -872,7 +872,7 @@ class WarningsApi:
     @validate_call
     async def warning_put(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         warning: Annotated[WarningPut, Field(description="Warning status")],
         _request_timeout: Union[
             None,
@@ -891,7 +891,7 @@ class WarningsApi:
 
         Updates the warning status.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param warning: Warning status (required)
         :type warning: WarningPut
@@ -946,7 +946,7 @@ class WarningsApi:
     @validate_call
     async def warning_put_with_http_info(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         warning: Annotated[WarningPut, Field(description="Warning status")],
         _request_timeout: Union[
             None,
@@ -965,7 +965,7 @@ class WarningsApi:
 
         Updates the warning status.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param warning: Warning status (required)
         :type warning: WarningPut
@@ -1020,7 +1020,7 @@ class WarningsApi:
     @validate_call
     async def warning_put_without_preload_content(
         self,
-        uuid: Annotated[StrictStr, Field(description="Path parameter: uuid")],
+        uuid: Annotated[StrictStr, Field(description="UUID")],
         warning: Annotated[WarningPut, Field(description="Warning status")],
         _request_timeout: Union[
             None,
@@ -1039,7 +1039,7 @@ class WarningsApi:
 
         Updates the warning status.
 
-        :param uuid: Path parameter: uuid (required)
+        :param uuid: UUID (required)
         :type uuid: str
         :param warning: Warning status (required)
         :type warning: WarningPut

@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "6.23.0.post22"
+__version__ = "7.0.0"
 
 # Define package exports
 __all__ = [
@@ -339,6 +339,9 @@ __all__ = [
     "StoragePoolPut",
     "StoragePoolResources200Response",
     "StoragePoolState",
+    "StoragePoolVolumeTypeBitmapGet200Response",
+    "StoragePoolVolumeTypeBitmapsGet200Response",
+    "StoragePoolVolumeTypeBitmapsGetRecursion1200Response",
     "StoragePoolVolumeTypeGet200Response",
     "StoragePoolVolumeTypeGetRecursion1200Response",
     "StoragePoolVolumeTypeStateGet200Response",
@@ -359,6 +362,8 @@ __all__ = [
     "StorageVolumeBackup",
     "StorageVolumeBackupPost",
     "StorageVolumeBackupsPost",
+    "StorageVolumeBitmap",
+    "StorageVolumeBitmapsPost",
     "StorageVolumeFull",
     "StorageVolumePost",
     "StorageVolumePostTarget",
@@ -703,6 +708,9 @@ from pyincusd.models.storage_pool_get200_response import StoragePoolGet200Respon
 from pyincusd.models.storage_pool_put import StoragePoolPut as StoragePoolPut
 from pyincusd.models.storage_pool_resources200_response import StoragePoolResources200Response as StoragePoolResources200Response
 from pyincusd.models.storage_pool_state import StoragePoolState as StoragePoolState
+from pyincusd.models.storage_pool_volume_type_bitmap_get200_response import StoragePoolVolumeTypeBitmapGet200Response as StoragePoolVolumeTypeBitmapGet200Response
+from pyincusd.models.storage_pool_volume_type_bitmaps_get200_response import StoragePoolVolumeTypeBitmapsGet200Response as StoragePoolVolumeTypeBitmapsGet200Response
+from pyincusd.models.storage_pool_volume_type_bitmaps_get_recursion1200_response import StoragePoolVolumeTypeBitmapsGetRecursion1200Response as StoragePoolVolumeTypeBitmapsGetRecursion1200Response
 from pyincusd.models.storage_pool_volume_type_get200_response import StoragePoolVolumeTypeGet200Response as StoragePoolVolumeTypeGet200Response
 from pyincusd.models.storage_pool_volume_type_get_recursion1200_response import StoragePoolVolumeTypeGetRecursion1200Response as StoragePoolVolumeTypeGetRecursion1200Response
 from pyincusd.models.storage_pool_volume_type_state_get200_response import StoragePoolVolumeTypeStateGet200Response as StoragePoolVolumeTypeStateGet200Response
@@ -723,6 +731,8 @@ from pyincusd.models.storage_volume import StorageVolume as StorageVolume
 from pyincusd.models.storage_volume_backup import StorageVolumeBackup as StorageVolumeBackup
 from pyincusd.models.storage_volume_backup_post import StorageVolumeBackupPost as StorageVolumeBackupPost
 from pyincusd.models.storage_volume_backups_post import StorageVolumeBackupsPost as StorageVolumeBackupsPost
+from pyincusd.models.storage_volume_bitmap import StorageVolumeBitmap as StorageVolumeBitmap
+from pyincusd.models.storage_volume_bitmaps_post import StorageVolumeBitmapsPost as StorageVolumeBitmapsPost
 from pyincusd.models.storage_volume_full import StorageVolumeFull as StorageVolumeFull
 from pyincusd.models.storage_volume_post import StorageVolumePost as StorageVolumePost
 from pyincusd.models.storage_volume_post_target import StorageVolumePostTarget as StorageVolumePostTarget

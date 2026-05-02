@@ -48,7 +48,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_delete(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -67,7 +67,7 @@ class NetworkAddressSetsApi:
 
         Removes the network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -122,7 +122,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_delete_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -141,7 +141,7 @@ class NetworkAddressSetsApi:
 
         Removes the network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -196,7 +196,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_delete_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -215,7 +215,7 @@ class NetworkAddressSetsApi:
 
         Removes the network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -334,7 +334,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -353,7 +353,7 @@ class NetworkAddressSetsApi:
 
         Gets a specific network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -407,7 +407,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -426,7 +426,7 @@ class NetworkAddressSetsApi:
 
         Gets a specific network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -480,7 +480,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -499,7 +499,7 @@ class NetworkAddressSetsApi:
 
         Gets a specific network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -617,7 +617,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_patch(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPut, Field(description="Address set configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -637,7 +637,7 @@ class NetworkAddressSetsApi:
 
         Updates a subset of the network address set configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set configuration (required)
         :type address_set: NetworkAddressSetPut
@@ -696,7 +696,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_patch_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPut, Field(description="Address set configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -716,7 +716,7 @@ class NetworkAddressSetsApi:
 
         Updates a subset of the network address set configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set configuration (required)
         :type address_set: NetworkAddressSetPut
@@ -775,7 +775,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_patch_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPut, Field(description="Address set configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -795,7 +795,7 @@ class NetworkAddressSetsApi:
 
         Updates a subset of the network address set configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set configuration (required)
         :type address_set: NetworkAddressSetPut
@@ -934,7 +934,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_post(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPost, Field(description="Address set rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -954,7 +954,7 @@ class NetworkAddressSetsApi:
 
         Renames an existing network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set rename request (required)
         :type address_set: NetworkAddressSetPost
@@ -1012,7 +1012,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_post_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPost, Field(description="Address set rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1032,7 +1032,7 @@ class NetworkAddressSetsApi:
 
         Renames an existing network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set rename request (required)
         :type address_set: NetworkAddressSetPost
@@ -1090,7 +1090,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_post_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPost, Field(description="Address set rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1110,7 +1110,7 @@ class NetworkAddressSetsApi:
 
         Renames an existing network address set.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set rename request (required)
         :type address_set: NetworkAddressSetPost
@@ -1248,7 +1248,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_put(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPut, Field(description="Address set configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1268,7 +1268,7 @@ class NetworkAddressSetsApi:
 
         Updates the entire network address set configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set configuration (required)
         :type address_set: NetworkAddressSetPut
@@ -1327,7 +1327,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_put_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPut, Field(description="Address set configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1347,7 +1347,7 @@ class NetworkAddressSetsApi:
 
         Updates the entire network address set configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set configuration (required)
         :type address_set: NetworkAddressSetPut
@@ -1406,7 +1406,7 @@ class NetworkAddressSetsApi:
     @validate_call
     async def network_address_set_put_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Address set name")],
         address_set: Annotated[NetworkAddressSetPut, Field(description="Address set configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1426,7 +1426,7 @@ class NetworkAddressSetsApi:
 
         Updates the entire network address set configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Address set name (required)
         :type name: str
         :param address_set: Address set configuration (required)
         :type address_set: NetworkAddressSetPut

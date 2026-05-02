@@ -47,8 +47,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_delete(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -67,9 +67,9 @@ class NetworkForwardsApi:
 
         Removes the network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -125,8 +125,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_delete_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -145,9 +145,9 @@ class NetworkForwardsApi:
 
         Removes the network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -203,8 +203,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_delete_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -223,9 +223,9 @@ class NetworkForwardsApi:
 
         Removes the network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -348,8 +348,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_get(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -368,9 +368,9 @@ class NetworkForwardsApi:
 
         Gets a specific network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -425,8 +425,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_get_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -445,9 +445,9 @@ class NetworkForwardsApi:
 
         Gets a specific network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -502,8 +502,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_get_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -522,9 +522,9 @@ class NetworkForwardsApi:
 
         Gets a specific network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -646,7 +646,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_get_recursion1(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -666,7 +666,7 @@ class NetworkForwardsApi:
 
         Returns a list of network address forwards (structs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -723,7 +723,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_get_recursion1_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -743,7 +743,7 @@ class NetworkForwardsApi:
 
         Returns a list of network address forwards (structs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -800,7 +800,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_get_recursion1_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -820,7 +820,7 @@ class NetworkForwardsApi:
 
         Returns a list of network address forwards (structs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -946,8 +946,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_patch(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         forward: Annotated[NetworkForwardPut, Field(description="Address forward configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -967,9 +967,9 @@ class NetworkForwardsApi:
 
         Updates a subset of the network address forward configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param forward: Address forward configuration (required)
         :type forward: NetworkForwardPut
@@ -1029,8 +1029,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_patch_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         forward: Annotated[NetworkForwardPut, Field(description="Address forward configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1050,9 +1050,9 @@ class NetworkForwardsApi:
 
         Updates a subset of the network address forward configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param forward: Address forward configuration (required)
         :type forward: NetworkForwardPut
@@ -1112,8 +1112,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_patch_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         forward: Annotated[NetworkForwardPut, Field(description="Address forward configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1133,9 +1133,9 @@ class NetworkForwardsApi:
 
         Updates a subset of the network address forward configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param forward: Address forward configuration (required)
         :type forward: NetworkForwardPut
@@ -1278,8 +1278,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_put(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         forward: Annotated[NetworkForwardPut, Field(description="Address forward configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1299,9 +1299,9 @@ class NetworkForwardsApi:
 
         Updates the entire network address forward configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param forward: Address forward configuration (required)
         :type forward: NetworkForwardPut
@@ -1361,8 +1361,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_put_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         forward: Annotated[NetworkForwardPut, Field(description="Address forward configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1382,9 +1382,9 @@ class NetworkForwardsApi:
 
         Updates the entire network address forward configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param forward: Address forward configuration (required)
         :type forward: NetworkForwardPut
@@ -1444,8 +1444,8 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forward_put_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         forward: Annotated[NetworkForwardPut, Field(description="Address forward configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1465,9 +1465,9 @@ class NetworkForwardsApi:
 
         Updates the entire network address forward configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param forward: Address forward configuration (required)
         :type forward: NetworkForwardPut
@@ -1610,7 +1610,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forwards_get(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -1630,7 +1630,7 @@ class NetworkForwardsApi:
 
         Returns a list of network address forwards (URLs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -1687,7 +1687,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forwards_get_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -1707,7 +1707,7 @@ class NetworkForwardsApi:
 
         Returns a list of network address forwards (URLs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -1764,7 +1764,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forwards_get_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -1784,7 +1784,7 @@ class NetworkForwardsApi:
 
         Returns a list of network address forwards (URLs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -1910,7 +1910,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forwards_post(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         forward: Annotated[NetworkForwardsPost, Field(description="Forward")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1930,7 +1930,7 @@ class NetworkForwardsApi:
 
         Creates a new network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param forward: Forward (required)
         :type forward: NetworkForwardsPost
@@ -1988,7 +1988,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forwards_post_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         forward: Annotated[NetworkForwardsPost, Field(description="Forward")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2008,7 +2008,7 @@ class NetworkForwardsApi:
 
         Creates a new network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param forward: Forward (required)
         :type forward: NetworkForwardsPost
@@ -2066,7 +2066,7 @@ class NetworkForwardsApi:
     @validate_call
     async def network_forwards_post_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         forward: Annotated[NetworkForwardsPost, Field(description="Forward")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2086,7 +2086,7 @@ class NetworkForwardsApi:
 
         Creates a new network address forward.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param forward: Forward (required)
         :type forward: NetworkForwardsPost

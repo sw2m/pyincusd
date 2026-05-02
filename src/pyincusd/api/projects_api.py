@@ -51,7 +51,7 @@ class ProjectsApi:
     @validate_call
     async def project_access(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -69,7 +69,7 @@ class ProjectsApi:
 
         Gets the access information for the project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -121,7 +121,7 @@ class ProjectsApi:
     @validate_call
     async def project_access_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -139,7 +139,7 @@ class ProjectsApi:
 
         Gets the access information for the project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -191,7 +191,7 @@ class ProjectsApi:
     @validate_call
     async def project_access_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -209,7 +209,7 @@ class ProjectsApi:
 
         Gets the access information for the project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -320,7 +320,7 @@ class ProjectsApi:
     @validate_call
     async def project_delete(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         force: Annotated[Optional[StrictBool], Field(description="Delete project and related artifacts")] = None,
         _request_timeout: Union[
             None,
@@ -339,7 +339,7 @@ class ProjectsApi:
 
         Removes the project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param force: Delete project and related artifacts
         :type force: bool
@@ -394,7 +394,7 @@ class ProjectsApi:
     @validate_call
     async def project_delete_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         force: Annotated[Optional[StrictBool], Field(description="Delete project and related artifacts")] = None,
         _request_timeout: Union[
             None,
@@ -413,7 +413,7 @@ class ProjectsApi:
 
         Removes the project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param force: Delete project and related artifacts
         :type force: bool
@@ -468,7 +468,7 @@ class ProjectsApi:
     @validate_call
     async def project_delete_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         force: Annotated[Optional[StrictBool], Field(description="Delete project and related artifacts")] = None,
         _request_timeout: Union[
             None,
@@ -487,7 +487,7 @@ class ProjectsApi:
 
         Removes the project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param force: Delete project and related artifacts
         :type force: bool
@@ -606,7 +606,7 @@ class ProjectsApi:
     @validate_call
     async def project_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -624,7 +624,7 @@ class ProjectsApi:
 
         Gets a specific project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -675,7 +675,7 @@ class ProjectsApi:
     @validate_call
     async def project_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -693,7 +693,7 @@ class ProjectsApi:
 
         Gets a specific project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -744,7 +744,7 @@ class ProjectsApi:
     @validate_call
     async def project_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -762,7 +762,7 @@ class ProjectsApi:
 
         Gets a specific project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -872,7 +872,7 @@ class ProjectsApi:
     @validate_call
     async def project_patch(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPut, Field(description="Project configuration")],
         _request_timeout: Union[
             None,
@@ -891,7 +891,7 @@ class ProjectsApi:
 
         Updates a subset of the project configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project configuration (required)
         :type project: ProjectPut
@@ -947,7 +947,7 @@ class ProjectsApi:
     @validate_call
     async def project_patch_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPut, Field(description="Project configuration")],
         _request_timeout: Union[
             None,
@@ -966,7 +966,7 @@ class ProjectsApi:
 
         Updates a subset of the project configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project configuration (required)
         :type project: ProjectPut
@@ -1022,7 +1022,7 @@ class ProjectsApi:
     @validate_call
     async def project_patch_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPut, Field(description="Project configuration")],
         _request_timeout: Union[
             None,
@@ -1041,7 +1041,7 @@ class ProjectsApi:
 
         Updates a subset of the project configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project configuration (required)
         :type project: ProjectPut
@@ -1172,7 +1172,7 @@ class ProjectsApi:
     @validate_call
     async def project_post(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPost, Field(description="Project rename request")],
         _request_timeout: Union[
             None,
@@ -1191,7 +1191,7 @@ class ProjectsApi:
 
         Renames an existing project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project rename request (required)
         :type project: ProjectPost
@@ -1246,7 +1246,7 @@ class ProjectsApi:
     @validate_call
     async def project_post_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPost, Field(description="Project rename request")],
         _request_timeout: Union[
             None,
@@ -1265,7 +1265,7 @@ class ProjectsApi:
 
         Renames an existing project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project rename request (required)
         :type project: ProjectPost
@@ -1320,7 +1320,7 @@ class ProjectsApi:
     @validate_call
     async def project_post_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPost, Field(description="Project rename request")],
         _request_timeout: Union[
             None,
@@ -1339,7 +1339,7 @@ class ProjectsApi:
 
         Renames an existing project.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project rename request (required)
         :type project: ProjectPost
@@ -1469,7 +1469,7 @@ class ProjectsApi:
     @validate_call
     async def project_put(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPut, Field(description="Project configuration")],
         _request_timeout: Union[
             None,
@@ -1488,7 +1488,7 @@ class ProjectsApi:
 
         Updates the entire project configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project configuration (required)
         :type project: ProjectPut
@@ -1544,7 +1544,7 @@ class ProjectsApi:
     @validate_call
     async def project_put_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPut, Field(description="Project configuration")],
         _request_timeout: Union[
             None,
@@ -1563,7 +1563,7 @@ class ProjectsApi:
 
         Updates the entire project configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project configuration (required)
         :type project: ProjectPut
@@ -1619,7 +1619,7 @@ class ProjectsApi:
     @validate_call
     async def project_put_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         project: Annotated[ProjectPut, Field(description="Project configuration")],
         _request_timeout: Union[
             None,
@@ -1638,7 +1638,7 @@ class ProjectsApi:
 
         Updates the entire project configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param project: Project configuration (required)
         :type project: ProjectPut
@@ -1769,7 +1769,7 @@ class ProjectsApi:
     @validate_call
     async def project_state_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1787,7 +1787,7 @@ class ProjectsApi:
 
         Gets a specific project resource consumption information.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1838,7 +1838,7 @@ class ProjectsApi:
     @validate_call
     async def project_state_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1856,7 +1856,7 @@ class ProjectsApi:
 
         Gets a specific project resource consumption information.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1907,7 +1907,7 @@ class ProjectsApi:
     @validate_call
     async def project_state_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Project name")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1925,7 +1925,7 @@ class ProjectsApi:
 
         Gets a specific project resource consumption information.
 
-        :param name: Path parameter: name (required)
+        :param name: Project name (required)
         :type name: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

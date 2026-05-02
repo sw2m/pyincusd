@@ -52,7 +52,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_delete(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -71,7 +71,7 @@ class NetworkZonesApi:
 
         Removes the network zone.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -126,7 +126,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_delete_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -145,7 +145,7 @@ class NetworkZonesApi:
 
         Removes the network zone.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -200,7 +200,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_delete_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -219,7 +219,7 @@ class NetworkZonesApi:
 
         Removes the network zone.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -338,7 +338,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_get(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -357,7 +357,7 @@ class NetworkZonesApi:
 
         Gets a specific network zone.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -411,7 +411,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_get_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -430,7 +430,7 @@ class NetworkZonesApi:
 
         Gets a specific network zone.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -484,7 +484,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_get_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -503,7 +503,7 @@ class NetworkZonesApi:
 
         Gets a specific network zone.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -621,7 +621,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_patch(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZonePut, Field(description="zone configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -641,7 +641,7 @@ class NetworkZonesApi:
 
         Updates a subset of the network zone configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone configuration (required)
         :type zone2: NetworkZonePut
@@ -700,7 +700,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_patch_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZonePut, Field(description="zone configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -720,7 +720,7 @@ class NetworkZonesApi:
 
         Updates a subset of the network zone configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone configuration (required)
         :type zone2: NetworkZonePut
@@ -779,7 +779,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_patch_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZonePut, Field(description="zone configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -799,7 +799,7 @@ class NetworkZonesApi:
 
         Updates a subset of the network zone configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone configuration (required)
         :type zone2: NetworkZonePut
@@ -938,7 +938,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_put(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZonePut, Field(description="zone configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -958,7 +958,7 @@ class NetworkZonesApi:
 
         Updates the entire network zone configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone configuration (required)
         :type zone2: NetworkZonePut
@@ -1017,7 +1017,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_put_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZonePut, Field(description="zone configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1037,7 +1037,7 @@ class NetworkZonesApi:
 
         Updates the entire network zone configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone configuration (required)
         :type zone2: NetworkZonePut
@@ -1096,7 +1096,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_put_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZonePut, Field(description="zone configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1116,7 +1116,7 @@ class NetworkZonesApi:
 
         Updates the entire network zone configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone configuration (required)
         :type zone2: NetworkZonePut
@@ -1255,8 +1255,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_delete(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1275,9 +1275,9 @@ class NetworkZonesApi:
 
         Removes the network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -1333,8 +1333,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_delete_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1353,9 +1353,9 @@ class NetworkZonesApi:
 
         Removes the network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -1411,8 +1411,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_delete_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1431,9 +1431,9 @@ class NetworkZonesApi:
 
         Removes the network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -1556,8 +1556,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_get(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1576,9 +1576,9 @@ class NetworkZonesApi:
 
         Gets a specific network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -1633,8 +1633,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_get_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1653,9 +1653,9 @@ class NetworkZonesApi:
 
         Gets a specific network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -1710,8 +1710,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_get_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1730,9 +1730,9 @@ class NetworkZonesApi:
 
         Gets a specific network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -1854,8 +1854,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_patch(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         zone2: Annotated[NetworkZoneRecordPut, Field(description="zone record configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1875,9 +1875,9 @@ class NetworkZonesApi:
 
         Updates a subset of the network zone record configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param zone2: zone record configuration (required)
         :type zone2: NetworkZoneRecordPut
@@ -1937,8 +1937,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_patch_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         zone2: Annotated[NetworkZoneRecordPut, Field(description="zone record configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1958,9 +1958,9 @@ class NetworkZonesApi:
 
         Updates a subset of the network zone record configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param zone2: zone record configuration (required)
         :type zone2: NetworkZoneRecordPut
@@ -2020,8 +2020,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_patch_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         zone2: Annotated[NetworkZoneRecordPut, Field(description="zone record configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2041,9 +2041,9 @@ class NetworkZonesApi:
 
         Updates a subset of the network zone record configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param zone2: zone record configuration (required)
         :type zone2: NetworkZoneRecordPut
@@ -2186,8 +2186,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_put(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         zone2: Annotated[NetworkZoneRecordPut, Field(description="zone record configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2207,9 +2207,9 @@ class NetworkZonesApi:
 
         Updates the entire network zone record configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param zone2: zone record configuration (required)
         :type zone2: NetworkZoneRecordPut
@@ -2269,8 +2269,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_put_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         zone2: Annotated[NetworkZoneRecordPut, Field(description="zone record configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2290,9 +2290,9 @@ class NetworkZonesApi:
 
         Updates the entire network zone record configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param zone2: zone record configuration (required)
         :type zone2: NetworkZoneRecordPut
@@ -2352,8 +2352,8 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_record_put_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
+        name: Annotated[StrictStr, Field(description="Record name")],
         zone2: Annotated[NetworkZoneRecordPut, Field(description="zone record configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2373,9 +2373,9 @@ class NetworkZonesApi:
 
         Updates the entire network zone record configuration.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
-        :param name: Path parameter: name (required)
+        :param name: Record name (required)
         :type name: str
         :param zone2: zone record configuration (required)
         :type zone2: NetworkZoneRecordPut
@@ -2518,7 +2518,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_get(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -2538,7 +2538,7 @@ class NetworkZonesApi:
 
         Returns a list of network zone records (URLs).
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -2595,7 +2595,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_get_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -2615,7 +2615,7 @@ class NetworkZonesApi:
 
         Returns a list of network zone records (URLs).
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -2672,7 +2672,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_get_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -2692,7 +2692,7 @@ class NetworkZonesApi:
 
         Returns a list of network zone records (URLs).
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -2818,7 +2818,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_get_recursion1(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -2838,7 +2838,7 @@ class NetworkZonesApi:
 
         Returns a list of network zone records (structs).
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -2895,7 +2895,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_get_recursion1_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -2915,7 +2915,7 @@ class NetworkZonesApi:
 
         Returns a list of network zone records (structs).
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -2972,7 +2972,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_get_recursion1_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -2992,7 +2992,7 @@ class NetworkZonesApi:
 
         Returns a list of network zone records (structs).
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param project: Project name
         :type project: str
@@ -3118,7 +3118,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_post(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZoneRecordsPost, Field(description="zone")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -3138,7 +3138,7 @@ class NetworkZonesApi:
 
         Creates a new network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone (required)
         :type zone2: NetworkZoneRecordsPost
@@ -3196,7 +3196,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_post_with_http_info(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZoneRecordsPost, Field(description="zone")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -3216,7 +3216,7 @@ class NetworkZonesApi:
 
         Creates a new network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone (required)
         :type zone2: NetworkZoneRecordsPost
@@ -3274,7 +3274,7 @@ class NetworkZonesApi:
     @validate_call
     async def network_zone_records_post_without_preload_content(
         self,
-        zone: Annotated[StrictStr, Field(description="Path parameter: zone")],
+        zone: Annotated[StrictStr, Field(description="Network zone name")],
         zone2: Annotated[NetworkZoneRecordsPost, Field(description="zone")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -3294,7 +3294,7 @@ class NetworkZonesApi:
 
         Creates a new network zone record.
 
-        :param zone: Path parameter: zone (required)
+        :param zone: Network zone name (required)
         :type zone: str
         :param zone2: zone (required)
         :type zone2: NetworkZoneRecordsPost

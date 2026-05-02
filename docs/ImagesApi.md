@@ -4,31 +4,31 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**image_alias_delete**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_alias_delete) | **DELETE** /1.0/images/aliases/{name} | Delete the image alias
-[**image_alias_get**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_alias_get) | **GET** /1.0/images/aliases/{name} | Get the image alias
-[**image_alias_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_alias_get_untrusted) | **GET** /1.0/images/aliases/{name}?public | Get the public image alias
-[**image_delete**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_delete) | **DELETE** /1.0/images/{fingerprint} | Delete the image
-[**image_export_get**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_export_get) | **GET** /1.0/images/{fingerprint}/export | Get the raw image file(s)
-[**image_export_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_export_get_untrusted) | **GET** /1.0/images/{fingerprint}/export?public | Get the raw image file(s)
-[**image_get**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_get) | **GET** /1.0/images/{fingerprint} | Get the image
-[**image_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_get_untrusted) | **GET** /1.0/images/{fingerprint}?public | Get the public image
-[**image_patch**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_patch) | **PATCH** /1.0/images/{fingerprint} | Partially update the image
-[**image_put**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#image_put) | **PUT** /1.0/images/{fingerprint} | Update the image
-[**images_alias_patch**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_alias_patch) | **PATCH** /1.0/images/aliases/{name} | Partially update the image alias
-[**images_alias_post**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_alias_post) | **POST** /1.0/images/aliases/{name} | Rename the image alias
-[**images_aliases_get**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_aliases_get) | **GET** /1.0/images/aliases | Get the image aliases
-[**images_aliases_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_aliases_get_recursion1) | **GET** /1.0/images/aliases?recursion&#x3D;1 | Get the image aliases
-[**images_aliases_post**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_aliases_post) | **POST** /1.0/images/aliases | Add an image alias
-[**images_aliases_put**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_aliases_put) | **PUT** /1.0/images/aliases/{name} | Update the image alias
-[**images_export_post**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_export_post) | **POST** /1.0/images/{fingerprint}/export | Make the server push the image to a remote server
-[**images_get**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_get) | **GET** /1.0/images | Get the images
-[**images_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_get_recursion1) | **GET** /1.0/images?recursion&#x3D;1 | Get the images
-[**images_get_recursion1_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_get_recursion1_untrusted) | **GET** /1.0/images?public&amp;recursion&#x3D;1 | Get the public images
-[**images_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_get_untrusted) | **GET** /1.0/images?public | Get the public images
-[**images_post**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_post) | **POST** /1.0/images | Add an image
-[**images_post_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_post_untrusted) | **POST** /1.0/images?public | Add an image
-[**images_refresh_post**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_refresh_post) | **POST** /1.0/images/{fingerprint}/refresh | Refresh an image
-[**images_secret_post**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesApi.md#images_secret_post) | **POST** /1.0/images/{fingerprint}/secret | Generate secret for retrieval of the image by an untrusted client
+[**image_alias_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_alias_delete) | **DELETE** /1.0/images/aliases/{name} | Delete the image alias
+[**image_alias_get**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_alias_get) | **GET** /1.0/images/aliases/{name} | Get the image alias
+[**image_alias_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_alias_get_untrusted) | **GET** /1.0/images/aliases/{name}?public | Get the public image alias
+[**image_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_delete) | **DELETE** /1.0/images/{fingerprint} | Delete the image
+[**image_export_get**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_export_get) | **GET** /1.0/images/{fingerprint}/export | Get the raw image file(s)
+[**image_export_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_export_get_untrusted) | **GET** /1.0/images/{fingerprint}/export?public | Get the raw image file(s)
+[**image_get**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_get) | **GET** /1.0/images/{fingerprint} | Get the image
+[**image_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_get_untrusted) | **GET** /1.0/images/{fingerprint}?public | Get the public image
+[**image_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_patch) | **PATCH** /1.0/images/{fingerprint} | Partially update the image
+[**image_put**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#image_put) | **PUT** /1.0/images/{fingerprint} | Update the image
+[**images_alias_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_alias_patch) | **PATCH** /1.0/images/aliases/{name} | Partially update the image alias
+[**images_alias_post**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_alias_post) | **POST** /1.0/images/aliases/{name} | Rename the image alias
+[**images_aliases_get**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_aliases_get) | **GET** /1.0/images/aliases | Get the image aliases
+[**images_aliases_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_aliases_get_recursion1) | **GET** /1.0/images/aliases?recursion&#x3D;1 | Get the image aliases
+[**images_aliases_post**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_aliases_post) | **POST** /1.0/images/aliases | Add an image alias
+[**images_aliases_put**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_aliases_put) | **PUT** /1.0/images/aliases/{name} | Update the image alias
+[**images_export_post**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_export_post) | **POST** /1.0/images/{fingerprint}/export | Make the server push the image to a remote server
+[**images_get**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_get) | **GET** /1.0/images | Get the images
+[**images_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_get_recursion1) | **GET** /1.0/images?recursion&#x3D;1 | Get the images
+[**images_get_recursion1_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_get_recursion1_untrusted) | **GET** /1.0/images?public&amp;recursion&#x3D;1 | Get the public images
+[**images_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_get_untrusted) | **GET** /1.0/images?public | Get the public images
+[**images_post**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_post) | **POST** /1.0/images | Add an image
+[**images_post_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_post_untrusted) | **POST** /1.0/images?public | Add an image
+[**images_refresh_post**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_refresh_post) | **POST** /1.0/images/{fingerprint}/refresh | Refresh an image
+[**images_secret_post**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesApi.md#images_secret_post) | **POST** /1.0/images/{fingerprint}/secret | Generate secret for retrieval of the image by an untrusted client
 
 
 # **image_alias_delete**
@@ -58,7 +58,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Alias name
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -77,12 +77,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
+ **name** | **str**| Alias name | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Alias name
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -150,12 +150,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
+ **name** | **str**| Alias name | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ImageAliasGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageAliasGet200Response.md)
+[**ImageAliasGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageAliasGet200Response.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Alias name
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -223,12 +223,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
+ **name** | **str**| Alias name | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ImageAliasGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageAliasGet200Response.md)
+[**ImageAliasGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageAliasGet200Response.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -295,12 +295,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
+ **fingerprint** | **str**| Fingerprint | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ClusterMembersPost202Response.md)
+[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ClusterMembersPost202Response.md)
 
 ### Authorization
 
@@ -349,7 +349,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -366,7 +366,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
+ **fingerprint** | **str**| Fingerprint | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
@@ -419,7 +419,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     project = 'project_example' # str | Project name (optional)
     secret = 'secret_example' # str | Secret token to retrieve a private image (optional)
 
@@ -437,7 +437,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
+ **fingerprint** | **str**| Fingerprint | 
  **project** | **str**| Project name | [optional] 
  **secret** | **str**| Secret token to retrieve a private image | [optional] 
 
@@ -491,7 +491,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -510,12 +510,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
+ **fingerprint** | **str**| Fingerprint | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ImageGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageGet200Response.md)
+[**ImageGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageGet200Response.md)
 
 ### Authorization
 
@@ -563,7 +563,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     project = 'project_example' # str | Project name (optional)
     secret = 'secret_example' # str | Secret token to retrieve a private image (optional)
 
@@ -583,13 +583,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
+ **fingerprint** | **str**| Fingerprint | 
  **project** | **str**| Project name | [optional] 
  **secret** | **str**| Secret token to retrieve a private image | [optional] 
 
 ### Return type
 
-[**ImageGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageGet200Response.md)
+[**ImageGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageGet200Response.md)
 
 ### Authorization
 
@@ -638,7 +638,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     image = pyincusd.ImagePut() # ImagePut | Image configuration
     project = 'project_example' # str | Project name (optional)
 
@@ -658,13 +658,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
- **image** | [**ImagePut**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagePut.md)| Image configuration | 
+ **fingerprint** | **str**| Fingerprint | 
+ **image** | [**ImagePut**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagePut.md)| Image configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -715,7 +715,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     image = pyincusd.ImagePut() # ImagePut | Image configuration
     project = 'project_example' # str | Project name (optional)
 
@@ -735,13 +735,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
- **image** | [**ImagePut**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagePut.md)| Image configuration | 
+ **fingerprint** | **str**| Fingerprint | 
+ **image** | [**ImagePut**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagePut.md)| Image configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -792,7 +792,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Alias name
     image_alias = pyincusd.ImageAliasesEntryPut() # ImageAliasesEntryPut | Image alias configuration
     project = 'project_example' # str | Project name (optional)
 
@@ -812,13 +812,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
- **image_alias** | [**ImageAliasesEntryPut**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageAliasesEntryPut.md)| Image alias configuration | 
+ **name** | **str**| Alias name | 
+ **image_alias** | [**ImageAliasesEntryPut**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageAliasesEntryPut.md)| Image alias configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -869,7 +869,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Alias name
     image_alias = pyincusd.ImageAliasesEntryPost() # ImageAliasesEntryPost | Image alias rename request
     project = 'project_example' # str | Project name (optional)
 
@@ -889,13 +889,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
- **image_alias** | [**ImageAliasesEntryPost**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageAliasesEntryPost.md)| Image alias rename request | 
+ **name** | **str**| Alias name | 
+ **image_alias** | [**ImageAliasesEntryPost**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageAliasesEntryPost.md)| Image alias rename request | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -966,7 +966,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ImagesAliasesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesAliasesGet200Response.md)
+[**ImagesAliasesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesAliasesGet200Response.md)
 
 ### Authorization
 
@@ -1036,7 +1036,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ImagesAliasesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesAliasesGetRecursion1200Response.md)
+[**ImagesAliasesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesAliasesGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -1104,12 +1104,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **image_alias** | [**ImageAliasesPost**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageAliasesPost.md)| Image alias | 
+ **image_alias** | [**ImageAliasesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageAliasesPost.md)| Image alias | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1159,7 +1159,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    name = 'name_example' # str | Path parameter: name
+    name = 'name_example' # str | Alias name
     image_alias = pyincusd.ImageAliasesEntryPut() # ImageAliasesEntryPut | Image alias configuration
     project = 'project_example' # str | Project name (optional)
 
@@ -1179,13 +1179,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| Path parameter: name | 
- **image_alias** | [**ImageAliasesEntryPut**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageAliasesEntryPut.md)| Image alias configuration | 
+ **name** | **str**| Alias name | 
+ **image_alias** | [**ImageAliasesEntryPut**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageAliasesEntryPut.md)| Image alias configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1236,7 +1236,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     image = pyincusd.ImageExportPost() # ImageExportPost | Image push request
     project = 'project_example' # str | Project name (optional)
 
@@ -1256,13 +1256,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
- **image** | [**ImageExportPost**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImageExportPost.md)| Image push request | 
+ **fingerprint** | **str**| Fingerprint | 
+ **image** | [**ImageExportPost**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImageExportPost.md)| Image push request | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ClusterMembersPost202Response.md)
+[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ClusterMembersPost202Response.md)
 
 ### Authorization
 
@@ -1336,7 +1336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ImagesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesGet200Response.md)
+[**ImagesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesGet200Response.md)
 
 ### Authorization
 
@@ -1410,7 +1410,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ImagesGetRecursion1Untrusted200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesGetRecursion1Untrusted200Response.md)
+[**ImagesGetRecursion1Untrusted200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesGetRecursion1Untrusted200Response.md)
 
 ### Authorization
 
@@ -1484,7 +1484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ImagesGetRecursion1Untrusted200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesGetRecursion1Untrusted200Response.md)
+[**ImagesGetRecursion1Untrusted200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesGetRecursion1Untrusted200Response.md)
 
 ### Authorization
 
@@ -1558,7 +1558,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ImagesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesGet200Response.md)
+[**ImagesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesGet200Response.md)
 
 ### Authorization
 
@@ -1646,7 +1646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ClusterMembersPost202Response.md)
+[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ClusterMembersPost202Response.md)
 
 ### Authorization
 
@@ -1718,12 +1718,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **image** | [**ImagesPost**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ImagesPost.md)| Image | 
+ **image** | [**ImagesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ImagesPost.md)| Image | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1774,7 +1774,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -1793,12 +1793,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
+ **fingerprint** | **str**| Fingerprint | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ClusterMembersPost202Response.md)
+[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ClusterMembersPost202Response.md)
 
 ### Authorization
 
@@ -1848,7 +1848,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.ImagesApi(api_client)
-    fingerprint = 'fingerprint_example' # str | Path parameter: fingerprint
+    fingerprint = 'fingerprint_example' # str | Fingerprint
     project = 'project_example' # str | Project name (optional)
 
     try:
@@ -1867,12 +1867,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**| Path parameter: fingerprint | 
+ **fingerprint** | **str**| Fingerprint | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v6.23.0.post22/docs/ClusterMembersPost202Response.md)
+[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.0.0/docs/ClusterMembersPost202Response.md)
 
 ### Authorization
 

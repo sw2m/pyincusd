@@ -48,7 +48,7 @@ class ProfilesApi:
     @validate_call
     async def profile_delete(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -67,7 +67,7 @@ class ProfilesApi:
 
         Removes the profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -122,7 +122,7 @@ class ProfilesApi:
     @validate_call
     async def profile_delete_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -141,7 +141,7 @@ class ProfilesApi:
 
         Removes the profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -196,7 +196,7 @@ class ProfilesApi:
     @validate_call
     async def profile_delete_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -215,7 +215,7 @@ class ProfilesApi:
 
         Removes the profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -334,7 +334,7 @@ class ProfilesApi:
     @validate_call
     async def profile_get(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -353,7 +353,7 @@ class ProfilesApi:
 
         Gets a specific profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -407,7 +407,7 @@ class ProfilesApi:
     @validate_call
     async def profile_get_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -426,7 +426,7 @@ class ProfilesApi:
 
         Gets a specific profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -480,7 +480,7 @@ class ProfilesApi:
     @validate_call
     async def profile_get_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -499,7 +499,7 @@ class ProfilesApi:
 
         Gets a specific profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param project: Project name
         :type project: str
@@ -617,7 +617,7 @@ class ProfilesApi:
     @validate_call
     async def profile_patch(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePut, Field(description="Profile configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -637,7 +637,7 @@ class ProfilesApi:
 
         Updates a subset of the profile configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile configuration (required)
         :type profile: ProfilePut
@@ -696,7 +696,7 @@ class ProfilesApi:
     @validate_call
     async def profile_patch_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePut, Field(description="Profile configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -716,7 +716,7 @@ class ProfilesApi:
 
         Updates a subset of the profile configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile configuration (required)
         :type profile: ProfilePut
@@ -775,7 +775,7 @@ class ProfilesApi:
     @validate_call
     async def profile_patch_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePut, Field(description="Profile configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -795,7 +795,7 @@ class ProfilesApi:
 
         Updates a subset of the profile configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile configuration (required)
         :type profile: ProfilePut
@@ -934,7 +934,7 @@ class ProfilesApi:
     @validate_call
     async def profile_post(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePost, Field(description="Profile rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -954,7 +954,7 @@ class ProfilesApi:
 
         Renames an existing profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile rename request (required)
         :type profile: ProfilePost
@@ -1012,7 +1012,7 @@ class ProfilesApi:
     @validate_call
     async def profile_post_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePost, Field(description="Profile rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1032,7 +1032,7 @@ class ProfilesApi:
 
         Renames an existing profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile rename request (required)
         :type profile: ProfilePost
@@ -1090,7 +1090,7 @@ class ProfilesApi:
     @validate_call
     async def profile_post_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePost, Field(description="Profile rename request")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1110,7 +1110,7 @@ class ProfilesApi:
 
         Renames an existing profile.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile rename request (required)
         :type profile: ProfilePost
@@ -1248,7 +1248,7 @@ class ProfilesApi:
     @validate_call
     async def profile_put(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePut, Field(description="Profile configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1268,7 +1268,7 @@ class ProfilesApi:
 
         Updates the entire profile configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile configuration (required)
         :type profile: ProfilePut
@@ -1327,7 +1327,7 @@ class ProfilesApi:
     @validate_call
     async def profile_put_with_http_info(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePut, Field(description="Profile configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1347,7 +1347,7 @@ class ProfilesApi:
 
         Updates the entire profile configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile configuration (required)
         :type profile: ProfilePut
@@ -1406,7 +1406,7 @@ class ProfilesApi:
     @validate_call
     async def profile_put_without_preload_content(
         self,
-        name: Annotated[StrictStr, Field(description="Path parameter: name")],
+        name: Annotated[StrictStr, Field(description="Profile name")],
         profile: Annotated[ProfilePut, Field(description="Profile configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1426,7 +1426,7 @@ class ProfilesApi:
 
         Updates the entire profile configuration.
 
-        :param name: Path parameter: name (required)
+        :param name: Profile name (required)
         :type name: str
         :param profile: Profile configuration (required)
         :type profile: ProfilePut

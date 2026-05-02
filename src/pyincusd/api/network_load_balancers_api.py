@@ -48,8 +48,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_delete(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -68,9 +68,9 @@ class NetworkLoadBalancersApi:
 
         Removes the network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -126,8 +126,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_delete_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -146,9 +146,9 @@ class NetworkLoadBalancersApi:
 
         Removes the network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -204,8 +204,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_delete_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -224,9 +224,9 @@ class NetworkLoadBalancersApi:
 
         Removes the network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -349,8 +349,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_get(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -369,9 +369,9 @@ class NetworkLoadBalancersApi:
 
         Gets a specific network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -426,8 +426,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_get_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -446,9 +446,9 @@ class NetworkLoadBalancersApi:
 
         Gets a specific network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -503,8 +503,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_get_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -523,9 +523,9 @@ class NetworkLoadBalancersApi:
 
         Gets a specific network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -647,7 +647,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_get_recursion1(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -667,7 +667,7 @@ class NetworkLoadBalancersApi:
 
         Returns a list of network address load balancers (structs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -724,7 +724,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_get_recursion1_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -744,7 +744,7 @@ class NetworkLoadBalancersApi:
 
         Returns a list of network address load balancers (structs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -801,7 +801,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_get_recursion1_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -821,7 +821,7 @@ class NetworkLoadBalancersApi:
 
         Returns a list of network address load balancers (structs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -947,8 +947,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_patch(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         load_balancer: Annotated[NetworkLoadBalancerPut, Field(description="Address load balancer configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -968,9 +968,9 @@ class NetworkLoadBalancersApi:
 
         Updates a subset of the network address load balancer configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param load_balancer: Address load balancer configuration (required)
         :type load_balancer: NetworkLoadBalancerPut
@@ -1030,8 +1030,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_patch_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         load_balancer: Annotated[NetworkLoadBalancerPut, Field(description="Address load balancer configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1051,9 +1051,9 @@ class NetworkLoadBalancersApi:
 
         Updates a subset of the network address load balancer configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param load_balancer: Address load balancer configuration (required)
         :type load_balancer: NetworkLoadBalancerPut
@@ -1113,8 +1113,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_patch_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         load_balancer: Annotated[NetworkLoadBalancerPut, Field(description="Address load balancer configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1134,9 +1134,9 @@ class NetworkLoadBalancersApi:
 
         Updates a subset of the network address load balancer configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param load_balancer: Address load balancer configuration (required)
         :type load_balancer: NetworkLoadBalancerPut
@@ -1279,8 +1279,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_put(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         load_balancer: Annotated[NetworkLoadBalancerPut, Field(description="Address load balancer configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1300,9 +1300,9 @@ class NetworkLoadBalancersApi:
 
         Updates the entire network address load balancer configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param load_balancer: Address load balancer configuration (required)
         :type load_balancer: NetworkLoadBalancerPut
@@ -1362,8 +1362,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_put_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         load_balancer: Annotated[NetworkLoadBalancerPut, Field(description="Address load balancer configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1383,9 +1383,9 @@ class NetworkLoadBalancersApi:
 
         Updates the entire network address load balancer configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param load_balancer: Address load balancer configuration (required)
         :type load_balancer: NetworkLoadBalancerPut
@@ -1445,8 +1445,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_put_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         load_balancer: Annotated[NetworkLoadBalancerPut, Field(description="Address load balancer configuration")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -1466,9 +1466,9 @@ class NetworkLoadBalancersApi:
 
         Updates the entire network address load balancer configuration.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param load_balancer: Address load balancer configuration (required)
         :type load_balancer: NetworkLoadBalancerPut
@@ -1611,8 +1611,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_state_get(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1631,9 +1631,9 @@ class NetworkLoadBalancersApi:
 
         Get the current state of a specific network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -1688,8 +1688,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_state_get_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1708,9 +1708,9 @@ class NetworkLoadBalancersApi:
 
         Get the current state of a specific network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -1765,8 +1765,8 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancer_state_get_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
-        listen_address: Annotated[StrictStr, Field(description="Path parameter: listenAddress")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
+        listen_address: Annotated[StrictStr, Field(description="Listen address")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
             None,
@@ -1785,9 +1785,9 @@ class NetworkLoadBalancersApi:
 
         Get the current state of a specific network address load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
-        :param listen_address: Path parameter: listenAddress (required)
+        :param listen_address: Listen address (required)
         :type listen_address: str
         :param project: Project name
         :type project: str
@@ -1909,7 +1909,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancers_get(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -1929,7 +1929,7 @@ class NetworkLoadBalancersApi:
 
         Returns a list of network address load balancers (URLs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -1986,7 +1986,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancers_get_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -2006,7 +2006,7 @@ class NetworkLoadBalancersApi:
 
         Returns a list of network address load balancers (URLs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -2063,7 +2063,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancers_get_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Collection filter")] = None,
         _request_timeout: Union[
@@ -2083,7 +2083,7 @@ class NetworkLoadBalancersApi:
 
         Returns a list of network address load balancers (URLs).
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param project: Project name
         :type project: str
@@ -2209,7 +2209,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancers_post(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         load_balancer: Annotated[NetworkLoadBalancersPost, Field(description="Load Balancer")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2229,7 +2229,7 @@ class NetworkLoadBalancersApi:
 
         Creates a new network load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param load_balancer: Load Balancer (required)
         :type load_balancer: NetworkLoadBalancersPost
@@ -2287,7 +2287,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancers_post_with_http_info(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         load_balancer: Annotated[NetworkLoadBalancersPost, Field(description="Load Balancer")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2307,7 +2307,7 @@ class NetworkLoadBalancersApi:
 
         Creates a new network load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param load_balancer: Load Balancer (required)
         :type load_balancer: NetworkLoadBalancersPost
@@ -2365,7 +2365,7 @@ class NetworkLoadBalancersApi:
     @validate_call
     async def network_load_balancers_post_without_preload_content(
         self,
-        network_name: Annotated[StrictStr, Field(description="Path parameter: networkName")],
+        network_name: Annotated[StrictStr, Field(description="Network name")],
         load_balancer: Annotated[NetworkLoadBalancersPost, Field(description="Load Balancer")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         _request_timeout: Union[
@@ -2385,7 +2385,7 @@ class NetworkLoadBalancersApi:
 
         Creates a new network load balancer.
 
-        :param network_name: Path parameter: networkName (required)
+        :param network_name: Network name (required)
         :type network_name: str
         :param load_balancer: Load Balancer (required)
         :type load_balancer: NetworkLoadBalancersPost
