@@ -6,10 +6,10 @@ StorageBucketKeyPut represents the modifiable fields of a storage pool bucket ke
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**access_key** | **str** | Access key | [optional] 
-**description** | **str** | Description of the storage bucket key | [optional] 
-**role** | **str** | Whether the key can perform write actions or not. | [optional] 
-**secret_key** | **str** | Secret key | [optional] 
+**access_key** | **str** | Access key  API extension: storage_buckets | [optional] 
+**description** | **str** | Description of the storage bucket key  API extension: storage_buckets | [optional] 
+**role** | **str** | Whether the key can perform write actions or not.  API extension: storage_buckets | [optional] 
+**secret_key** | **str** | Secret key  API extension: storage_buckets | [optional] 
 
 ## Example
 

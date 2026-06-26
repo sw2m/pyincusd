@@ -6,18 +6,18 @@ StorageVolumeSource represents the creation source for a new storage volume
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**certificate** | **str** | Certificate (for migration) | [optional] 
-**location** | **str** | What cluster member this record was found on | [optional] 
-**mode** | **str** | Whether to use pull or push mode (for migration) | [optional] 
+**certificate** | **str** | Certificate (for migration)  API extension: storage_api_remote_volume_handling | [optional] 
+**location** | **str** | What cluster member this record was found on  API extension: cluster_internal_custom_volume_copy | [optional] 
+**mode** | **str** | Whether to use pull or push mode (for migration)  API extension: storage_api_remote_volume_handling | [optional] 
 **name** | **str** | Source volume name (for copy) | [optional] 
-**operation** | **str** | Remote operation URL (for migration) | [optional] 
+**operation** | **str** | Remote operation URL (for migration)  API extension: storage_api_remote_volume_handling | [optional] 
 **pool** | **str** | Source storage pool (for copy) | [optional] 
-**project** | **str** | Source project name | [optional] 
-**refresh** | **bool** | Whether existing destination volume should be refreshed | [optional] 
-**refresh_exclude_older** | **bool** | Whether to exclude source snapshots earlier than latest target snapshot | [optional] 
-**secrets** | **Dict[str, str]** | Map of migration websockets (for migration) | [optional] 
+**project** | **str** | Source project name  API extension: storage_api_project | [optional] 
+**refresh** | **bool** | Whether existing destination volume should be refreshed  API extension: custom_volume_refresh | [optional] 
+**refresh_exclude_older** | **bool** | Whether to exclude source snapshots earlier than latest target snapshot  API extension: custom_volume_refresh_exclude_older_snapshots | [optional] 
+**secrets** | **Dict[str, str]** | Map of migration websockets (for migration)  API extension: storage_api_remote_volume_handling | [optional] 
 **type** | **str** | Source type (copy or migration) | [optional] 
-**volume_only** | **bool** | Whether snapshots should be discarded (for migration) | [optional] 
+**volume_only** | **bool** | Whether snapshots should be discarded (for migration)  API extension: storage_api_volume_snapshots | [optional] 
 
 ## Example
 

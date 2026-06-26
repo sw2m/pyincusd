@@ -30,9 +30,9 @@ class InstancesPost(BaseModel):
     InstancesPost
     """ # noqa: E501
     architecture: Optional[StrictStr] = Field(default=None, description="Architecture name", json_schema_extra={"examples": ["x86_64"]})
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Instance configuration (see doc/instances.md)", json_schema_extra={"examples": [{"security.nesting": "true"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Instance description", json_schema_extra={"examples": ["My test instance"]})
-    devices: Optional[Dict[str, Any]] = Field(default=None, description="Instance devices (see doc/instances.md)", json_schema_extra={"examples": [{"root": {"path": "/", "pool": "default", "type": "disk"}}]})
+    devices: Optional[Dict[str, Any]] = Field(default=None, description="DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     disk_only: Optional[StrictBool] = Field(default=None, description="Whether only the instances disk should be restored", json_schema_extra={"examples": [False]})
     ephemeral: Optional[StrictBool] = Field(default=None, description="Whether the instance is ephemeral (deleted on shutdown)", json_schema_extra={"examples": [False]})
     instance_type: Optional[StrictStr] = Field(default=None, description="Cloud instance type (AWS, GCP, Azure, ...) to emulate with limits", json_schema_extra={"examples": ["t1.micro"]})
@@ -40,7 +40,7 @@ class InstancesPost(BaseModel):
     profiles: Optional[List[StrictStr]] = Field(default=None, description="List of profiles applied to the instance", json_schema_extra={"examples": [["default"]]})
     restore: Optional[StrictStr] = Field(default=None, description="If set, instance will be restored to the provided snapshot name", json_schema_extra={"examples": ["snap0"]})
     source: Optional[InstanceSource] = None
-    start: Optional[StrictBool] = Field(default=None, description="Whether to start the instance after creation", json_schema_extra={"examples": [True]})
+    start: Optional[StrictBool] = Field(default=None, description="Whether to start the instance after creation  API extension: instance_create_start", json_schema_extra={"examples": [True]})
     stateful: Optional[StrictBool] = Field(default=None, description="Whether the instance currently has saved state on disk", json_schema_extra={"examples": [False]})
     type: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["architecture", "config", "description", "devices", "disk_only", "ephemeral", "instance_type", "name", "profiles", "restore", "source", "start", "stateful", "type"]

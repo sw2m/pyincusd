@@ -6,23 +6,23 @@ ResourcesStorageDisk represents a disk
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**block_size** | **int** | Block size | [optional] 
+**block_size** | **int** | Block size  API extension: resources_disk_sata | [optional] 
 **device** | **str** | Device number | [optional] 
-**device_id** | **str** | Device by-id identifier | [optional] 
-**device_path** | **str** | Device by-path identifier | [optional] 
-**firmware_version** | **str** | Current firmware version | [optional] 
+**device_id** | **str** | Device by-id identifier  API extension: resources_disk_id | [optional] 
+**device_path** | **str** | Device by-path identifier  API extension: resources_disk_sata | [optional] 
+**firmware_version** | **str** | Current firmware version  API extension: resources_disk_sata | [optional] 
 **id** | **str** | ID of the disk (device name) | [optional] 
 **model** | **str** | Disk model name | [optional] 
 **numa_node** | **int** | NUMA node the disk is a part of | [optional] 
-**partitions** | [**List[ResourcesStorageDiskPartition]**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/ResourcesStorageDiskPartition.md) | List of partitions | [optional] 
-**pci_address** | **str** | PCI address | [optional] 
+**partitions** | [**List[ResourcesStorageDiskPartition]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ResourcesStorageDiskPartition.md) | List of partitions | [optional] 
+**pci_address** | **str** | PCI address  API extension: resources_disk_address | [optional] 
 **read_only** | **bool** | Whether the disk is read-only | [optional] 
 **removable** | **bool** | Whether the disk is removable (hot-plug) | [optional] 
-**rpm** | **int** | Rotation speed (RPM) | [optional] 
-**serial** | **str** | Serial number | [optional] 
+**rpm** | **int** | Rotation speed (RPM)  API extension: resources_disk_sata | [optional] 
+**serial** | **str** | Serial number  API extension: resources_disk_sata | [optional] 
 **size** | **int** | Total size of the disk (bytes) | [optional] 
 **type** | **str** | Storage type | [optional] 
-**usb_address** | **str** | USB address | [optional] 
+**usb_address** | **str** | USB address  API extension: resources_disk_address | [optional] 
 **wwn** | **str** | WWN identifier | [optional] 
 
 ## Example

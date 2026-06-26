@@ -5,14 +5,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Storage volume configuration map (refer to doc/storage.md) | [optional] 
-**content_type** | **str** | Volume content type (filesystem or block) | [optional] 
-**created_at** | **datetime** | Volume creation timestamp | [optional] 
-**description** | **str** | Description of the storage volume | [optional] 
-**location** | **str** | What cluster member this record was found on | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**content_type** | **str** | Volume content type (filesystem or block)  API extension: custom_block_volumes | [optional] 
+**created_at** | **datetime** | Volume creation timestamp API extension: storage_volumes_created_at | [optional] 
+**description** | **str** | Description of the storage volume  API extension: entity_description | [optional] 
+**location** | **str** | What cluster member this record was found on  API extension: clustering | [optional] 
 **name** | **str** | Volume name | [optional] 
-**project** | **str** | Project containing the volume. | [optional] 
-**restore** | **str** | Name of a snapshot to restore | [optional] 
+**project** | **str** | Project containing the volume.  API extension: storage_volumes_all_projects | [optional] 
+**restore** | **str** | Name of a snapshot to restore  API extension: storage_api_volume_snapshots | [optional] 
 **type** | **str** | Volume type | [optional] 
 **used_by** | **List[str]** | List of URLs of objects using this storage volume | [optional] 
 

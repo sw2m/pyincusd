@@ -6,9 +6,9 @@ ServerStorageDriverInfo represents the read-only info about a storage driver
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name of the driver | [optional] 
-**remote** | **bool** | Whether the driver has remote volumes | [optional] 
-**version** | **str** | Version of the driver | [optional] 
+**name** | **str** | Name of the driver  API extension: server_supported_storage_drivers | [optional] 
+**remote** | **bool** | Whether the driver has remote volumes  API extension: server_supported_storage_drivers | [optional] 
+**version** | **str** | Version of the driver  API extension: server_supported_storage_drivers | [optional] 
 
 ## Example
 

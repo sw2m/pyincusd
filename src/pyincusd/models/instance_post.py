@@ -29,16 +29,16 @@ class InstancePost(BaseModel):
     """
     InstancePost
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Instance configuration file.", alias="Config", json_schema_extra={"examples": [{"security.nesting": "true"}]})
-    devices: Optional[Dict[str, Any]] = Field(default=None, description="Instance devices.", alias="Devices", json_schema_extra={"examples": [{"root": {"path": "/", "pool": "default", "type": "disk"}}]})
-    profiles: Optional[List[StrictStr]] = Field(default=None, description="List of profiles applied to the instance.", alias="Profiles", json_schema_extra={"examples": [["default"]]})
-    allow_inconsistent: Optional[StrictBool] = Field(default=None, description="AllowInconsistent allow inconsistent copies when migrating.", json_schema_extra={"examples": [False]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.", alias="Config")
+    devices: Optional[Dict[str, Any]] = Field(default=None, description="DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.", alias="Devices")
+    profiles: Optional[List[StrictStr]] = Field(default=None, description="List of profiles applied to the instance.  API extension: instance_move_config", alias="Profiles", json_schema_extra={"examples": [["default"]]})
+    allow_inconsistent: Optional[StrictBool] = Field(default=None, description="AllowInconsistent allow inconsistent copies when migrating.  API extension: instance_allow_inconsistent_copy", json_schema_extra={"examples": [False]})
     instance_only: Optional[StrictBool] = Field(default=None, description="Whether snapshots should be discarded (migration only)", json_schema_extra={"examples": [False]})
     live: Optional[StrictBool] = Field(default=None, description="Whether to perform a live migration (migration only)", json_schema_extra={"examples": [False]})
     migration: Optional[StrictBool] = Field(default=None, description="Whether the instance is being migrated to another server", json_schema_extra={"examples": [False]})
     name: Optional[StrictStr] = Field(default=None, description="New name for the instance", json_schema_extra={"examples": ["bar"]})
-    pool: Optional[StrictStr] = Field(default=None, description="Target pool for local cross-pool move", json_schema_extra={"examples": ["baz"]})
-    project: Optional[StrictStr] = Field(default=None, description="Target project for local cross-project move", json_schema_extra={"examples": ["foo"]})
+    pool: Optional[StrictStr] = Field(default=None, description="Target pool for local cross-pool move  API extension: instance_pool_move", json_schema_extra={"examples": ["baz"]})
+    project: Optional[StrictStr] = Field(default=None, description="Target project for local cross-project move  API extension: instance_project_move", json_schema_extra={"examples": ["foo"]})
     target: Optional[InstancePostTarget] = None
     __properties: ClassVar[List[str]] = ["Config", "Devices", "Profiles", "allow_inconsistent", "instance_only", "live", "migration", "name", "pool", "project", "target"]
 

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **architecture** | **str** | Architecture (generation) | [optional] 
 **brand** | **str** | Brand name | [optional] 
-**card_device** | **str** | Card device number | [optional] 
-**card_name** | **str** | Card device name | [optional] 
+**card_device** | **str** | Card device number  API extension: resources_v2 | [optional] 
+**card_name** | **str** | Card device name  API extension: resources_v2 | [optional] 
 **cuda_version** | **str** | Version of the CUDA API | [optional] 
 **model** | **str** | Model name | [optional] 
 **nvrm_version** | **str** | Version of the NVRM (usually driver version) | [optional] 

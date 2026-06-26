@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bus_address** | **int** | USB address (bus) | [optional] 
 **device_address** | **int** | USB address (device) | [optional] 
-**interfaces** | [**List[ResourcesUSBDeviceInterface]**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/ResourcesUSBDeviceInterface.md) | List of USB interfaces | [optional] 
+**interfaces** | [**List[ResourcesUSBDeviceInterface]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ResourcesUSBDeviceInterface.md) | List of USB interfaces | [optional] 
 **product** | **str** | Name of the product | [optional] 
 **product_id** | **str** | USB ID of the product | [optional] 
-**serial** | **str** | USB serial number | [optional] 
+**serial** | **str** | USB serial number  API extension: device_usb_serial. | [optional] 
 **speed** | **float** | Transfer speed (Mbit/s) | [optional] 
 **vendor** | **str** | Name of the vendor | [optional] 
 **vendor_id** | **str** | USB ID of the vendor | [optional] 

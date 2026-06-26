@@ -28,9 +28,9 @@ class StorageBucketsPost(BaseModel):
     """
     StorageBucketsPost represents the fields of a new storage pool bucket
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Storage bucket configuration map", json_schema_extra={"examples": [{"size": "50GiB"}]})
-    description: Optional[StrictStr] = Field(default=None, description="Description of the storage bucket", json_schema_extra={"examples": ["My custom bucket"]})
-    name: Optional[StrictStr] = Field(default=None, description="Bucket name", json_schema_extra={"examples": ["foo"]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
+    description: Optional[StrictStr] = Field(default=None, description="Description of the storage bucket  API extension: storage_buckets", json_schema_extra={"examples": ["My custom bucket"]})
+    name: Optional[StrictStr] = Field(default=None, description="Bucket name  API extension: storage_buckets", json_schema_extra={"examples": ["foo"]})
     __properties: ClassVar[List[str]] = ["config", "description", "name"]
 
     model_config = ConfigDict(

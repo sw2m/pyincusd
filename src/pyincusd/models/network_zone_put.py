@@ -28,7 +28,7 @@ class NetworkZonePut(BaseModel):
     """
     NetworkZonePut represents the modifiable fields of a network zone
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Zone configuration map (refer to doc/network-zones.md)", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the network zone", json_schema_extra={"examples": ["Internal domain"]})
     __properties: ClassVar[List[str]] = ["config", "description"]
 

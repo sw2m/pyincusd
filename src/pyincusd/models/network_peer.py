@@ -28,14 +28,14 @@ class NetworkPeer(BaseModel):
     """
     NetworkPeer
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Peer configuration map (refer to doc/network-peers.md)", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the peer", json_schema_extra={"examples": ["Peering with network1 in project1"]})
     name: Optional[StrictStr] = Field(default=None, description="Name of the peer", json_schema_extra={"examples": ["project1-network1"]})
     status: Optional[StrictStr] = Field(default=None, description="The state of the peering", json_schema_extra={"examples": ["Pending"]})
-    target_integration: Optional[StrictStr] = Field(default=None, description="Name of the target integration", json_schema_extra={"examples": ["ovn-ic1"]})
+    target_integration: Optional[StrictStr] = Field(default=None, description="Name of the target integration  API extension: network_integrations.", json_schema_extra={"examples": ["ovn-ic1"]})
     target_network: Optional[StrictStr] = Field(default=None, description="Name of the target network", json_schema_extra={"examples": ["network1"]})
     target_project: Optional[StrictStr] = Field(default=None, description="Name of the target project", json_schema_extra={"examples": ["project1"]})
-    type: Optional[StrictStr] = Field(default=None, description="Type of peer", json_schema_extra={"examples": ["local"]})
+    type: Optional[StrictStr] = Field(default=None, description="Type of peer  API extension: network_integrations.", json_schema_extra={"examples": ["local"]})
     used_by: Optional[List[StrictStr]] = Field(default=None, description="List of URLs of objects using this network peering", json_schema_extra={"examples": [["/1.0/network-acls/test", "/1.0/network-acls/foo"]]})
     __properties: ClassVar[List[str]] = ["config", "description", "name", "status", "target_integration", "target_network", "target_project", "type", "used_by"]
 

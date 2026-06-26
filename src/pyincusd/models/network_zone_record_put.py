@@ -29,7 +29,7 @@ class NetworkZoneRecordPut(BaseModel):
     """
     NetworkZoneRecordPut represents the modifiable fields of a network zone record
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Advanced configuration for the record", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the record", json_schema_extra={"examples": ["SPF record"]})
     entries: Optional[List[NetworkZoneRecordEntry]] = Field(default=None, description="Entries in the record")
     __properties: ClassVar[List[str]] = ["config", "description", "entries"]

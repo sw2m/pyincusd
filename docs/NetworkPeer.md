@@ -5,14 +5,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Peer configuration map (refer to doc/network-peers.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the peer | [optional] 
 **name** | **str** | Name of the peer | [optional] [readonly] 
 **status** | **str** | The state of the peering | [optional] [readonly] 
-**target_integration** | **str** | Name of the target integration | [optional] 
+**target_integration** | **str** | Name of the target integration  API extension: network_integrations. | [optional] 
 **target_network** | **str** | Name of the target network | [optional] [readonly] 
 **target_project** | **str** | Name of the target project | [optional] [readonly] 
-**type** | **str** | Type of peer | [optional] 
+**type** | **str** | Type of peer  API extension: network_integrations. | [optional] 
 **used_by** | **List[str]** | List of URLs of objects using this network peering | [optional] [readonly] 
 
 ## Example

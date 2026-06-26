@@ -34,14 +34,14 @@ class ResourcesGPUCard(BaseModel):
     driver: Optional[StrictStr] = Field(default=None, description="Kernel driver currently associated with the GPU", json_schema_extra={"examples": ["i915"]})
     driver_version: Optional[StrictStr] = Field(default=None, description="Version of the kernel driver", json_schema_extra={"examples": ["5.8.0-36-generic"]})
     drm: Optional[ResourcesGPUCardDRM] = None
-    mdev: Optional[Dict[str, ResourcesGPUCardMdev]] = Field(default=None, description="Map of available mediated device profiles")
+    mdev: Optional[Dict[str, ResourcesGPUCardMdev]] = Field(default=None, description="Map of available mediated device profiles  API extension: resources_gpu_mdev")
     numa_node: Optional[StrictInt] = Field(default=None, description="NUMA node the GPU is a part of", json_schema_extra={"examples": [0]})
     nvidia: Optional[ResourcesGPUCardNvidia] = None
     pci_address: Optional[StrictStr] = Field(default=None, description="PCI address", json_schema_extra={"examples": ["0000:00:02.0"]})
     product: Optional[StrictStr] = Field(default=None, description="Name of the product", json_schema_extra={"examples": ["HD Graphics 620"]})
     product_id: Optional[StrictStr] = Field(default=None, description="PCI ID of the product", json_schema_extra={"examples": ["5916"]})
     sriov: Optional[ResourcesGPUCardSRIOV] = None
-    usb_address: Optional[StrictStr] = Field(default=None, description="USB address (for USB cards)", json_schema_extra={"examples": ["2:7"]})
+    usb_address: Optional[StrictStr] = Field(default=None, description="USB address (for USB cards)  API extension: resources_gpu_usb", json_schema_extra={"examples": ["2:7"]})
     vendor: Optional[StrictStr] = Field(default=None, description="Name of the vendor", json_schema_extra={"examples": ["Intel Corporation"]})
     vendor_id: Optional[StrictStr] = Field(default=None, description="PCI ID of the vendor", json_schema_extra={"examples": ["8086"]})
     __properties: ClassVar[List[str]] = ["driver", "driver_version", "drm", "mdev", "numa_node", "nvidia", "pci_address", "product", "product_id", "sriov", "usb_address", "vendor", "vendor_id"]

@@ -33,10 +33,10 @@ class Server(BaseModel):
     api_status: Optional[StrictStr] = Field(default=None, description="Support status of the current API (one of \"devel\", \"stable\" or \"deprecated\")", json_schema_extra={"examples": ["stable"]})
     api_version: Optional[StrictStr] = Field(default=None, description="API version number", json_schema_extra={"examples": ["1.0"]})
     auth: Optional[StrictStr] = Field(default=None, description="Whether the client is trusted (one of \"trusted\" or \"untrusted\")", json_schema_extra={"examples": ["untrusted"]})
-    auth_methods: Optional[List[StrictStr]] = Field(default=None, description="List of supported authentication methods", json_schema_extra={"examples": [["tls"]]})
-    auth_user_method: Optional[StrictStr] = Field(default=None, description="The current API user login method", json_schema_extra={"examples": ["unix"]})
-    auth_user_name: Optional[StrictStr] = Field(default=None, description="The current API user identifier", json_schema_extra={"examples": ["uid=201105"]})
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Server configuration map (refer to doc/server.md)", json_schema_extra={"examples": [{"core.https_address": ":8443"}]})
+    auth_methods: Optional[List[StrictStr]] = Field(default=None, description="List of supported authentication methods  API extension: macaroon_authentication", json_schema_extra={"examples": [["tls"]]})
+    auth_user_method: Optional[StrictStr] = Field(default=None, description="The current API user login method  API extension: auth_user", json_schema_extra={"examples": ["unix"]})
+    auth_user_name: Optional[StrictStr] = Field(default=None, description="The current API user identifier  API extension: auth_user", json_schema_extra={"examples": ["uid=201105"]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     environment: Optional[ServerEnvironment] = None
     public: Optional[StrictBool] = Field(default=None, description="Whether the server is public-only (only public endpoints are implemented)", json_schema_extra={"examples": [False]})
     __properties: ClassVar[List[str]] = ["api_extensions", "api_status", "api_version", "auth", "auth_methods", "auth_user_method", "auth_user_name", "config", "environment", "public"]

@@ -28,7 +28,7 @@ class InstanceStateCPU(BaseModel):
     """
     InstanceStateCPU
     """ # noqa: E501
-    allocated_time: Optional[StrictInt] = Field(default=None, description="CPU time available per second, in nanoseconds", json_schema_extra={"examples": [4000000000]})
+    allocated_time: Optional[StrictInt] = Field(default=None, description="CPU time available per second, in nanoseconds  API extension: instance_state_cpu_time", json_schema_extra={"examples": [4000000000]})
     usage: Optional[StrictInt] = Field(default=None, description="CPU usage in nanoseconds", json_schema_extra={"examples": [3637691016]})
     __properties: ClassVar[List[str]] = ["allocated_time", "usage"]
 

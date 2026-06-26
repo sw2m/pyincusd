@@ -5,13 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**compression_algorithm** | **str** | What compression algorithm to use | [optional] 
+**compression_algorithm** | **str** | What compression algorithm to use  API extension: backup_compression_algorithm | [optional] 
 **expires_at** | **datetime** | When the backup expires (gets auto-deleted) | [optional] 
 **instance_only** | **bool** | Whether to ignore snapshots | [optional] 
 **name** | **str** | Backup name | [optional] 
 **optimized_storage** | **bool** | Whether to use a pool-optimized binary format (instead of plain tarball) | [optional] 
 **root_only** | **bool** | Whether to ignore dependent volumes | [optional] 
-**target** | [**BackupTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/BackupTarget.md) |  | [optional] 
+**target** | [**BackupTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/BackupTarget.md) |  | [optional] 
 
 ## Example
 

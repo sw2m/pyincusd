@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **description** | **str** | Alias description | [optional] 
 **name** | **str** | Alias name | [optional] 
 **target** | **str** | Target fingerprint for the alias | [optional] 
-**type** | **str** | Alias type (container or virtual-machine) | [optional] 
+**type** | **str** | Alias type (container or virtual-machine)  API extension: image_types | [optional] 
 
 ## Example
 

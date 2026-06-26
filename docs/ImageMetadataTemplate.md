@@ -7,11 +7,11 @@ ImageMetadataTemplate represents a template entry in image metadata (used in ima
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **create_only** | **bool** | Whether to trigger only if the file is missing | [optional] 
-**gid** | **str** | The file owner gid. | [optional] 
-**mode** | **str** | The file permissions. | [optional] 
+**gid** | **str** | The file owner gid.  API extension: image_template_permissions | [optional] 
+**mode** | **str** | The file permissions.  API extension: image_template_permissions | [optional] 
 **properties** | **Dict[str, str]** | Key/value properties to pass to the template | [optional] 
 **template** | **str** | The template itself as a valid pongo2 template | [optional] 
-**uid** | **str** | The file owner uid. | [optional] 
+**uid** | **str** | The file owner uid.  API extension: image_template_permissions | [optional] 
 **when** | **List[str]** | When to trigger the template (create, copy or start) | [optional] 
 
 ## Example

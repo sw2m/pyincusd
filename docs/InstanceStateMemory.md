@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **swap_usage** | **int** | SWAP usage in bytes | [optional] 
 **swap_usage_peak** | **int** | Peak SWAP usage in bytes | [optional] 
-**total** | **int** | Total memory size in bytes | [optional] 
+**total** | **int** | Total memory size in bytes  API extension: instances_state_total | [optional] 
 **usage** | **int** | Memory usage in bytes | [optional] 
 **usage_peak** | **int** | Peak memory usage in bytes | [optional] 
 

@@ -6,8 +6,8 @@ StoragePoolsPost represents the fields of a new storage pool
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Storage pool configuration map (refer to doc/storage.md) | [optional] 
-**description** | **str** | Description of the storage pool | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**description** | **str** | Description of the storage pool  API extension: entity_description | [optional] 
 **driver** | **str** | Storage pool driver (btrfs, ceph, cephfs, cephobject, dir, lvm, lvmcluster or zfs) | [optional] 
 **name** | **str** | Storage pool name | [optional] 
 

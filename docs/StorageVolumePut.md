@@ -6,9 +6,9 @@ StorageVolumePut represents the modifiable fields of a storage volume
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Storage volume configuration map (refer to doc/storage.md) | [optional] 
-**description** | **str** | Description of the storage volume | [optional] 
-**restore** | **str** | Name of a snapshot to restore | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**description** | **str** | Description of the storage volume  API extension: entity_description | [optional] 
+**restore** | **str** | Name of a snapshot to restore  API extension: storage_api_volume_snapshots | [optional] 
 
 ## Example
 

@@ -6,7 +6,7 @@ ServerPut represents the modifiable fields of a server configuration
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Server configuration map (refer to doc/server.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 
 ## Example
 

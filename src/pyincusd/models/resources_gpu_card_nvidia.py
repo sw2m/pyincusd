@@ -30,8 +30,8 @@ class ResourcesGPUCardNvidia(BaseModel):
     """ # noqa: E501
     architecture: Optional[StrictStr] = Field(default=None, description="Architecture (generation)", json_schema_extra={"examples": ["3.5"]})
     brand: Optional[StrictStr] = Field(default=None, description="Brand name", json_schema_extra={"examples": ["GeForce"]})
-    card_device: Optional[StrictStr] = Field(default=None, description="Card device number", json_schema_extra={"examples": ["195:0"]})
-    card_name: Optional[StrictStr] = Field(default=None, description="Card device name", json_schema_extra={"examples": ["nvidia0"]})
+    card_device: Optional[StrictStr] = Field(default=None, description="Card device number  API extension: resources_v2", json_schema_extra={"examples": ["195:0"]})
+    card_name: Optional[StrictStr] = Field(default=None, description="Card device name  API extension: resources_v2", json_schema_extra={"examples": ["nvidia0"]})
     cuda_version: Optional[StrictStr] = Field(default=None, description="Version of the CUDA API", json_schema_extra={"examples": ["11.0"]})
     model: Optional[StrictStr] = Field(default=None, description="Model name", json_schema_extra={"examples": ["GeForce GT 730"]})
     nvrm_version: Optional[StrictStr] = Field(default=None, description="Version of the NVRM (usually driver version)", json_schema_extra={"examples": ["450.102.04"]})

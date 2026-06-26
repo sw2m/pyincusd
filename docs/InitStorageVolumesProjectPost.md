@@ -7,12 +7,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pool** | **str** | Storage pool in which the volume will reside | [optional] 
 **project** | **str** | Project in which the volume will reside | [optional] 
-**config** | **object** | Storage volume configuration map (refer to doc/storage.md) | [optional] 
-**content_type** | **str** | Volume content type (filesystem or block) | [optional] 
-**description** | **str** | Description of the storage volume | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**content_type** | **str** | Volume content type (filesystem or block)  API extension: custom_block_volumes | [optional] 
+**description** | **str** | Description of the storage volume  API extension: entity_description | [optional] 
 **name** | **str** | Volume name | [optional] 
-**restore** | **str** | Name of a snapshot to restore | [optional] 
-**source** | [**StorageVolumeSource**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/StorageVolumeSource.md) |  | [optional] 
+**restore** | **str** | Name of a snapshot to restore  API extension: storage_api_volume_snapshots | [optional] 
+**source** | [**StorageVolumeSource**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/StorageVolumeSource.md) |  | [optional] 
 **type** | **str** | Volume type (container, custom, image or virtual-machine) | [optional] 
 
 ## Example

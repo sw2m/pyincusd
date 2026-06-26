@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **int** | Total size in bytes | [optional] 
+**total** | **int** | Total size in bytes  API extension: instances_state_total | [optional] 
 **usage** | **int** | Disk usage in bytes | [optional] 
 
 ## Example

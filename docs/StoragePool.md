@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Storage pool configuration map (refer to doc/storage.md) | [optional] 
-**description** | **str** | Description of the storage pool | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**description** | **str** | Description of the storage pool  API extension: entity_description | [optional] 
 **driver** | **str** | Storage pool driver (btrfs, ceph, cephfs, cephobject, dir, lvm, lvmcluster or zfs) | [optional] 
-**locations** | **List[str]** | Cluster members on which the storage pool has been defined | [optional] [readonly] 
+**locations** | **List[str]** | Cluster members on which the storage pool has been defined  API extension: clustering | [optional] [readonly] 
 **name** | **str** | Storage pool name | [optional] 
-**status** | **str** | Pool status (Pending, Created, Errored or Unknown) | [optional] [readonly] 
+**status** | **str** | Pool status (Pending, Created, Errored or Unknown)  API extension: clustering | [optional] [readonly] 
 **used_by** | **List[str]** | List of URLs of objects using this storage pool | [optional] 
 
 ## Example

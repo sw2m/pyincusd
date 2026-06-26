@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Cluster group configuration map | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | The description of the cluster group | [optional] 
 **members** | **List[str]** | List of members in this group | [optional] 
 **name** | **str** | The new name of the cluster group | [optional] 
-**used_by** | **List[str]** | List of URLs of objects using this cluster group | [optional] [readonly] 
+**used_by** | **List[str]** | List of URLs of objects using this cluster group  API extension: cluster_group_usedby. | [optional] [readonly] 
 
 ## Example
 

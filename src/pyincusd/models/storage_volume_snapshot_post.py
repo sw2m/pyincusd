@@ -29,7 +29,7 @@ class StorageVolumeSnapshotPost(BaseModel):
     """
     StorageVolumeSnapshotPost represents the fields required to rename/move a storage volume snapshot
     """ # noqa: E501
-    migration: Optional[StrictBool] = Field(default=None, description="Initiate volume snapshot migration", json_schema_extra={"examples": [False]})
+    migration: Optional[StrictBool] = Field(default=None, description="Initiate volume snapshot migration  API extension: storage_api_remote_volume_snapshot_copy", json_schema_extra={"examples": [False]})
     name: Optional[StrictStr] = Field(default=None, description="New snapshot name", json_schema_extra={"examples": ["snap1"]})
     target: Optional[StorageVolumePostTarget] = None
     __properties: ClassVar[List[str]] = ["migration", "name", "target"]

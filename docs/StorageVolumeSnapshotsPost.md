@@ -6,7 +6,7 @@ StorageVolumeSnapshotsPost represents the fields available for a new storage vol
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**expires_at** | **datetime** | When the snapshot expires (gets auto-deleted) | [optional] 
+**expires_at** | **datetime** | When the snapshot expires (gets auto-deleted)  API extension: custom_volume_snapshot_expiry | [optional] 
 **name** | **str** | Snapshot name | [optional] 
 
 ## Example

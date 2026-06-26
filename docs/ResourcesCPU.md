@@ -6,8 +6,8 @@ ResourcesCPU represents the cpu resources available on the system
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**architecture** | **str** | Architecture name | [optional] 
-**sockets** | [**List[ResourcesCPUSocket]**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/ResourcesCPUSocket.md) | List of CPU sockets | [optional] 
+**architecture** | **str** | Architecture name  API extension: resources_v2 | [optional] 
+**sockets** | [**List[ResourcesCPUSocket]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ResourcesCPUSocket.md) | List of CPU sockets | [optional] 
 **total** | **int** | Total number of CPU threads (from all sockets and cores) | [optional] 
 
 ## Example

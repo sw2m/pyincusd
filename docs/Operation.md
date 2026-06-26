@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **description** | **str** | Description of the operation | [optional] 
 **err** | **str** | Operation error message | [optional] 
 **id** | **str** | UUID of the operation | [optional] 
-**location** | **str** | What cluster member this record was found on | [optional] 
+**location** | **str** | What cluster member this record was found on  API extension: operation_location | [optional] 
 **may_cancel** | **bool** | Whether the operation can be canceled | [optional] 
 **metadata** | **object** | Operation specific metadata | [optional] 
 **resources** | **object** | Affected resources | [optional] 

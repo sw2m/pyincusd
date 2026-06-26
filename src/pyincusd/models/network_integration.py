@@ -28,7 +28,7 @@ class NetworkIntegration(BaseModel):
     """
     NetworkIntegration
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Integration configuration map (refer to doc/network-integrations.md)", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the network integration", json_schema_extra={"examples": ["OVN interconnection for region1"]})
     name: Optional[StrictStr] = Field(default=None, description="The name of the integration", json_schema_extra={"examples": ["region1"]})
     type: Optional[StrictStr] = Field(default=None, description="The type of integration", json_schema_extra={"examples": ["ovn"]})

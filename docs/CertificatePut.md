@@ -6,11 +6,11 @@ CertificatePut represents the modifiable fields of a certificate
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**certificate** | **str** | The certificate itself, as PEM encoded X509 (or as base64 encoded X509 on POST) | [optional] 
-**description** | **str** | Certificate description | [optional] 
+**certificate** | **str** | The certificate itself, as PEM encoded X509 (or as base64 encoded X509 on POST)  API extension: certificate_self_renewal | [optional] 
+**description** | **str** | Certificate description  API extension: certificate_description | [optional] 
 **name** | **str** | Name associated with the certificate | [optional] 
-**projects** | **List[str]** | List of allowed projects (applies when restricted) | [optional] 
-**restricted** | **bool** | Whether to limit the certificate to listed projects | [optional] 
+**projects** | **List[str]** | List of allowed projects (applies when restricted)  API extension: certificate_project | [optional] 
+**restricted** | **bool** | Whether to limit the certificate to listed projects  API extension: certificate_project | [optional] 
 **type** | **str** | Usage type for the certificate | [optional] 
 
 ## Example

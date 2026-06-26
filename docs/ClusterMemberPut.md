@@ -6,11 +6,11 @@ ClusterMemberPut represents the modifiable fields of a cluster member
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Additional configuration information | [optional] 
-**description** | **str** | Cluster member description | [optional] 
-**failure_domain** | **str** | Name of the failure domain for this cluster member | [optional] 
-**groups** | **List[str]** | List of cluster groups this member belongs to | [optional] 
-**roles** | **List[str]** | List of roles held by this cluster member | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**description** | **str** | Cluster member description  API extension: clustering_description | [optional] 
+**failure_domain** | **str** | Name of the failure domain for this cluster member  API extension: clustering_failure_domains | [optional] 
+**groups** | **List[str]** | List of cluster groups this member belongs to  API extension: clustering_groups | [optional] 
+**roles** | **List[str]** | List of roles held by this cluster member  API extension: clustering_roles | [optional] 
 
 ## Example
 

@@ -6,7 +6,7 @@ NetworkZonePut represents the modifiable fields of a network zone
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Zone configuration map (refer to doc/network-zones.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the network zone | [optional] 
 
 ## Example

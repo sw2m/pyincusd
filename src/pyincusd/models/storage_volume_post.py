@@ -30,13 +30,13 @@ class StorageVolumePost(BaseModel):
     """
     StorageVolumePost represents the fields required to rename a storage pool volume
     """ # noqa: E501
-    migration: Optional[StrictBool] = Field(default=None, description="Initiate volume migration", json_schema_extra={"examples": [False]})
+    migration: Optional[StrictBool] = Field(default=None, description="Initiate volume migration  API extension: storage_api_remote_volume_handling", json_schema_extra={"examples": [False]})
     name: Optional[StrictStr] = Field(default=None, description="New volume name", json_schema_extra={"examples": ["foo"]})
-    pool: Optional[StrictStr] = Field(default=None, description="New storage pool", json_schema_extra={"examples": ["remote"]})
-    project: Optional[StrictStr] = Field(default=None, description="New project name", json_schema_extra={"examples": ["foo"]})
+    pool: Optional[StrictStr] = Field(default=None, description="New storage pool  API extension: storage_api_local_volume_handling", json_schema_extra={"examples": ["remote"]})
+    project: Optional[StrictStr] = Field(default=None, description="New project name  API extension: storage_volume_project_move", json_schema_extra={"examples": ["foo"]})
     source: Optional[StorageVolumeSource] = None
     target: Optional[StorageVolumePostTarget] = None
-    volume_only: Optional[StrictBool] = Field(default=None, description="Whether snapshots should be discarded (migration only)", json_schema_extra={"examples": [False]})
+    volume_only: Optional[StrictBool] = Field(default=None, description="Whether snapshots should be discarded (migration only)  API extension: storage_api_remote_volume_snapshots", json_schema_extra={"examples": [False]})
     __properties: ClassVar[List[str]] = ["migration", "name", "pool", "project", "source", "target", "volume_only"]
 
     model_config = ConfigDict(

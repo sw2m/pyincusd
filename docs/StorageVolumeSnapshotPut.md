@@ -7,7 +7,7 @@ StorageVolumeSnapshotPut represents the modifiable fields of a storage volume
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** | Description of the storage volume | [optional] 
-**expires_at** | **datetime** | When the snapshot expires (gets auto-deleted) | [optional] 
+**expires_at** | **datetime** | When the snapshot expires (gets auto-deleted)  API extension: custom_volume_snapshot_expiry | [optional] 
 
 ## Example
 

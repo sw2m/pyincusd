@@ -7,7 +7,7 @@ Refer to doc/howto/network_address_sets.md for details.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addresses** | **List[str]** | List of addresses in the set | [optional] 
-**config** | **object** | Address set configuration map (refer to doc/network-address-sets.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the address set | [optional] 
 **name** | **str** | The new name of the address set | [optional] 
 **project** | **str** | Project name | [optional] 

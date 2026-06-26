@@ -29,23 +29,23 @@ class ResourcesStorageDisk(BaseModel):
     """
     ResourcesStorageDisk represents a disk
     """ # noqa: E501
-    block_size: Optional[StrictInt] = Field(default=None, description="Block size", json_schema_extra={"examples": [512]})
+    block_size: Optional[StrictInt] = Field(default=None, description="Block size  API extension: resources_disk_sata", json_schema_extra={"examples": [512]})
     device: Optional[StrictStr] = Field(default=None, description="Device number", json_schema_extra={"examples": ["259:0"]})
-    device_id: Optional[StrictStr] = Field(default=None, description="Device by-id identifier", json_schema_extra={"examples": ["nvme-eui.0000000001000000e4d25cafae2e4c00"]})
-    device_path: Optional[StrictStr] = Field(default=None, description="Device by-path identifier", json_schema_extra={"examples": ["pci-0000:05:00.0-nvme-1"]})
-    firmware_version: Optional[StrictStr] = Field(default=None, description="Current firmware version", json_schema_extra={"examples": ["PSF121C"]})
+    device_id: Optional[StrictStr] = Field(default=None, description="Device by-id identifier  API extension: resources_disk_id", json_schema_extra={"examples": ["nvme-eui.0000000001000000e4d25cafae2e4c00"]})
+    device_path: Optional[StrictStr] = Field(default=None, description="Device by-path identifier  API extension: resources_disk_sata", json_schema_extra={"examples": ["pci-0000:05:00.0-nvme-1"]})
+    firmware_version: Optional[StrictStr] = Field(default=None, description="Current firmware version  API extension: resources_disk_sata", json_schema_extra={"examples": ["PSF121C"]})
     id: Optional[StrictStr] = Field(default=None, description="ID of the disk (device name)", json_schema_extra={"examples": ["nvme0n1"]})
     model: Optional[StrictStr] = Field(default=None, description="Disk model name", json_schema_extra={"examples": ["INTEL SSDPEKKW256G7"]})
     numa_node: Optional[StrictInt] = Field(default=None, description="NUMA node the disk is a part of", json_schema_extra={"examples": [0]})
     partitions: Optional[List[ResourcesStorageDiskPartition]] = Field(default=None, description="List of partitions")
-    pci_address: Optional[StrictStr] = Field(default=None, description="PCI address", json_schema_extra={"examples": ["0000:05:00.0"]})
+    pci_address: Optional[StrictStr] = Field(default=None, description="PCI address  API extension: resources_disk_address", json_schema_extra={"examples": ["0000:05:00.0"]})
     read_only: Optional[StrictBool] = Field(default=None, description="Whether the disk is read-only", json_schema_extra={"examples": [False]})
     removable: Optional[StrictBool] = Field(default=None, description="Whether the disk is removable (hot-plug)", json_schema_extra={"examples": [False]})
-    rpm: Optional[StrictInt] = Field(default=None, description="Rotation speed (RPM)", json_schema_extra={"examples": [0]})
-    serial: Optional[StrictStr] = Field(default=None, description="Serial number", json_schema_extra={"examples": ["BTPY63440ARH256D"]})
+    rpm: Optional[StrictInt] = Field(default=None, description="Rotation speed (RPM)  API extension: resources_disk_sata", json_schema_extra={"examples": [0]})
+    serial: Optional[StrictStr] = Field(default=None, description="Serial number  API extension: resources_disk_sata", json_schema_extra={"examples": ["BTPY63440ARH256D"]})
     size: Optional[StrictInt] = Field(default=None, description="Total size of the disk (bytes)", json_schema_extra={"examples": [256060514304]})
     type: Optional[StrictStr] = Field(default=None, description="Storage type", json_schema_extra={"examples": ["nvme"]})
-    usb_address: Optional[StrictStr] = Field(default=None, description="USB address", json_schema_extra={"examples": ["3:5"]})
+    usb_address: Optional[StrictStr] = Field(default=None, description="USB address  API extension: resources_disk_address", json_schema_extra={"examples": ["3:5"]})
     wwn: Optional[StrictStr] = Field(default=None, description="WWN identifier", json_schema_extra={"examples": ["eui.0000000001000000e4d25cafae2e4c00"]})
     __properties: ClassVar[List[str]] = ["block_size", "device", "device_id", "device_path", "firmware_version", "id", "model", "numa_node", "partitions", "pci_address", "read_only", "removable", "rpm", "serial", "size", "type", "usb_address", "wwn"]
 

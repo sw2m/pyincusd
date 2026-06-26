@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**allocated_time** | **int** | CPU time available per second, in nanoseconds | [optional] 
+**allocated_time** | **int** | CPU time available per second, in nanoseconds  API extension: instance_state_cpu_time | [optional] 
 **usage** | **int** | CPU usage in nanoseconds | [optional] 
 
 ## Example

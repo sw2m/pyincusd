@@ -29,10 +29,10 @@ class NetworkStateOVN(BaseModel):
     NetworkStateOVN represents OVN specific state
     """ # noqa: E501
     chassis: Optional[StrictStr] = Field(default=None, description="OVN network chassis name", json_schema_extra={"examples": ["server01"]})
-    logical_router: Optional[StrictStr] = Field(default=None, description="OVN logical router name", json_schema_extra={"examples": ["incus-net1-lr"]})
-    logical_switch: Optional[StrictStr] = Field(default=None, description="OVN logical switch name", json_schema_extra={"examples": ["incus-net1-ls-int"]})
-    uplink_ipv4: Optional[StrictStr] = Field(default=None, description="OVN network uplink ipv4 address", json_schema_extra={"examples": ["10.0.0.1"]})
-    uplink_ipv6: Optional[StrictStr] = Field(default=None, description="OVN network uplink ipv6 address", json_schema_extra={"examples": ["2001:0000:130F:0000:0000:09C0:876A:130B."]})
+    logical_router: Optional[StrictStr] = Field(default=None, description="OVN logical router name  API extension: network_state_ovn_lr", json_schema_extra={"examples": ["incus-net1-lr"]})
+    logical_switch: Optional[StrictStr] = Field(default=None, description="OVN logical switch name  API extension: network_state_ovn_ls", json_schema_extra={"examples": ["incus-net1-ls-int"]})
+    uplink_ipv4: Optional[StrictStr] = Field(default=None, description="OVN network uplink ipv4 address  API extension: network_ovn_state_addresses", json_schema_extra={"examples": ["10.0.0.1"]})
+    uplink_ipv6: Optional[StrictStr] = Field(default=None, description="OVN network uplink ipv6 address  API extension: network_ovn_state_addresses", json_schema_extra={"examples": ["2001:0000:130F:0000:0000:09C0:876A:130B"]})
     __properties: ClassVar[List[str]] = ["chassis", "logical_router", "logical_switch", "uplink_ipv4", "uplink_ipv6"]
 
     model_config = ConfigDict(

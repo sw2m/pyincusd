@@ -28,12 +28,12 @@ class Profile(BaseModel):
     """
     Profile represents a profile
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Instance configuration map (refer to doc/instances.md)", json_schema_extra={"examples": [{"limits.cpu": "4", "limits.memory": "4GiB"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the profile", json_schema_extra={"examples": ["Medium size instances"]})
-    devices: Optional[Dict[str, Any]] = Field(default=None, description="List of devices", json_schema_extra={"examples": [{"eth0": {"name": "eth0", "network": "mybr0", "type": "nic"}, "root": {"path": "/", "pool": "default", "type": "disk"}}]})
+    devices: Optional[Dict[str, Any]] = Field(default=None, description="DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     name: Optional[StrictStr] = Field(default=None, description="The profile name", json_schema_extra={"examples": ["foo"]})
-    project: Optional[StrictStr] = Field(default=None, description="Project name", json_schema_extra={"examples": ["project1"]})
-    used_by: Optional[List[StrictStr]] = Field(default=None, description="List of URLs of objects using this profile", json_schema_extra={"examples": [["/1.0/instances/c1", "/1.0/instances/v1"]]})
+    project: Optional[StrictStr] = Field(default=None, description="Project name  API extension: profiles_all_projects", json_schema_extra={"examples": ["project1"]})
+    used_by: Optional[List[StrictStr]] = Field(default=None, description="List of URLs of objects using this profile  API extension: profile_usedby", json_schema_extra={"examples": [["/1.0/instances/c1", "/1.0/instances/v1"]]})
     __properties: ClassVar[List[str]] = ["config", "description", "devices", "name", "project", "used_by"]
 
     model_config = ConfigDict(

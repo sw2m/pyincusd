@@ -8,14 +8,14 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **driver** | **str** | Kernel driver currently associated with the GPU | [optional] 
 **driver_version** | **str** | Version of the kernel driver | [optional] 
-**iommu_group** | **int** | IOMMU group number | [optional] 
+**iommu_group** | **int** | IOMMU group number  API extension: resources_pci_iommu | [optional] 
 **numa_node** | **int** | NUMA node the card is a part of | [optional] 
 **pci_address** | **str** | PCI address | [optional] 
 **product** | **str** | Name of the product | [optional] 
 **product_id** | **str** | PCI ID of the product | [optional] 
 **vendor** | **str** | Name of the vendor | [optional] 
 **vendor_id** | **str** | PCI ID of the vendor | [optional] 
-**vpd** | [**ResourcesPCIVPD**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/ResourcesPCIVPD.md) |  | [optional] 
+**vpd** | [**ResourcesPCIVPD**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ResourcesPCIVPD.md) |  | [optional] 
 
 ## Example
 

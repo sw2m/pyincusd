@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**expires_at** | **datetime** | When the snapshot expires (gets auto-deleted) | [optional] 
+**expires_at** | **datetime** | When the snapshot expires (gets auto-deleted)  API extension: snapshot_expiry_creation | [optional] 
 **name** | **str** | Snapshot name | [optional] 
 **stateful** | **bool** | Whether the snapshot should include runtime state | [optional] 
 

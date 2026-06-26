@@ -29,7 +29,7 @@ class NetworkACLsPost(BaseModel):
     """
     NetworkACLsPost
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="ACL configuration map (refer to doc/network-acls.md)", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the ACL", json_schema_extra={"examples": ["Web servers"]})
     egress: Optional[List[NetworkACLRule]] = Field(default=None, description="List of egress rules (order independent)")
     ingress: Optional[List[NetworkACLRule]] = Field(default=None, description="List of ingress rules (order independent)")

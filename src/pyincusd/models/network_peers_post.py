@@ -28,13 +28,13 @@ class NetworkPeersPost(BaseModel):
     """
     NetworkPeersPost represents the fields of a new network peering
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Peer configuration map (refer to doc/network-peers.md)", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the peer", json_schema_extra={"examples": ["Peering with network1 in project1"]})
     name: Optional[StrictStr] = Field(default=None, description="Name of the peer", json_schema_extra={"examples": ["project1-network1"]})
-    target_integration: Optional[StrictStr] = Field(default=None, description="Name of the target integration", json_schema_extra={"examples": ["ovn-ic1"]})
+    target_integration: Optional[StrictStr] = Field(default=None, description="Name of the target integration  API extension: network_integrations.", json_schema_extra={"examples": ["ovn-ic1"]})
     target_network: Optional[StrictStr] = Field(default=None, description="Name of the target network", json_schema_extra={"examples": ["network1"]})
     target_project: Optional[StrictStr] = Field(default=None, description="Name of the target project", json_schema_extra={"examples": ["project1"]})
-    type: Optional[StrictStr] = Field(default=None, description="Type of peer", json_schema_extra={"examples": ["local"]})
+    type: Optional[StrictStr] = Field(default=None, description="Type of peer  API extension: network_integrations.", json_schema_extra={"examples": ["local"]})
     __properties: ClassVar[List[str]] = ["config", "description", "name", "target_integration", "target_network", "target_project", "type"]
 
     model_config = ConfigDict(

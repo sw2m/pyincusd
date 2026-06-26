@@ -31,8 +31,8 @@ class ImageExportPost(BaseModel):
     """ # noqa: E501
     aliases: Optional[List[ImageAlias]] = Field(default=None, description="List of aliases to set on the image")
     certificate: Optional[StrictStr] = Field(default=None, description="Remote server certificate", json_schema_extra={"examples": ["X509 PEM certificate"]})
-    profiles: Optional[List[StrictStr]] = Field(default=None, description="List of profiles to use", json_schema_extra={"examples": [["default"]]})
-    project: Optional[StrictStr] = Field(default=None, description="Project name", json_schema_extra={"examples": ["project1"]})
+    profiles: Optional[List[StrictStr]] = Field(default=None, description="List of profiles to use  API extension: image_copy_profile", json_schema_extra={"examples": [["default"]]})
+    project: Optional[StrictStr] = Field(default=None, description="Project name  API extension: image_target_project", json_schema_extra={"examples": ["project1"]})
     secret: Optional[StrictStr] = Field(default=None, description="Image receive secret", json_schema_extra={"examples": ["RANDOM-STRING"]})
     target: Optional[StrictStr] = Field(default=None, description="Target server URL", json_schema_extra={"examples": ["https://1.2.3.4:8443"]})
     __properties: ClassVar[List[str]] = ["aliases", "certificate", "profiles", "project", "secret", "target"]

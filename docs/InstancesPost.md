@@ -6,17 +6,17 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **architecture** | **str** | Architecture name | [optional] 
-**config** | **object** | Instance configuration (see doc/instances.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Instance description | [optional] 
-**devices** | **object** | Instance devices (see doc/instances.md) | [optional] 
+**devices** | **object** | DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **disk_only** | **bool** | Whether only the instances disk should be restored | [optional] 
 **ephemeral** | **bool** | Whether the instance is ephemeral (deleted on shutdown) | [optional] 
 **instance_type** | **str** | Cloud instance type (AWS, GCP, Azure, ...) to emulate with limits | [optional] 
 **name** | **str** | Instance name | [optional] 
 **profiles** | **List[str]** | List of profiles applied to the instance | [optional] 
 **restore** | **str** | If set, instance will be restored to the provided snapshot name | [optional] 
-**source** | [**InstanceSource**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/InstanceSource.md) |  | [optional] 
-**start** | **bool** | Whether to start the instance after creation | [optional] 
+**source** | [**InstanceSource**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSource.md) |  | [optional] 
+**start** | **bool** | Whether to start the instance after creation  API extension: instance_create_start | [optional] 
 **stateful** | **bool** | Whether the instance currently has saved state on disk | [optional] 
 **type** | **str** |  | [optional] 
 

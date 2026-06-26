@@ -6,9 +6,9 @@ NetworkZoneRecordsPost represents the fields of a new network zone record
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Advanced configuration for the record | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the record | [optional] 
-**entries** | [**List[NetworkZoneRecordEntry]**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/NetworkZoneRecordEntry.md) | Entries in the record | [optional] 
+**entries** | [**List[NetworkZoneRecordEntry]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkZoneRecordEntry.md) | Entries in the record | [optional] 
 **name** | **str** | The record name in the zone | [optional] 
 
 ## Example

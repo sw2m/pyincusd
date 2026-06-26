@@ -28,12 +28,12 @@ class CertificatesPost(BaseModel):
     """
     CertificatesPost represents the fields of a new certificate
     """ # noqa: E501
-    certificate: Optional[StrictStr] = Field(default=None, description="The certificate itself, as PEM encoded X509 (or as base64 encoded X509 on POST)", json_schema_extra={"examples": ["X509 PEM certificate"]})
-    description: Optional[StrictStr] = Field(default=None, description="Certificate description", json_schema_extra={"examples": ["X509 certificate"]})
+    certificate: Optional[StrictStr] = Field(default=None, description="The certificate itself, as PEM encoded X509 (or as base64 encoded X509 on POST)  API extension: certificate_self_renewal", json_schema_extra={"examples": ["X509 PEM certificate"]})
+    description: Optional[StrictStr] = Field(default=None, description="Certificate description  API extension: certificate_description", json_schema_extra={"examples": ["X509 certificate"]})
     name: Optional[StrictStr] = Field(default=None, description="Name associated with the certificate", json_schema_extra={"examples": ["castiana"]})
-    projects: Optional[List[StrictStr]] = Field(default=None, description="List of allowed projects (applies when restricted)", json_schema_extra={"examples": [["default", "foo", "bar"]]})
-    restricted: Optional[StrictBool] = Field(default=None, description="Whether to limit the certificate to listed projects", json_schema_extra={"examples": [True]})
-    token: Optional[StrictBool] = Field(default=None, description="Whether to create a certificate add token", json_schema_extra={"examples": [True]})
+    projects: Optional[List[StrictStr]] = Field(default=None, description="List of allowed projects (applies when restricted)  API extension: certificate_project", json_schema_extra={"examples": [["default", "foo", "bar"]]})
+    restricted: Optional[StrictBool] = Field(default=None, description="Whether to limit the certificate to listed projects  API extension: certificate_project", json_schema_extra={"examples": [True]})
+    token: Optional[StrictBool] = Field(default=None, description="Whether to create a certificate add token  API extension: certificate_token", json_schema_extra={"examples": [True]})
     trust_token: Optional[StrictStr] = Field(default=None, description="Trust token (used to add an untrusted client)", json_schema_extra={"examples": ["blah"]})
     type: Optional[StrictStr] = Field(default=None, description="Usage type for the certificate", json_schema_extra={"examples": ["client"]})
     __properties: ClassVar[List[str]] = ["certificate", "description", "name", "projects", "restricted", "token", "trust_token", "type"]

@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **api_status** | **str** | Support status of the current API (one of \&quot;devel\&quot;, \&quot;stable\&quot; or \&quot;deprecated\&quot;) | [optional] [readonly] 
 **api_version** | **str** | API version number | [optional] [readonly] 
 **auth** | **str** | Whether the client is trusted (one of \&quot;trusted\&quot; or \&quot;untrusted\&quot;) | [optional] [readonly] 
-**auth_methods** | **List[str]** | List of supported authentication methods | [optional] [readonly] 
-**config** | **object** | Server configuration map (refer to doc/server.md) | [optional] 
+**auth_methods** | **List[str]** | List of supported authentication methods  API extension: macaroon_authentication | [optional] [readonly] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **public** | **bool** | Whether the server is public-only (only public endpoints are implemented) | [optional] [readonly] 
 
 ## Example

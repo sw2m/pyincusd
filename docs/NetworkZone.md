@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Zone configuration map (refer to doc/network-zones.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the network zone | [optional] 
 **name** | **str** | The name of the zone (DNS domain name) | [optional] 
-**project** | **str** | Project name | [optional] 
+**project** | **str** | Project name  API extension: network_zones_all_projects | [optional] 
 **used_by** | **List[str]** | List of URLs of objects using this network zone | [optional] [readonly] 
 
 ## Example

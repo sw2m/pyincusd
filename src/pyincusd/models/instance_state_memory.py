@@ -30,7 +30,7 @@ class InstanceStateMemory(BaseModel):
     """ # noqa: E501
     swap_usage: Optional[StrictInt] = Field(default=None, description="SWAP usage in bytes", json_schema_extra={"examples": [12297557]})
     swap_usage_peak: Optional[StrictInt] = Field(default=None, description="Peak SWAP usage in bytes", json_schema_extra={"examples": [12297557]})
-    total: Optional[StrictInt] = Field(default=None, description="Total memory size in bytes", json_schema_extra={"examples": [12297557]})
+    total: Optional[StrictInt] = Field(default=None, description="Total memory size in bytes  API extension: instances_state_total", json_schema_extra={"examples": [12297557]})
     usage: Optional[StrictInt] = Field(default=None, description="Memory usage in bytes", json_schema_extra={"examples": [73248768]})
     usage_peak: Optional[StrictInt] = Field(default=None, description="Peak memory usage in bytes", json_schema_extra={"examples": [73785344]})
     __properties: ClassVar[List[str]] = ["swap_usage", "swap_usage_peak", "total", "usage", "usage_peak"]

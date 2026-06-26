@@ -28,7 +28,7 @@ class ClusterGroupsPost(BaseModel):
     """
     ClusterGroupsPost
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Cluster group configuration map", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="The description of the cluster group", json_schema_extra={"examples": ["amd64 servers"]})
     members: Optional[List[StrictStr]] = Field(default=None, description="List of members in this group", json_schema_extra={"examples": [["server01", "server02"]]})
     name: Optional[StrictStr] = Field(default=None, description="The new name of the cluster group", json_schema_extra={"examples": ["group1"]})

@@ -6,7 +6,7 @@ ProjectsPost represents the fields of a new project
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Project configuration map (refer to doc/projects.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the project | [optional] 
 **name** | **str** | The name of the new project | [optional] 
 

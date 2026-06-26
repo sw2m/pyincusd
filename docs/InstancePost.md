@@ -5,17 +5,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Instance configuration file. | [optional] 
-**devices** | **object** | Instance devices. | [optional] 
-**profiles** | **List[str]** | List of profiles applied to the instance. | [optional] 
-**allow_inconsistent** | **bool** | AllowInconsistent allow inconsistent copies when migrating. | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**devices** | **object** | DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**profiles** | **List[str]** | List of profiles applied to the instance.  API extension: instance_move_config | [optional] 
+**allow_inconsistent** | **bool** | AllowInconsistent allow inconsistent copies when migrating.  API extension: instance_allow_inconsistent_copy | [optional] 
 **instance_only** | **bool** | Whether snapshots should be discarded (migration only) | [optional] 
 **live** | **bool** | Whether to perform a live migration (migration only) | [optional] 
 **migration** | **bool** | Whether the instance is being migrated to another server | [optional] 
 **name** | **str** | New name for the instance | [optional] 
-**pool** | **str** | Target pool for local cross-pool move | [optional] 
-**project** | **str** | Target project for local cross-project move | [optional] 
-**target** | [**InstancePostTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/InstancePostTarget.md) |  | [optional] 
+**pool** | **str** | Target pool for local cross-pool move  API extension: instance_pool_move | [optional] 
+**project** | **str** | Target project for local cross-project move  API extension: instance_project_move | [optional] 
+**target** | [**InstancePostTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancePostTarget.md) |  | [optional] 
 
 ## Example
 

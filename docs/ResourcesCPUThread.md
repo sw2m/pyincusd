@@ -7,7 +7,7 @@ ResourcesCPUThread represents a CPU thread on the system
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Thread ID (used for CPU pinning) | [optional] 
-**isolated** | **bool** | Whether the thread has been isolated (outside of normal scheduling) | [optional] 
+**isolated** | **bool** | Whether the thread has been isolated (outside of normal scheduling)  API extension: resource_cpu_isolated | [optional] 
 **numa_node** | **int** | NUMA node the thread is a part of | [optional] 
 **online** | **bool** | Whether the thread is online (enabled) | [optional] 
 **thread** | **int** | Thread identifier within the core | [optional] 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **address** | **str** | The IP address | [optional] 
 **hostname** | **str** | The hostname associated with the record | [optional] 
 **hwaddr** | **str** | The MAC address | [optional] 
-**location** | **str** | What cluster member this record was found on | [optional] 
+**location** | **str** | What cluster member this record was found on  API extension: network_leases_location | [optional] 
 **type** | **str** | The type of record (static or dynamic) | [optional] 
 
 ## Example

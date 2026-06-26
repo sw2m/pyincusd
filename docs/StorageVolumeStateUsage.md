@@ -6,7 +6,7 @@ StorageVolumeStateUsage represents the disk usage of a volume
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **int** | Storage volume size in bytes | [optional] 
+**total** | **int** | Storage volume size in bytes  API extension: storage_volume_state_total | [optional] 
 **used** | **int** | Used space in bytes | [optional] 
 
 ## Example

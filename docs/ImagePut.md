@@ -7,8 +7,8 @@ ImagePut represents the modifiable fields of an image
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auto_update** | **bool** | Whether the image should auto-update when a new build is available | [optional] 
-**expires_at** | **datetime** | When the image becomes obsolete | [optional] 
-**profiles** | **List[str]** | List of profiles to use when creating from this image (if none provided by user) | [optional] 
+**expires_at** | **datetime** | When the image becomes obsolete  API extension: images_expiry | [optional] 
+**profiles** | **List[str]** | List of profiles to use when creating from this image (if none provided by user)  API extension: image_profiles | [optional] 
 **properties** | **Dict[str, str]** | Descriptive properties | [optional] 
 **public** | **bool** | Whether the image is available to unauthenticated users | [optional] 
 

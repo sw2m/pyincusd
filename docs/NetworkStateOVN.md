@@ -7,10 +7,10 @@ NetworkStateOVN represents OVN specific state
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chassis** | **str** | OVN network chassis name | [optional] 
-**logical_router** | **str** | OVN logical router name | [optional] 
-**logical_switch** | **str** | OVN logical switch name | [optional] 
-**uplink_ipv4** | **str** | OVN network uplink ipv4 address | [optional] 
-**uplink_ipv6** | **str** | OVN network uplink ipv6 address | [optional] 
+**logical_router** | **str** | OVN logical router name  API extension: network_state_ovn_lr | [optional] 
+**logical_switch** | **str** | OVN logical switch name  API extension: network_state_ovn_ls | [optional] 
+**uplink_ipv4** | **str** | OVN network uplink ipv4 address  API extension: network_ovn_state_addresses | [optional] 
+**uplink_ipv6** | **str** | OVN network uplink ipv6 address  API extension: network_ovn_state_addresses | [optional] 
 
 ## Example
 

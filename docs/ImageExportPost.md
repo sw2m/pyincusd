@@ -6,10 +6,10 @@ ImageExportPost represents the fields required to export an image
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aliases** | [**List[ImageAlias]**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/ImageAlias.md) | List of aliases to set on the image | [optional] 
+**aliases** | [**List[ImageAlias]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ImageAlias.md) | List of aliases to set on the image | [optional] 
 **certificate** | **str** | Remote server certificate | [optional] 
-**profiles** | **List[str]** | List of profiles to use | [optional] 
-**project** | **str** | Project name | [optional] 
+**profiles** | **List[str]** | List of profiles to use  API extension: image_copy_profile | [optional] 
+**project** | **str** | Project name  API extension: image_target_project | [optional] 
 **secret** | **str** | Image receive secret | [optional] 
 **target** | **str** | Target server URL | [optional] 
 

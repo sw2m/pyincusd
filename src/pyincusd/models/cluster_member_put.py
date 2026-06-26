@@ -28,11 +28,11 @@ class ClusterMemberPut(BaseModel):
     """
     ClusterMemberPut represents the modifiable fields of a cluster member
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Additional configuration information", json_schema_extra={"examples": [{"scheduler.instance": "all"}]})
-    description: Optional[StrictStr] = Field(default=None, description="Cluster member description", json_schema_extra={"examples": ["AMD Epyc 32c/64t"]})
-    failure_domain: Optional[StrictStr] = Field(default=None, description="Name of the failure domain for this cluster member", json_schema_extra={"examples": ["rack1"]})
-    groups: Optional[List[StrictStr]] = Field(default=None, description="List of cluster groups this member belongs to", json_schema_extra={"examples": [["group1", "group2"]]})
-    roles: Optional[List[StrictStr]] = Field(default=None, description="List of roles held by this cluster member", json_schema_extra={"examples": [["database"]]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
+    description: Optional[StrictStr] = Field(default=None, description="Cluster member description  API extension: clustering_description", json_schema_extra={"examples": ["AMD Epyc 32c/64t"]})
+    failure_domain: Optional[StrictStr] = Field(default=None, description="Name of the failure domain for this cluster member  API extension: clustering_failure_domains", json_schema_extra={"examples": ["rack1"]})
+    groups: Optional[List[StrictStr]] = Field(default=None, description="List of cluster groups this member belongs to  API extension: clustering_groups", json_schema_extra={"examples": [["group1", "group2"]]})
+    roles: Optional[List[StrictStr]] = Field(default=None, description="List of roles held by this cluster member  API extension: clustering_roles", json_schema_extra={"examples": [["database"]]})
     __properties: ClassVar[List[str]] = ["config", "description", "failure_domain", "groups", "roles"]
 
     model_config = ConfigDict(

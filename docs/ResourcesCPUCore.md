@@ -7,10 +7,10 @@ ResourcesCPUCore represents a CPU core on the system
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **core** | **int** | Core identifier within the socket | [optional] 
-**die** | **int** | What die the CPU is a part of (for chiplet designs) | [optional] 
-**flags** | **List[str]** | List of CPU flags | [optional] 
+**die** | **int** | What die the CPU is a part of (for chiplet designs)  API extension: resources_cpu_core_die | [optional] 
+**flags** | **List[str]** | List of CPU flags  API extension: resources_cpu_flags | [optional] 
 **frequency** | **int** | Current frequency | [optional] 
-**threads** | [**List[ResourcesCPUThread]**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/ResourcesCPUThread.md) | List of threads | [optional] 
+**threads** | [**List[ResourcesCPUThread]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ResourcesCPUThread.md) | List of threads | [optional] 
 
 ## Example
 

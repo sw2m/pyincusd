@@ -29,9 +29,9 @@ class NetworkAddressSetsPost(BaseModel):
     NetworkAddressSetsPost
     """ # noqa: E501
     addresses: Optional[List[StrictStr]] = Field(default=None, description="List of addresses in the set", json_schema_extra={"examples": [["192.0.0.1", "2001:0db8:1234::1"]]})
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Address set configuration map (refer to doc/network-address-sets.md)", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the address set", json_schema_extra={"examples": ["Web servers"]})
-    name: Optional[StrictStr] = Field(default=None, description="The new name of the address set", json_schema_extra={"examples": ["\"bar\""]})
+    name: Optional[StrictStr] = Field(default=None, description="The new name of the address set", json_schema_extra={"examples": ["bar"]})
     __properties: ClassVar[List[str]] = ["addresses", "config", "description", "name"]
 
     model_config = ConfigDict(

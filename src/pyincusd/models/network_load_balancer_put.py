@@ -31,7 +31,7 @@ class NetworkLoadBalancerPut(BaseModel):
     NetworkLoadBalancerPut represents the modifiable fields of a network load balancer
     """ # noqa: E501
     backends: Optional[List[NetworkLoadBalancerBackend]] = Field(default=None, description="Backends (optional)")
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Load balancer configuration map (refer to doc/network-load-balancers.md)", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the load balancer listen IP", json_schema_extra={"examples": ["My public IP load balancer"]})
     ports: Optional[List[NetworkLoadBalancerPort]] = Field(default=None, description="Port forwards (optional)")
     __properties: ClassVar[List[str]] = ["backends", "config", "description", "ports"]

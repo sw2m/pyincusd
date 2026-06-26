@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alias** | **str** | Source alias to download from | [optional] 
 **certificate** | **str** | Source server certificate (if not trusted by system CA) | [optional] 
-**image_type** | **str** | Type of image (container or virtual-machine) | [optional] 
+**image_type** | **str** | Type of image (container or virtual-machine)  API extension: image_types | [optional] 
 **protocol** | **str** | Source server protocol | [optional] 
 **server** | **str** | URL of the source server | [optional] 
 

@@ -6,8 +6,8 @@ StorageBucketPut represents the modifiable fields of a storage pool bucket
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Storage bucket configuration map | [optional] 
-**description** | **str** | Description of the storage bucket | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**description** | **str** | Description of the storage bucket  API extension: storage_buckets | [optional] 
 
 ## Example
 

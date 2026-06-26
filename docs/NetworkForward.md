@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Forward configuration map (refer to doc/network-forwards.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the forward listen IP | [optional] 
 **listen_address** | **str** | The listen address of the forward | [optional] 
 **location** | **str** | What cluster member this record was found on | [optional] 
-**ports** | [**List[NetworkForwardPort]**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/NetworkForwardPort.md) | Port forwards (optional) | [optional] 
+**ports** | [**List[NetworkForwardPort]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkForwardPort.md) | Port forwards (optional) | [optional] 
 
 ## Example
 

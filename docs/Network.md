@@ -6,13 +6,13 @@ Network represents a network
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Network configuration map (refer to doc/networks.md) | [optional] 
-**description** | **str** | Description of the profile | [optional] 
-**locations** | **List[str]** | Cluster members on which the network has been defined | [optional] [readonly] 
-**managed** | **bool** | Whether this is a managed network | [optional] [readonly] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**description** | **str** | Description of the profile  API extension: entity_description | [optional] 
+**locations** | **List[str]** | Cluster members on which the network has been defined  API extension: clustering | [optional] [readonly] 
+**managed** | **bool** | Whether this is a managed network  API extension: network | [optional] [readonly] 
 **name** | **str** | The network name | [optional] [readonly] 
-**project** | **str** | Project name | [optional] 
-**status** | **str** | The state of the network (for managed network in clusters) | [optional] [readonly] 
+**project** | **str** | Project name  API extension: networks_all_projects | [optional] 
+**status** | **str** | The state of the network (for managed network in clusters)  API extension: clustering | [optional] [readonly] 
 **type** | **str** | The network type | [optional] [readonly] 
 **used_by** | **List[str]** | List of URLs of objects using this profile | [optional] [readonly] 
 

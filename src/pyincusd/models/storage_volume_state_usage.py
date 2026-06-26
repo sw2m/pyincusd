@@ -28,7 +28,7 @@ class StorageVolumeStateUsage(BaseModel):
     """
     StorageVolumeStateUsage represents the disk usage of a volume
     """ # noqa: E501
-    total: Optional[StrictInt] = Field(default=None, description="Storage volume size in bytes", json_schema_extra={"examples": [5189222192]})
+    total: Optional[StrictInt] = Field(default=None, description="Storage volume size in bytes  API extension: storage_volume_state_total", json_schema_extra={"examples": [5189222192]})
     used: Optional[StrictInt] = Field(default=None, description="Used space in bytes", json_schema_extra={"examples": [1693552640]})
     __properties: ClassVar[List[str]] = ["total", "used"]
 

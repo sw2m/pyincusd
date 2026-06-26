@@ -6,12 +6,12 @@ Profile represents a profile
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Instance configuration map (refer to doc/instances.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the profile | [optional] 
-**devices** | **object** | List of devices | [optional] 
+**devices** | **object** | DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **name** | **str** | The profile name | [optional] [readonly] 
-**project** | **str** | Project name | [optional] 
-**used_by** | **List[str]** | List of URLs of objects using this profile | [optional] [readonly] 
+**project** | **str** | Project name  API extension: profiles_all_projects | [optional] 
+**used_by** | **List[str]** | List of URLs of objects using this profile  API extension: profile_usedby | [optional] [readonly] 
 
 ## Example
 

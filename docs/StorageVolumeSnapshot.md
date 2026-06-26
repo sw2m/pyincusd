@@ -6,11 +6,11 @@ StorageVolumeSnapshot represents a storage volume snapshot
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Storage volume configuration map (refer to doc/storage.md) | [optional] 
-**content_type** | **str** | The content type (filesystem or block) | [optional] 
-**created_at** | **datetime** | Volume snapshot creation timestamp | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**content_type** | **str** | The content type (filesystem or block)  API extension: custom_block_volumes | [optional] 
+**created_at** | **datetime** | Volume snapshot creation timestamp API extension: storage_volumes_created_at | [optional] 
 **description** | **str** | Description of the storage volume | [optional] 
-**expires_at** | **datetime** | When the snapshot expires (gets auto-deleted) | [optional] 
+**expires_at** | **datetime** | When the snapshot expires (gets auto-deleted)  API extension: custom_volume_snapshot_expiry | [optional] 
 **name** | **str** | Snapshot name | [optional] 
 
 ## Example

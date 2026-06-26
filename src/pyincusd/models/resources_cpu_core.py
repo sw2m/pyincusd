@@ -30,8 +30,8 @@ class ResourcesCPUCore(BaseModel):
     ResourcesCPUCore represents a CPU core on the system
     """ # noqa: E501
     core: Optional[StrictInt] = Field(default=None, description="Core identifier within the socket", json_schema_extra={"examples": [0]})
-    die: Optional[StrictInt] = Field(default=None, description="What die the CPU is a part of (for chiplet designs)", json_schema_extra={"examples": [0]})
-    flags: Optional[List[StrictStr]] = Field(default=None, description="List of CPU flags", json_schema_extra={"examples": [[]]})
+    die: Optional[StrictInt] = Field(default=None, description="What die the CPU is a part of (for chiplet designs)  API extension: resources_cpu_core_die", json_schema_extra={"examples": [0]})
+    flags: Optional[List[StrictStr]] = Field(default=None, description="List of CPU flags  API extension: resources_cpu_flags", json_schema_extra={"examples": [[]]})
     frequency: Optional[StrictInt] = Field(default=None, description="Current frequency", json_schema_extra={"examples": [3500]})
     threads: Optional[List[ResourcesCPUThread]] = Field(default=None, description="List of threads")
     __properties: ClassVar[List[str]] = ["core", "die", "flags", "frequency", "threads"]

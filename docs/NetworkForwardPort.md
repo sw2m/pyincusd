@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **description** | **str** | Description of the forward port | [optional] 
 **listen_port** | **str** | ListenPort(s) to forward (comma delimited ranges) | [optional] 
 **protocol** | **str** | Protocol for port forward (either tcp or udp) | [optional] 
-**snat** | **bool** | SNAT controls whether to apply a matching SNAT rule to new outgoing traffic from the target | [optional] 
+**snat** | **bool** | SNAT controls whether to apply a matching SNAT rule to new outgoing traffic from the target  API extension: network_forward_snat | [optional] 
 **target_address** | **str** | TargetAddress to forward ListenPorts to | [optional] 
 **target_port** | **str** | TargetPort(s) to forward ListenPorts to (allows for many-to-one) | [optional] 
 

@@ -29,7 +29,7 @@ class ResourcesCPU(BaseModel):
     """
     ResourcesCPU represents the cpu resources available on the system
     """ # noqa: E501
-    architecture: Optional[StrictStr] = Field(default=None, description="Architecture name", json_schema_extra={"examples": ["x86_64"]})
+    architecture: Optional[StrictStr] = Field(default=None, description="Architecture name  API extension: resources_v2", json_schema_extra={"examples": ["x86_64"]})
     sockets: Optional[List[ResourcesCPUSocket]] = Field(default=None, description="List of CPU sockets")
     total: Optional[StrictInt] = Field(default=None, description="Total number of CPU threads (from all sockets and cores)", json_schema_extra={"examples": [1]})
     __properties: ClassVar[List[str]] = ["architecture", "sockets", "total"]

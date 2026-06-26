@@ -34,7 +34,7 @@ class ResourcesUSBDevice(BaseModel):
     interfaces: Optional[List[ResourcesUSBDeviceInterface]] = Field(default=None, description="List of USB interfaces")
     product: Optional[StrictStr] = Field(default=None, description="Name of the product", json_schema_extra={"examples": ["Hermon USB hidmouse Device"]})
     product_id: Optional[StrictStr] = Field(default=None, description="USB ID of the product", json_schema_extra={"examples": ["2221"]})
-    serial: Optional[StrictStr] = Field(default=None, description="USB serial number", json_schema_extra={"examples": ["DAE005fp"]})
+    serial: Optional[StrictStr] = Field(default=None, description="USB serial number  API extension: device_usb_serial.", json_schema_extra={"examples": ["DAE005fp"]})
     speed: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Transfer speed (Mbit/s)", json_schema_extra={"examples": [12.0]})
     vendor: Optional[StrictStr] = Field(default=None, description="Name of the vendor", json_schema_extra={"examples": ["ATEN International Co., Ltd"]})
     vendor_id: Optional[StrictStr] = Field(default=None, description="USB ID of the vendor", json_schema_extra={"examples": ["0557"]})

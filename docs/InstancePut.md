@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **architecture** | **str** | Architecture name | [optional] 
-**config** | **object** | Instance configuration (see doc/instances.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Instance description | [optional] 
-**devices** | **object** | Instance devices (see doc/instances.md) | [optional] 
+**devices** | **object** | DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **disk_only** | **bool** | Whether only the instances disk should be restored | [optional] 
 **ephemeral** | **bool** | Whether the instance is ephemeral (deleted on shutdown) | [optional] 
 **profiles** | **List[str]** | List of profiles applied to the instance | [optional] 

@@ -6,8 +6,8 @@ NetworksPost represents the fields of a new network
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Network configuration map (refer to doc/networks.md) | [optional] 
-**description** | **str** | Description of the profile | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**description** | **str** | Description of the profile  API extension: entity_description | [optional] 
 **name** | **str** | The name of the new network | [optional] 
 **type** | **str** | The network type (refer to doc/networks.md) | [optional] 
 

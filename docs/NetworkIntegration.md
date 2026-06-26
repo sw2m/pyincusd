@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Integration configuration map (refer to doc/network-integrations.md) | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the network integration | [optional] 
 **name** | **str** | The name of the integration | [optional] 
 **type** | **str** | The type of integration | [optional] 

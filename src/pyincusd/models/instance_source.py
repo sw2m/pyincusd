@@ -29,7 +29,7 @@ class InstanceSource(BaseModel):
     InstanceSource
     """ # noqa: E501
     alias: Optional[StrictStr] = Field(default=None, description="Image alias name (for image source)", json_schema_extra={"examples": ["ubuntu/22.04"]})
-    allow_inconsistent: Optional[StrictBool] = Field(default=None, description="Whether to ignore errors when copying (e.g. for volatile files)", json_schema_extra={"examples": [False]})
+    allow_inconsistent: Optional[StrictBool] = Field(default=None, description="Whether to ignore errors when copying (e.g. for volatile files)  API extension: instance_allow_inconsistent_copy", json_schema_extra={"examples": [False]})
     base_image: Optional[StrictStr] = Field(default=None, description="Base image fingerprint (for faster migration)", alias="base-image", json_schema_extra={"examples": ["ed56997f7c5b48e8d78986d2467a26109be6fb9f2d92e8c7b08eb8b6cec7629a"]})
     certificate: Optional[StrictStr] = Field(default=None, description="Certificate (for remote images or migration)", json_schema_extra={"examples": ["X509 PEM certificate"]})
     fingerprint: Optional[StrictStr] = Field(default=None, description="Image fingerprint (for image source)", json_schema_extra={"examples": ["ed56997f7c5b48e8d78986d2467a26109be6fb9f2d92e8c7b08eb8b6cec7629a"]})
@@ -41,7 +41,7 @@ class InstanceSource(BaseModel):
     properties: Optional[Dict[str, StrictStr]] = Field(default=None, description="Image filters (for image source)", json_schema_extra={"examples": [{"os": "Ubuntu", "release": "jammy", "variant": "cloud"}]})
     protocol: Optional[StrictStr] = Field(default=None, description="Protocol name (for remote image)", json_schema_extra={"examples": ["simplestreams"]})
     refresh: Optional[StrictBool] = Field(default=None, description="Whether this is refreshing an existing instance (for migration and copy)", json_schema_extra={"examples": [False]})
-    refresh_exclude_older: Optional[StrictBool] = Field(default=None, description="Whether to exclude source snapshots earlier than latest target snapshot", json_schema_extra={"examples": [False]})
+    refresh_exclude_older: Optional[StrictBool] = Field(default=None, description="Whether to exclude source snapshots earlier than latest target snapshot  API extension: custom_volume_refresh_exclude_older_snapshots", json_schema_extra={"examples": [False]})
     secret: Optional[StrictStr] = Field(default=None, description="Remote server secret (for remote private images)", json_schema_extra={"examples": ["RANDOM-STRING"]})
     secrets: Optional[Dict[str, StrictStr]] = Field(default=None, description="Map of migration websockets (for migration)", json_schema_extra={"examples": [{"criu": "RANDOM-STRING", "rsync": "RANDOM-STRING"}]})
     server: Optional[StrictStr] = Field(default=None, description="Remote server URL (for remote images)", json_schema_extra={"examples": ["https://images.linuxcontainers.org"]})

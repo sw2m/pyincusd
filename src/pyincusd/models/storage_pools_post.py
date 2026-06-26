@@ -28,8 +28,8 @@ class StoragePoolsPost(BaseModel):
     """
     StoragePoolsPost represents the fields of a new storage pool
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Storage pool configuration map (refer to doc/storage.md)", json_schema_extra={"examples": [{"volume.block.filesystem": "ext4", "volume.size": "50GiB"}]})
-    description: Optional[StrictStr] = Field(default=None, description="Description of the storage pool", json_schema_extra={"examples": ["Local SSD pool"]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
+    description: Optional[StrictStr] = Field(default=None, description="Description of the storage pool  API extension: entity_description", json_schema_extra={"examples": ["Local SSD pool"]})
     driver: Optional[StrictStr] = Field(default=None, description="Storage pool driver (btrfs, ceph, cephfs, cephobject, dir, lvm, lvmcluster or zfs)", json_schema_extra={"examples": ["zfs"]})
     name: Optional[StrictStr] = Field(default=None, description="Storage pool name", json_schema_extra={"examples": ["local"]})
     __properties: ClassVar[List[str]] = ["config", "description", "driver", "name"]

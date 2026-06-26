@@ -29,7 +29,7 @@ class NetworkForwardPut(BaseModel):
     """
     NetworkForwardPut represents the modifiable fields of a network address forward
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Forward configuration map (refer to doc/network-forwards.md)", json_schema_extra={"examples": [{"user.mykey": "foo"}]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the forward listen IP", json_schema_extra={"examples": ["My public IP forward"]})
     ports: Optional[List[NetworkForwardPort]] = Field(default=None, description="Port forwards (optional)")
     __properties: ClassVar[List[str]] = ["config", "description", "ports"]

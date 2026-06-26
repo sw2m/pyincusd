@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | **str** | The action to be performed. Valid actions are \&quot;evacuate\&quot; and \&quot;restore\&quot;. | [optional] 
-**mode** | **str** | Override the configured evacuation mode. | [optional] 
+**mode** | **str** | Override the configured evacuation mode.  API extension: clustering_evacuate_mode | [optional] 
 
 ## Example
 

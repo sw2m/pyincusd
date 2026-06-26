@@ -6,13 +6,13 @@ StorageVolumePost represents the fields required to rename a storage pool volume
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**migration** | **bool** | Initiate volume migration | [optional] 
+**migration** | **bool** | Initiate volume migration  API extension: storage_api_remote_volume_handling | [optional] 
 **name** | **str** | New volume name | [optional] 
-**pool** | **str** | New storage pool | [optional] 
-**project** | **str** | New project name | [optional] 
-**source** | [**StorageVolumeSource**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/StorageVolumeSource.md) |  | [optional] 
-**target** | [**StorageVolumePostTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.1.0/docs/StorageVolumePostTarget.md) |  | [optional] 
-**volume_only** | **bool** | Whether snapshots should be discarded (migration only) | [optional] 
+**pool** | **str** | New storage pool  API extension: storage_api_local_volume_handling | [optional] 
+**project** | **str** | New project name  API extension: storage_volume_project_move | [optional] 
+**source** | [**StorageVolumeSource**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/StorageVolumeSource.md) |  | [optional] 
+**target** | [**StorageVolumePostTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/StorageVolumePostTarget.md) |  | [optional] 
+**volume_only** | **bool** | Whether snapshots should be discarded (migration only)  API extension: storage_api_remote_volume_snapshots | [optional] 
 
 ## Example
 

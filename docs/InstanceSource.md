@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alias** | **str** | Image alias name (for image source) | [optional] 
-**allow_inconsistent** | **bool** | Whether to ignore errors when copying (e.g. for volatile files) | [optional] 
+**allow_inconsistent** | **bool** | Whether to ignore errors when copying (e.g. for volatile files)  API extension: instance_allow_inconsistent_copy | [optional] 
 **base_image** | **str** | Base image fingerprint (for faster migration) | [optional] 
 **certificate** | **str** | Certificate (for remote images or migration) | [optional] 
 **fingerprint** | **str** | Image fingerprint (for image source) | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **properties** | **Dict[str, str]** | Image filters (for image source) | [optional] 
 **protocol** | **str** | Protocol name (for remote image) | [optional] 
 **refresh** | **bool** | Whether this is refreshing an existing instance (for migration and copy) | [optional] 
-**refresh_exclude_older** | **bool** | Whether to exclude source snapshots earlier than latest target snapshot | [optional] 
+**refresh_exclude_older** | **bool** | Whether to exclude source snapshots earlier than latest target snapshot  API extension: custom_volume_refresh_exclude_older_snapshots | [optional] 
 **secret** | **str** | Remote server secret (for remote private images) | [optional] 
 **secrets** | **Dict[str, str]** | Map of migration websockets (for migration) | [optional] 
 **server** | **str** | Remote server URL (for remote images) | [optional] 

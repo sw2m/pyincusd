@@ -29,13 +29,13 @@ class InitStorageVolumesProjectPost(BaseModel):
     """
     InitStorageVolumesProjectPost
     """ # noqa: E501
-    pool: Optional[StrictStr] = Field(default=None, description="Storage pool in which the volume will reside", alias="Pool", json_schema_extra={"examples": ["\"default\""]})
-    project: Optional[StrictStr] = Field(default=None, description="Project in which the volume will reside", alias="Project", json_schema_extra={"examples": ["\"default\""]})
-    config: Optional[Dict[str, Any]] = Field(default=None, description="Storage volume configuration map (refer to doc/storage.md)", json_schema_extra={"examples": [{"size": "50GiB", "zfs.remove_snapshots": "true"}]})
-    content_type: Optional[StrictStr] = Field(default=None, description="Volume content type (filesystem or block)", json_schema_extra={"examples": ["filesystem"]})
-    description: Optional[StrictStr] = Field(default=None, description="Description of the storage volume", json_schema_extra={"examples": ["My custom volume"]})
+    pool: Optional[StrictStr] = Field(default=None, description="Storage pool in which the volume will reside", alias="Pool", json_schema_extra={"examples": ["default"]})
+    project: Optional[StrictStr] = Field(default=None, description="Project in which the volume will reside", alias="Project", json_schema_extra={"examples": ["default"]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
+    content_type: Optional[StrictStr] = Field(default=None, description="Volume content type (filesystem or block)  API extension: custom_block_volumes", json_schema_extra={"examples": ["filesystem"]})
+    description: Optional[StrictStr] = Field(default=None, description="Description of the storage volume  API extension: entity_description", json_schema_extra={"examples": ["My custom volume"]})
     name: Optional[StrictStr] = Field(default=None, description="Volume name", json_schema_extra={"examples": ["foo"]})
-    restore: Optional[StrictStr] = Field(default=None, description="Name of a snapshot to restore", json_schema_extra={"examples": ["snap0"]})
+    restore: Optional[StrictStr] = Field(default=None, description="Name of a snapshot to restore  API extension: storage_api_volume_snapshots", json_schema_extra={"examples": ["snap0"]})
     source: Optional[StorageVolumeSource] = None
     type: Optional[StrictStr] = Field(default=None, description="Volume type (container, custom, image or virtual-machine)", json_schema_extra={"examples": ["custom"]})
     __properties: ClassVar[List[str]] = ["Pool", "Project", "config", "content_type", "description", "name", "restore", "source", "type"]

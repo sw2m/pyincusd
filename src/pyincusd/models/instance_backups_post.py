@@ -30,7 +30,7 @@ class InstanceBackupsPost(BaseModel):
     """
     InstanceBackupsPost
     """ # noqa: E501
-    compression_algorithm: Optional[StrictStr] = Field(default=None, description="What compression algorithm to use", json_schema_extra={"examples": ["gzip"]})
+    compression_algorithm: Optional[StrictStr] = Field(default=None, description="What compression algorithm to use  API extension: backup_compression_algorithm", json_schema_extra={"examples": ["gzip"]})
     expires_at: Optional[datetime] = Field(default=None, description="When the backup expires (gets auto-deleted)", json_schema_extra={"examples": ["2021-03-23T17:38:37.753398689-04:00"]})
     instance_only: Optional[StrictBool] = Field(default=None, description="Whether to ignore snapshots", json_schema_extra={"examples": [False]})
     name: Optional[StrictStr] = Field(default=None, description="Backup name", json_schema_extra={"examples": ["backup0"]})

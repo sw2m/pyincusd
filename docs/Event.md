@@ -6,9 +6,9 @@ Event represents an event entry (over websocket)
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**location** | **str** | Originating cluster member | [optional] 
+**location** | **str** | Originating cluster member  API extension: event_location | [optional] 
 **metadata** | **object** | JSON encoded metadata (see EventLogging, EventLifecycle or Operation) | [optional] 
-**project** | **str** | Project the event belongs to. | [optional] 
+**project** | **str** | Project the event belongs to.  API extension: event_project | [optional] 
 **timestamp** | **datetime** | Time at which the event was sent | [optional] 
 **type** | **str** | Event type (one of operation, logging or lifecycle) | [optional] 
 

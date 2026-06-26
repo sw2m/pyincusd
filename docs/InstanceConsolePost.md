@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**force** | **bool** | Forces a connection to the console | [optional] 
+**force** | **bool** | Forces a connection to the console  API extension: console_force | [optional] 
 **height** | **int** | Console height in rows (console type only) | [optional] 
-**type** | **str** | Type of console to attach to (console or vga) | [optional] 
+**type** | **str** | Type of console to attach to (console or vga)  API extension: console_vga_type | [optional] 
 **width** | **int** | Console width in columns (console type only) | [optional] 
 
 ## Example

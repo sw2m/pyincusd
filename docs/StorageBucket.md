@@ -6,12 +6,12 @@ StorageBucket represents the fields of a storage pool bucket
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **object** | Storage bucket configuration map | [optional] 
-**description** | **str** | Description of the storage bucket | [optional] 
-**location** | **str** | What cluster member this record was found on | [optional] 
-**name** | **str** | Bucket name | [optional] 
-**project** | **str** | Project name | [optional] 
-**s3_url** | **str** | Bucket S3 URL | [optional] 
+**config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
+**description** | **str** | Description of the storage bucket  API extension: storage_buckets | [optional] 
+**location** | **str** | What cluster member this record was found on  API extension: storage_buckets | [optional] 
+**name** | **str** | Bucket name  API extension: storage_buckets | [optional] 
+**project** | **str** | Project name  API extension: storage_buckets_all_projects | [optional] 
+**s3_url** | **str** | Bucket S3 URL  API extension: storage_buckets | [optional] 
 
 ## Example
 
