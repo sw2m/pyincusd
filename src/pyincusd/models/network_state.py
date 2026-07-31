@@ -89,8 +89,7 @@ class NetworkState(BaseModel):
         _items = []
         if self.addresses:
             for _item_addresses in self.addresses:
-                if _item_addresses:
-                    _items.append(_item_addresses.to_dict())
+                _items.append(_item_addresses.to_dict() if _item_addresses is not None else None)
             _dict['addresses'] = _items
         # override the default output from pydantic by calling `to_dict()` of bond
         if self.bond:

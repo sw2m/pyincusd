@@ -75,10 +75,9 @@ class MetadataConfiguration(BaseModel):
         _field_dict_of_dict = {}
         if self.configs:
             for _key_configs, _value_configs in self.configs.items():
-                if _value_configs is not None:
-                    _field_dict_of_dict[_key_configs] = {
-                        _key: _value.to_dict() for _key, _value in _value_configs.items()
-                    }
+                _field_dict_of_dict[_key_configs] = {
+                    _key: _value.to_dict() if _value is not None else None for _key, _value in _value_configs.items()
+                } if _value_configs is not None else None
             _dict['configs'] = _field_dict_of_dict
         return _dict
 

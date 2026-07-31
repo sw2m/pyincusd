@@ -20,21 +20,18 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pyincusd.models.operation import Operation
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
-class ClusterMembersPost202Response(BaseModel):
+class ServerGet404Response(BaseModel):
     """
-    ClusterMembersPost202Response
+    ServerGet404Response
     """ # noqa: E501
-    metadata: Optional[Operation] = None
-    operation: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["/1.0/operations/66e83638-9dd7-4a26-aef2-5462814869a1"]})
-    status: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["Operation created"]})
-    status_code: Optional[StrictInt] = Field(default=None, json_schema_extra={"examples": [100]})
-    type: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["async"]})
-    __properties: ClassVar[List[str]] = ["metadata", "operation", "status", "status_code", "type"]
+    error: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["not found"]})
+    error_code: Optional[StrictInt] = Field(default=None, json_schema_extra={"examples": [404]})
+    type: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["error"]})
+    __properties: ClassVar[List[str]] = ["error", "error_code", "type"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -54,7 +51,7 @@ class ClusterMembersPost202Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ClusterMembersPost202Response from a JSON string"""
+        """Create an instance of ServerGet404Response from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -75,14 +72,11 @@ class ClusterMembersPost202Response(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of metadata
-        if self.metadata:
-            _dict['metadata'] = self.metadata.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ClusterMembersPost202Response from a dict"""
+        """Create an instance of ServerGet404Response from a dict"""
         if obj is None:
             return None
 
@@ -90,10 +84,8 @@ class ClusterMembersPost202Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "metadata": Operation.from_dict(obj["metadata"]) if obj.get("metadata") is not None else None,
-            "operation": obj.get("operation"),
-            "status": obj.get("status"),
-            "status_code": obj.get("status_code"),
+            "error": obj.get("error"),
+            "error_code": obj.get("error_code"),
             "type": obj.get("type")
         })
         return _obj

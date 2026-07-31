@@ -99,15 +99,13 @@ class InstanceFull(BaseModel):
         _items = []
         if self.backups:
             for _item_backups in self.backups:
-                if _item_backups:
-                    _items.append(_item_backups.to_dict())
+                _items.append(_item_backups.to_dict() if _item_backups is not None else None)
             _dict['backups'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in snapshots (list)
         _items = []
         if self.snapshots:
             for _item_snapshots in self.snapshots:
-                if _item_snapshots:
-                    _items.append(_item_snapshots.to_dict())
+                _items.append(_item_snapshots.to_dict() if _item_snapshots is not None else None)
             _dict['snapshots'] = _items
         # override the default output from pydantic by calling `to_dict()` of state
         if self.state:

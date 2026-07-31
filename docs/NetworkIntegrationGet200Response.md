@@ -6,7 +6,7 @@ Sync response
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**NetworkIntegration**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkIntegration.md) |  | [optional] 
+**metadata** | [**NetworkIntegration**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkIntegration.md) |  | [optional] 
 **status** | **str** | Status description | [optional] 
 **status_code** | **int** | Status code | [optional] 
 **type** | **str** | Response type | [optional] 

@@ -20,18 +20,20 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from pyincusd.models.instance_nvram_variable import InstanceNVRAMVariable
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
-class ServerPut403Response(BaseModel):
+class InstanceNvramGetRecursion2200Response(BaseModel):
     """
-    ServerPut403Response
+    Sync response
     """ # noqa: E501
-    error: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["not authorized"]})
-    error_code: Optional[StrictInt] = Field(default=None, json_schema_extra={"examples": [403]})
-    type: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["error"]})
-    __properties: ClassVar[List[str]] = ["error", "error_code", "type"]
+    metadata: Optional[Dict[str, Dict[str, InstanceNVRAMVariable]]] = Field(default=None, description="UEFI variables")
+    status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
+    status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
+    type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})
+    __properties: ClassVar[List[str]] = ["metadata", "status", "status_code", "type"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -51,7 +53,7 @@ class ServerPut403Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ServerPut403Response from a JSON string"""
+        """Create an instance of InstanceNvramGetRecursion2200Response from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,11 +74,19 @@ class ServerPut403Response(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each value in metadata (dict of dict)
+        _field_dict_of_dict = {}
+        if self.metadata:
+            for _key_metadata, _value_metadata in self.metadata.items():
+                _field_dict_of_dict[_key_metadata] = {
+                    _key: _value.to_dict() if _value is not None else None for _key, _value in _value_metadata.items()
+                } if _value_metadata is not None else None
+            _dict['metadata'] = _field_dict_of_dict
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ServerPut403Response from a dict"""
+        """Create an instance of InstanceNvramGetRecursion2200Response from a dict"""
         if obj is None:
             return None
 
@@ -84,8 +94,20 @@ class ServerPut403Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "error": obj.get("error"),
-            "error_code": obj.get("error_code"),
+            "metadata": dict(
+                (_k, dict(
+                    (_ik, InstanceNVRAMVariable.from_dict(_iv))
+                        for _ik, _iv in _v.items()
+                    )
+                    if _v is not None
+                    else None
+                )
+                for _k, _v in obj["metadata"].items()
+            )
+            if obj.get("metadata") is not None
+            else None,
+            "status": obj.get("status"),
+            "status_code": obj.get("status_code"),
             "type": obj.get("type")
         })
         return _obj

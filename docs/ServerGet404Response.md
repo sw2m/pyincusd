@@ -1,4 +1,4 @@
-# ServerPut400Response
+# ServerGet404Response
 
 
 ## Properties
@@ -12,19 +12,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from pyincusd.models.server_put400_response import ServerPut400Response
+from pyincusd.models.server_get404_response import ServerGet404Response
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of ServerPut400Response from a JSON string
-server_put400_response_instance = ServerPut400Response.from_json(json)
+# create an instance of ServerGet404Response from a JSON string
+server_get404_response_instance = ServerGet404Response.from_json(json)
 # print the JSON string representation of the object
-print(ServerPut400Response.to_json())
+print(ServerGet404Response.to_json())
 
 # convert the object into a dict
-server_put400_response_dict = server_put400_response_instance.to_dict()
-# create an instance of ServerPut400Response from a dict
-server_put400_response_from_dict = ServerPut400Response.from_dict(server_put400_response_dict)
+server_get404_response_dict = server_get404_response_instance.to_dict()
+# create an instance of ServerGet404Response from a dict
+server_get404_response_from_dict = ServerGet404Response.from_dict(server_get404_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

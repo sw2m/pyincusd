@@ -75,8 +75,7 @@ class NetworkLoadBalancerState(BaseModel):
         _field_dict = {}
         if self.backend_health:
             for _key_backend_health in self.backend_health:
-                if self.backend_health[_key_backend_health]:
-                    _field_dict[_key_backend_health] = self.backend_health[_key_backend_health].to_dict()
+                _field_dict[_key_backend_health] = self.backend_health[_key_backend_health].to_dict() if self.backend_health[_key_backend_health] is not None else None
             _dict['backend_health'] = _field_dict
         return _dict
 

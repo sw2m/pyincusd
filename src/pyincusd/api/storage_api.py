@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictBool, StrictInt, StrictStr
 from typing import Any, Dict, Optional
 from typing_extensions import Annotated
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.server_put200_response import ServerPut200Response
 from pyincusd.models.storage_bucket_backup_post import StorageBucketBackupPost
 from pyincusd.models.storage_bucket_backups_post import StorageBucketBackupsPost
@@ -154,8 +154,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -236,8 +238,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -318,8 +322,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -468,7 +474,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -545,7 +554,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -622,7 +634,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -766,7 +781,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -843,7 +861,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -920,7 +941,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1072,8 +1096,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1158,8 +1184,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1244,8 +1272,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1401,7 +1431,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeyGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1482,7 +1515,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeyGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1563,7 +1599,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeyGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1713,9 +1752,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': None,
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1795,9 +1836,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': None,
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1877,9 +1920,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': None,
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2051,8 +2096,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -2142,8 +2189,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -2233,8 +2282,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -2403,7 +2454,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeysGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2480,7 +2534,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeysGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2557,7 +2614,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeysGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2701,7 +2761,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeysGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2778,7 +2841,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeysGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2855,7 +2921,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketKeysGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3007,8 +3076,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3094,8 +3165,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3181,8 +3254,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3347,9 +3422,12 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': None,
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3425,9 +3503,12 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': None,
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3503,9 +3584,12 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': None,
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3670,8 +3754,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3757,8 +3843,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3844,8 +3932,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3968,7 +4058,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Delete a storage bucket backup
 
         Deletes a new storage bucket backup.
@@ -4018,9 +4108,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4054,7 +4146,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Delete a storage bucket backup
 
         Deletes a new storage bucket backup.
@@ -4104,9 +4196,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4190,9 +4284,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4352,7 +4448,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4437,7 +4536,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4522,7 +4624,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4682,7 +4787,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4767,7 +4875,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4852,7 +4963,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4962,7 +5076,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Rename a storage bucket backup
 
         Renames a storage bucket backup.
@@ -5015,9 +5129,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5052,7 +5168,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Rename a storage bucket backup
 
         Renames a storage bucket backup.
@@ -5105,9 +5221,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5195,9 +5313,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5369,7 +5489,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5450,7 +5573,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5531,7 +5657,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5684,7 +5813,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5765,7 +5897,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5846,7 +5981,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5952,7 +6090,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Create a storage bucket backup
 
         Creates a new storage bucket backup.  If the `Accept` header is set to `application/octet-stream`, this directly streams the backup tarball to the client without any intermediate operation.
@@ -6002,9 +6140,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6038,7 +6178,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Create a storage bucket backup
 
         Creates a new storage bucket backup.  If the `Accept` header is set to `application/octet-stream`, this directly streams the backup tarball to the client without any intermediate operation.
@@ -6088,9 +6228,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6174,9 +6316,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6346,7 +6490,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6427,7 +6574,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6508,7 +6658,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6663,7 +6816,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6744,7 +6900,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6825,7 +6984,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6980,7 +7142,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7061,7 +7226,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7142,7 +7310,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolBucketsGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7293,7 +7464,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7370,7 +7544,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7447,7 +7624,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7597,8 +7777,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -7680,8 +7862,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -7763,8 +7947,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -7931,8 +8117,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -8014,8 +8202,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -8097,8 +8287,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -8257,7 +8449,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolResources200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8330,7 +8525,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolResources200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8403,7 +8601,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolResources200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8556,7 +8757,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8645,7 +8849,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8734,7 +8941,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8897,7 +9107,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8982,7 +9195,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9067,7 +9283,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9227,7 +9446,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9312,7 +9534,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9397,7 +9622,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeBitmapsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9557,8 +9785,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9643,8 +9873,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9729,8 +9961,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9894,9 +10128,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9985,9 +10220,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10076,9 +10312,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10241,9 +10478,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10328,9 +10566,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10415,9 +10654,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10578,9 +10818,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10665,9 +10906,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10752,9 +10994,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10934,9 +11177,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11041,9 +11285,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11148,9 +11393,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11338,7 +11584,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11423,7 +11672,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11508,7 +11760,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11668,7 +11923,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11753,7 +12011,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11838,7 +12099,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11998,9 +12262,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12085,9 +12350,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12172,9 +12438,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12339,8 +12606,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -12430,8 +12699,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -12521,8 +12792,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -12649,7 +12922,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> ServerPut200Response:
         """Rename or move/migrate a storage volume
 
         Renames, moves a storage volume between pools or migrates an instance to another server.  The returned operation metadata will vary based on what's requested. For rename or move within the same server, this is a simple background operation with progress data. For migration, in the push case, this will similarly be a background operation with progress data, for the pull case, it will be a websocket operation with a number of secrets to be passed to the target server.
@@ -12702,9 +12975,12 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12739,7 +13015,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[ServerPut200Response]:
         """Rename or move/migrate a storage volume
 
         Renames, moves a storage volume between pools or migrates an instance to another server.  The returned operation metadata will vary based on what's requested. For rename or move within the same server, this is a simple background operation with progress data. For migration, in the push case, this will similarly be a background operation with progress data, for the pull case, it will be a websocket operation with a number of secrets to be passed to the target server.
@@ -12792,9 +13068,12 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12882,9 +13161,12 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13064,8 +13346,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -13155,8 +13439,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -13246,8 +13532,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -13374,7 +13662,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Rebuild the storage volume
 
         Wipes the underlying storage volume and re-creates an empty one with the same configuration. Only allowed for custom volumes without snapshots.
@@ -13427,10 +13715,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13465,7 +13754,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Rebuild the storage volume
 
         Wipes the underlying storage volume and re-creates an empty one with the same configuration. Only allowed for custom volumes without snapshots.
@@ -13518,10 +13807,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13609,10 +13899,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13780,9 +14071,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13859,9 +14151,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13938,9 +14231,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14091,7 +14385,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeStateGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14176,7 +14473,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeStateGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14261,7 +14561,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumeTypeStateGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14417,7 +14720,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14498,7 +14804,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14579,7 +14888,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14734,7 +15046,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14815,7 +15130,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14896,7 +15214,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15051,9 +15372,11 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15134,9 +15457,11 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15217,9 +15542,11 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15339,7 +15666,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Delete a storage volume backup
 
         Deletes a new storage volume backup.
@@ -15392,9 +15719,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15429,7 +15758,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Delete a storage volume backup
 
         Deletes a new storage volume backup.
@@ -15482,9 +15811,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15572,9 +15903,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15741,7 +16074,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15830,7 +16166,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15919,7 +16258,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16086,7 +16428,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16175,7 +16520,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16264,7 +16612,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16378,7 +16729,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Rename a storage volume backup
 
         Renames a storage volume backup.
@@ -16434,9 +16785,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16472,7 +16825,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Rename a storage volume backup
 
         Renames a storage volume backup.
@@ -16528,9 +16881,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16622,9 +16977,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16803,7 +17160,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16888,7 +17248,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16973,7 +17336,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -17133,7 +17499,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -17218,7 +17587,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -17303,7 +17675,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -17413,7 +17788,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Create a storage volume backup
 
         Creates a new storage volume backup.  If the `Accept` header is set to `application/octet-stream`, this directly streams the backup tarball to the client without any intermediate operation.
@@ -17466,9 +17841,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -17503,7 +17880,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Create a storage volume backup
 
         Creates a new storage volume backup.  If the `Accept` header is set to `application/octet-stream`, this directly streams the backup tarball to the client without any intermediate operation.
@@ -17556,9 +17933,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -17646,9 +18025,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -17775,7 +18156,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> ServerPut200Response:
         """Delete a storage volume bitmap
 
         Deletes a storage volume bitmap.
@@ -17828,9 +18209,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -17865,7 +18248,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[ServerPut200Response]:
         """Delete a storage volume bitmap
 
         Deletes a storage volume bitmap.
@@ -17918,9 +18301,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18008,9 +18393,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18123,7 +18510,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> ServerPut200Response:
         """Create a storage volume bitmap
 
         Creates a new storage volume bitmap.
@@ -18176,9 +18563,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18213,7 +18602,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[ServerPut200Response]:
         """Create a storage volume bitmap
 
         Creates a new storage volume bitmap.
@@ -18266,9 +18655,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18356,9 +18747,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18531,7 +18924,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18612,7 +19008,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18693,7 +19092,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18846,7 +19248,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -18927,7 +19332,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19008,7 +19416,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19161,7 +19572,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19242,7 +19656,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19323,7 +19740,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19480,9 +19900,11 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19567,9 +19989,11 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19654,9 +20078,11 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19779,7 +20205,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Delete a storage volume snapshot
 
         Deletes a new storage volume snapshot.
@@ -19832,9 +20258,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -19869,7 +20297,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Delete a storage volume snapshot
 
         Deletes a new storage volume snapshot.
@@ -19922,9 +20350,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -20012,9 +20442,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -20181,7 +20613,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -20270,7 +20705,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -20359,7 +20797,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -20530,8 +20971,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -20625,8 +21068,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -20720,8 +21165,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -20852,7 +21299,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Rename a storage volume snapshot
 
         Renames a storage volume snapshot.
@@ -20908,9 +21355,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -20946,7 +21395,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Rename a storage volume snapshot
 
         Renames a storage volume snapshot.
@@ -21002,9 +21451,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -21096,9 +21547,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -21285,8 +21738,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -21380,8 +21835,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -21475,8 +21932,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -21656,7 +22115,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -21741,7 +22203,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -21826,7 +22291,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -21986,7 +22454,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22071,7 +22542,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22156,7 +22630,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolVolumesTypeSnapshotsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22266,7 +22743,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Create a storage volume snapshot
 
         Creates a new storage volume snapshot.
@@ -22319,9 +22796,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22356,7 +22835,7 @@ class StorageApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Create a storage volume snapshot
 
         Creates a new storage volume snapshot.
@@ -22409,9 +22888,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22499,9 +22980,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22665,8 +23148,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22739,8 +23224,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22813,8 +23300,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -22951,7 +23440,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -23024,7 +23516,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -23097,7 +23592,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -23236,7 +23734,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -23309,7 +23810,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -23382,7 +23886,10 @@ class StorageApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "StoragePoolsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -23524,9 +24031,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -23602,9 +24111,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -23680,9 +24191,11 @@ class StorageApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(

@@ -80,8 +80,7 @@ class ResourcesMemory(BaseModel):
         _items = []
         if self.nodes:
             for _item_nodes in self.nodes:
-                if _item_nodes:
-                    _items.append(_item_nodes.to_dict())
+                _items.append(_item_nodes.to_dict() if _item_nodes is not None else None)
             _dict['nodes'] = _items
         return _dict
 

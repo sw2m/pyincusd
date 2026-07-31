@@ -92,8 +92,7 @@ class ResourcesGPUCard(BaseModel):
         _field_dict = {}
         if self.mdev:
             for _key_mdev in self.mdev:
-                if self.mdev[_key_mdev]:
-                    _field_dict[_key_mdev] = self.mdev[_key_mdev].to_dict()
+                _field_dict[_key_mdev] = self.mdev[_key_mdev].to_dict() if self.mdev[_key_mdev] is not None else None
             _dict['mdev'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of nvidia
         if self.nvidia:

@@ -78,8 +78,7 @@ class InstancesGetRecursion1200Response(BaseModel):
         _items = []
         if self.metadata:
             for _item_metadata in self.metadata:
-                if _item_metadata:
-                    _items.append(_item_metadata.to_dict())
+                _items.append(_item_metadata.to_dict() if _item_metadata is not None else None)
             _dict['metadata'] = _items
         return _dict
 

@@ -87,7 +87,7 @@ class DefaultApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "MetadataConfigurationGet200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -152,7 +152,7 @@ class DefaultApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "MetadataConfigurationGet200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -217,7 +217,7 @@ class DefaultApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "MetadataConfigurationGet200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(

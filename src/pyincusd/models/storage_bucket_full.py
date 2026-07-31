@@ -83,15 +83,13 @@ class StorageBucketFull(BaseModel):
         _items = []
         if self.backups:
             for _item_backups in self.backups:
-                if _item_backups:
-                    _items.append(_item_backups.to_dict())
+                _items.append(_item_backups.to_dict() if _item_backups is not None else None)
             _dict['backups'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in keys (list)
         _items = []
         if self.keys:
             for _item_keys in self.keys:
-                if _item_keys:
-                    _items.append(_item_keys.to_dict())
+                _items.append(_item_keys.to_dict() if _item_keys is not None else None)
             _dict['keys'] = _items
         return _dict
 

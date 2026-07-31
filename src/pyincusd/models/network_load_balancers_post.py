@@ -80,15 +80,13 @@ class NetworkLoadBalancersPost(BaseModel):
         _items = []
         if self.backends:
             for _item_backends in self.backends:
-                if _item_backends:
-                    _items.append(_item_backends.to_dict())
+                _items.append(_item_backends.to_dict() if _item_backends is not None else None)
             _dict['backends'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in ports (list)
         _items = []
         if self.ports:
             for _item_ports in self.ports:
-                if _item_ports:
-                    _items.append(_item_ports.to_dict())
+                _items.append(_item_ports.to_dict() if _item_ports is not None else None)
             _dict['ports'] = _items
         return _dict
 

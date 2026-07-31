@@ -76,8 +76,7 @@ class ResourcesStorage(BaseModel):
         _items = []
         if self.disks:
             for _item_disks in self.disks:
-                if _item_disks:
-                    _items.append(_item_disks.to_dict())
+                _items.append(_item_disks.to_dict() if _item_disks is not None else None)
             _dict['disks'] = _items
         return _dict
 

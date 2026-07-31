@@ -77,8 +77,7 @@ class ResourcesCPU(BaseModel):
         _items = []
         if self.sockets:
             for _item_sockets in self.sockets:
-                if _item_sockets:
-                    _items.append(_item_sockets.to_dict())
+                _items.append(_item_sockets.to_dict() if _item_sockets is not None else None)
             _dict['sockets'] = _items
         return _dict
 

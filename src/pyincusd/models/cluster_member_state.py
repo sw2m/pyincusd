@@ -77,8 +77,7 @@ class ClusterMemberState(BaseModel):
         _field_dict = {}
         if self.storage_pools:
             for _key_storage_pools in self.storage_pools:
-                if self.storage_pools[_key_storage_pools]:
-                    _field_dict[_key_storage_pools] = self.storage_pools[_key_storage_pools].to_dict()
+                _field_dict[_key_storage_pools] = self.storage_pools[_key_storage_pools].to_dict() if self.storage_pools[_key_storage_pools] is not None else None
             _dict['storage_pools'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of sysinfo
         if self.sysinfo:

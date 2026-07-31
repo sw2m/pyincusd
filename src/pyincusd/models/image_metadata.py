@@ -79,8 +79,7 @@ class ImageMetadata(BaseModel):
         _field_dict = {}
         if self.templates:
             for _key_templates in self.templates:
-                if self.templates[_key_templates]:
-                    _field_dict[_key_templates] = self.templates[_key_templates].to_dict()
+                _field_dict[_key_templates] = self.templates[_key_templates].to_dict() if self.templates[_key_templates] is not None else None
             _dict['templates'] = _field_dict
         return _dict
 

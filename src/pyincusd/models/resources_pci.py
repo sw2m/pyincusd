@@ -76,8 +76,7 @@ class ResourcesPCI(BaseModel):
         _items = []
         if self.devices:
             for _item_devices in self.devices:
-                if _item_devices:
-                    _items.append(_item_devices.to_dict())
+                _items.append(_item_devices.to_dict() if _item_devices is not None else None)
             _dict['devices'] = _items
         return _dict
 

@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictBool, StrictBytes, StrictStr
 from typing import Any, Optional, Tuple, Union
 from typing_extensions import Annotated
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.image_alias_get200_response import ImageAliasGet200Response
 from pyincusd.models.image_aliases_entry_post import ImageAliasesEntryPost
 from pyincusd.models.image_aliases_entry_put import ImageAliasesEntryPut
@@ -111,8 +111,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -185,8 +187,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -259,8 +263,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -397,7 +403,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageAliasGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -470,7 +479,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageAliasGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -543,7 +555,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageAliasGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -680,7 +695,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageAliasGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -753,7 +771,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageAliasGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -826,7 +847,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageAliasGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -921,7 +945,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Delete the image
 
         Removes the image from the image store.
@@ -962,9 +986,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -995,7 +1021,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Delete the image
 
         Removes the image from the image store.
@@ -1036,9 +1062,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1110,9 +1138,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1249,7 +1279,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1322,7 +1355,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1395,7 +1431,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1537,7 +1576,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1614,7 +1656,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1691,7 +1736,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1834,7 +1882,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1907,7 +1958,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1980,7 +2034,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2121,7 +2178,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2198,7 +2258,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2275,7 +2338,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImageGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2421,8 +2487,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -2500,8 +2568,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -2579,8 +2649,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -2738,8 +2810,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -2817,8 +2891,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -2896,8 +2972,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3055,8 +3133,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3134,8 +3214,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3213,8 +3295,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -3371,9 +3455,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3449,9 +3535,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3527,9 +3615,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3678,7 +3768,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesAliasesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3747,7 +3840,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesAliasesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3816,7 +3912,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesAliasesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3946,7 +4045,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesAliasesGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4015,7 +4117,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesAliasesGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4084,7 +4189,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesAliasesGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4217,9 +4325,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4291,9 +4401,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4365,9 +4477,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4521,8 +4635,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -4600,8 +4716,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -4679,8 +4797,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -4793,7 +4913,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Make the server push the image to a remote server
 
         Gets the server to connect to a remote server and push the image to it.
@@ -4837,8 +4957,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4870,7 +4993,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Make the server push the image to a remote server
 
         Gets the server to connect to a remote server and push the image to it.
@@ -4914,8 +5037,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4991,8 +5117,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5136,7 +5265,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5213,7 +5345,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5290,7 +5425,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5438,7 +5576,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGetRecursion1Untrusted200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5515,7 +5656,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGetRecursion1Untrusted200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5592,7 +5736,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGetRecursion1Untrusted200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5740,7 +5887,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGetRecursion1Untrusted200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5817,7 +5967,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGetRecursion1Untrusted200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5894,7 +6047,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGetRecursion1Untrusted200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6042,7 +6198,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6119,7 +6278,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6196,7 +6358,10 @@ class ImagesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ImagesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6306,7 +6471,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Add an image
 
         Adds a new image to the image store.
@@ -6371,9 +6536,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6412,7 +6579,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Add an image
 
         Adds a new image to the image store.
@@ -6477,9 +6644,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6583,9 +6752,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6717,7 +6888,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServerPut200Response:
+    ) -> CertificatesPost202Response:
         """Add an image
 
         Pushes the data to the target image server. This is meant for server to server communication where a new image entry is prepared on the target server and the source server is provided that URL and a secret token to push the image content over.
@@ -6758,9 +6929,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6791,7 +6964,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServerPut200Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Add an image
 
         Pushes the data to the target image server. This is meant for server to server communication where a new image entry is prepared on the target server and the source server is provided that URL and a secret token to push the image content over.
@@ -6832,9 +7005,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6906,9 +7081,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7016,7 +7193,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Refresh an image
 
         This causes the server to check the image source server for an updated version of the image and if available to refresh the local copy with the new version.
@@ -7057,8 +7234,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7089,7 +7269,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Refresh an image
 
         This causes the server to check the image source server for an updated version of the image and if available to refresh the local copy with the new version.
@@ -7130,8 +7310,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7203,8 +7386,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7299,7 +7485,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Generate secret for retrieval of the image by an untrusted client
 
         This generates a background operation including a secret one time key in its metadata which can be used to fetch this image from an untrusted client.
@@ -7340,8 +7526,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7372,7 +7561,7 @@ class ImagesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Generate secret for retrieval of the image by an untrusted client
 
         This generates a background operation including a secret one time key in its metadata which can be used to fetch this image from an untrusted client.
@@ -7413,8 +7602,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7486,8 +7678,11 @@ class ImagesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(

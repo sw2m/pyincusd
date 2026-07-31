@@ -4,14 +4,14 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**network_load_balancer_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_delete) | **DELETE** /1.0/networks/{networkName}/load-balancers/{listenAddress} | Delete the network address load balancer
-[**network_load_balancer_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_get) | **GET** /1.0/networks/{networkName}/load-balancers/{listenAddress} | Get the network address load balancer
-[**network_load_balancer_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_get_recursion1) | **GET** /1.0/networks/{networkName}/load-balancers?recursion&#x3D;1 | Get the network address load balancers
-[**network_load_balancer_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_patch) | **PATCH** /1.0/networks/{networkName}/load-balancers/{listenAddress} | Partially update the network address load balancer
-[**network_load_balancer_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_put) | **PUT** /1.0/networks/{networkName}/load-balancers/{listenAddress} | Update the network address load balancer
-[**network_load_balancer_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_state_get) | **GET** /1.0/networks/{networkName}/load-balancers/{listenAddress}/state | Get the network address load balancer state
-[**network_load_balancers_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersApi.md#network_load_balancers_get) | **GET** /1.0/networks/{networkName}/load-balancers | Get the network address of load balancers
-[**network_load_balancers_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersApi.md#network_load_balancers_post) | **POST** /1.0/networks/{networkName}/load-balancers | Add a network load balancer
+[**network_load_balancer_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_delete) | **DELETE** /1.0/networks/{networkName}/load-balancers/{listenAddress} | Delete the network address load balancer
+[**network_load_balancer_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_get) | **GET** /1.0/networks/{networkName}/load-balancers/{listenAddress} | Get the network address load balancer
+[**network_load_balancer_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_get_recursion1) | **GET** /1.0/networks/{networkName}/load-balancers?recursion&#x3D;1 | Get the network address load balancers
+[**network_load_balancer_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_patch) | **PATCH** /1.0/networks/{networkName}/load-balancers/{listenAddress} | Partially update the network address load balancer
+[**network_load_balancer_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_put) | **PUT** /1.0/networks/{networkName}/load-balancers/{listenAddress} | Update the network address load balancer
+[**network_load_balancer_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersApi.md#network_load_balancer_state_get) | **GET** /1.0/networks/{networkName}/load-balancers/{listenAddress}/state | Get the network address load balancer state
+[**network_load_balancers_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersApi.md#network_load_balancers_get) | **GET** /1.0/networks/{networkName}/load-balancers | Get the network address of load balancers
+[**network_load_balancers_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersApi.md#network_load_balancers_post) | **POST** /1.0/networks/{networkName}/load-balancers | Add a network load balancer
 
 
 # **network_load_balancer_delete**
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -85,6 +85,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -142,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkLoadBalancerGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancerGet200Response.md)
+[**NetworkLoadBalancerGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancerGet200Response.md)
 
 ### Authorization
 
@@ -158,7 +160,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Load Balancer |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -216,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkLoadBalancerGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancerGetRecursion1200Response.md)
+[**NetworkLoadBalancerGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancerGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -232,7 +237,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -288,12 +296,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
  **listen_address** | **str**| Listen address | 
- **load_balancer** | [**NetworkLoadBalancerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancerPut.md)| Address load balancer configuration | 
+ **load_balancer** | [**NetworkLoadBalancerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancerPut.md)| Address load balancer configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -311,6 +319,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
@@ -367,12 +377,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
  **listen_address** | **str**| Listen address | 
- **load_balancer** | [**NetworkLoadBalancerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancerPut.md)| Address load balancer configuration | 
+ **load_balancer** | [**NetworkLoadBalancerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancerPut.md)| Address load balancer configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -390,6 +400,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
@@ -448,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkLoadBalancerStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancerStateGet200Response.md)
+[**NetworkLoadBalancerStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancerStateGet200Response.md)
 
 ### Authorization
 
@@ -464,7 +476,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Load Balancer state |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -522,7 +537,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkLoadBalancersGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersGet200Response.md)
+[**NetworkLoadBalancersGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersGet200Response.md)
 
 ### Authorization
 
@@ -538,7 +553,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -592,12 +610,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
- **load_balancer** | [**NetworkLoadBalancersPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkLoadBalancersPost.md)| Load Balancer | 
+ **load_balancer** | [**NetworkLoadBalancersPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancersPost.md)| Load Balancer | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -612,9 +630,11 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Empty sync response |  -  |
+**201** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

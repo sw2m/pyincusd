@@ -92,8 +92,7 @@ class InstanceState(BaseModel):
         _field_dict = {}
         if self.disk:
             for _key_disk in self.disk:
-                if self.disk[_key_disk]:
-                    _field_dict[_key_disk] = self.disk[_key_disk].to_dict()
+                _field_dict[_key_disk] = self.disk[_key_disk].to_dict() if self.disk[_key_disk] is not None else None
             _dict['disk'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of memory
         if self.memory:
@@ -102,8 +101,7 @@ class InstanceState(BaseModel):
         _field_dict = {}
         if self.network:
             for _key_network in self.network:
-                if self.network[_key_network]:
-                    _field_dict[_key_network] = self.network[_key_network].to_dict()
+                _field_dict[_key_network] = self.network[_key_network].to_dict() if self.network[_key_network] is not None else None
             _dict['network'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of os_info
         if self.os_info:

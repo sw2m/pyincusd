@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, Optional
 from typing_extensions import Annotated
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.image_metadata import ImageMetadata
 from pyincusd.models.instance_access200_response import InstanceAccess200Response
 from pyincusd.models.instance_backup_get200_response import InstanceBackupGet200Response
@@ -35,6 +35,13 @@ from pyincusd.models.instance_get200_response import InstanceGet200Response
 from pyincusd.models.instance_get_recursion1200_response import InstanceGetRecursion1200Response
 from pyincusd.models.instance_logs_get200_response import InstanceLogsGet200Response
 from pyincusd.models.instance_metadata_get200_response import InstanceMetadataGet200Response
+from pyincusd.models.instance_nvram_get200_response import InstanceNvramGet200Response
+from pyincusd.models.instance_nvram_get_recursion1200_response import InstanceNvramGetRecursion1200Response
+from pyincusd.models.instance_nvram_get_recursion2200_response import InstanceNvramGetRecursion2200Response
+from pyincusd.models.instance_nvram_guid_get200_response import InstanceNvramGuidGet200Response
+from pyincusd.models.instance_nvram_guid_get_recursion1200_response import InstanceNvramGuidGetRecursion1200Response
+from pyincusd.models.instance_nvram_guid_var_get200_response import InstanceNvramGuidVarGet200Response
+from pyincusd.models.instance_port_forward_post import InstancePortForwardPost
 from pyincusd.models.instance_post import InstancePost
 from pyincusd.models.instance_put import InstancePut
 from pyincusd.models.instance_rebuild_post import InstanceRebuildPost
@@ -131,8 +138,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceAccess200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -205,8 +214,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceAccess200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -279,8 +290,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceAccess200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -376,7 +389,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Delete a backup
 
         Deletes the instance backup.
@@ -420,9 +433,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -454,7 +469,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Delete a backup
 
         Deletes the instance backup.
@@ -498,9 +513,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -576,9 +593,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -722,7 +741,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -799,7 +821,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -876,7 +901,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1020,7 +1048,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1097,7 +1128,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1174,7 +1208,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1274,7 +1311,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Rename a backup
 
         Renames an instance backup.
@@ -1321,9 +1358,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1356,7 +1395,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Rename a backup
 
         Renames an instance backup.
@@ -1403,9 +1442,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1485,9 +1526,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1643,7 +1686,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1716,7 +1762,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1789,7 +1838,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1926,7 +1978,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1999,7 +2054,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2072,7 +2130,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceBackupsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2168,7 +2229,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Create a backup
 
         Creates a new backup.  If the `Accept` header is set to `application/octet-stream`, this directly streams the backup tarball to the client without any intermediate operation.
@@ -2212,9 +2273,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2246,7 +2309,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Create a backup
 
         Creates a new backup.  If the `Accept` header is set to `application/octet-stream`, this directly streams the backup tarball to the client without any intermediate operation.
@@ -2290,9 +2353,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2368,9 +2433,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2483,7 +2550,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> ServerPut200Response:
         """Create a bitmap
 
         Creates a new bitmap.
@@ -2527,9 +2594,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2561,7 +2630,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[ServerPut200Response]:
         """Create a bitmap
 
         Creates a new bitmap.
@@ -2605,9 +2674,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2683,9 +2754,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2838,9 +2911,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2913,9 +2987,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2988,9 +3063,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3131,9 +3207,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3210,9 +3287,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3289,9 +3367,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3392,7 +3471,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Connect to console
 
         Connects to the console of an instance.  The returned operation metadata will contain two websockets, one for data and one for control.
@@ -3436,9 +3515,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3470,7 +3551,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Connect to console
 
         Connects to the console of an instance.  The returned operation metadata will contain two websockets, one for data and one for control.
@@ -3514,9 +3595,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3592,9 +3675,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3751,9 +3836,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3830,9 +3916,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -3909,9 +3996,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4057,9 +4145,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4136,9 +4225,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4215,9 +4305,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4281,7 +4372,7 @@ class InstancesApi:
         ]
 
         return self.api_client.param_serialize(
-            method='GET',
+            method='POST',
             resource_path='/1.0/instances/{name}/debug/repair',
             path_params=_path_params,
             query_params=_query_params,
@@ -4315,7 +4406,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Delete an instance
 
         Deletes a specific instance.  This also deletes anything owned by the instance such as snapshots and backups.
@@ -4356,9 +4447,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4389,7 +4482,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Delete an instance
 
         Deletes a specific instance.  This also deletes anything owned by the instance such as snapshots and backups.
@@ -4430,9 +4523,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4504,9 +4599,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4647,9 +4744,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4726,9 +4824,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4805,9 +4904,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -4951,9 +5051,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5030,9 +5131,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5109,9 +5211,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5252,8 +5355,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceExecOutputsGet200Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5326,8 +5431,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceExecOutputsGet200Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5400,8 +5507,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceExecOutputsGet200Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5497,7 +5606,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Run a command
 
         Executes a command inside an instance.  The returned operation metadata will contain either 2 or 4 websockets. In non-interactive mode, you'll get one websocket for each of stdin, stdout and stderr. In interactive mode, a single bi-directional websocket is used for stdin and stdout/stderr.  An additional \"control\" socket is always added on top which can be used for out of band communications. This allows sending signals and window sizing information through.
@@ -5541,9 +5650,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5575,7 +5686,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Run a command
 
         Executes a command inside an instance.  The returned operation metadata will contain either 2 or 4 websockets. In non-interactive mode, you'll get one websocket for each of stdin, stdout and stderr. In interactive mode, a single bi-directional websocket is used for stdin and stdout/stderr.  An additional \"control\" socket is always added on top which can be used for out of band communications. This allows sending signals and window sizing information through.
@@ -5619,9 +5730,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5697,9 +5810,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5860,9 +5975,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -5943,9 +6059,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6026,9 +6143,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6177,9 +6295,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6256,9 +6375,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6335,9 +6455,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6484,9 +6605,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6563,9 +6685,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6642,9 +6765,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6810,9 +6934,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -6909,9 +7034,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7008,9 +7134,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7180,7 +7307,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7253,7 +7383,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7326,7 +7459,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7463,7 +7599,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7536,7 +7675,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7609,7 +7751,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7750,9 +7895,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7829,9 +7975,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -7908,9 +8055,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8054,9 +8202,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8133,9 +8282,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8212,9 +8362,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8355,8 +8506,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceLogsGet200Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8429,8 +8582,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceLogsGet200Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8503,8 +8658,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceLogsGet200Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8641,7 +8798,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceMetadataGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8714,7 +8874,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceMetadataGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8787,7 +8950,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceMetadataGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -8928,8 +9094,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -9007,8 +9175,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -9086,8 +9256,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -9245,8 +9417,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -9324,8 +9498,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -9403,8 +9579,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -9562,9 +9740,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9641,9 +9820,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9720,9 +9900,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9868,9 +10049,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -9947,9 +10129,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10026,9 +10209,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10175,9 +10359,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10254,9 +10439,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10333,9 +10519,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10494,9 +10681,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10573,9 +10761,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10652,9 +10841,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10739,6 +10929,2499 @@ class InstancesApi:
 
 
     @validate_call
+    async def instance_nvram_get(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> InstanceNvramGet200Response:
+        """Get the NVRAM variable GUIDs
+
+        Returns a list of NVRAM variable GUIDs (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_get_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[InstanceNvramGet200Response]:
+        """Get the NVRAM variable GUIDs
+
+        Returns a list of NVRAM variable GUIDs (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_get_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Get the NVRAM variable GUIDs
+
+        Returns a list of NVRAM variable GUIDs (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_get_serialize(
+        self,
+        name,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/1.0/instances/{name}/nvram',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    async def instance_nvram_get_recursion1(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> InstanceNvramGetRecursion1200Response:
+        """Get the NVRAM variable GUIDs and names
+
+        Returns a map of NVRAM variable GUIDs and their associated names (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_recursion1_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGetRecursion1200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_get_recursion1_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[InstanceNvramGetRecursion1200Response]:
+        """Get the NVRAM variable GUIDs and names
+
+        Returns a map of NVRAM variable GUIDs and their associated names (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_recursion1_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGetRecursion1200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_get_recursion1_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Get the NVRAM variable GUIDs and names
+
+        Returns a map of NVRAM variable GUIDs and their associated names (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_recursion1_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGetRecursion1200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_get_recursion1_serialize(
+        self,
+        name,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/1.0/instances/{name}/nvram?recursion=1',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    async def instance_nvram_get_recursion2(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> InstanceNvramGetRecursion2200Response:
+        """Get the NVRAM variables
+
+        Returns a map of NVRAM variable GUIDs and their dissected values.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_recursion2_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGetRecursion2200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_get_recursion2_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[InstanceNvramGetRecursion2200Response]:
+        """Get the NVRAM variables
+
+        Returns a map of NVRAM variable GUIDs and their dissected values.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_recursion2_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGetRecursion2200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_get_recursion2_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Get the NVRAM variables
+
+        Returns a map of NVRAM variable GUIDs and their dissected values.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_get_recursion2_serialize(
+            name=name,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGetRecursion2200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_get_recursion2_serialize(
+        self,
+        name,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/1.0/instances/{name}/nvram?recursion=2',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    async def instance_nvram_guid_get(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="GUID")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> InstanceNvramGuidGet200Response:
+        """Get the NVRAM variable names under the given GUID
+
+        Returns a map of variable names (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: GUID (required)
+        :type guid: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_get_serialize(
+            name=name,
+            guid=guid,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_guid_get_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="GUID")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[InstanceNvramGuidGet200Response]:
+        """Get the NVRAM variable names under the given GUID
+
+        Returns a map of variable names (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: GUID (required)
+        :type guid: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_get_serialize(
+            name=name,
+            guid=guid,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_guid_get_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="GUID")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Get the NVRAM variable names under the given GUID
+
+        Returns a map of variable names (URLs).  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: GUID (required)
+        :type guid: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_get_serialize(
+            name=name,
+            guid=guid,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_guid_get_serialize(
+        self,
+        name,
+        guid,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        if guid is not None:
+            _path_params['guid'] = guid
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/1.0/instances/{name}/nvram/{guid}',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    async def instance_nvram_guid_get_recursion1(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="GUID")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> InstanceNvramGuidGetRecursion1200Response:
+        """Get the NVRAM variables under the given GUID
+
+        Returns a map of NVRAM variable GUIDs and their dissected values.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: GUID (required)
+        :type guid: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_get_recursion1_serialize(
+            name=name,
+            guid=guid,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidGetRecursion1200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_guid_get_recursion1_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="GUID")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[InstanceNvramGuidGetRecursion1200Response]:
+        """Get the NVRAM variables under the given GUID
+
+        Returns a map of NVRAM variable GUIDs and their dissected values.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: GUID (required)
+        :type guid: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_get_recursion1_serialize(
+            name=name,
+            guid=guid,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidGetRecursion1200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_guid_get_recursion1_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="GUID")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Get the NVRAM variables under the given GUID
+
+        Returns a map of NVRAM variable GUIDs and their dissected values.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: GUID (required)
+        :type guid: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_get_recursion1_serialize(
+            name=name,
+            guid=guid,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidGetRecursion1200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_guid_get_recursion1_serialize(
+        self,
+        name,
+        guid,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        if guid is not None:
+            _path_params['guid'] = guid
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/1.0/instances/{name}/nvram/{guid}?recursion=1',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    async def instance_nvram_guid_var_delete(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ServerPut200Response:
+        """Delete the NVRAM variable
+
+        Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_delete_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_guid_var_delete_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[ServerPut200Response]:
+        """Delete the NVRAM variable
+
+        Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_delete_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_guid_var_delete_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Delete the NVRAM variable
+
+        Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_delete_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_guid_var_delete_serialize(
+        self,
+        name,
+        guid,
+        var,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        if guid is not None:
+            _path_params['guid'] = guid
+        if var is not None:
+            _path_params['var'] = var
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='DELETE',
+            resource_path='/1.0/instances/{name}/nvram/{guid}/{var}',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    async def instance_nvram_guid_var_get(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> InstanceNvramGuidVarGet200Response:
+        """Get the NVRAM variable
+
+        If the `Accept` header is set to `application/octet-stream`, the raw binary value of the variable is returned.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_get_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidVarGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_guid_var_get_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[InstanceNvramGuidVarGet200Response]:
+        """Get the NVRAM variable
+
+        If the `Accept` header is set to `application/octet-stream`, the raw binary value of the variable is returned.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_get_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidVarGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_guid_var_get_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Get the NVRAM variable
+
+        If the `Accept` header is set to `application/octet-stream`, the raw binary value of the variable is returned.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_get_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "InstanceNvramGuidVarGet200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_guid_var_get_serialize(
+        self,
+        name,
+        guid,
+        var,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        if guid is not None:
+            _path_params['guid'] = guid
+        if var is not None:
+            _path_params['var'] = var
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json', 
+                    'application/octet-stream'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/1.0/instances/{name}/nvram/{guid}/{var}',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    async def instance_nvram_guid_var_put(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        x_incus_attributes: Annotated[Optional[Any], Field(description="Raw UEFI variable attributes to set")] = None,
+        x_incus_timestamp: Annotated[Optional[Any], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ServerPut200Response:
+        """Update the NVRAM variable
+
+        If the `Content-Type` header is set to `application/octet-stream`, this sets the raw binary value of the variable.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param x_incus_attributes: Raw UEFI variable attributes to set
+        :type x_incus_attributes: object
+        :param x_incus_timestamp: Raw UEFI variable UNIX timestamp (in seconds) to set
+        :type x_incus_timestamp: object
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_put_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            x_incus_attributes=x_incus_attributes,
+            x_incus_timestamp=x_incus_timestamp,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_guid_var_put_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        x_incus_attributes: Annotated[Optional[Any], Field(description="Raw UEFI variable attributes to set")] = None,
+        x_incus_timestamp: Annotated[Optional[Any], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[ServerPut200Response]:
+        """Update the NVRAM variable
+
+        If the `Content-Type` header is set to `application/octet-stream`, this sets the raw binary value of the variable.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param x_incus_attributes: Raw UEFI variable attributes to set
+        :type x_incus_attributes: object
+        :param x_incus_timestamp: Raw UEFI variable UNIX timestamp (in seconds) to set
+        :type x_incus_timestamp: object
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_put_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            x_incus_attributes=x_incus_attributes,
+            x_incus_timestamp=x_incus_timestamp,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_guid_var_put_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        guid: Annotated[StrictStr, Field(description="Variable GUID")],
+        var: Annotated[StrictStr, Field(description="Variable name")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        x_incus_attributes: Annotated[Optional[Any], Field(description="Raw UEFI variable attributes to set")] = None,
+        x_incus_timestamp: Annotated[Optional[Any], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Update the NVRAM variable
+
+        If the `Content-Type` header is set to `application/octet-stream`, this sets the raw binary value of the variable.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param guid: Variable GUID (required)
+        :type guid: str
+        :param var: Variable name (required)
+        :type var: str
+        :param project: Project name
+        :type project: str
+        :param x_incus_attributes: Raw UEFI variable attributes to set
+        :type x_incus_attributes: object
+        :param x_incus_timestamp: Raw UEFI variable UNIX timestamp (in seconds) to set
+        :type x_incus_timestamp: object
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_guid_var_put_serialize(
+            name=name,
+            guid=guid,
+            var=var,
+            project=project,
+            x_incus_attributes=x_incus_attributes,
+            x_incus_timestamp=x_incus_timestamp,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_guid_var_put_serialize(
+        self,
+        name,
+        guid,
+        var,
+        project,
+        x_incus_attributes,
+        x_incus_timestamp,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        if guid is not None:
+            _path_params['guid'] = guid
+        if var is not None:
+            _path_params['var'] = var
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        if x_incus_attributes is not None:
+            _header_params['X-Incus-attributes'] = x_incus_attributes
+        if x_incus_timestamp is not None:
+            _header_params['X-Incus-timestamp'] = x_incus_timestamp
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='PUT',
+            resource_path='/1.0/instances/{name}/nvram/{guid}/{var}',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
     async def instance_patch(
         self,
         name: Annotated[StrictStr, Field(description="Instance name")],
@@ -10801,8 +13484,11 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10879,8 +13565,11 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -10957,8 +13646,11 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11053,6 +13745,327 @@ class InstancesApi:
 
 
     @validate_call
+    async def instance_port_forward_post(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        port_forward: Annotated[InstancePortForwardPost, Field(description="Port forwarding request")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> None:
+        """Connect to a TCP port inside the instance
+
+        Upgrades the request to a raw TCP connection to the given address and port inside of the instance.  For containers, the connection is established directly by the server from within the container's network namespace. For virtual machines, the request is forwarded to the agent which then handles the connection.  This is only available on running instances.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param port_forward: Port forwarding request (required)
+        :type port_forward: InstancePortForwardPost
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_port_forward_post_serialize(
+            name=name,
+            port_forward=port_forward,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '101': None,
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_port_forward_post_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        port_forward: Annotated[InstancePortForwardPost, Field(description="Port forwarding request")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[None]:
+        """Connect to a TCP port inside the instance
+
+        Upgrades the request to a raw TCP connection to the given address and port inside of the instance.  For containers, the connection is established directly by the server from within the container's network namespace. For virtual machines, the request is forwarded to the agent which then handles the connection.  This is only available on running instances.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param port_forward: Port forwarding request (required)
+        :type port_forward: InstancePortForwardPost
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_port_forward_post_serialize(
+            name=name,
+            port_forward=port_forward,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '101': None,
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_port_forward_post_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        port_forward: Annotated[InstancePortForwardPost, Field(description="Port forwarding request")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Connect to a TCP port inside the instance
+
+        Upgrades the request to a raw TCP connection to the given address and port inside of the instance.  For containers, the connection is established directly by the server from within the container's network namespace. For virtual machines, the request is forwarded to the agent which then handles the connection.  This is only available on running instances.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param port_forward: Port forwarding request (required)
+        :type port_forward: InstancePortForwardPost
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_port_forward_post_serialize(
+            name=name,
+            port_forward=port_forward,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '101': None,
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_port_forward_post_serialize(
+        self,
+        name,
+        port_forward,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+        if port_forward is not None:
+            _body_params = port_forward
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json', 
+                    'application/octet-stream'
+                ]
+            )
+
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='POST',
+            resource_path='/1.0/instances/{name}/port-forward',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
     async def instance_post(
         self,
         name: Annotated[StrictStr, Field(description="Instance name")],
@@ -11070,7 +14083,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Rename or move/migrate an instance
 
         Renames, moves an instance between pools or migrates an instance to another server.  The returned operation metadata will vary based on what's requested. For rename or move within the same server, this is a simple background operation with progress data. For migration, in the push case, this will similarly be a background operation with progress data, for the pull case, it will be a websocket operation with a number of secrets to be passed to the target server.
@@ -11114,9 +14127,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11148,7 +14163,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Rename or move/migrate an instance
 
         Renames, moves an instance between pools or migrates an instance to another server.  The returned operation metadata will vary based on what's requested. For rename or move within the same server, this is a simple background operation with progress data. For migration, in the push case, this will similarly be a background operation with progress data, for the pull case, it will be a websocket operation with a number of secrets to be passed to the target server.
@@ -11192,9 +14207,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11270,9 +14287,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11384,7 +14403,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Update the instance
 
         Updates the instance configuration or trigger a snapshot restore.
@@ -11428,9 +14447,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11462,7 +14484,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Update the instance
 
         Updates the instance configuration or trigger a snapshot restore.
@@ -11506,9 +14528,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11584,9 +14609,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11698,7 +14726,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ServerPut200Response:
+    ) -> CertificatesPost202Response:
         """Rebuild an instance
 
         Rebuild an instance using an alternate image or as empty.
@@ -11742,11 +14770,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11778,7 +14806,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ServerPut200Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Rebuild an instance
 
         Rebuild an instance using an alternate image or as empty.
@@ -11822,11 +14850,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -11902,11 +14930,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12055,9 +15083,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12126,9 +15155,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12197,9 +15227,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '101': None,
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
-            '404': "InstanceConsoleGet404Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12291,7 +15322,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Delete a snapshot
 
         Deletes the instance snapshot.
@@ -12335,9 +15366,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12369,7 +15402,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Delete a snapshot
 
         Deletes the instance snapshot.
@@ -12413,9 +15446,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12491,9 +15526,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12637,7 +15674,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12714,7 +15754,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12791,7 +15834,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12891,7 +15937,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Partially update snapshot
 
         Updates a subset of the snapshot config.
@@ -12938,9 +15984,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -12973,7 +16022,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Partially update snapshot
 
         Updates a subset of the snapshot config.
@@ -13020,9 +16069,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13102,9 +16154,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13220,7 +16275,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Rename or move/migrate a snapshot
 
         Renames or migrates an instance snapshot to another server.  The returned operation metadata will vary based on what's requested. For rename or move within the same server, this is a simple background operation with progress data. For migration, in the push case, this will similarly be a background operation with progress data, for the pull case, it will be a websocket operation with a number of secrets to be passed to the target server.
@@ -13267,9 +16322,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13302,7 +16359,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Rename or move/migrate a snapshot
 
         Renames or migrates an instance snapshot to another server.  The returned operation metadata will vary based on what's requested. For rename or move within the same server, this is a simple background operation with progress data. For migration, in the push case, this will similarly be a background operation with progress data, for the pull case, it will be a websocket operation with a number of secrets to be passed to the target server.
@@ -13349,9 +16406,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13431,9 +16490,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13549,7 +16610,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Update snapshot
 
         Updates the snapshot config.
@@ -13596,9 +16657,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13631,7 +16695,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Update snapshot
 
         Updates the snapshot config.
@@ -13678,9 +16742,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13760,9 +16827,12 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13918,7 +16988,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -13991,7 +17064,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14064,7 +17140,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotsGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14201,7 +17280,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14274,7 +17356,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14347,7 +17432,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceSnapshotsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14443,7 +17531,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Create a snapshot
 
         Creates a new snapshot.
@@ -14487,9 +17575,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14521,7 +17611,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Create a snapshot
 
         Creates a new snapshot.
@@ -14565,9 +17655,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14643,9 +17735,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14798,8 +17892,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceStateGet200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14872,8 +17968,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceStateGet200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -14946,8 +18044,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstanceStateGet200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15043,7 +18143,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Change the state
 
         Changes the running state of the instance.
@@ -15087,9 +18187,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15121,7 +18223,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Change the state
 
         Changes the running state of the instance.
@@ -15165,9 +18267,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15243,9 +18347,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15402,7 +18508,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15479,7 +18588,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15556,7 +18668,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15704,7 +18819,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15781,7 +18899,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -15858,7 +18979,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16006,7 +19130,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16083,7 +19210,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16160,7 +19290,10 @@ class InstancesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InstancesGetRecursion2200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16263,7 +19396,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Create a new instance
 
         Creates a new instance. Depending on the source, this can create an instance from an existing local image, remote image, existing local instance or snapshot, remote migration stream or backup file.
@@ -16307,9 +19440,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16341,7 +19476,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Create a new instance
 
         Creates a new instance. Depending on the source, this can create an instance from an existing local image, remote image, existing local instance or snapshot, remote migration stream or backup file.
@@ -16385,9 +19520,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16463,9 +19600,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16578,7 +19717,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ClusterMembersPost202Response:
+    ) -> CertificatesPost202Response:
         """Bulk instance state update
 
         Changes the running state of all instances.
@@ -16619,9 +19758,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16652,7 +19793,7 @@ class InstancesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ClusterMembersPost202Response]:
+    ) -> ApiResponse[CertificatesPost202Response]:
         """Bulk instance state update
 
         Changes the running state of all instances.
@@ -16693,9 +19834,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -16767,9 +19910,11 @@ class InstancesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '202': "ClusterMembersPost202Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '202': "CertificatesPost202Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(

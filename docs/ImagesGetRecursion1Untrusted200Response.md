@@ -6,7 +6,7 @@ Sync response
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**List[Image]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/Image.md) | List of images | [optional] 
+**metadata** | [**List[Image]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/Image.md) | List of images | [optional] 
 **status** | **str** | Status description | [optional] 
 **status_code** | **int** | Status code | [optional] 
 **type** | **str** | Response type | [optional] 

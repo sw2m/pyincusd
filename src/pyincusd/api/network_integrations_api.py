@@ -100,8 +100,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -170,8 +172,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -240,8 +244,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -369,7 +375,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -438,7 +447,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -507,7 +519,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationGet200Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -639,8 +654,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -714,8 +731,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -789,8 +808,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -938,9 +959,11 @@ class NetworkIntegrationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1012,9 +1035,11 @@ class NetworkIntegrationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1086,9 +1111,11 @@ class NetworkIntegrationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1223,8 +1250,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -1298,8 +1327,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -1373,8 +1404,10 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '412': "ServerPut412Response",
             '500': "ServerGet500Response",
         }
@@ -1519,7 +1552,7 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationsGet200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1588,7 +1621,7 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationsGet200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1657,7 +1690,7 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationsGet200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1787,7 +1820,7 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1856,7 +1889,7 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -1925,7 +1958,7 @@ class NetworkIntegrationsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "NetworkIntegrationsGetRecursion1200Response",
-            '403': "ServerPut403Response",
+            '403': "ServerGet403Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2054,9 +2087,11 @@ class NetworkIntegrationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2124,9 +2159,11 @@ class NetworkIntegrationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(
@@ -2194,9 +2231,11 @@ class NetworkIntegrationsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ServerPut200Response",
-            '400': "ServerPut400Response",
-            '403': "ServerPut403Response",
+            '201': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
             '500': "ServerGet500Response",
         }
         response_data = await self.api_client.call_api(

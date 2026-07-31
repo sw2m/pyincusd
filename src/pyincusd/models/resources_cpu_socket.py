@@ -88,15 +88,13 @@ class ResourcesCPUSocket(BaseModel):
         _items = []
         if self.cache:
             for _item_cache in self.cache:
-                if _item_cache:
-                    _items.append(_item_cache.to_dict())
+                _items.append(_item_cache.to_dict() if _item_cache is not None else None)
             _dict['cache'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cores (list)
         _items = []
         if self.cores:
             for _item_cores in self.cores:
-                if _item_cores:
-                    _items.append(_item_cores.to_dict())
+                _items.append(_item_cores.to_dict() if _item_cores is not None else None)
             _dict['cores'] = _items
         return _dict
 

@@ -24,12 +24,12 @@ from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
-class InstanceConsoleGet404Response(BaseModel):
+class ServerGet403Response(BaseModel):
     """
-    InstanceConsoleGet404Response
+    ServerGet403Response
     """ # noqa: E501
-    error: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["not found"]})
-    error_code: Optional[StrictInt] = Field(default=None, json_schema_extra={"examples": [404]})
+    error: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["not authorized"]})
+    error_code: Optional[StrictInt] = Field(default=None, json_schema_extra={"examples": [403]})
     type: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["error"]})
     __properties: ClassVar[List[str]] = ["error", "error_code", "type"]
 
@@ -51,7 +51,7 @@ class InstanceConsoleGet404Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of InstanceConsoleGet404Response from a JSON string"""
+        """Create an instance of ServerGet403Response from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -76,7 +76,7 @@ class InstanceConsoleGet404Response(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of InstanceConsoleGet404Response from a dict"""
+        """Create an instance of ServerGet403Response from a dict"""
         if obj is None:
             return None
 

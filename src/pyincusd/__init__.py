@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "7.2.0"
+__version__ = "7.3.0"
 
 # Define package exports
 __all__ = [
@@ -60,6 +60,7 @@ __all__ = [
     "CertificatesGet200Response",
     "CertificatesGetRecursion1200Response",
     "CertificatesPost",
+    "CertificatesPost202Response",
     "Cluster",
     "ClusterCertificatePut",
     "ClusterGet200Response",
@@ -83,7 +84,6 @@ __all__ = [
     "ClusterMembersGet200Response",
     "ClusterMembersGetRecursion1200Response",
     "ClusterMembersPost",
-    "ClusterMembersPost202Response",
     "ClusterPut",
     "Event",
     "Image",
@@ -119,7 +119,6 @@ __all__ = [
     "InstanceBackupsGet200Response",
     "InstanceBackupsGetRecursion1200Response",
     "InstanceBackupsPost",
-    "InstanceConsoleGet404Response",
     "InstanceConsolePost",
     "InstanceDebugRepairPost",
     "InstanceExecOutputsGet200Response",
@@ -129,6 +128,15 @@ __all__ = [
     "InstanceGetRecursion1200Response",
     "InstanceLogsGet200Response",
     "InstanceMetadataGet200Response",
+    "InstanceNVRAMVariable",
+    "InstanceNVRAMVariablePut",
+    "InstanceNvramGet200Response",
+    "InstanceNvramGetRecursion1200Response",
+    "InstanceNvramGetRecursion2200Response",
+    "InstanceNvramGuidGet200Response",
+    "InstanceNvramGuidGetRecursion1200Response",
+    "InstanceNvramGuidVarGet200Response",
+    "InstancePortForwardPost",
     "InstancePost",
     "InstancePostTarget",
     "InstancePut",
@@ -304,12 +312,14 @@ __all__ = [
     "Server",
     "ServerEnvironment",
     "ServerGet200Response",
+    "ServerGet400Response",
+    "ServerGet403Response",
+    "ServerGet404Response",
+    "ServerGet409Response",
     "ServerGet500Response",
     "ServerGetUntrusted200Response",
     "ServerPut",
     "ServerPut200Response",
-    "ServerPut400Response",
-    "ServerPut403Response",
     "ServerPut412Response",
     "ServerStorageDriverInfo",
     "ServerUntrusted",
@@ -429,6 +439,7 @@ from pyincusd.models.certificate_put import CertificatePut as CertificatePut
 from pyincusd.models.certificates_get200_response import CertificatesGet200Response as CertificatesGet200Response
 from pyincusd.models.certificates_get_recursion1200_response import CertificatesGetRecursion1200Response as CertificatesGetRecursion1200Response
 from pyincusd.models.certificates_post import CertificatesPost as CertificatesPost
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response as CertificatesPost202Response
 from pyincusd.models.cluster import Cluster as Cluster
 from pyincusd.models.cluster_certificate_put import ClusterCertificatePut as ClusterCertificatePut
 from pyincusd.models.cluster_get200_response import ClusterGet200Response as ClusterGet200Response
@@ -452,7 +463,6 @@ from pyincusd.models.cluster_member_sys_info import ClusterMemberSysInfo as Clus
 from pyincusd.models.cluster_members_get200_response import ClusterMembersGet200Response as ClusterMembersGet200Response
 from pyincusd.models.cluster_members_get_recursion1200_response import ClusterMembersGetRecursion1200Response as ClusterMembersGetRecursion1200Response
 from pyincusd.models.cluster_members_post import ClusterMembersPost as ClusterMembersPost
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response as ClusterMembersPost202Response
 from pyincusd.models.cluster_put import ClusterPut as ClusterPut
 from pyincusd.models.event import Event as Event
 from pyincusd.models.image import Image as Image
@@ -488,7 +498,6 @@ from pyincusd.models.instance_backup_post import InstanceBackupPost as InstanceB
 from pyincusd.models.instance_backups_get200_response import InstanceBackupsGet200Response as InstanceBackupsGet200Response
 from pyincusd.models.instance_backups_get_recursion1200_response import InstanceBackupsGetRecursion1200Response as InstanceBackupsGetRecursion1200Response
 from pyincusd.models.instance_backups_post import InstanceBackupsPost as InstanceBackupsPost
-from pyincusd.models.instance_console_get404_response import InstanceConsoleGet404Response as InstanceConsoleGet404Response
 from pyincusd.models.instance_console_post import InstanceConsolePost as InstanceConsolePost
 from pyincusd.models.instance_debug_repair_post import InstanceDebugRepairPost as InstanceDebugRepairPost
 from pyincusd.models.instance_exec_outputs_get200_response import InstanceExecOutputsGet200Response as InstanceExecOutputsGet200Response
@@ -498,6 +507,15 @@ from pyincusd.models.instance_get200_response import InstanceGet200Response as I
 from pyincusd.models.instance_get_recursion1200_response import InstanceGetRecursion1200Response as InstanceGetRecursion1200Response
 from pyincusd.models.instance_logs_get200_response import InstanceLogsGet200Response as InstanceLogsGet200Response
 from pyincusd.models.instance_metadata_get200_response import InstanceMetadataGet200Response as InstanceMetadataGet200Response
+from pyincusd.models.instance_nvram_variable import InstanceNVRAMVariable as InstanceNVRAMVariable
+from pyincusd.models.instance_nvram_variable_put import InstanceNVRAMVariablePut as InstanceNVRAMVariablePut
+from pyincusd.models.instance_nvram_get200_response import InstanceNvramGet200Response as InstanceNvramGet200Response
+from pyincusd.models.instance_nvram_get_recursion1200_response import InstanceNvramGetRecursion1200Response as InstanceNvramGetRecursion1200Response
+from pyincusd.models.instance_nvram_get_recursion2200_response import InstanceNvramGetRecursion2200Response as InstanceNvramGetRecursion2200Response
+from pyincusd.models.instance_nvram_guid_get200_response import InstanceNvramGuidGet200Response as InstanceNvramGuidGet200Response
+from pyincusd.models.instance_nvram_guid_get_recursion1200_response import InstanceNvramGuidGetRecursion1200Response as InstanceNvramGuidGetRecursion1200Response
+from pyincusd.models.instance_nvram_guid_var_get200_response import InstanceNvramGuidVarGet200Response as InstanceNvramGuidVarGet200Response
+from pyincusd.models.instance_port_forward_post import InstancePortForwardPost as InstancePortForwardPost
 from pyincusd.models.instance_post import InstancePost as InstancePost
 from pyincusd.models.instance_post_target import InstancePostTarget as InstancePostTarget
 from pyincusd.models.instance_put import InstancePut as InstancePut
@@ -673,12 +691,14 @@ from pyincusd.models.resources_usb_device_interface import ResourcesUSBDeviceInt
 from pyincusd.models.server import Server as Server
 from pyincusd.models.server_environment import ServerEnvironment as ServerEnvironment
 from pyincusd.models.server_get200_response import ServerGet200Response as ServerGet200Response
+from pyincusd.models.server_get400_response import ServerGet400Response as ServerGet400Response
+from pyincusd.models.server_get403_response import ServerGet403Response as ServerGet403Response
+from pyincusd.models.server_get404_response import ServerGet404Response as ServerGet404Response
+from pyincusd.models.server_get409_response import ServerGet409Response as ServerGet409Response
 from pyincusd.models.server_get500_response import ServerGet500Response as ServerGet500Response
 from pyincusd.models.server_get_untrusted200_response import ServerGetUntrusted200Response as ServerGetUntrusted200Response
 from pyincusd.models.server_put import ServerPut as ServerPut
 from pyincusd.models.server_put200_response import ServerPut200Response as ServerPut200Response
-from pyincusd.models.server_put400_response import ServerPut400Response as ServerPut400Response
-from pyincusd.models.server_put403_response import ServerPut403Response as ServerPut403Response
 from pyincusd.models.server_put412_response import ServerPut412Response as ServerPut412Response
 from pyincusd.models.server_storage_driver_info import ServerStorageDriverInfo as ServerStorageDriverInfo
 from pyincusd.models.server_untrusted import ServerUntrusted as ServerUntrusted

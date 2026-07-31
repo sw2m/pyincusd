@@ -4,15 +4,15 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**network_acl_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acl_delete) | **DELETE** /1.0/network-acls/{name} | Delete the network ACL
-[**network_acl_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acl_get) | **GET** /1.0/network-acls/{name} | Get the network ACL
-[**network_acl_log_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acl_log_get) | **GET** /1.0/network-acls/{name}/log | Get the network ACL log
-[**network_acl_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acl_patch) | **PATCH** /1.0/network-acls/{name} | Partially update the network ACL
-[**network_acl_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acl_post) | **POST** /1.0/network-acls/{name} | Rename the network ACL
-[**network_acl_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acl_put) | **PUT** /1.0/network-acls/{name} | Update the network ACL
-[**network_acls_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acls_get) | **GET** /1.0/network-acls | Get the network ACLs
-[**network_acls_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acls_get_recursion1) | **GET** /1.0/network-acls?recursion&#x3D;1 | Get the network ACLs
-[**network_acls_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsApi.md#network_acls_post) | **POST** /1.0/network-acls | Add a network ACL
+[**network_acl_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acl_delete) | **DELETE** /1.0/network-acls/{name} | Delete the network ACL
+[**network_acl_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acl_get) | **GET** /1.0/network-acls/{name} | Get the network ACL
+[**network_acl_log_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acl_log_get) | **GET** /1.0/network-acls/{name}/log | Get the network ACL log
+[**network_acl_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acl_patch) | **PATCH** /1.0/network-acls/{name} | Partially update the network ACL
+[**network_acl_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acl_post) | **POST** /1.0/network-acls/{name} | Rename the network ACL
+[**network_acl_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acl_put) | **PUT** /1.0/network-acls/{name} | Update the network ACL
+[**network_acls_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acls_get) | **GET** /1.0/network-acls | Get the network ACLs
+[**network_acls_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acls_get_recursion1) | **GET** /1.0/network-acls?recursion&#x3D;1 | Get the network ACLs
+[**network_acls_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsApi.md#network_acls_post) | **POST** /1.0/network-acls | Add a network ACL
 
 
 # **network_acl_delete**
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -84,6 +84,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -139,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkAclGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclGet200Response.md)
+[**NetworkAclGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclGet200Response.md)
 
 ### Authorization
 
@@ -155,7 +157,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | ACL |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -224,7 +229,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Raw log file |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -278,12 +286,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| ACL name | 
- **acl** | [**NetworkACLPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkACLPut.md)| ACL configuration | 
+ **acl** | [**NetworkACLPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkACLPut.md)| ACL configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -301,6 +309,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
@@ -355,12 +365,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| ACL name | 
- **acl** | [**NetworkACLPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkACLPost.md)| ACL rename request | 
+ **acl** | [**NetworkACLPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkACLPost.md)| ACL rename request | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -375,9 +385,11 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Empty sync response |  -  |
+**201** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -431,12 +443,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| ACL name | 
- **acl** | [**NetworkACLPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkACLPut.md)| ACL configuration | 
+ **acl** | [**NetworkACLPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkACLPut.md)| ACL configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -454,6 +466,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
@@ -512,7 +526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkAclsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsGet200Response.md)
+[**NetworkAclsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsGet200Response.md)
 
 ### Authorization
 
@@ -528,7 +542,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -586,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkAclsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkAclsGetRecursion1200Response.md)
+[**NetworkAclsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAclsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -602,7 +619,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -654,12 +674,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **acl** | [**NetworkACLsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/NetworkACLsPost.md)| ACL | 
+ **acl** | [**NetworkACLsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkACLsPost.md)| ACL | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -674,9 +694,11 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Empty sync response |  -  |
+**201** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -92,8 +92,7 @@ class ResourcesStorageDisk(BaseModel):
         _items = []
         if self.partitions:
             for _item_partitions in self.partitions:
-                if _item_partitions:
-                    _items.append(_item_partitions.to_dict())
+                _items.append(_item_partitions.to_dict() if _item_partitions is not None else None)
             _dict['partitions'] = _items
         return _dict
 

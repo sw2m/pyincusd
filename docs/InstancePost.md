@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **name** | **str** | New name for the instance | [optional] 
 **pool** | **str** | Target pool for local cross-pool move  API extension: instance_pool_move | [optional] 
 **project** | **str** | Target project for local cross-project move  API extension: instance_project_move | [optional] 
-**target** | [**InstancePostTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancePostTarget.md) |  | [optional] 
+**target** | [**InstancePostTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancePostTarget.md) |  | [optional] 
 
 ## Example
 

@@ -88,50 +88,43 @@ class InitLocalPreseed(BaseModel):
         _items = []
         if self.certificates:
             for _item_certificates in self.certificates:
-                if _item_certificates:
-                    _items.append(_item_certificates.to_dict())
+                _items.append(_item_certificates.to_dict() if _item_certificates is not None else None)
             _dict['certificates'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cluster_groups (list)
         _items = []
         if self.cluster_groups:
             for _item_cluster_groups in self.cluster_groups:
-                if _item_cluster_groups:
-                    _items.append(_item_cluster_groups.to_dict())
+                _items.append(_item_cluster_groups.to_dict() if _item_cluster_groups is not None else None)
             _dict['cluster_groups'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in networks (list)
         _items = []
         if self.networks:
             for _item_networks in self.networks:
-                if _item_networks:
-                    _items.append(_item_networks.to_dict())
+                _items.append(_item_networks.to_dict() if _item_networks is not None else None)
             _dict['networks'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in profiles (list)
         _items = []
         if self.profiles:
             for _item_profiles in self.profiles:
-                if _item_profiles:
-                    _items.append(_item_profiles.to_dict())
+                _items.append(_item_profiles.to_dict() if _item_profiles is not None else None)
             _dict['profiles'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in projects (list)
         _items = []
         if self.projects:
             for _item_projects in self.projects:
-                if _item_projects:
-                    _items.append(_item_projects.to_dict())
+                _items.append(_item_projects.to_dict() if _item_projects is not None else None)
             _dict['projects'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in storage_pools (list)
         _items = []
         if self.storage_pools:
             for _item_storage_pools in self.storage_pools:
-                if _item_storage_pools:
-                    _items.append(_item_storage_pools.to_dict())
+                _items.append(_item_storage_pools.to_dict() if _item_storage_pools is not None else None)
             _dict['storage_pools'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in storage_volumes (list)
         _items = []
         if self.storage_volumes:
             for _item_storage_volumes in self.storage_volumes:
-                if _item_storage_volumes:
-                    _items.append(_item_storage_volumes.to_dict())
+                _items.append(_item_storage_volumes.to_dict() if _item_storage_volumes is not None else None)
             _dict['storage_volumes'] = _items
         return _dict
 

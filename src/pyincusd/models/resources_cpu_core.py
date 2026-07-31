@@ -29,12 +29,13 @@ class ResourcesCPUCore(BaseModel):
     """
     ResourcesCPUCore represents a CPU core on the system
     """ # noqa: E501
+    cluster: Optional[StrictInt] = Field(default=None, description="What cluster the core is a part of (core identifiers may only be unique within a cluster)  API extension: resources_cpu_cluster", json_schema_extra={"examples": [0]})
     core: Optional[StrictInt] = Field(default=None, description="Core identifier within the socket", json_schema_extra={"examples": [0]})
     die: Optional[StrictInt] = Field(default=None, description="What die the CPU is a part of (for chiplet designs)  API extension: resources_cpu_core_die", json_schema_extra={"examples": [0]})
     flags: Optional[List[StrictStr]] = Field(default=None, description="List of CPU flags  API extension: resources_cpu_flags", json_schema_extra={"examples": [[]]})
     frequency: Optional[StrictInt] = Field(default=None, description="Current frequency", json_schema_extra={"examples": [3500]})
     threads: Optional[List[ResourcesCPUThread]] = Field(default=None, description="List of threads")
-    __properties: ClassVar[List[str]] = ["core", "die", "flags", "frequency", "threads"]
+    __properties: ClassVar[List[str]] = ["cluster", "core", "die", "flags", "frequency", "threads"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -79,8 +80,7 @@ class ResourcesCPUCore(BaseModel):
         _items = []
         if self.threads:
             for _item_threads in self.threads:
-                if _item_threads:
-                    _items.append(_item_threads.to_dict())
+                _items.append(_item_threads.to_dict() if _item_threads is not None else None)
             _dict['threads'] = _items
         return _dict
 
@@ -94,6 +94,7 @@ class ResourcesCPUCore(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "cluster": obj.get("cluster"),
             "core": obj.get("core"),
             "die": obj.get("die"),
             "flags": obj.get("flags"),

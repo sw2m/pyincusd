@@ -76,8 +76,7 @@ class NetworkLoadBalancerStateBackendHealth(BaseModel):
         _items = []
         if self.ports:
             for _item_ports in self.ports:
-                if _item_ports:
-                    _items.append(_item_ports.to_dict())
+                _items.append(_item_ports.to_dict() if _item_ports is not None else None)
             _dict['ports'] = _items
         return _dict
 

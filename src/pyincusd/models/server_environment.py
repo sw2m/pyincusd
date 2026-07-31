@@ -98,8 +98,7 @@ class ServerEnvironment(BaseModel):
         _items = []
         if self.storage_supported_drivers:
             for _item_storage_supported_drivers in self.storage_supported_drivers:
-                if _item_storage_supported_drivers:
-                    _items.append(_item_storage_supported_drivers.to_dict())
+                _items.append(_item_storage_supported_drivers.to_dict() if _item_storage_supported_drivers is not None else None)
             _dict['storage_supported_drivers'] = _items
         return _dict
 

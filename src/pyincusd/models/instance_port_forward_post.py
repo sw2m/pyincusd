@@ -24,14 +24,13 @@ from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
-class ServerPut400Response(BaseModel):
+class InstancePortForwardPost(BaseModel):
     """
-    ServerPut400Response
+    InstancePortForwardPost
     """ # noqa: E501
-    error: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["bad request"]})
-    error_code: Optional[StrictInt] = Field(default=None, json_schema_extra={"examples": [400]})
-    type: Optional[StrictStr] = Field(default=None, json_schema_extra={"examples": ["error"]})
-    __properties: ClassVar[List[str]] = ["error", "error_code", "type"]
+    address: Optional[StrictStr] = Field(default=None, description="Address to connect to inside of the instance", json_schema_extra={"examples": ["127.0.0.1"]})
+    port: Optional[StrictInt] = Field(default=None, description="TCP port to connect to inside of the instance", json_schema_extra={"examples": [80]})
+    __properties: ClassVar[List[str]] = ["address", "port"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -51,7 +50,7 @@ class ServerPut400Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ServerPut400Response from a JSON string"""
+        """Create an instance of InstancePortForwardPost from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -76,7 +75,7 @@ class ServerPut400Response(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ServerPut400Response from a dict"""
+        """Create an instance of InstancePortForwardPost from a dict"""
         if obj is None:
             return None
 
@@ -84,9 +83,8 @@ class ServerPut400Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "error": obj.get("error"),
-            "error_code": obj.get("error_code"),
-            "type": obj.get("type")
+            "address": obj.get("address"),
+            "port": obj.get("port")
         })
         return _obj
 

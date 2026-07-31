@@ -4,7 +4,7 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**metrics_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/MetricsApi.md#metrics_get) | **GET** /1.0/metrics | Get metrics
+[**metrics_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/MetricsApi.md#metrics_get) | **GET** /1.0/metrics | Get metrics
 
 
 # **metrics_get**
@@ -73,7 +73,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Metrics |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

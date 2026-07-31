@@ -4,13 +4,13 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**api_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerApi.md#api_get) | **GET** / | Get the supported API endpoints
-[**events_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerApi.md#events_get) | **GET** /1.0/events | Get the event stream
-[**resources_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerApi.md#resources_get) | **GET** /1.0/resources | Get system resources information
-[**server_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerApi.md#server_get) | **GET** /1.0 | Get the server environment and configuration
-[**server_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerApi.md#server_get_untrusted) | **GET** /1.0?public | Get the server environment
-[**server_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerApi.md#server_patch) | **PATCH** /1.0 | Partially update the server configuration
-[**server_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerApi.md#server_put) | **PUT** /1.0 | Update the server configuration
+[**api_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerApi.md#api_get) | **GET** / | Get the supported API endpoints
+[**events_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerApi.md#events_get) | **GET** /1.0/events | Get the event stream
+[**resources_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerApi.md#resources_get) | **GET** /1.0/resources | Get system resources information
+[**server_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerApi.md#server_get) | **GET** /1.0 | Get the server environment and configuration
+[**server_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerApi.md#server_get_untrusted) | **GET** /1.0?public | Get the server environment
+[**server_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerApi.md#server_patch) | **PATCH** /1.0 | Partially update the server configuration
+[**server_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerApi.md#server_put) | **PUT** /1.0 | Update the server configuration
 
 
 # **api_get**
@@ -61,7 +61,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ApiGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ApiGet200Response.md)
+[**ApiGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ApiGet200Response.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **events_get**
-> Event events_get(project=project, type=type, all_projects=all_projects)
+> events_get(project=project, type=type, all_projects=all_projects)
 
 Get the event stream
 
@@ -92,7 +92,6 @@ Connects to the event API using websocket.
 
 ```python
 import pyincusd
-from pyincusd.models.event import Event
 from pyincusd.rest import ApiException
 from pprint import pprint
 
@@ -113,9 +112,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
     try:
         # Get the event stream
-        api_response = await api_instance.events_get(project=project, type=type, all_projects=all_projects)
-        print("The response of ServerApi->events_get:\n")
-        pprint(api_response)
+        await api_instance.events_get(project=project, type=type, all_projects=all_projects)
     except Exception as e:
         print("Exception when calling ServerApi->events_get: %s\n" % e)
 ```
@@ -133,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Event**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/Event.md)
+void (empty response body)
 
 ### Authorization
 
@@ -148,7 +145,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Websocket message (JSON) |  -  |
+**101** | Websocket message (JSON) |  -  |
 **403** | Forbidden |  -  |
 **500** | Internal Server Error |  -  |
 
@@ -203,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResourcesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ResourcesGet200Response.md)
+[**ResourcesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ResourcesGet200Response.md)
 
 ### Authorization
 
@@ -219,7 +216,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Hardware resources |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerGet200Response.md)
+[**ServerGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerGet200Response.md)
 
 ### Authorization
 
@@ -291,6 +291,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Server environment and configuration |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -344,7 +348,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ServerGetUntrusted200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerGetUntrusted200Response.md)
+[**ServerGetUntrusted200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerGetUntrusted200Response.md)
 
 ### Authorization
 
@@ -360,6 +364,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Server environment and configuration |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -411,12 +419,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **server** | [**ServerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut.md)| Server configuration | 
+ **server** | [**ServerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut.md)| Server configuration | 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -434,6 +442,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
@@ -486,12 +496,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **server** | [**ServerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut.md)| Server configuration | 
+ **server** | [**ServerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut.md)| Server configuration | 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -509,6 +519,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 

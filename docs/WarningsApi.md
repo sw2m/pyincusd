@@ -4,12 +4,12 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**warning_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningsApi.md#warning_delete) | **DELETE** /1.0/warnings/{uuid} | Delete the warning
-[**warning_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningsApi.md#warning_get) | **GET** /1.0/warnings/{uuid} | Get the warning
-[**warning_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningsApi.md#warning_patch) | **PATCH** /1.0/warnings/{uuid} | Partially update the warning
-[**warning_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningsApi.md#warning_put) | **PUT** /1.0/warnings/{uuid} | Update the warning
-[**warnings_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningsApi.md#warnings_get) | **GET** /1.0/warnings | List the warnings
-[**warnings_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningsApi.md#warnings_get_recursion1) | **GET** /1.0/warnings?recursion&#x3D;1 | Get the warnings
+[**warning_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warning_delete) | **DELETE** /1.0/warnings/{uuid} | Delete the warning
+[**warning_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warning_get) | **GET** /1.0/warnings/{uuid} | Get the warning
+[**warning_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warning_patch) | **PATCH** /1.0/warnings/{uuid} | Partially update the warning
+[**warning_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warning_put) | **PUT** /1.0/warnings/{uuid} | Update the warning
+[**warnings_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warnings_get) | **GET** /1.0/warnings | List the warnings
+[**warnings_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warnings_get_recursion1) | **GET** /1.0/warnings?recursion&#x3D;1 | Get the warnings
 
 
 # **warning_delete**
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -77,6 +77,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Empty sync response |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -130,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WarningGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningGet200Response.md)
+[**WarningGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningGet200Response.md)
 
 ### Authorization
 
@@ -146,7 +150,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Warning |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -199,11 +206,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| UUID | 
- **warning** | [**WarningPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningPut.md)| Warning status | 
+ **warning** | [**WarningPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningPut.md)| Warning status | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -221,6 +228,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -273,11 +282,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| UUID | 
- **warning** | [**WarningPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningPut.md)| Warning status | 
+ **warning** | [**WarningPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningPut.md)| Warning status | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -295,6 +304,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -348,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WarningsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningsGet200Response.md)
+[**WarningsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsGet200Response.md)
 
 ### Authorization
 
@@ -364,6 +375,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Sync response |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -417,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WarningsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/WarningsGetRecursion1200Response.md)
+[**WarningsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -433,6 +448,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

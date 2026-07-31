@@ -82,8 +82,7 @@ class InitClusterPreseed(BaseModel):
         _items = []
         if self.member_config:
             for _item_member_config in self.member_config:
-                if _item_member_config:
-                    _items.append(_item_member_config.to_dict())
+                _items.append(_item_member_config.to_dict() if _item_member_config is not None else None)
             _dict['member_config'] = _items
         return _dict
 

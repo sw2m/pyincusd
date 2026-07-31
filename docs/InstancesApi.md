@@ -4,61 +4,70 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**instance_access**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_access) | **GET** /1.0/instances/{name}/access | Get who has access to an instance
-[**instance_backup_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_backup_delete) | **DELETE** /1.0/instances/{name}/backups/{backup} | Delete a backup
-[**instance_backup_export**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_backup_export) | **GET** /1.0/instances/{name}/backups/{backup}/export | Get the raw backup file(s)
-[**instance_backup_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_backup_get) | **GET** /1.0/instances/{name}/backups/{backup} | Get the backup
-[**instance_backup_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_backup_post) | **POST** /1.0/instances/{name}/backups/{backup} | Rename a backup
-[**instance_backups_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_backups_get) | **GET** /1.0/instances/{name}/backups | Get the backups
-[**instance_backups_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_backups_get_recursion1) | **GET** /1.0/instances/{name}/backups?recursion&#x3D;1 | Get the backups
-[**instance_backups_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_backups_post) | **POST** /1.0/instances/{name}/backups | Create a backup
-[**instance_bitmaps_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_bitmaps_post) | **POST** /1.0/instances/{name}/bitmaps | Create a bitmap
-[**instance_console_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_console_delete) | **DELETE** /1.0/instances/{name}/console | Clear the console log
-[**instance_console_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_console_get) | **GET** /1.0/instances/{name}/console | Get console output
-[**instance_console_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_console_post) | **POST** /1.0/instances/{name}/console | Connect to console
-[**instance_debug_memory_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_debug_memory_get) | **GET** /1.0/instances/{name}/debug/memory | Get memory debug information of an instance
-[**instance_debug_repair_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_debug_repair_post) | **GET** /1.0/instances/{name}/debug/repair | Trigger a repair action on the instance.
-[**instance_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_delete) | **DELETE** /1.0/instances/{name} | Delete an instance
-[**instance_exec_output_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_exec_output_delete) | **DELETE** /1.0/instances/{name}/logs/exec-output/{filename} | Delete the exec record-output file
-[**instance_exec_output_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_exec_output_get) | **GET** /1.0/instances/{name}/logs/exec-output/{filename} | Get the exec-output log file
-[**instance_exec_outputs_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_exec_outputs_get) | **GET** /1.0/instances/{name}/logs/exec-output | Get the exec record-output files
-[**instance_exec_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_exec_post) | **POST** /1.0/instances/{name}/exec | Run a command
-[**instance_files_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_files_delete) | **DELETE** /1.0/instances/{name}/files | Delete a file
-[**instance_files_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_files_get) | **GET** /1.0/instances/{name}/files | Get a file
-[**instance_files_head**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_files_head) | **HEAD** /1.0/instances/{name}/files | Get metadata for a file
-[**instance_files_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_files_post) | **POST** /1.0/instances/{name}/files | Create or replace a file
-[**instance_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_get) | **GET** /1.0/instances/{name} | Get the instance
-[**instance_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_get_recursion1) | **GET** /1.0/instances/{name}?recursion&#x3D;1 | Get the instance
-[**instance_log_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_log_delete) | **DELETE** /1.0/instances/{name}/logs/{filename} | Delete the log file
-[**instance_log_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_log_get) | **GET** /1.0/instances/{name}/logs/{filename} | Get the log file
-[**instance_logs_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_logs_get) | **GET** /1.0/instances/{name}/logs | Get the log files
-[**instance_metadata_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_metadata_get) | **GET** /1.0/instances/{name}/metadata | Get the instance image metadata
-[**instance_metadata_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_metadata_patch) | **PATCH** /1.0/instances/{name}/metadata | Partially update the image metadata
-[**instance_metadata_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_metadata_put) | **PUT** /1.0/instances/{name}/metadata | Update the image metadata
-[**instance_metadata_templates_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_metadata_templates_delete) | **DELETE** /1.0/instances/{name}/metadata/templates | Delete a template file
-[**instance_metadata_templates_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_metadata_templates_get) | **GET** /1.0/instances/{name}/metadata/templates | Get the template file names or a specific
-[**instance_metadata_templates_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_metadata_templates_post) | **POST** /1.0/instances/{name}/metadata/templates | Create or replace a template file
-[**instance_nbd_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_nbd_get) | **GET** /1.0/instances/{name}/nbd | Get an NBD connection for all of the instance&#39;s disks
-[**instance_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_patch) | **PATCH** /1.0/instances/{name} | Partially update the instance
-[**instance_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_post) | **POST** /1.0/instances/{name} | Rename or move/migrate an instance
-[**instance_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_put) | **PUT** /1.0/instances/{name} | Update the instance
-[**instance_rebuild_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_rebuild_post) | **POST** /1.0/instances/{name}/rebuild | Rebuild an instance
-[**instance_sftp**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_sftp) | **GET** /1.0/instances/{name}/sftp | Get the instance SFTP connection
-[**instance_snapshot_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_snapshot_delete) | **DELETE** /1.0/instances/{name}/snapshots/{snapshot} | Delete a snapshot
-[**instance_snapshot_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_snapshot_get) | **GET** /1.0/instances/{name}/snapshots/{snapshot} | Get the snapshot
-[**instance_snapshot_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_snapshot_patch) | **PATCH** /1.0/instances/{name}/snapshots/{snapshot} | Partially update snapshot
-[**instance_snapshot_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_snapshot_post) | **POST** /1.0/instances/{name}/snapshots/{snapshot} | Rename or move/migrate a snapshot
-[**instance_snapshot_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_snapshot_put) | **PUT** /1.0/instances/{name}/snapshots/{snapshot} | Update snapshot
-[**instance_snapshots_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_snapshots_get) | **GET** /1.0/instances/{name}/snapshots | Get the snapshots
-[**instance_snapshots_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_snapshots_get_recursion1) | **GET** /1.0/instances/{name}/snapshots?recursion&#x3D;1 | Get the snapshots
-[**instance_snapshots_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_snapshots_post) | **POST** /1.0/instances/{name}/snapshots | Create a snapshot
-[**instance_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_state_get) | **GET** /1.0/instances/{name}/state | Get the runtime state
-[**instance_state_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instance_state_put) | **PUT** /1.0/instances/{name}/state | Change the state
-[**instances_get**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instances_get) | **GET** /1.0/instances | Get the instances
-[**instances_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instances_get_recursion1) | **GET** /1.0/instances?recursion&#x3D;1 | Get the instances
-[**instances_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instances_get_recursion2) | **GET** /1.0/instances?recursion&#x3D;2 | Get the instances
-[**instances_post**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instances_post) | **POST** /1.0/instances | Create a new instance
-[**instances_put**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesApi.md#instances_put) | **PUT** /1.0/instances | Bulk instance state update
+[**instance_access**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_access) | **GET** /1.0/instances/{name}/access | Get who has access to an instance
+[**instance_backup_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_backup_delete) | **DELETE** /1.0/instances/{name}/backups/{backup} | Delete a backup
+[**instance_backup_export**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_backup_export) | **GET** /1.0/instances/{name}/backups/{backup}/export | Get the raw backup file(s)
+[**instance_backup_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_backup_get) | **GET** /1.0/instances/{name}/backups/{backup} | Get the backup
+[**instance_backup_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_backup_post) | **POST** /1.0/instances/{name}/backups/{backup} | Rename a backup
+[**instance_backups_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_backups_get) | **GET** /1.0/instances/{name}/backups | Get the backups
+[**instance_backups_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_backups_get_recursion1) | **GET** /1.0/instances/{name}/backups?recursion&#x3D;1 | Get the backups
+[**instance_backups_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_backups_post) | **POST** /1.0/instances/{name}/backups | Create a backup
+[**instance_bitmaps_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_bitmaps_post) | **POST** /1.0/instances/{name}/bitmaps | Create a bitmap
+[**instance_console_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_console_delete) | **DELETE** /1.0/instances/{name}/console | Clear the console log
+[**instance_console_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_console_get) | **GET** /1.0/instances/{name}/console | Get console output
+[**instance_console_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_console_post) | **POST** /1.0/instances/{name}/console | Connect to console
+[**instance_debug_memory_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_debug_memory_get) | **GET** /1.0/instances/{name}/debug/memory | Get memory debug information of an instance
+[**instance_debug_repair_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_debug_repair_post) | **POST** /1.0/instances/{name}/debug/repair | Trigger a repair action on the instance.
+[**instance_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_delete) | **DELETE** /1.0/instances/{name} | Delete an instance
+[**instance_exec_output_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_exec_output_delete) | **DELETE** /1.0/instances/{name}/logs/exec-output/{filename} | Delete the exec record-output file
+[**instance_exec_output_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_exec_output_get) | **GET** /1.0/instances/{name}/logs/exec-output/{filename} | Get the exec-output log file
+[**instance_exec_outputs_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_exec_outputs_get) | **GET** /1.0/instances/{name}/logs/exec-output | Get the exec record-output files
+[**instance_exec_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_exec_post) | **POST** /1.0/instances/{name}/exec | Run a command
+[**instance_files_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_files_delete) | **DELETE** /1.0/instances/{name}/files | Delete a file
+[**instance_files_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_files_get) | **GET** /1.0/instances/{name}/files | Get a file
+[**instance_files_head**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_files_head) | **HEAD** /1.0/instances/{name}/files | Get metadata for a file
+[**instance_files_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_files_post) | **POST** /1.0/instances/{name}/files | Create or replace a file
+[**instance_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_get) | **GET** /1.0/instances/{name} | Get the instance
+[**instance_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_get_recursion1) | **GET** /1.0/instances/{name}?recursion&#x3D;1 | Get the instance
+[**instance_log_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_log_delete) | **DELETE** /1.0/instances/{name}/logs/{filename} | Delete the log file
+[**instance_log_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_log_get) | **GET** /1.0/instances/{name}/logs/{filename} | Get the log file
+[**instance_logs_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_logs_get) | **GET** /1.0/instances/{name}/logs | Get the log files
+[**instance_metadata_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_metadata_get) | **GET** /1.0/instances/{name}/metadata | Get the instance image metadata
+[**instance_metadata_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_metadata_patch) | **PATCH** /1.0/instances/{name}/metadata | Partially update the image metadata
+[**instance_metadata_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_metadata_put) | **PUT** /1.0/instances/{name}/metadata | Update the image metadata
+[**instance_metadata_templates_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_metadata_templates_delete) | **DELETE** /1.0/instances/{name}/metadata/templates | Delete a template file
+[**instance_metadata_templates_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_metadata_templates_get) | **GET** /1.0/instances/{name}/metadata/templates | Get the template file names or a specific
+[**instance_metadata_templates_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_metadata_templates_post) | **POST** /1.0/instances/{name}/metadata/templates | Create or replace a template file
+[**instance_nbd_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nbd_get) | **GET** /1.0/instances/{name}/nbd | Get an NBD connection for all of the instance&#39;s disks
+[**instance_nvram_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nvram_get) | **GET** /1.0/instances/{name}/nvram | Get the NVRAM variable GUIDs
+[**instance_nvram_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nvram_get_recursion1) | **GET** /1.0/instances/{name}/nvram?recursion&#x3D;1 | Get the NVRAM variable GUIDs and names
+[**instance_nvram_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nvram_get_recursion2) | **GET** /1.0/instances/{name}/nvram?recursion&#x3D;2 | Get the NVRAM variables
+[**instance_nvram_guid_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nvram_guid_get) | **GET** /1.0/instances/{name}/nvram/{guid} | Get the NVRAM variable names under the given GUID
+[**instance_nvram_guid_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nvram_guid_get_recursion1) | **GET** /1.0/instances/{name}/nvram/{guid}?recursion&#x3D;1 | Get the NVRAM variables under the given GUID
+[**instance_nvram_guid_var_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nvram_guid_var_delete) | **DELETE** /1.0/instances/{name}/nvram/{guid}/{var} | Delete the NVRAM variable
+[**instance_nvram_guid_var_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nvram_guid_var_get) | **GET** /1.0/instances/{name}/nvram/{guid}/{var} | Get the NVRAM variable
+[**instance_nvram_guid_var_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_nvram_guid_var_put) | **PUT** /1.0/instances/{name}/nvram/{guid}/{var} | Update the NVRAM variable
+[**instance_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_patch) | **PATCH** /1.0/instances/{name} | Partially update the instance
+[**instance_port_forward_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_port_forward_post) | **POST** /1.0/instances/{name}/port-forward | Connect to a TCP port inside the instance
+[**instance_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_post) | **POST** /1.0/instances/{name} | Rename or move/migrate an instance
+[**instance_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_put) | **PUT** /1.0/instances/{name} | Update the instance
+[**instance_rebuild_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_rebuild_post) | **POST** /1.0/instances/{name}/rebuild | Rebuild an instance
+[**instance_sftp**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_sftp) | **GET** /1.0/instances/{name}/sftp | Get the instance SFTP connection
+[**instance_snapshot_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_snapshot_delete) | **DELETE** /1.0/instances/{name}/snapshots/{snapshot} | Delete a snapshot
+[**instance_snapshot_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_snapshot_get) | **GET** /1.0/instances/{name}/snapshots/{snapshot} | Get the snapshot
+[**instance_snapshot_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_snapshot_patch) | **PATCH** /1.0/instances/{name}/snapshots/{snapshot} | Partially update snapshot
+[**instance_snapshot_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_snapshot_post) | **POST** /1.0/instances/{name}/snapshots/{snapshot} | Rename or move/migrate a snapshot
+[**instance_snapshot_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_snapshot_put) | **PUT** /1.0/instances/{name}/snapshots/{snapshot} | Update snapshot
+[**instance_snapshots_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_snapshots_get) | **GET** /1.0/instances/{name}/snapshots | Get the snapshots
+[**instance_snapshots_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_snapshots_get_recursion1) | **GET** /1.0/instances/{name}/snapshots?recursion&#x3D;1 | Get the snapshots
+[**instance_snapshots_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_snapshots_post) | **POST** /1.0/instances/{name}/snapshots | Create a snapshot
+[**instance_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_state_get) | **GET** /1.0/instances/{name}/state | Get the runtime state
+[**instance_state_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instance_state_put) | **PUT** /1.0/instances/{name}/state | Change the state
+[**instances_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instances_get) | **GET** /1.0/instances | Get the instances
+[**instances_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instances_get_recursion1) | **GET** /1.0/instances?recursion&#x3D;1 | Get the instances
+[**instances_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instances_get_recursion2) | **GET** /1.0/instances?recursion&#x3D;2 | Get the instances
+[**instances_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instances_post) | **POST** /1.0/instances | Create a new instance
+[**instances_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesApi.md#instances_put) | **PUT** /1.0/instances | Bulk instance state update
 
 
 # **instance_access**
@@ -112,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceAccess200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceAccess200Response.md)
+[**InstanceAccess200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceAccess200Response.md)
 
 ### Authorization
 
@@ -130,12 +139,14 @@ No authorization required
 **200** | Access |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_backup_delete**
-> ClusterMembersPost202Response instance_backup_delete(name, backup, project=project)
+> CertificatesPost202Response instance_backup_delete(name, backup, project=project)
 
 Delete a backup
 
@@ -146,7 +157,7 @@ Deletes the instance backup.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.rest import ApiException
 from pprint import pprint
 
@@ -187,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -205,6 +216,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -275,7 +288,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Raw image data |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -333,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceBackupGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceBackupGet200Response.md)
+[**InstanceBackupGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceBackupGet200Response.md)
 
 ### Authorization
 
@@ -349,13 +365,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Instance backup |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_backup_post**
-> ClusterMembersPost202Response instance_backup_post(name, backup, project=project, backup2=backup2)
+> CertificatesPost202Response instance_backup_post(name, backup, project=project, backup2=backup2)
 
 Rename a backup
 
@@ -366,7 +385,7 @@ Renames an instance backup.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_backup_post import InstanceBackupPost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -406,11 +425,11 @@ Name | Type | Description  | Notes
  **name** | **str**| Instance name | 
  **backup** | **str**| Backup name | 
  **project** | **str**| Project name | [optional] 
- **backup2** | [**InstanceBackupPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceBackupPost.md)| Backup rename | [optional] 
+ **backup2** | [**InstanceBackupPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceBackupPost.md)| Backup rename | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -428,6 +447,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -483,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceBackupsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceBackupsGet200Response.md)
+[**InstanceBackupsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceBackupsGet200Response.md)
 
 ### Authorization
 
@@ -499,7 +520,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -555,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceBackupsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceBackupsGetRecursion1200Response.md)
+[**InstanceBackupsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceBackupsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -571,13 +595,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_backups_post**
-> ClusterMembersPost202Response instance_backups_post(name, project=project, backup=backup)
+> CertificatesPost202Response instance_backups_post(name, project=project, backup=backup)
 
 Create a backup
 
@@ -591,7 +618,7 @@ tarball to the client without any intermediate operation.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_backups_post import InstanceBackupsPost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -629,11 +656,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **backup** | [**InstanceBackupsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceBackupsPost.md)| Backup request | [optional] 
+ **backup** | [**InstanceBackupsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceBackupsPost.md)| Backup request | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -651,12 +678,14 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_bitmaps_post**
-> ClusterMembersPost202Response instance_bitmaps_post(name, project=project, bitmap=bitmap)
+> ServerPut200Response instance_bitmaps_post(name, project=project, bitmap=bitmap)
 
 Create a bitmap
 
@@ -667,7 +696,7 @@ Creates a new bitmap.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.server_put200_response import ServerPut200Response
 from pyincusd.models.storage_volume_bitmaps_post import StorageVolumeBitmapsPost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -705,11 +734,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **bitmap** | [**StorageVolumeBitmapsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/StorageVolumeBitmapsPost.md)| Bitmap request | [optional] 
+ **bitmap** | [**StorageVolumeBitmapsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/StorageVolumeBitmapsPost.md)| Bitmap request | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -724,9 +753,11 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**202** | Operation |  -  |
+**200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -782,7 +813,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -801,6 +832,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -834,7 +866,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     api_instance = pyincusd.InstancesApi(api_client)
     name = 'name_example' # str | Instance name
     project = 'project_example' # str | Project name (optional)
-    type = log # str | Console type (optional) (default to log)
+    type = 'log' # str | Console type (optional) (default to 'log')
 
     try:
         # Get console output
@@ -852,7 +884,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **type** | **str**| Console type | [optional] [default to log]
+ **type** | **str**| Console type | [optional] [default to &#39;log&#39;]
 
 ### Return type
 
@@ -875,12 +907,13 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_console_post**
-> ClusterMembersPost202Response instance_console_post(name, project=project, console=console)
+> CertificatesPost202Response instance_console_post(name, project=project, console=console)
 
 Connect to console
 
@@ -893,7 +926,7 @@ The returned operation metadata will contain two websockets, one for data and on
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_console_post import InstanceConsolePost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -931,11 +964,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **console** | [**InstanceConsolePost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceConsolePost.md)| Console request | [optional] 
+ **console** | [**InstanceConsolePost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceConsolePost.md)| Console request | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -953,6 +986,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1027,6 +1062,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1081,11 +1117,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **state** | [**InstanceDebugRepairPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceDebugRepairPost.md)| State | [optional] 
+ **state** | [**InstanceDebugRepairPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceDebugRepairPost.md)| State | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1104,12 +1140,13 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_delete**
-> ClusterMembersPost202Response instance_delete(name, project=project)
+> CertificatesPost202Response instance_delete(name, project=project)
 
 Delete an instance
 
@@ -1122,7 +1159,7 @@ This also deletes anything owned by the instance such as snapshots and backups.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.rest import ApiException
 from pprint import pprint
 
@@ -1161,7 +1198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -1179,6 +1216,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1236,7 +1275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1255,6 +1294,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1328,6 +1368,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1383,7 +1424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceExecOutputsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceExecOutputsGet200Response.md)
+[**InstanceExecOutputsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceExecOutputsGet200Response.md)
 
 ### Authorization
 
@@ -1399,14 +1440,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_exec_post**
-> ClusterMembersPost202Response instance_exec_post(name, project=project, var_exec=var_exec)
+> CertificatesPost202Response instance_exec_post(name, project=project, var_exec=var_exec)
 
 Run a command
 
@@ -1424,7 +1467,7 @@ This allows sending signals and window sizing information through.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_exec_post import InstanceExecPost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -1462,11 +1505,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **var_exec** | [**InstanceExecPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceExecPost.md)| Exec request | [optional] 
+ **var_exec** | [**InstanceExecPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceExecPost.md)| Exec request | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -1484,6 +1527,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1543,7 +1588,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1562,6 +1607,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1635,6 +1681,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1708,6 +1755,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1775,7 +1823,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1794,6 +1842,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1849,7 +1898,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceGet200Response.md)
+[**InstanceGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceGet200Response.md)
 
 ### Authorization
 
@@ -1865,7 +1914,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Instance |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1923,7 +1975,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceGetRecursion1200Response.md)
+[**InstanceGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -1939,7 +1991,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Instance |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1997,7 +2052,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2016,6 +2071,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2089,6 +2145,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2144,7 +2201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceLogsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceLogsGet200Response.md)
+[**InstanceLogsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceLogsGet200Response.md)
 
 ### Authorization
 
@@ -2160,8 +2217,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2217,7 +2276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceMetadataGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceMetadataGet200Response.md)
+[**InstanceMetadataGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceMetadataGet200Response.md)
 
 ### Authorization
 
@@ -2233,7 +2292,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Image metadata |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2287,12 +2349,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
- **metadata** | [**ImageMetadata**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ImageMetadata.md)| Image metadata | 
+ **metadata** | [**ImageMetadata**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ImageMetadata.md)| Image metadata | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2310,6 +2372,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
@@ -2364,12 +2428,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
- **metadata** | [**ImageMetadata**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ImageMetadata.md)| Image metadata | 
+ **metadata** | [**ImageMetadata**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ImageMetadata.md)| Image metadata | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2387,6 +2451,8 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
@@ -2445,7 +2511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2464,6 +2530,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2538,6 +2605,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2595,7 +2663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2614,6 +2682,7 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2694,6 +2763,645 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_nvram_get**
+> InstanceNvramGet200Response instance_nvram_get(name, project=project)
+
+Get the NVRAM variable GUIDs
+
+Returns a list of NVRAM variable GUIDs (URLs).
+
+Only supported for VMs.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.instance_nvram_get200_response import InstanceNvramGet200Response
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    project = 'project_example' # str | Project name (optional)
+
+    try:
+        # Get the NVRAM variable GUIDs
+        api_response = await api_instance.instance_nvram_get(name, project=project)
+        print("The response of InstancesApi->instance_nvram_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_nvram_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **project** | **str**| Project name | [optional] 
+
+### Return type
+
+[**InstanceNvramGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceNvramGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_nvram_get_recursion1**
+> InstanceNvramGetRecursion1200Response instance_nvram_get_recursion1(name, project=project)
+
+Get the NVRAM variable GUIDs and names
+
+Returns a map of NVRAM variable GUIDs and their associated names (URLs).
+
+Only supported for VMs.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.instance_nvram_get_recursion1200_response import InstanceNvramGetRecursion1200Response
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    project = 'project_example' # str | Project name (optional)
+
+    try:
+        # Get the NVRAM variable GUIDs and names
+        api_response = await api_instance.instance_nvram_get_recursion1(name, project=project)
+        print("The response of InstancesApi->instance_nvram_get_recursion1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_nvram_get_recursion1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **project** | **str**| Project name | [optional] 
+
+### Return type
+
+[**InstanceNvramGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceNvramGetRecursion1200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_nvram_get_recursion2**
+> InstanceNvramGetRecursion2200Response instance_nvram_get_recursion2(name, project=project)
+
+Get the NVRAM variables
+
+Returns a map of NVRAM variable GUIDs and their dissected values.
+
+Only supported for VMs.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.instance_nvram_get_recursion2200_response import InstanceNvramGetRecursion2200Response
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    project = 'project_example' # str | Project name (optional)
+
+    try:
+        # Get the NVRAM variables
+        api_response = await api_instance.instance_nvram_get_recursion2(name, project=project)
+        print("The response of InstancesApi->instance_nvram_get_recursion2:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_nvram_get_recursion2: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **project** | **str**| Project name | [optional] 
+
+### Return type
+
+[**InstanceNvramGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceNvramGetRecursion2200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | NVRAM variables |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_nvram_guid_get**
+> InstanceNvramGuidGet200Response instance_nvram_guid_get(name, guid, project=project)
+
+Get the NVRAM variable names under the given GUID
+
+Returns a map of variable names (URLs).
+
+Only supported for VMs.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.instance_nvram_guid_get200_response import InstanceNvramGuidGet200Response
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    guid = 'guid_example' # str | GUID
+    project = 'project_example' # str | Project name (optional)
+
+    try:
+        # Get the NVRAM variable names under the given GUID
+        api_response = await api_instance.instance_nvram_guid_get(name, guid, project=project)
+        print("The response of InstancesApi->instance_nvram_guid_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_nvram_guid_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **guid** | **str**| GUID | 
+ **project** | **str**| Project name | [optional] 
+
+### Return type
+
+[**InstanceNvramGuidGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceNvramGuidGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_nvram_guid_get_recursion1**
+> InstanceNvramGuidGetRecursion1200Response instance_nvram_guid_get_recursion1(name, guid, project=project)
+
+Get the NVRAM variables under the given GUID
+
+Returns a map of NVRAM variable GUIDs and their dissected values.
+
+Only supported for VMs.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.instance_nvram_guid_get_recursion1200_response import InstanceNvramGuidGetRecursion1200Response
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    guid = 'guid_example' # str | GUID
+    project = 'project_example' # str | Project name (optional)
+
+    try:
+        # Get the NVRAM variables under the given GUID
+        api_response = await api_instance.instance_nvram_guid_get_recursion1(name, guid, project=project)
+        print("The response of InstancesApi->instance_nvram_guid_get_recursion1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_nvram_guid_get_recursion1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **guid** | **str**| GUID | 
+ **project** | **str**| Project name | [optional] 
+
+### Return type
+
+[**InstanceNvramGuidGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceNvramGuidGetRecursion1200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | NVRAM variables |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_nvram_guid_var_delete**
+> ServerPut200Response instance_nvram_guid_var_delete(name, guid, var, project=project)
+
+Delete the NVRAM variable
+
+Only supported for VMs.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.server_put200_response import ServerPut200Response
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    guid = 'guid_example' # str | Variable GUID
+    var = 'var_example' # str | Variable name
+    project = 'project_example' # str | Project name (optional)
+
+    try:
+        # Delete the NVRAM variable
+        api_response = await api_instance.instance_nvram_guid_var_delete(name, guid, var, project=project)
+        print("The response of InstancesApi->instance_nvram_guid_var_delete:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_nvram_guid_var_delete: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **guid** | **str**| Variable GUID | 
+ **var** | **str**| Variable name | 
+ **project** | **str**| Project name | [optional] 
+
+### Return type
+
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Empty sync response |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_nvram_guid_var_get**
+> InstanceNvramGuidVarGet200Response instance_nvram_guid_var_get(name, guid, var, project=project)
+
+Get the NVRAM variable
+
+If the `Accept` header is set to `application/octet-stream`, the raw binary value of the variable
+is returned.
+
+Only supported for VMs.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.instance_nvram_guid_var_get200_response import InstanceNvramGuidVarGet200Response
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    guid = 'guid_example' # str | Variable GUID
+    var = 'var_example' # str | Variable name
+    project = 'project_example' # str | Project name (optional)
+
+    try:
+        # Get the NVRAM variable
+        api_response = await api_instance.instance_nvram_guid_var_get(name, guid, var, project=project)
+        print("The response of InstancesApi->instance_nvram_guid_var_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_nvram_guid_var_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **guid** | **str**| Variable GUID | 
+ **var** | **str**| Variable name | 
+ **project** | **str**| Project name | [optional] 
+
+### Return type
+
+[**InstanceNvramGuidVarGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceNvramGuidVarGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/octet-stream
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | NVRAM variable |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_nvram_guid_var_put**
+> ServerPut200Response instance_nvram_guid_var_put(name, guid, var, project=project, x_incus_attributes=x_incus_attributes, x_incus_timestamp=x_incus_timestamp)
+
+Update the NVRAM variable
+
+If the `Content-Type` header is set to `application/octet-stream`, this sets the raw binary
+value of the variable.
+
+Only supported for VMs.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.server_put200_response import ServerPut200Response
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    guid = 'guid_example' # str | Variable GUID
+    var = 'var_example' # str | Variable name
+    project = 'project_example' # str | Project name (optional)
+    x_incus_attributes = None # object | Raw UEFI variable attributes to set (optional)
+    x_incus_timestamp = None # object | Raw UEFI variable UNIX timestamp (in seconds) to set (optional)
+
+    try:
+        # Update the NVRAM variable
+        api_response = await api_instance.instance_nvram_guid_var_put(name, guid, var, project=project, x_incus_attributes=x_incus_attributes, x_incus_timestamp=x_incus_timestamp)
+        print("The response of InstancesApi->instance_nvram_guid_var_put:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_nvram_guid_var_put: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **guid** | **str**| Variable GUID | 
+ **var** | **str**| Variable name | 
+ **project** | **str**| Project name | [optional] 
+ **x_incus_attributes** | [**object**](.md)| Raw UEFI variable attributes to set | [optional] 
+ **x_incus_timestamp** | [**object**](.md)| Raw UEFI variable UNIX timestamp (in seconds) to set | [optional] 
+
+### Return type
+
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Empty sync response |  -  |
+**201** | Empty sync response |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2748,11 +3456,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **instance** | [**InstancePut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancePut.md)| Update request | [optional] 
+ **instance** | [**InstancePut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancePut.md)| Update request | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2770,12 +3478,96 @@ No authorization required
 **200** | Empty sync response |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**412** | Precondition Failed |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **instance_port_forward_post**
+> instance_port_forward_post(name, port_forward, project=project)
+
+Connect to a TCP port inside the instance
+
+Upgrades the request to a raw TCP connection to the given address and port inside of the instance.
+
+For containers, the connection is established directly by the server from within the
+container's network namespace. For virtual machines, the request is forwarded to the
+agent which then handles the connection.
+
+This is only available on running instances.
+
+### Example
+
+
+```python
+import pyincusd
+from pyincusd.models.instance_port_forward_post import InstancePortForwardPost
+from pyincusd.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pyincusd.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+async with pyincusd.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = pyincusd.InstancesApi(api_client)
+    name = 'name_example' # str | Instance name
+    port_forward = pyincusd.InstancePortForwardPost() # InstancePortForwardPost | Port forwarding request
+    project = 'project_example' # str | Project name (optional)
+
+    try:
+        # Connect to a TCP port inside the instance
+        await api_instance.instance_port_forward_post(name, port_forward, project=project)
+    except Exception as e:
+        print("Exception when calling InstancesApi->instance_port_forward_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Instance name | 
+ **port_forward** | [**InstancePortForwardPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancePortForwardPost.md)| Port forwarding request | 
+ **project** | **str**| Project name | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, application/octet-stream
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**101** | Switching protocols to TCP |  -  |
+**400** | Bad Request |  -  |
+**403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_post**
-> ClusterMembersPost202Response instance_post(name, project=project, migration=migration)
+> CertificatesPost202Response instance_post(name, project=project, migration=migration)
 
 Rename or move/migrate an instance
 
@@ -2792,7 +3584,7 @@ operation with a number of secrets to be passed to the target server.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_post import InstancePost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -2830,11 +3622,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **migration** | [**InstancePost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancePost.md)| Migration request | [optional] 
+ **migration** | [**InstancePost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancePost.md)| Migration request | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -2852,12 +3644,14 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_put**
-> ClusterMembersPost202Response instance_put(name, project=project, instance=instance)
+> CertificatesPost202Response instance_put(name, project=project, instance=instance)
 
 Update the instance
 
@@ -2868,7 +3662,7 @@ Updates the instance configuration or trigger a snapshot restore.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_put import InstancePut
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -2906,11 +3700,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **instance** | [**InstancePut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancePut.md)| Update request | [optional] 
+ **instance** | [**InstancePut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancePut.md)| Update request | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -2928,12 +3722,15 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_rebuild_post**
-> ServerPut200Response instance_rebuild_post(name, instance, project=project)
+> CertificatesPost202Response instance_rebuild_post(name, instance, project=project)
 
 Rebuild an instance
 
@@ -2944,8 +3741,8 @@ Rebuild an instance using an alternate image or as empty.
 
 ```python
 import pyincusd
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_rebuild_post import InstanceRebuildPost
-from pyincusd.models.server_put200_response import ServerPut200Response
 from pyincusd.rest import ApiException
 from pprint import pprint
 
@@ -2981,12 +3778,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
- **instance** | [**InstanceRebuildPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceRebuildPost.md)| InstanceRebuild request | 
+ **instance** | [**InstanceRebuildPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceRebuildPost.md)| InstanceRebuild request | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ServerPut200Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3001,11 +3798,11 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Empty sync response |  -  |
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3075,12 +3872,13 @@ No authorization required
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
 **404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_snapshot_delete**
-> ClusterMembersPost202Response instance_snapshot_delete(name, snapshot, project=project)
+> CertificatesPost202Response instance_snapshot_delete(name, snapshot, project=project)
 
 Delete a snapshot
 
@@ -3091,7 +3889,7 @@ Deletes the instance snapshot.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.rest import ApiException
 from pprint import pprint
 
@@ -3132,7 +3930,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3150,6 +3948,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3207,7 +4007,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceSnapshotGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSnapshotGet200Response.md)
+[**InstanceSnapshotGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceSnapshotGet200Response.md)
 
 ### Authorization
 
@@ -3223,13 +4023,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Instance snapshot |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_snapshot_patch**
-> ClusterMembersPost202Response instance_snapshot_patch(name, snapshot, project=project, snapshot2=snapshot2)
+> CertificatesPost202Response instance_snapshot_patch(name, snapshot, project=project, snapshot2=snapshot2)
 
 Partially update snapshot
 
@@ -3240,7 +4043,7 @@ Updates a subset of the snapshot config.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_snapshot_put import InstanceSnapshotPut
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -3280,11 +4083,11 @@ Name | Type | Description  | Notes
  **name** | **str**| Instance name | 
  **snapshot** | **str**| Snapshot name | 
  **project** | **str**| Project name | [optional] 
- **snapshot2** | [**InstanceSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSnapshotPut.md)| Snapshot update | [optional] 
+ **snapshot2** | [**InstanceSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceSnapshotPut.md)| Snapshot update | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3302,12 +4105,15 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_snapshot_post**
-> ClusterMembersPost202Response instance_snapshot_post(name, snapshot, project=project, snapshot2=snapshot2)
+> CertificatesPost202Response instance_snapshot_post(name, snapshot, project=project, snapshot2=snapshot2)
 
 Rename or move/migrate a snapshot
 
@@ -3324,7 +4130,7 @@ operation with a number of secrets to be passed to the target server.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_snapshot_post import InstanceSnapshotPost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -3364,11 +4170,11 @@ Name | Type | Description  | Notes
  **name** | **str**| Instance name | 
  **snapshot** | **str**| Snapshot name | 
  **project** | **str**| Project name | [optional] 
- **snapshot2** | [**InstanceSnapshotPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSnapshotPost.md)| Snapshot migration | [optional] 
+ **snapshot2** | [**InstanceSnapshotPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceSnapshotPost.md)| Snapshot migration | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3386,12 +4192,14 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_snapshot_put**
-> ClusterMembersPost202Response instance_snapshot_put(name, snapshot, project=project, snapshot2=snapshot2)
+> CertificatesPost202Response instance_snapshot_put(name, snapshot, project=project, snapshot2=snapshot2)
 
 Update snapshot
 
@@ -3402,7 +4210,7 @@ Updates the snapshot config.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_snapshot_put import InstanceSnapshotPut
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -3442,11 +4250,11 @@ Name | Type | Description  | Notes
  **name** | **str**| Instance name | 
  **snapshot** | **str**| Snapshot name | 
  **project** | **str**| Project name | [optional] 
- **snapshot2** | [**InstanceSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSnapshotPut.md)| Snapshot update | [optional] 
+ **snapshot2** | [**InstanceSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceSnapshotPut.md)| Snapshot update | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3464,6 +4272,9 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
+**412** | Precondition Failed |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3519,7 +4330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceSnapshotsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSnapshotsGet200Response.md)
+[**InstanceSnapshotsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceSnapshotsGet200Response.md)
 
 ### Authorization
 
@@ -3535,7 +4346,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3591,7 +4405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceSnapshotsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSnapshotsGetRecursion1200Response.md)
+[**InstanceSnapshotsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceSnapshotsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -3607,13 +4421,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_snapshots_post**
-> ClusterMembersPost202Response instance_snapshots_post(name, project=project, snapshot=snapshot)
+> CertificatesPost202Response instance_snapshots_post(name, project=project, snapshot=snapshot)
 
 Create a snapshot
 
@@ -3624,7 +4441,7 @@ Creates a new snapshot.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_snapshots_post import InstanceSnapshotsPost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -3662,11 +4479,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **snapshot** | [**InstanceSnapshotsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSnapshotsPost.md)| Snapshot request | [optional] 
+ **snapshot** | [**InstanceSnapshotsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceSnapshotsPost.md)| Snapshot request | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3684,6 +4501,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3743,7 +4562,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceStateGet200Response.md)
+[**InstanceStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceStateGet200Response.md)
 
 ### Authorization
 
@@ -3761,12 +4580,14 @@ No authorization required
 **200** | State |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instance_state_put**
-> ClusterMembersPost202Response instance_state_put(name, project=project, state=state)
+> CertificatesPost202Response instance_state_put(name, project=project, state=state)
 
 Change the state
 
@@ -3777,7 +4598,7 @@ Changes the running state of the instance.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instance_state_put import InstanceStatePut
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -3815,11 +4636,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **state** | [**InstanceStatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceStatePut.md)| State | [optional] 
+ **state** | [**InstanceStatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceStatePut.md)| State | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3837,6 +4658,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3894,7 +4717,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstancesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesGet200Response.md)
+[**InstancesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesGet200Response.md)
 
 ### Authorization
 
@@ -3910,7 +4733,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3968,7 +4794,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstancesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesGetRecursion1200Response.md)
+[**InstancesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -3984,7 +4810,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4046,7 +4875,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstancesGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesGetRecursion2200Response.md)
+[**InstancesGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesGetRecursion2200Response.md)
 
 ### Authorization
 
@@ -4062,13 +4891,16 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | API endpoints |  -  |
+**400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instances_post**
-> ClusterMembersPost202Response instances_post(project=project, target=target, instance=instance)
+> CertificatesPost202Response instances_post(project=project, target=target, instance=instance)
 
 Create a new instance
 
@@ -4082,7 +4914,7 @@ migration stream or backup file.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instances_post import InstancesPost
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -4120,11 +4952,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member | [optional] 
- **instance** | [**InstancesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesPost.md)| Instance request | [optional] 
+ **instance** | [**InstancesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesPost.md)| Instance request | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4142,12 +4974,14 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **instances_put**
-> ClusterMembersPost202Response instances_put(project=project, state=state)
+> CertificatesPost202Response instances_put(project=project, state=state)
 
 Bulk instance state update
 
@@ -4158,7 +4992,7 @@ Changes the running state of all instances.
 
 ```python
 import pyincusd
-from pyincusd.models.cluster_members_post202_response import ClusterMembersPost202Response
+from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.instances_put import InstancesPut
 from pyincusd.rest import ApiException
 from pprint import pprint
@@ -4194,11 +5028,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project** | **str**| Project name | [optional] 
- **state** | [**InstancesPut**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstancesPut.md)| State | [optional] 
+ **state** | [**InstancesPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstancesPut.md)| State | [optional] 
 
 ### Return type
 
-[**ClusterMembersPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/ClusterMembersPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4216,6 +5050,8 @@ No authorization required
 **202** | Operation |  -  |
 **400** | Bad Request |  -  |
 **403** | Forbidden |  -  |
+**404** | Not found |  -  |
+**409** | Conflict |  -  |
 **500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

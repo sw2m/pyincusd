@@ -76,8 +76,7 @@ class ResourcesGPUCardSRIOV(BaseModel):
         _items = []
         if self.vfs:
             for _item_vfs in self.vfs:
-                if _item_vfs:
-                    _items.append(_item_vfs.to_dict())
+                _items.append(_item_vfs.to_dict() if _item_vfs is not None else None)
             _dict['vfs'] = _items
         return _dict
 

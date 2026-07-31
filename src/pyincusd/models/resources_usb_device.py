@@ -83,8 +83,7 @@ class ResourcesUSBDevice(BaseModel):
         _items = []
         if self.interfaces:
             for _item_interfaces in self.interfaces:
-                if _item_interfaces:
-                    _items.append(_item_interfaces.to_dict())
+                _items.append(_item_interfaces.to_dict() if _item_interfaces is not None else None)
             _dict['interfaces'] = _items
         return _dict
 

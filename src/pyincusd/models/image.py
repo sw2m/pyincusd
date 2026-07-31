@@ -93,8 +93,7 @@ class Image(BaseModel):
         _items = []
         if self.aliases:
             for _item_aliases in self.aliases:
-                if _item_aliases:
-                    _items.append(_item_aliases.to_dict())
+                _items.append(_item_aliases.to_dict() if _item_aliases is not None else None)
             _dict['aliases'] = _items
         # override the default output from pydantic by calling `to_dict()` of update_source
         if self.update_source:

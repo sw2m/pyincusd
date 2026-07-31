@@ -77,8 +77,7 @@ class ProjectState(BaseModel):
         _field_dict = {}
         if self.resources:
             for _key_resources in self.resources:
-                if self.resources[_key_resources]:
-                    _field_dict[_key_resources] = self.resources[_key_resources].to_dict()
+                _field_dict[_key_resources] = self.resources[_key_resources].to_dict() if self.resources[_key_resources] is not None else None
             _dict['resources'] = _field_dict
         return _dict
 

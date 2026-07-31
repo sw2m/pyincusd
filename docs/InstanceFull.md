@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **architecture** | **str** | Architecture name | [optional] 
-**backups** | [**List[InstanceBackup]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceBackup.md) | List of backups. | [optional] 
+**backups** | [**List[InstanceBackup]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceBackup.md) | List of backups. | [optional] 
 **config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **created_at** | **datetime** | Instance creation timestamp | [optional] 
 **description** | **str** | Instance description | [optional] 
@@ -21,8 +21,8 @@ Name | Type | Description | Notes
 **profiles** | **List[str]** | List of profiles applied to the instance | [optional] 
 **project** | **str** | Instance project name  API extension: instance_all_projects | [optional] 
 **restore** | **str** | If set, instance will be restored to the provided snapshot name | [optional] 
-**snapshots** | [**List[InstanceSnapshot]**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceSnapshot.md) | List of snapshots. | [optional] 
-**state** | [**InstanceState**](https://github.com/anonhostpi/pyincusd/blob/v7.2.0/docs/InstanceState.md) |  | [optional] 
+**snapshots** | [**List[InstanceSnapshot]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceSnapshot.md) | List of snapshots. | [optional] 
+**state** | [**InstanceState**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InstanceState.md) |  | [optional] 
 **stateful** | **bool** | Whether the instance currently has saved state on disk | [optional] 
 **status** | **str** | Instance status (see instance_state) | [optional] 
 **status_code** | **int** |  | [optional] 

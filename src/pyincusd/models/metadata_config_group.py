@@ -75,10 +75,9 @@ class MetadataConfigGroup(BaseModel):
         _items = []
         if self.keys:
             for _item_keys in self.keys:
-                if _item_keys:
-                    _items.append(
-                         {_inner_key: _inner_value.to_dict() for _inner_key, _inner_value in _item_keys.items()}
-                    )
+                _items.append(
+                     {_inner_key: _inner_value.to_dict() if _inner_value is not None else None for _inner_key, _inner_value in _item_keys.items()} if _item_keys is not None else None
+                )
             _dict['keys'] = _items
         return _dict
 
@@ -93,7 +92,7 @@ class MetadataConfigGroup(BaseModel):
 
         _obj = cls.model_validate({
             "keys": [
-                    {_inner_key: MetadataConfigKey.from_dict(_inner_value) for _inner_key, _inner_value in _item.items()}
+                    {_inner_key: MetadataConfigKey.from_dict(_inner_value) for _inner_key, _inner_value in _item.items()} if _item is not None else None
                     for _item in obj["keys"]
                 ] if obj.get("keys") is not None else None
         })
