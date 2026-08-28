@@ -17,7 +17,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictBool, StrictBytes, StrictStr
-from typing import Any, Optional, Tuple, Union
+from typing import List, Optional, Tuple, Union
 from typing_extensions import Annotated
 from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.image_alias_get200_response import ImageAliasGet200Response
@@ -6452,13 +6452,13 @@ class ImagesApi:
         metadata: Annotated[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]], Field(description="Image metadata tarball (incus.tar.xz)")],
         rootfs: Annotated[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]], Field(description="Image rootfs (squashfs or tarball)")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_secret: Annotated[Optional[Any], Field(description="Push secret for server to server communication")] = None,
-        x_incus_fingerprint: Annotated[Optional[Any], Field(description="Expected fingerprint when pushing a raw image")] = None,
-        x_incus_aliases: Annotated[Optional[Any], Field(description="List of aliases to assign")] = None,
-        x_incus_properties: Annotated[Optional[Any], Field(description="Descriptive properties")] = None,
-        x_incus_public: Annotated[Optional[Any], Field(description="Whether the image is available to unauthenticated users")] = None,
-        x_incus_filename: Annotated[Optional[Any], Field(description="Original filename of the image")] = None,
-        x_incus_profiles: Annotated[Optional[Any], Field(description="List of profiles to use")] = None,
+        x_incus_secret: Annotated[Optional[StrictStr], Field(description="Push secret for server to server communication")] = None,
+        x_incus_fingerprint: Annotated[Optional[StrictStr], Field(description="Expected fingerprint when pushing a raw image")] = None,
+        x_incus_aliases: Annotated[Optional[List[StrictStr]], Field(description="List of aliases to assign")] = None,
+        x_incus_properties: Annotated[Optional[StrictStr], Field(description="Descriptive properties (URL encoded)")] = None,
+        x_incus_public: Annotated[Optional[StrictBool], Field(description="Whether the image is available to unauthenticated users")] = None,
+        x_incus_filename: Annotated[Optional[StrictStr], Field(description="Original filename of the image")] = None,
+        x_incus_profiles: Annotated[Optional[List[StrictStr]], Field(description="List of profiles to use")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6483,19 +6483,19 @@ class ImagesApi:
         :param project: Project name
         :type project: str
         :param x_incus_secret: Push secret for server to server communication
-        :type x_incus_secret: object
+        :type x_incus_secret: str
         :param x_incus_fingerprint: Expected fingerprint when pushing a raw image
-        :type x_incus_fingerprint: object
+        :type x_incus_fingerprint: str
         :param x_incus_aliases: List of aliases to assign
-        :type x_incus_aliases: object
-        :param x_incus_properties: Descriptive properties
-        :type x_incus_properties: object
+        :type x_incus_aliases: List[str]
+        :param x_incus_properties: Descriptive properties (URL encoded)
+        :type x_incus_properties: str
         :param x_incus_public: Whether the image is available to unauthenticated users
-        :type x_incus_public: object
+        :type x_incus_public: bool
         :param x_incus_filename: Original filename of the image
-        :type x_incus_filename: object
+        :type x_incus_filename: str
         :param x_incus_profiles: List of profiles to use
-        :type x_incus_profiles: object
+        :type x_incus_profiles: List[str]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6560,13 +6560,13 @@ class ImagesApi:
         metadata: Annotated[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]], Field(description="Image metadata tarball (incus.tar.xz)")],
         rootfs: Annotated[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]], Field(description="Image rootfs (squashfs or tarball)")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_secret: Annotated[Optional[Any], Field(description="Push secret for server to server communication")] = None,
-        x_incus_fingerprint: Annotated[Optional[Any], Field(description="Expected fingerprint when pushing a raw image")] = None,
-        x_incus_aliases: Annotated[Optional[Any], Field(description="List of aliases to assign")] = None,
-        x_incus_properties: Annotated[Optional[Any], Field(description="Descriptive properties")] = None,
-        x_incus_public: Annotated[Optional[Any], Field(description="Whether the image is available to unauthenticated users")] = None,
-        x_incus_filename: Annotated[Optional[Any], Field(description="Original filename of the image")] = None,
-        x_incus_profiles: Annotated[Optional[Any], Field(description="List of profiles to use")] = None,
+        x_incus_secret: Annotated[Optional[StrictStr], Field(description="Push secret for server to server communication")] = None,
+        x_incus_fingerprint: Annotated[Optional[StrictStr], Field(description="Expected fingerprint when pushing a raw image")] = None,
+        x_incus_aliases: Annotated[Optional[List[StrictStr]], Field(description="List of aliases to assign")] = None,
+        x_incus_properties: Annotated[Optional[StrictStr], Field(description="Descriptive properties (URL encoded)")] = None,
+        x_incus_public: Annotated[Optional[StrictBool], Field(description="Whether the image is available to unauthenticated users")] = None,
+        x_incus_filename: Annotated[Optional[StrictStr], Field(description="Original filename of the image")] = None,
+        x_incus_profiles: Annotated[Optional[List[StrictStr]], Field(description="List of profiles to use")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6591,19 +6591,19 @@ class ImagesApi:
         :param project: Project name
         :type project: str
         :param x_incus_secret: Push secret for server to server communication
-        :type x_incus_secret: object
+        :type x_incus_secret: str
         :param x_incus_fingerprint: Expected fingerprint when pushing a raw image
-        :type x_incus_fingerprint: object
+        :type x_incus_fingerprint: str
         :param x_incus_aliases: List of aliases to assign
-        :type x_incus_aliases: object
-        :param x_incus_properties: Descriptive properties
-        :type x_incus_properties: object
+        :type x_incus_aliases: List[str]
+        :param x_incus_properties: Descriptive properties (URL encoded)
+        :type x_incus_properties: str
         :param x_incus_public: Whether the image is available to unauthenticated users
-        :type x_incus_public: object
+        :type x_incus_public: bool
         :param x_incus_filename: Original filename of the image
-        :type x_incus_filename: object
+        :type x_incus_filename: str
         :param x_incus_profiles: List of profiles to use
-        :type x_incus_profiles: object
+        :type x_incus_profiles: List[str]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6668,13 +6668,13 @@ class ImagesApi:
         metadata: Annotated[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]], Field(description="Image metadata tarball (incus.tar.xz)")],
         rootfs: Annotated[Union[StrictBytes, StrictStr, Tuple[StrictStr, StrictBytes]], Field(description="Image rootfs (squashfs or tarball)")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_secret: Annotated[Optional[Any], Field(description="Push secret for server to server communication")] = None,
-        x_incus_fingerprint: Annotated[Optional[Any], Field(description="Expected fingerprint when pushing a raw image")] = None,
-        x_incus_aliases: Annotated[Optional[Any], Field(description="List of aliases to assign")] = None,
-        x_incus_properties: Annotated[Optional[Any], Field(description="Descriptive properties")] = None,
-        x_incus_public: Annotated[Optional[Any], Field(description="Whether the image is available to unauthenticated users")] = None,
-        x_incus_filename: Annotated[Optional[Any], Field(description="Original filename of the image")] = None,
-        x_incus_profiles: Annotated[Optional[Any], Field(description="List of profiles to use")] = None,
+        x_incus_secret: Annotated[Optional[StrictStr], Field(description="Push secret for server to server communication")] = None,
+        x_incus_fingerprint: Annotated[Optional[StrictStr], Field(description="Expected fingerprint when pushing a raw image")] = None,
+        x_incus_aliases: Annotated[Optional[List[StrictStr]], Field(description="List of aliases to assign")] = None,
+        x_incus_properties: Annotated[Optional[StrictStr], Field(description="Descriptive properties (URL encoded)")] = None,
+        x_incus_public: Annotated[Optional[StrictBool], Field(description="Whether the image is available to unauthenticated users")] = None,
+        x_incus_filename: Annotated[Optional[StrictStr], Field(description="Original filename of the image")] = None,
+        x_incus_profiles: Annotated[Optional[List[StrictStr]], Field(description="List of profiles to use")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6699,19 +6699,19 @@ class ImagesApi:
         :param project: Project name
         :type project: str
         :param x_incus_secret: Push secret for server to server communication
-        :type x_incus_secret: object
+        :type x_incus_secret: str
         :param x_incus_fingerprint: Expected fingerprint when pushing a raw image
-        :type x_incus_fingerprint: object
+        :type x_incus_fingerprint: str
         :param x_incus_aliases: List of aliases to assign
-        :type x_incus_aliases: object
-        :param x_incus_properties: Descriptive properties
-        :type x_incus_properties: object
+        :type x_incus_aliases: List[str]
+        :param x_incus_properties: Descriptive properties (URL encoded)
+        :type x_incus_properties: str
         :param x_incus_public: Whether the image is available to unauthenticated users
-        :type x_incus_public: object
+        :type x_incus_public: bool
         :param x_incus_filename: Original filename of the image
-        :type x_incus_filename: object
+        :type x_incus_filename: str
         :param x_incus_profiles: List of profiles to use
-        :type x_incus_profiles: object
+        :type x_incus_profiles: List[str]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6787,6 +6787,8 @@ class ImagesApi:
         _host = None
 
         _collection_formats: Dict[str, str] = {
+            'X-Incus-aliases': 'csv',
+            'X-Incus-profiles': 'csv',
         }
 
         _path_params: Dict[str, str] = {}

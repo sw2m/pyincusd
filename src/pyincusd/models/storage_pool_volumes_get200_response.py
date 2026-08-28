@@ -28,7 +28,7 @@ class StoragePoolVolumesGet200Response(BaseModel):
     """
     Sync response
     """ # noqa: E501
-    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": ["[\n  \"/1.0/storage-pools/local/volumes/container/a1\",\n  \"/1.0/storage-pools/local/volumes/container/a2\",\n  \"/1.0/storage-pools/local/volumes/custom/backups\",\n  \"/1.0/storage-pools/local/volumes/custom/images\"\n]"]})
+    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": [["/1.0/storage-pools/local/volumes/container/a1", "/1.0/storage-pools/local/volumes/container/a2", "/1.0/storage-pools/local/volumes/custom/backups", "/1.0/storage-pools/local/volumes/custom/images"]]})
     status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
     status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
     type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})

@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from pyincusd.models.metadata_configuration import MetadataConfiguration
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
@@ -28,7 +29,7 @@ class MetadataConfigurationGet200Response(BaseModel):
     """
     Sync response
     """ # noqa: E501
-    metadata: Optional[StrictStr] = Field(default=None, description="The generated metadata configuration")
+    metadata: Optional[MetadataConfiguration] = None
     status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
     status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
     type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})
@@ -73,6 +74,9 @@ class MetadataConfigurationGet200Response(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of metadata
+        if self.metadata:
+            _dict['metadata'] = self.metadata.to_dict()
         return _dict
 
     @classmethod
@@ -85,7 +89,7 @@ class MetadataConfigurationGet200Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "metadata": obj.get("metadata"),
+            "metadata": MetadataConfiguration.from_dict(obj["metadata"]) if obj.get("metadata") is not None else None,
             "status": obj.get("status"),
             "status_code": obj.get("status_code"),
             "type": obj.get("type")

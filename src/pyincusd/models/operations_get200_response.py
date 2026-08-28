@@ -28,7 +28,7 @@ class OperationsGet200Response(BaseModel):
     """
     Sync response
     """ # noqa: E501
-    metadata: Optional[Dict[str, List[StrictStr]]] = Field(default=None, description="JSON object of operation types to operation URLs", json_schema_extra={"examples": ["{\n  \"running\": [\n    \"/1.0/operations/6916c8a6-9b7d-4abd-90b3-aedfec7ec7da\"\n  ]\n}"]})
+    metadata: Optional[Dict[str, List[StrictStr]]] = Field(default=None, description="JSON object of operation types to operation URLs", json_schema_extra={"examples": [{"running": ["/1.0/operations/6916c8a6-9b7d-4abd-90b3-aedfec7ec7da"]}]})
     status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
     status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
     type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})

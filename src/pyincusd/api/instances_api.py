@@ -17,7 +17,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
-from typing import Any, Optional
+from typing import Dict, Optional
 from typing_extensions import Annotated
 from pyincusd.models.certificates_post202_response import CertificatesPost202Response
 from pyincusd.models.image_metadata import ImageMetadata
@@ -35,6 +35,7 @@ from pyincusd.models.instance_get200_response import InstanceGet200Response
 from pyincusd.models.instance_get_recursion1200_response import InstanceGetRecursion1200Response
 from pyincusd.models.instance_logs_get200_response import InstanceLogsGet200Response
 from pyincusd.models.instance_metadata_get200_response import InstanceMetadataGet200Response
+from pyincusd.models.instance_nvram_variable_put import InstanceNVRAMVariablePut
 from pyincusd.models.instance_nvram_get200_response import InstanceNvramGet200Response
 from pyincusd.models.instance_nvram_get_recursion1200_response import InstanceNvramGetRecursion1200Response
 from pyincusd.models.instance_nvram_get_recursion2200_response import InstanceNvramGetRecursion2200Response
@@ -5914,7 +5915,7 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_force: Annotated[Optional[Any], Field(description="Perform recursive deletion")] = None,
+        x_incus_force: Annotated[Optional[StrictBool], Field(description="Perform recursive deletion")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5939,7 +5940,7 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_force: Perform recursive deletion
-        :type x_incus_force: object
+        :type x_incus_force: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5998,7 +5999,7 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_force: Annotated[Optional[Any], Field(description="Perform recursive deletion")] = None,
+        x_incus_force: Annotated[Optional[StrictBool], Field(description="Perform recursive deletion")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6023,7 +6024,7 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_force: Perform recursive deletion
-        :type x_incus_force: object
+        :type x_incus_force: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6082,7 +6083,7 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_force: Annotated[Optional[Any], Field(description="Perform recursive deletion")] = None,
+        x_incus_force: Annotated[Optional[StrictBool], Field(description="Perform recursive deletion")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6107,7 +6108,7 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_force: Perform recursive deletion
-        :type x_incus_force: object
+        :type x_incus_force: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6857,11 +6858,12 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_uid: Annotated[Optional[Any], Field(description="File owner UID")] = None,
-        x_incus_gid: Annotated[Optional[Any], Field(description="File owner GID")] = None,
-        x_incus_mode: Annotated[Optional[Any], Field(description="File mode")] = None,
-        x_incus_type: Annotated[Optional[Any], Field(description="Type of file (file, symlink or directory)")] = None,
-        x_incus_write: Annotated[Optional[Any], Field(description="Write mode (overwrite or append)")] = None,
+        x_incus_uid: Annotated[Optional[StrictInt], Field(description="File owner UID")] = None,
+        x_incus_gid: Annotated[Optional[StrictInt], Field(description="File owner GID")] = None,
+        x_incus_mode: Annotated[Optional[StrictInt], Field(description="File mode")] = None,
+        x_incus_type: Annotated[Optional[StrictStr], Field(description="Type of file (file, symlink or directory)")] = None,
+        x_incus_write: Annotated[Optional[StrictStr], Field(description="Write mode (overwrite or append)")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6886,15 +6888,17 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_uid: File owner UID
-        :type x_incus_uid: object
+        :type x_incus_uid: int
         :param x_incus_gid: File owner GID
-        :type x_incus_gid: object
+        :type x_incus_gid: int
         :param x_incus_mode: File mode
-        :type x_incus_mode: object
+        :type x_incus_mode: int
         :param x_incus_type: Type of file (file, symlink or directory)
-        :type x_incus_type: object
+        :type x_incus_type: str
         :param x_incus_write: Write mode (overwrite or append)
-        :type x_incus_write: object
+        :type x_incus_write: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6926,6 +6930,7 @@ class InstancesApi:
             x_incus_mode=x_incus_mode,
             x_incus_type=x_incus_type,
             x_incus_write=x_incus_write,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6957,11 +6962,12 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_uid: Annotated[Optional[Any], Field(description="File owner UID")] = None,
-        x_incus_gid: Annotated[Optional[Any], Field(description="File owner GID")] = None,
-        x_incus_mode: Annotated[Optional[Any], Field(description="File mode")] = None,
-        x_incus_type: Annotated[Optional[Any], Field(description="Type of file (file, symlink or directory)")] = None,
-        x_incus_write: Annotated[Optional[Any], Field(description="Write mode (overwrite or append)")] = None,
+        x_incus_uid: Annotated[Optional[StrictInt], Field(description="File owner UID")] = None,
+        x_incus_gid: Annotated[Optional[StrictInt], Field(description="File owner GID")] = None,
+        x_incus_mode: Annotated[Optional[StrictInt], Field(description="File mode")] = None,
+        x_incus_type: Annotated[Optional[StrictStr], Field(description="Type of file (file, symlink or directory)")] = None,
+        x_incus_write: Annotated[Optional[StrictStr], Field(description="Write mode (overwrite or append)")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6986,15 +6992,17 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_uid: File owner UID
-        :type x_incus_uid: object
+        :type x_incus_uid: int
         :param x_incus_gid: File owner GID
-        :type x_incus_gid: object
+        :type x_incus_gid: int
         :param x_incus_mode: File mode
-        :type x_incus_mode: object
+        :type x_incus_mode: int
         :param x_incus_type: Type of file (file, symlink or directory)
-        :type x_incus_type: object
+        :type x_incus_type: str
         :param x_incus_write: Write mode (overwrite or append)
-        :type x_incus_write: object
+        :type x_incus_write: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7026,6 +7034,7 @@ class InstancesApi:
             x_incus_mode=x_incus_mode,
             x_incus_type=x_incus_type,
             x_incus_write=x_incus_write,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7057,11 +7066,12 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_uid: Annotated[Optional[Any], Field(description="File owner UID")] = None,
-        x_incus_gid: Annotated[Optional[Any], Field(description="File owner GID")] = None,
-        x_incus_mode: Annotated[Optional[Any], Field(description="File mode")] = None,
-        x_incus_type: Annotated[Optional[Any], Field(description="Type of file (file, symlink or directory)")] = None,
-        x_incus_write: Annotated[Optional[Any], Field(description="Write mode (overwrite or append)")] = None,
+        x_incus_uid: Annotated[Optional[StrictInt], Field(description="File owner UID")] = None,
+        x_incus_gid: Annotated[Optional[StrictInt], Field(description="File owner GID")] = None,
+        x_incus_mode: Annotated[Optional[StrictInt], Field(description="File mode")] = None,
+        x_incus_type: Annotated[Optional[StrictStr], Field(description="Type of file (file, symlink or directory)")] = None,
+        x_incus_write: Annotated[Optional[StrictStr], Field(description="Write mode (overwrite or append)")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7086,15 +7096,17 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_uid: File owner UID
-        :type x_incus_uid: object
+        :type x_incus_uid: int
         :param x_incus_gid: File owner GID
-        :type x_incus_gid: object
+        :type x_incus_gid: int
         :param x_incus_mode: File mode
-        :type x_incus_mode: object
+        :type x_incus_mode: int
         :param x_incus_type: Type of file (file, symlink or directory)
-        :type x_incus_type: object
+        :type x_incus_type: str
         :param x_incus_write: Write mode (overwrite or append)
-        :type x_incus_write: object
+        :type x_incus_write: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7126,6 +7138,7 @@ class InstancesApi:
             x_incus_mode=x_incus_mode,
             x_incus_type=x_incus_type,
             x_incus_write=x_incus_write,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7157,6 +7170,7 @@ class InstancesApi:
         x_incus_mode,
         x_incus_type,
         x_incus_write,
+        raw_file,
         _request_auth,
         _content_type,
         _headers,
@@ -7202,6 +7216,8 @@ class InstancesApi:
             _header_params['X-Incus-write'] = x_incus_write
         # process the form parameters
         # process the body parameter
+        if raw_file is not None:
+            _body_params = raw_file
 
 
         # set the HTTP header `Accept`
@@ -10302,6 +10318,7 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Template name")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -10325,6 +10342,8 @@ class InstancesApi:
         :type path: str
         :param project: Project name
         :type project: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -10351,6 +10370,7 @@ class InstancesApi:
             name=name,
             path=path,
             project=project,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -10382,6 +10402,7 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Template name")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -10405,6 +10426,8 @@ class InstancesApi:
         :type path: str
         :param project: Project name
         :type project: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -10431,6 +10454,7 @@ class InstancesApi:
             name=name,
             path=path,
             project=project,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -10462,6 +10486,7 @@ class InstancesApi:
         name: Annotated[StrictStr, Field(description="Instance name")],
         path: Annotated[Optional[StrictStr], Field(description="Template name")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -10485,6 +10510,8 @@ class InstancesApi:
         :type path: str
         :param project: Project name
         :type project: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -10511,6 +10538,7 @@ class InstancesApi:
             name=name,
             path=path,
             project=project,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -10537,6 +10565,7 @@ class InstancesApi:
         name,
         path,
         project,
+        raw_file,
         _request_auth,
         _content_type,
         _headers,
@@ -10572,6 +10601,8 @@ class InstancesApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
+        if raw_file is not None:
+            _body_params = raw_file
 
 
         # set the HTTP header `Accept`
@@ -13070,8 +13101,8 @@ class InstancesApi:
         guid: Annotated[StrictStr, Field(description="Variable GUID")],
         var: Annotated[StrictStr, Field(description="Variable name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_attributes: Annotated[Optional[Any], Field(description="Raw UEFI variable attributes to set")] = None,
-        x_incus_timestamp: Annotated[Optional[Any], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
+        x_incus_attributes: Annotated[Optional[StrictInt], Field(description="Raw UEFI variable attributes to set")] = None,
+        x_incus_timestamp: Annotated[Optional[StrictInt], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -13098,9 +13129,9 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_attributes: Raw UEFI variable attributes to set
-        :type x_incus_attributes: object
+        :type x_incus_attributes: int
         :param x_incus_timestamp: Raw UEFI variable UNIX timestamp (in seconds) to set
-        :type x_incus_timestamp: object
+        :type x_incus_timestamp: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -13164,8 +13195,8 @@ class InstancesApi:
         guid: Annotated[StrictStr, Field(description="Variable GUID")],
         var: Annotated[StrictStr, Field(description="Variable name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_attributes: Annotated[Optional[Any], Field(description="Raw UEFI variable attributes to set")] = None,
-        x_incus_timestamp: Annotated[Optional[Any], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
+        x_incus_attributes: Annotated[Optional[StrictInt], Field(description="Raw UEFI variable attributes to set")] = None,
+        x_incus_timestamp: Annotated[Optional[StrictInt], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -13192,9 +13223,9 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_attributes: Raw UEFI variable attributes to set
-        :type x_incus_attributes: object
+        :type x_incus_attributes: int
         :param x_incus_timestamp: Raw UEFI variable UNIX timestamp (in seconds) to set
-        :type x_incus_timestamp: object
+        :type x_incus_timestamp: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -13258,8 +13289,8 @@ class InstancesApi:
         guid: Annotated[StrictStr, Field(description="Variable GUID")],
         var: Annotated[StrictStr, Field(description="Variable name")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_attributes: Annotated[Optional[Any], Field(description="Raw UEFI variable attributes to set")] = None,
-        x_incus_timestamp: Annotated[Optional[Any], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
+        x_incus_attributes: Annotated[Optional[StrictInt], Field(description="Raw UEFI variable attributes to set")] = None,
+        x_incus_timestamp: Annotated[Optional[StrictInt], Field(description="Raw UEFI variable UNIX timestamp (in seconds) to set")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -13286,9 +13317,9 @@ class InstancesApi:
         :param project: Project name
         :type project: str
         :param x_incus_attributes: Raw UEFI variable attributes to set
-        :type x_incus_attributes: object
+        :type x_incus_attributes: int
         :param x_incus_timestamp: Raw UEFI variable UNIX timestamp (in seconds) to set
-        :type x_incus_timestamp: object
+        :type x_incus_timestamp: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -13406,6 +13437,326 @@ class InstancesApi:
         return self.api_client.param_serialize(
             method='PUT',
             resource_path='/1.0/instances/{name}/nvram/{guid}/{var}',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    async def instance_nvram_patch(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        uefi_variables_map: Annotated[Dict[str, Dict[str, InstanceNVRAMVariablePut]], Field(description="Load Balancer")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ServerPut200Response:
+        """Bulk modify NVRAM variables.
+
+        This consumes nested objects keyed on GUID, then variable name, deleting the corresponding UEFI variables if the objects are `null`, and updating them otherwise.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param uefi_variables_map: Load Balancer (required)
+        :type uefi_variables_map: Dict[str, Dict[str, InstanceNVRAMVariablePut]]
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_patch_serialize(
+            name=name,
+            uefi_variables_map=uefi_variables_map,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    async def instance_nvram_patch_with_http_info(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        uefi_variables_map: Annotated[Dict[str, Dict[str, InstanceNVRAMVariablePut]], Field(description="Load Balancer")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[ServerPut200Response]:
+        """Bulk modify NVRAM variables.
+
+        This consumes nested objects keyed on GUID, then variable name, deleting the corresponding UEFI variables if the objects are `null`, and updating them otherwise.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param uefi_variables_map: Load Balancer (required)
+        :type uefi_variables_map: Dict[str, Dict[str, InstanceNVRAMVariablePut]]
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_patch_serialize(
+            name=name,
+            uefi_variables_map=uefi_variables_map,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    async def instance_nvram_patch_without_preload_content(
+        self,
+        name: Annotated[StrictStr, Field(description="Instance name")],
+        uefi_variables_map: Annotated[Dict[str, Dict[str, InstanceNVRAMVariablePut]], Field(description="Load Balancer")],
+        project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Bulk modify NVRAM variables.
+
+        This consumes nested objects keyed on GUID, then variable name, deleting the corresponding UEFI variables if the objects are `null`, and updating them otherwise.  Only supported for VMs.
+
+        :param name: Instance name (required)
+        :type name: str
+        :param uefi_variables_map: Load Balancer (required)
+        :type uefi_variables_map: Dict[str, Dict[str, InstanceNVRAMVariablePut]]
+        :param project: Project name
+        :type project: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._instance_nvram_patch_serialize(
+            name=name,
+            uefi_variables_map=uefi_variables_map,
+            project=project,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ServerPut200Response",
+            '400': "ServerGet400Response",
+            '403': "ServerGet403Response",
+            '404': "ServerGet404Response",
+            '409': "ServerGet409Response",
+            '500': "ServerGet500Response",
+        }
+        response_data = await self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _instance_nvram_patch_serialize(
+        self,
+        name,
+        uefi_variables_map,
+        project,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params['name'] = name
+        # process the query parameters
+        if project is not None:
+            
+            _query_params.append(('project', project))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+        if uefi_variables_map is not None:
+            _body_params = uefi_variables_map
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    '*/*'
+                ]
+            )
+
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='PATCH',
+            resource_path='/1.0/instances/{name}/nvram',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -19383,7 +19734,7 @@ class InstancesApi:
         self,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member")] = None,
-        instance: Annotated[Optional[InstancesPost], Field(description="Instance request")] = None,
+        instance: Annotated[Optional[InstancesPost], Field(description="Instance request (or raw backup file)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -19405,7 +19756,7 @@ class InstancesApi:
         :type project: str
         :param target: Cluster member
         :type target: str
-        :param instance: Instance request
+        :param instance: Instance request (or raw backup file)
         :type instance: InstancesPost
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -19463,7 +19814,7 @@ class InstancesApi:
         self,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member")] = None,
-        instance: Annotated[Optional[InstancesPost], Field(description="Instance request")] = None,
+        instance: Annotated[Optional[InstancesPost], Field(description="Instance request (or raw backup file)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -19485,7 +19836,7 @@ class InstancesApi:
         :type project: str
         :param target: Cluster member
         :type target: str
-        :param instance: Instance request
+        :param instance: Instance request (or raw backup file)
         :type instance: InstancesPost
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -19543,7 +19894,7 @@ class InstancesApi:
         self,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member")] = None,
-        instance: Annotated[Optional[InstancesPost], Field(description="Instance request")] = None,
+        instance: Annotated[Optional[InstancesPost], Field(description="Instance request (or raw backup file)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -19565,7 +19916,7 @@ class InstancesApi:
         :type project: str
         :param target: Cluster member
         :type target: str
-        :param instance: Instance request
+        :param instance: Instance request (or raw backup file)
         :type instance: InstancesPost
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

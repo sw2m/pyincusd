@@ -60,6 +60,7 @@ from pyincusd.models.storage_pool_volumes_type_snapshots_get_recursion1200_respo
 from pyincusd.models.storage_pools_get200_response import StoragePoolsGet200Response
 from pyincusd.models.storage_pools_get_recursion1200_response import StoragePoolsGetRecursion1200Response
 from pyincusd.models.storage_pools_post import StoragePoolsPost
+from pyincusd.models.storage_volume_backup_post import StorageVolumeBackupPost
 from pyincusd.models.storage_volume_backups_post import StorageVolumeBackupsPost
 from pyincusd.models.storage_volume_bitmaps_post import StorageVolumeBitmapsPost
 from pyincusd.models.storage_volume_post import StorageVolumePost
@@ -10061,7 +10062,7 @@ class StorageApi:
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_force: Annotated[Optional[Any], Field(description="Perform recursive deletion")] = None,
+        x_incus_force: Annotated[Optional[StrictBool], Field(description="Perform recursive deletion")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -10090,7 +10091,7 @@ class StorageApi:
         :param project: Project name
         :type project: str
         :param x_incus_force: Perform recursive deletion
-        :type x_incus_force: object
+        :type x_incus_force: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -10153,7 +10154,7 @@ class StorageApi:
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_force: Annotated[Optional[Any], Field(description="Perform recursive deletion")] = None,
+        x_incus_force: Annotated[Optional[StrictBool], Field(description="Perform recursive deletion")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -10182,7 +10183,7 @@ class StorageApi:
         :param project: Project name
         :type project: str
         :param x_incus_force: Perform recursive deletion
-        :type x_incus_force: object
+        :type x_incus_force: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -10245,7 +10246,7 @@ class StorageApi:
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_force: Annotated[Optional[Any], Field(description="Perform recursive deletion")] = None,
+        x_incus_force: Annotated[Optional[StrictBool], Field(description="Perform recursive deletion")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -10274,7 +10275,7 @@ class StorageApi:
         :param project: Project name
         :type project: str
         :param x_incus_force: Perform recursive deletion
-        :type x_incus_force: object
+        :type x_incus_force: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -11094,11 +11095,12 @@ class StorageApi:
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_uid: Annotated[Optional[Any], Field(description="File owner UID")] = None,
-        x_incus_gid: Annotated[Optional[Any], Field(description="File owner GID")] = None,
-        x_incus_mode: Annotated[Optional[Any], Field(description="File mode")] = None,
-        x_incus_type: Annotated[Optional[Any], Field(description="Type of file (file, symlink or directory)")] = None,
-        x_incus_write: Annotated[Optional[Any], Field(description="Write mode (overwrite or append)")] = None,
+        x_incus_uid: Annotated[Optional[StrictInt], Field(description="File owner UID")] = None,
+        x_incus_gid: Annotated[Optional[StrictInt], Field(description="File owner GID")] = None,
+        x_incus_mode: Annotated[Optional[StrictInt], Field(description="File mode")] = None,
+        x_incus_type: Annotated[Optional[StrictStr], Field(description="Type of file (file, symlink or directory)")] = None,
+        x_incus_write: Annotated[Optional[StrictStr], Field(description="Write mode (overwrite or append)")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -11127,15 +11129,17 @@ class StorageApi:
         :param project: Project name
         :type project: str
         :param x_incus_uid: File owner UID
-        :type x_incus_uid: object
+        :type x_incus_uid: int
         :param x_incus_gid: File owner GID
-        :type x_incus_gid: object
+        :type x_incus_gid: int
         :param x_incus_mode: File mode
-        :type x_incus_mode: object
+        :type x_incus_mode: int
         :param x_incus_type: Type of file (file, symlink or directory)
-        :type x_incus_type: object
+        :type x_incus_type: str
         :param x_incus_write: Write mode (overwrite or append)
-        :type x_incus_write: object
+        :type x_incus_write: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -11169,6 +11173,7 @@ class StorageApi:
             x_incus_mode=x_incus_mode,
             x_incus_type=x_incus_type,
             x_incus_write=x_incus_write,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -11202,11 +11207,12 @@ class StorageApi:
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_uid: Annotated[Optional[Any], Field(description="File owner UID")] = None,
-        x_incus_gid: Annotated[Optional[Any], Field(description="File owner GID")] = None,
-        x_incus_mode: Annotated[Optional[Any], Field(description="File mode")] = None,
-        x_incus_type: Annotated[Optional[Any], Field(description="Type of file (file, symlink or directory)")] = None,
-        x_incus_write: Annotated[Optional[Any], Field(description="Write mode (overwrite or append)")] = None,
+        x_incus_uid: Annotated[Optional[StrictInt], Field(description="File owner UID")] = None,
+        x_incus_gid: Annotated[Optional[StrictInt], Field(description="File owner GID")] = None,
+        x_incus_mode: Annotated[Optional[StrictInt], Field(description="File mode")] = None,
+        x_incus_type: Annotated[Optional[StrictStr], Field(description="Type of file (file, symlink or directory)")] = None,
+        x_incus_write: Annotated[Optional[StrictStr], Field(description="Write mode (overwrite or append)")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -11235,15 +11241,17 @@ class StorageApi:
         :param project: Project name
         :type project: str
         :param x_incus_uid: File owner UID
-        :type x_incus_uid: object
+        :type x_incus_uid: int
         :param x_incus_gid: File owner GID
-        :type x_incus_gid: object
+        :type x_incus_gid: int
         :param x_incus_mode: File mode
-        :type x_incus_mode: object
+        :type x_incus_mode: int
         :param x_incus_type: Type of file (file, symlink or directory)
-        :type x_incus_type: object
+        :type x_incus_type: str
         :param x_incus_write: Write mode (overwrite or append)
-        :type x_incus_write: object
+        :type x_incus_write: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -11277,6 +11285,7 @@ class StorageApi:
             x_incus_mode=x_incus_mode,
             x_incus_type=x_incus_type,
             x_incus_write=x_incus_write,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -11310,11 +11319,12 @@ class StorageApi:
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         path: Annotated[Optional[StrictStr], Field(description="Path to the file")] = None,
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
-        x_incus_uid: Annotated[Optional[Any], Field(description="File owner UID")] = None,
-        x_incus_gid: Annotated[Optional[Any], Field(description="File owner GID")] = None,
-        x_incus_mode: Annotated[Optional[Any], Field(description="File mode")] = None,
-        x_incus_type: Annotated[Optional[Any], Field(description="Type of file (file, symlink or directory)")] = None,
-        x_incus_write: Annotated[Optional[Any], Field(description="Write mode (overwrite or append)")] = None,
+        x_incus_uid: Annotated[Optional[StrictInt], Field(description="File owner UID")] = None,
+        x_incus_gid: Annotated[Optional[StrictInt], Field(description="File owner GID")] = None,
+        x_incus_mode: Annotated[Optional[StrictInt], Field(description="File mode")] = None,
+        x_incus_type: Annotated[Optional[StrictStr], Field(description="Type of file (file, symlink or directory)")] = None,
+        x_incus_write: Annotated[Optional[StrictStr], Field(description="Write mode (overwrite or append)")] = None,
+        raw_file: Annotated[Optional[StrictStr], Field(description="Raw file content")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -11343,15 +11353,17 @@ class StorageApi:
         :param project: Project name
         :type project: str
         :param x_incus_uid: File owner UID
-        :type x_incus_uid: object
+        :type x_incus_uid: int
         :param x_incus_gid: File owner GID
-        :type x_incus_gid: object
+        :type x_incus_gid: int
         :param x_incus_mode: File mode
-        :type x_incus_mode: object
+        :type x_incus_mode: int
         :param x_incus_type: Type of file (file, symlink or directory)
-        :type x_incus_type: object
+        :type x_incus_type: str
         :param x_incus_write: Write mode (overwrite or append)
-        :type x_incus_write: object
+        :type x_incus_write: str
+        :param raw_file: Raw file content
+        :type raw_file: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -11385,6 +11397,7 @@ class StorageApi:
             x_incus_mode=x_incus_mode,
             x_incus_type=x_incus_type,
             x_incus_write=x_incus_write,
+            raw_file=raw_file,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -11418,6 +11431,7 @@ class StorageApi:
         x_incus_mode,
         x_incus_type,
         x_incus_write,
+        raw_file,
         _request_auth,
         _content_type,
         _headers,
@@ -11467,6 +11481,8 @@ class StorageApi:
             _header_params['X-Incus-write'] = x_incus_write
         # process the form parameters
         # process the body parameter
+        if raw_file is not None:
+            _body_params = raw_file
 
 
         # set the HTTP header `Accept`
@@ -16714,7 +16730,7 @@ class StorageApi:
         type: Annotated[StrictStr, Field(description="Storage volume type")],
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         backup_name: Annotated[StrictStr, Field(description="Backup name")],
-        volume_rename: Annotated[StorageVolumeSnapshotPost, Field(description="Storage volume backup")],
+        volume_rename: Annotated[StorageVolumeBackupPost, Field(description="Storage volume backup")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -16743,7 +16759,7 @@ class StorageApi:
         :param backup_name: Backup name (required)
         :type backup_name: str
         :param volume_rename: Storage volume backup (required)
-        :type volume_rename: StorageVolumeSnapshotPost
+        :type volume_rename: StorageVolumeBackupPost
         :param project: Project name
         :type project: str
         :param target: Cluster member name
@@ -16810,7 +16826,7 @@ class StorageApi:
         type: Annotated[StrictStr, Field(description="Storage volume type")],
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         backup_name: Annotated[StrictStr, Field(description="Backup name")],
-        volume_rename: Annotated[StorageVolumeSnapshotPost, Field(description="Storage volume backup")],
+        volume_rename: Annotated[StorageVolumeBackupPost, Field(description="Storage volume backup")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -16839,7 +16855,7 @@ class StorageApi:
         :param backup_name: Backup name (required)
         :type backup_name: str
         :param volume_rename: Storage volume backup (required)
-        :type volume_rename: StorageVolumeSnapshotPost
+        :type volume_rename: StorageVolumeBackupPost
         :param project: Project name
         :type project: str
         :param target: Cluster member name
@@ -16906,7 +16922,7 @@ class StorageApi:
         type: Annotated[StrictStr, Field(description="Storage volume type")],
         volume_name: Annotated[StrictStr, Field(description="Storage volume name")],
         backup_name: Annotated[StrictStr, Field(description="Backup name")],
-        volume_rename: Annotated[StorageVolumeSnapshotPost, Field(description="Storage volume backup")],
+        volume_rename: Annotated[StorageVolumeBackupPost, Field(description="Storage volume backup")],
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         target: Annotated[Optional[StrictStr], Field(description="Cluster member name")] = None,
         _request_timeout: Union[
@@ -16935,7 +16951,7 @@ class StorageApi:
         :param backup_name: Backup name (required)
         :type backup_name: str
         :param volume_rename: Storage volume backup (required)
-        :type volume_rename: StorageVolumeSnapshotPost
+        :type volume_rename: StorageVolumeBackupPost
         :param project: Project name
         :type project: str
         :param target: Cluster member name

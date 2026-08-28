@@ -28,7 +28,7 @@ class CertificatesGet200Response(BaseModel):
     """
     Sync response
     """ # noqa: E501
-    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": ["[\n  \"/1.0/certificates/390fdd27ed5dc2408edc11fe602eafceb6c025ddbad9341dfdcb1056a8dd98b1\",\n  \"/1.0/certificates/22aee3f051f96abe6d7756892eecabf4b4b22e2ba877840a4ca981e9ea54030a\"\n]"]})
+    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": [["/1.0/certificates/390fdd27ed5dc2408edc11fe602eafceb6c025ddbad9341dfdcb1056a8dd98b1", "/1.0/certificates/22aee3f051f96abe6d7756892eecabf4b4b22e2ba877840a4ca981e9ea54030a"]]})
     status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
     status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
     type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})

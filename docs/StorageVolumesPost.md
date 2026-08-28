@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **description** | **str** | Description of the storage volume  API extension: entity_description | [optional] 
 **name** | **str** | Volume name | [optional] 
 **restore** | **str** | Name of a snapshot to restore  API extension: storage_api_volume_snapshots | [optional] 
-**source** | [**StorageVolumeSource**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/StorageVolumeSource.md) |  | [optional] 
+**source** | [**StorageVolumeSource**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeSource.md) |  | [optional] 
 **type** | **str** | Volume type (container, custom, image or virtual-machine) | [optional] 
 
 ## Example

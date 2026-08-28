@@ -54,7 +54,7 @@ class DefaultApi:
     ) -> MetadataConfigurationGet200Response:
         """Get the metadata configuration
 
-        Returns the generated metadata configuration in YAML format.
+        Returns the generated metadata configuration.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -119,7 +119,7 @@ class DefaultApi:
     ) -> ApiResponse[MetadataConfigurationGet200Response]:
         """Get the metadata configuration
 
-        Returns the generated metadata configuration in YAML format.
+        Returns the generated metadata configuration.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -184,7 +184,7 @@ class DefaultApi:
     ) -> RESTResponseType:
         """Get the metadata configuration
 
-        Returns the generated metadata configuration in YAML format.
+        Returns the generated metadata configuration.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -260,7 +260,7 @@ class DefaultApi:
         if 'Accept' not in _header_params:
             _header_params['Accept'] = self.api_client.select_header_accept(
                 [
-                    'text/plain'
+                    'application/json'
                 ]
             )
 

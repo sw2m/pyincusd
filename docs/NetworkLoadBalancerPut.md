@@ -6,10 +6,10 @@ NetworkLoadBalancerPut represents the modifiable fields of a network load balanc
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**backends** | [**List[NetworkLoadBalancerBackend]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancerBackend.md) | Backends (optional) | [optional] 
+**backends** | [**List[NetworkLoadBalancerBackend]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkLoadBalancerBackend.md) | Backends (optional) | [optional] 
 **config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the load balancer listen IP | [optional] 
-**ports** | [**List[NetworkLoadBalancerPort]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkLoadBalancerPort.md) | Port forwards (optional) | [optional] 
+**ports** | [**List[NetworkLoadBalancerPort]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkLoadBalancerPort.md) | Port forwards (optional) | [optional] 
 
 ## Example
 

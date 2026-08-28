@@ -4,13 +4,13 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**network_peer_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersApi.md#network_peer_delete) | **DELETE** /1.0/networks/{networkName}/peers/{peerName} | Delete the network peer
-[**network_peer_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersApi.md#network_peer_get) | **GET** /1.0/networks/{networkName}/peers/{peerName} | Get the network peer
-[**network_peer_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersApi.md#network_peer_get_recursion1) | **GET** /1.0/networks/{networkName}/peers?recursion&#x3D;1 | Get the network peers
-[**network_peer_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersApi.md#network_peer_patch) | **PATCH** /1.0/networks/{networkName}/peers/{peerName} | Partially update the network peer
-[**network_peer_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersApi.md#network_peer_put) | **PUT** /1.0/networks/{networkName}/peers/{peerName} | Update the network peer
-[**network_peers_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersApi.md#network_peers_get) | **GET** /1.0/networks/{networkName}/peers | Get the network peers
-[**network_peers_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersApi.md#network_peers_post) | **POST** /1.0/networks/{networkName}/peers | Add a network peer
+[**network_peer_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersApi.md#network_peer_delete) | **DELETE** /1.0/networks/{networkName}/peers/{peerName} | Delete the network peer
+[**network_peer_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersApi.md#network_peer_get) | **GET** /1.0/networks/{networkName}/peers/{peerName} | Get the network peer
+[**network_peer_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersApi.md#network_peer_get_recursion1) | **GET** /1.0/networks/{networkName}/peers?recursion&#x3D;1 | Get the network peers
+[**network_peer_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersApi.md#network_peer_patch) | **PATCH** /1.0/networks/{networkName}/peers/{peerName} | Partially update the network peer
+[**network_peer_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersApi.md#network_peer_put) | **PUT** /1.0/networks/{networkName}/peers/{peerName} | Update the network peer
+[**network_peers_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersApi.md#network_peers_get) | **GET** /1.0/networks/{networkName}/peers | Get the network peers
+[**network_peers_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersApi.md#network_peers_post) | **POST** /1.0/networks/{networkName}/peers | Add a network peer
 
 
 # **network_peer_delete**
@@ -42,7 +42,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     api_instance = pyincusd.NetworkPeersApi(api_client)
     network_name = 'network_name_example' # str | Network name
     peer_name = 'peer_name_example' # str | Peer name
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Delete the network peer
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     api_instance = pyincusd.NetworkPeersApi(api_client)
     network_name = 'network_name_example' # str | Network name
     peer_name = 'peer_name_example' # str | Peer name
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Get the network peer
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkPeerGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeerGet200Response.md)
+[**NetworkPeerGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeerGet200Response.md)
 
 ### Authorization
 
@@ -195,8 +195,8 @@ async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.NetworkPeersApi(api_client)
     network_name = 'network_name_example' # str | Network name
-    project = 'project_example' # str | Project name (optional)
-    filter = 'filter_example' # str | Collection filter (optional)
+    project = 'default' # str | Project name (optional)
+    filter = 'default' # str | Collection filter (optional)
 
     try:
         # Get the network peers
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkPeerGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeerGetRecursion1200Response.md)
+[**NetworkPeerGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeerGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     network_name = 'network_name_example' # str | Network name
     peer_name = 'peer_name_example' # str | Peer name
     peer = pyincusd.NetworkPeerPut() # NetworkPeerPut | Peer configuration
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Partially update the network peer
@@ -295,12 +295,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
  **peer_name** | **str**| Peer name | 
- **peer** | [**NetworkPeerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeerPut.md)| Peer configuration | 
+ **peer** | [**NetworkPeerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeerPut.md)| Peer configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     network_name = 'network_name_example' # str | Network name
     peer_name = 'peer_name_example' # str | Peer name
     peer = pyincusd.NetworkPeerPut() # NetworkPeerPut | Peer configuration
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Update the network peer
@@ -376,12 +376,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
  **peer_name** | **str**| Peer name | 
- **peer** | [**NetworkPeerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeerPut.md)| Peer configuration | 
+ **peer** | [**NetworkPeerPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeerPut.md)| Peer configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -434,8 +434,8 @@ async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.NetworkPeersApi(api_client)
     network_name = 'network_name_example' # str | Network name
-    project = 'project_example' # str | Project name (optional)
-    filter = 'filter_example' # str | Collection filter (optional)
+    project = 'default' # str | Project name (optional)
+    filter = 'default' # str | Collection filter (optional)
 
     try:
         # Get the network peers
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkPeersGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersGet200Response.md)
+[**NetworkPeersGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersGet200Response.md)
 
 ### Authorization
 
@@ -513,7 +513,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     api_instance = pyincusd.NetworkPeersApi(api_client)
     network_name = 'network_name_example' # str | Network name
     peer = pyincusd.NetworkPeersPost() # NetworkPeersPost | Peer
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Add a network peer
@@ -532,12 +532,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
- **peer** | [**NetworkPeersPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkPeersPost.md)| Peer | 
+ **peer** | [**NetworkPeersPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkPeersPost.md)| Peer | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 

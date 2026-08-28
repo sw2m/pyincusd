@@ -28,7 +28,7 @@ class ClusterMembersGet200Response(BaseModel):
     """
     Sync response
     """ # noqa: E501
-    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": ["[\n  \"/1.0/cluster/members/server01\",\n  \"/1.0/cluster/members/server02\"\n]"]})
+    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": [["/1.0/cluster/members/server01", "/1.0/cluster/members/server02"]]})
     status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
     status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
     type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})

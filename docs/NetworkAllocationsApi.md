@@ -4,7 +4,7 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**network_allocations_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAllocationsApi.md#network_allocations_get) | **GET** /1.0/network-allocations | Get the network allocations in use (&#x60;network&#x60;, &#x60;network-forward&#x60; and &#x60;load-balancer&#x60; and &#x60;instance&#x60;)
+[**network_allocations_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkAllocationsApi.md#network_allocations_get) | **GET** /1.0/network-allocations | Get the network allocations in use (&#x60;network&#x60;, &#x60;network-forward&#x60; and &#x60;load-balancer&#x60; and &#x60;instance&#x60;)
 
 
 # **network_allocations_get**
@@ -34,7 +34,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.NetworkAllocationsApi(api_client)
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
     all_projects = True # bool | Retrieve entities from all projects (optional)
 
     try:
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkAllocationsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkAllocationsGet200Response.md)
+[**NetworkAllocationsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkAllocationsGet200Response.md)
 
 ### Authorization
 

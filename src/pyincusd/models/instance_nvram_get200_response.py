@@ -28,7 +28,7 @@ class InstanceNvramGet200Response(BaseModel):
     """
     Sync response
     """ # noqa: E501
-    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": ["[\n  \"/1.0/instances/foo/nvram/8be4df61-93ca-11d2-aa0d-00e098032b8c\",\n  \"/1.0/instances/foo/nvram/d9bee56e-75dc-49d9-b4d7-b534210f637a\",\n]"]})
+    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": [["/1.0/instances/foo/nvram/8be4df61-93ca-11d2-aa0d-00e098032b8c", "/1.0/instances/foo/nvram/d9bee56e-75dc-49d9-b4d7-b534210f637a"]]})
     status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
     status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
     type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})

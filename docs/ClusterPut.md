@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **cluster_certificate** | **str** | The expected certificate (X509 PEM encoded) for the cluster | [optional] 
 **cluster_token** | **str** | The cluster join token for the cluster you&#39;re trying to join  API extension: clustering_join | [optional] 
 **enabled** | **bool** | Whether clustering is enabled | [optional] 
-**member_config** | [**List[ClusterMemberConfigKey]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ClusterMemberConfigKey.md) | List of member configuration keys (used during join)  API extension: clustering_join | [optional] 
+**member_config** | [**List[ClusterMemberConfigKey]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ClusterMemberConfigKey.md) | List of member configuration keys (used during join)  API extension: clustering_join | [optional] 
 **server_address** | **str** | The local address to use for cluster communication  API extension: clustering_join | [optional] 
 **server_name** | **str** | Name of the cluster member answering the request | [optional] 
 

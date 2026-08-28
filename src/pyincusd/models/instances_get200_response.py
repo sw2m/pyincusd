@@ -28,7 +28,7 @@ class InstancesGet200Response(BaseModel):
     """
     Sync response
     """ # noqa: E501
-    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": ["[\n  \"/1.0/instances/foo\",\n  \"/1.0/instances/bar\"\n]"]})
+    metadata: Optional[List[StrictStr]] = Field(default=None, description="List of endpoints", json_schema_extra={"examples": [["/1.0/instances/foo", "/1.0/instances/bar"]]})
     status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
     status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
     type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})

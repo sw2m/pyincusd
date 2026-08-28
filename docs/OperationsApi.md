@@ -4,14 +4,14 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**operation_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsApi.md#operation_delete) | **DELETE** /1.0/operations/{id} | Cancel the operation
-[**operation_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsApi.md#operation_get) | **GET** /1.0/operations/{id} | Get the operation state
-[**operation_wait_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsApi.md#operation_wait_get) | **GET** /1.0/operations/{id}/wait | Wait for the operation
-[**operation_wait_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsApi.md#operation_wait_get_untrusted) | **GET** /1.0/operations/{id}/wait?public | Wait for the operation
-[**operation_websocket_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsApi.md#operation_websocket_get) | **GET** /1.0/operations/{id}/websocket | Get the websocket stream
-[**operation_websocket_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsApi.md#operation_websocket_get_untrusted) | **GET** /1.0/operations/{id}/websocket?public | Get the websocket stream
-[**operations_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsApi.md#operations_get) | **GET** /1.0/operations | Get the operations
-[**operations_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsApi.md#operations_get_recursion1) | **GET** /1.0/operations?recursion&#x3D;1 | Get the operations
+[**operation_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsApi.md#operation_delete) | **DELETE** /1.0/operations/{id} | Cancel the operation
+[**operation_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsApi.md#operation_get) | **GET** /1.0/operations/{id} | Get the operation state
+[**operation_wait_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsApi.md#operation_wait_get) | **GET** /1.0/operations/{id}/wait | Wait for the operation
+[**operation_wait_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsApi.md#operation_wait_get_untrusted) | **GET** /1.0/operations/{id}/wait?public | Wait for the operation
+[**operation_websocket_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsApi.md#operation_websocket_get) | **GET** /1.0/operations/{id}/websocket | Get the websocket stream
+[**operation_websocket_get_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsApi.md#operation_websocket_get_untrusted) | **GET** /1.0/operations/{id}/websocket?public | Get the websocket stream
+[**operations_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsApi.md#operations_get) | **GET** /1.0/operations | Get the operations
+[**operations_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsApi.md#operations_get_recursion1) | **GET** /1.0/operations?recursion&#x3D;1 | Get the operations
 
 
 # **operation_delete**
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OperationGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationGet200Response.md)
+[**OperationGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationGet200Response.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.OperationsApi(api_client)
     id = 'id_example' # str | Operation ID
-    timeout = 56 # int | Timeout in seconds (-1 means never) (optional)
+    timeout = -1 # int | Timeout in seconds (-1 means never) (optional)
 
     try:
         # Wait for the operation
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OperationGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationGet200Response.md)
+[**OperationGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationGet200Response.md)
 
 ### Authorization
 
@@ -265,8 +265,8 @@ async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.OperationsApi(api_client)
     id = 'id_example' # str | Operation ID
-    secret = 'secret_example' # str | Authentication token (optional)
-    timeout = 56 # int | Timeout in seconds (-1 means never) (optional)
+    secret = 'random-string' # str | Authentication token (optional)
+    timeout = -1 # int | Timeout in seconds (-1 means never) (optional)
 
     try:
         # Wait for the operation
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OperationGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationGet200Response.md)
+[**OperationGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationGet200Response.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.OperationsApi(api_client)
     id = 'id_example' # str | Operation ID
-    secret = 'secret_example' # str | Authentication token (optional)
+    secret = 'random-string' # str | Authentication token (optional)
 
     try:
         # Get the websocket stream
@@ -422,7 +422,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.OperationsApi(api_client)
     id = 'id_example' # str | Operation ID
-    secret = 'secret_example' # str | Authentication token (optional)
+    secret = 'random-string' # str | Authentication token (optional)
 
     try:
         # Get the websocket stream
@@ -494,7 +494,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.OperationsApi(api_client)
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
     all_projects = True # bool | Retrieve operations from all projects (optional)
 
     try:
@@ -518,7 +518,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OperationsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsGet200Response.md)
+[**OperationsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsGet200Response.md)
 
 ### Authorization
 
@@ -569,7 +569,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.OperationsApi(api_client)
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
     all_projects = True # bool | Retrieve operations from all projects (optional)
 
     try:
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OperationsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/OperationsGetRecursion1200Response.md)
+[**OperationsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/OperationsGetRecursion1200Response.md)
 
 ### Authorization
 

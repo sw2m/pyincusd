@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**backups** | [**List[StorageBucketBackup]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/StorageBucketBackup.md) | List of backups. | [optional] 
+**backups** | [**List[StorageBucketBackup]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketBackup.md) | List of backups. | [optional] 
 **config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the storage bucket  API extension: storage_buckets | [optional] 
-**keys** | [**List[StorageBucketKey]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/StorageBucketKey.md) | List of keys. | [optional] 
+**keys** | [**List[StorageBucketKey]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketKey.md) | List of keys. | [optional] 
 **location** | **str** | What cluster member this record was found on  API extension: storage_buckets | [optional] 
 **name** | **str** | Bucket name  API extension: storage_buckets | [optional] 
 **project** | **str** | Project name  API extension: storage_buckets_all_projects | [optional] 

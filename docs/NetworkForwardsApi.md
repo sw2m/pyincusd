@@ -4,13 +4,13 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**network_forward_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsApi.md#network_forward_delete) | **DELETE** /1.0/networks/{networkName}/forwards/{listenAddress} | Delete the network address forward
-[**network_forward_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsApi.md#network_forward_get) | **GET** /1.0/networks/{networkName}/forwards/{listenAddress} | Get the network address forward
-[**network_forward_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsApi.md#network_forward_get_recursion1) | **GET** /1.0/networks/{networkName}/forwards?recursion&#x3D;1 | Get the network address forwards
-[**network_forward_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsApi.md#network_forward_patch) | **PATCH** /1.0/networks/{networkName}/forwards/{listenAddress} | Partially update the network address forward
-[**network_forward_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsApi.md#network_forward_put) | **PUT** /1.0/networks/{networkName}/forwards/{listenAddress} | Update the network address forward
-[**network_forwards_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsApi.md#network_forwards_get) | **GET** /1.0/networks/{networkName}/forwards | Get the network address forwards
-[**network_forwards_post**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsApi.md#network_forwards_post) | **POST** /1.0/networks/{networkName}/forwards | Add a network address forward
+[**network_forward_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsApi.md#network_forward_delete) | **DELETE** /1.0/networks/{networkName}/forwards/{listenAddress} | Delete the network address forward
+[**network_forward_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsApi.md#network_forward_get) | **GET** /1.0/networks/{networkName}/forwards/{listenAddress} | Get the network address forward
+[**network_forward_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsApi.md#network_forward_get_recursion1) | **GET** /1.0/networks/{networkName}/forwards?recursion&#x3D;1 | Get the network address forwards
+[**network_forward_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsApi.md#network_forward_patch) | **PATCH** /1.0/networks/{networkName}/forwards/{listenAddress} | Partially update the network address forward
+[**network_forward_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsApi.md#network_forward_put) | **PUT** /1.0/networks/{networkName}/forwards/{listenAddress} | Update the network address forward
+[**network_forwards_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsApi.md#network_forwards_get) | **GET** /1.0/networks/{networkName}/forwards | Get the network address forwards
+[**network_forwards_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsApi.md#network_forwards_post) | **POST** /1.0/networks/{networkName}/forwards | Add a network address forward
 
 
 # **network_forward_delete**
@@ -42,7 +42,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     api_instance = pyincusd.NetworkForwardsApi(api_client)
     network_name = 'network_name_example' # str | Network name
     listen_address = 'listen_address_example' # str | Listen address
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Delete the network address forward
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     api_instance = pyincusd.NetworkForwardsApi(api_client)
     network_name = 'network_name_example' # str | Network name
     listen_address = 'listen_address_example' # str | Listen address
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Get the network address forward
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkForwardGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardGet200Response.md)
+[**NetworkForwardGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardGet200Response.md)
 
 ### Authorization
 
@@ -195,8 +195,8 @@ async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.NetworkForwardsApi(api_client)
     network_name = 'network_name_example' # str | Network name
-    project = 'project_example' # str | Project name (optional)
-    filter = 'filter_example' # str | Collection filter (optional)
+    project = 'default' # str | Project name (optional)
+    filter = 'default' # str | Collection filter (optional)
 
     try:
         # Get the network address forwards
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkForwardGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardGetRecursion1200Response.md)
+[**NetworkForwardGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     network_name = 'network_name_example' # str | Network name
     listen_address = 'listen_address_example' # str | Listen address
     forward = pyincusd.NetworkForwardPut() # NetworkForwardPut | Address forward configuration
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Partially update the network address forward
@@ -295,12 +295,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
  **listen_address** | **str**| Listen address | 
- **forward** | [**NetworkForwardPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardPut.md)| Address forward configuration | 
+ **forward** | [**NetworkForwardPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardPut.md)| Address forward configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     network_name = 'network_name_example' # str | Network name
     listen_address = 'listen_address_example' # str | Listen address
     forward = pyincusd.NetworkForwardPut() # NetworkForwardPut | Address forward configuration
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Update the network address forward
@@ -376,12 +376,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
  **listen_address** | **str**| Listen address | 
- **forward** | [**NetworkForwardPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardPut.md)| Address forward configuration | 
+ **forward** | [**NetworkForwardPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardPut.md)| Address forward configuration | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -434,8 +434,8 @@ async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.NetworkForwardsApi(api_client)
     network_name = 'network_name_example' # str | Network name
-    project = 'project_example' # str | Project name (optional)
-    filter = 'filter_example' # str | Collection filter (optional)
+    project = 'default' # str | Project name (optional)
+    filter = 'default' # str | Collection filter (optional)
 
     try:
         # Get the network address forwards
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NetworkForwardsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsGet200Response.md)
+[**NetworkForwardsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsGet200Response.md)
 
 ### Authorization
 
@@ -513,7 +513,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
     api_instance = pyincusd.NetworkForwardsApi(api_client)
     network_name = 'network_name_example' # str | Network name
     forward = pyincusd.NetworkForwardsPost() # NetworkForwardsPost | Forward
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Add a network address forward
@@ -532,12 +532,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network_name** | **str**| Network name | 
- **forward** | [**NetworkForwardsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/NetworkForwardsPost.md)| Forward | 
+ **forward** | [**NetworkForwardsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkForwardsPost.md)| Forward | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 

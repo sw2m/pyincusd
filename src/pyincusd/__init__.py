@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "7.3.0"
+__version__ = "7.4.0"
 
 # Define package exports
 __all__ = [
@@ -52,6 +52,7 @@ __all__ = [
     "ApiException",
     "AccessEntry",
     "ApiGet200Response",
+    "ApplicationAction",
     "BackupTarget",
     "Certificate",
     "CertificateAddToken",
@@ -85,6 +86,8 @@ __all__ = [
     "ClusterMembersGetRecursion1200Response",
     "ClusterMembersPost",
     "ClusterPut",
+    "DebugKernel",
+    "DebugKernelModule",
     "Event",
     "Image",
     "ImageAlias",
@@ -386,6 +389,75 @@ __all__ = [
     "StorageVolumeState",
     "StorageVolumeStateUsage",
     "StorageVolumesPost",
+    "SystemFallbackListener",
+    "SystemFallbackListenerConfig",
+    "SystemFallbackListenerState",
+    "SystemKernel",
+    "SystemKernelConfig",
+    "SystemKernelConfigCPU",
+    "SystemKernelConfigConsole",
+    "SystemKernelConfigMemory",
+    "SystemKernelConfigNetwork",
+    "SystemKernelConfigPCI",
+    "SystemKernelConfigPCIPassthrough",
+    "SystemKernelConfigPCISRIOV",
+    "SystemKernelConfigZFS",
+    "SystemKernelState",
+    "SystemKernelStateMemory",
+    "SystemKernelStateMemoryZramSwap",
+    "SystemLogging",
+    "SystemLoggingConfig",
+    "SystemLoggingSyslog",
+    "SystemNetwork",
+    "SystemNetworkBond",
+    "SystemNetworkBondOptions",
+    "SystemNetworkBridge",
+    "SystemNetworkConfig",
+    "SystemNetworkDNS",
+    "SystemNetworkEthernet",
+    "SystemNetworkFirewallRule",
+    "SystemNetworkInterface",
+    "SystemNetworkInterfaceState",
+    "SystemNetworkInterfaceStats",
+    "SystemNetworkLACPState",
+    "SystemNetworkLLDPState",
+    "SystemNetworkProxy",
+    "SystemNetworkProxyRule",
+    "SystemNetworkProxyServer",
+    "SystemNetworkRoute",
+    "SystemNetworkState",
+    "SystemNetworkTime",
+    "SystemNetworkVLAN",
+    "SystemNetworkWireguard",
+    "SystemNetworkWireguardPeer",
+    "SystemNetworkWireguardPeerState",
+    "SystemNetworkWireguardState",
+    "SystemProvider",
+    "SystemProviderConfig",
+    "SystemProviderState",
+    "SystemSecurity",
+    "SystemSecurityConfig",
+    "SystemSecurityEncryptedVolume",
+    "SystemSecuritySecureBootCertificate",
+    "SystemSecurityState",
+    "SystemStorage",
+    "SystemStorageConfig",
+    "SystemStorageDrive",
+    "SystemStorageDriveSMART",
+    "SystemStorageEncrypt",
+    "SystemStorageImportEncryptedDrive",
+    "SystemStoragePool",
+    "SystemStoragePoolKey",
+    "SystemStoragePoolScrubStatus",
+    "SystemStoragePoolSpecial",
+    "SystemStoragePoolVolume",
+    "SystemStorageRootPartition",
+    "SystemStorageState",
+    "SystemStorageWipe",
+    "SystemUpdate",
+    "SystemUpdateConfig",
+    "SystemUpdateMaintenanceWindow",
+    "SystemUpdateState",
     "Warning",
     "WarningGet200Response",
     "WarningPut",
@@ -431,6 +503,7 @@ from pyincusd.exceptions import ApiException as ApiException
 # import models into sdk package
 from pyincusd.models.access_entry import AccessEntry as AccessEntry
 from pyincusd.models.api_get200_response import ApiGet200Response as ApiGet200Response
+from pyincusd.models.application_action import ApplicationAction as ApplicationAction
 from pyincusd.models.backup_target import BackupTarget as BackupTarget
 from pyincusd.models.certificate import Certificate as Certificate
 from pyincusd.models.certificate_add_token import CertificateAddToken as CertificateAddToken
@@ -464,6 +537,8 @@ from pyincusd.models.cluster_members_get200_response import ClusterMembersGet200
 from pyincusd.models.cluster_members_get_recursion1200_response import ClusterMembersGetRecursion1200Response as ClusterMembersGetRecursion1200Response
 from pyincusd.models.cluster_members_post import ClusterMembersPost as ClusterMembersPost
 from pyincusd.models.cluster_put import ClusterPut as ClusterPut
+from pyincusd.models.debug_kernel import DebugKernel as DebugKernel
+from pyincusd.models.debug_kernel_module import DebugKernelModule as DebugKernelModule
 from pyincusd.models.event import Event as Event
 from pyincusd.models.image import Image as Image
 from pyincusd.models.image_alias import ImageAlias as ImageAlias
@@ -765,6 +840,75 @@ from pyincusd.models.storage_volume_source import StorageVolumeSource as Storage
 from pyincusd.models.storage_volume_state import StorageVolumeState as StorageVolumeState
 from pyincusd.models.storage_volume_state_usage import StorageVolumeStateUsage as StorageVolumeStateUsage
 from pyincusd.models.storage_volumes_post import StorageVolumesPost as StorageVolumesPost
+from pyincusd.models.system_fallback_listener import SystemFallbackListener as SystemFallbackListener
+from pyincusd.models.system_fallback_listener_config import SystemFallbackListenerConfig as SystemFallbackListenerConfig
+from pyincusd.models.system_fallback_listener_state import SystemFallbackListenerState as SystemFallbackListenerState
+from pyincusd.models.system_kernel import SystemKernel as SystemKernel
+from pyincusd.models.system_kernel_config import SystemKernelConfig as SystemKernelConfig
+from pyincusd.models.system_kernel_config_cpu import SystemKernelConfigCPU as SystemKernelConfigCPU
+from pyincusd.models.system_kernel_config_console import SystemKernelConfigConsole as SystemKernelConfigConsole
+from pyincusd.models.system_kernel_config_memory import SystemKernelConfigMemory as SystemKernelConfigMemory
+from pyincusd.models.system_kernel_config_network import SystemKernelConfigNetwork as SystemKernelConfigNetwork
+from pyincusd.models.system_kernel_config_pci import SystemKernelConfigPCI as SystemKernelConfigPCI
+from pyincusd.models.system_kernel_config_pci_passthrough import SystemKernelConfigPCIPassthrough as SystemKernelConfigPCIPassthrough
+from pyincusd.models.system_kernel_config_pcisriov import SystemKernelConfigPCISRIOV as SystemKernelConfigPCISRIOV
+from pyincusd.models.system_kernel_config_zfs import SystemKernelConfigZFS as SystemKernelConfigZFS
+from pyincusd.models.system_kernel_state import SystemKernelState as SystemKernelState
+from pyincusd.models.system_kernel_state_memory import SystemKernelStateMemory as SystemKernelStateMemory
+from pyincusd.models.system_kernel_state_memory_zram_swap import SystemKernelStateMemoryZramSwap as SystemKernelStateMemoryZramSwap
+from pyincusd.models.system_logging import SystemLogging as SystemLogging
+from pyincusd.models.system_logging_config import SystemLoggingConfig as SystemLoggingConfig
+from pyincusd.models.system_logging_syslog import SystemLoggingSyslog as SystemLoggingSyslog
+from pyincusd.models.system_network import SystemNetwork as SystemNetwork
+from pyincusd.models.system_network_bond import SystemNetworkBond as SystemNetworkBond
+from pyincusd.models.system_network_bond_options import SystemNetworkBondOptions as SystemNetworkBondOptions
+from pyincusd.models.system_network_bridge import SystemNetworkBridge as SystemNetworkBridge
+from pyincusd.models.system_network_config import SystemNetworkConfig as SystemNetworkConfig
+from pyincusd.models.system_network_dns import SystemNetworkDNS as SystemNetworkDNS
+from pyincusd.models.system_network_ethernet import SystemNetworkEthernet as SystemNetworkEthernet
+from pyincusd.models.system_network_firewall_rule import SystemNetworkFirewallRule as SystemNetworkFirewallRule
+from pyincusd.models.system_network_interface import SystemNetworkInterface as SystemNetworkInterface
+from pyincusd.models.system_network_interface_state import SystemNetworkInterfaceState as SystemNetworkInterfaceState
+from pyincusd.models.system_network_interface_stats import SystemNetworkInterfaceStats as SystemNetworkInterfaceStats
+from pyincusd.models.system_network_lacp_state import SystemNetworkLACPState as SystemNetworkLACPState
+from pyincusd.models.system_network_lldp_state import SystemNetworkLLDPState as SystemNetworkLLDPState
+from pyincusd.models.system_network_proxy import SystemNetworkProxy as SystemNetworkProxy
+from pyincusd.models.system_network_proxy_rule import SystemNetworkProxyRule as SystemNetworkProxyRule
+from pyincusd.models.system_network_proxy_server import SystemNetworkProxyServer as SystemNetworkProxyServer
+from pyincusd.models.system_network_route import SystemNetworkRoute as SystemNetworkRoute
+from pyincusd.models.system_network_state import SystemNetworkState as SystemNetworkState
+from pyincusd.models.system_network_time import SystemNetworkTime as SystemNetworkTime
+from pyincusd.models.system_network_vlan import SystemNetworkVLAN as SystemNetworkVLAN
+from pyincusd.models.system_network_wireguard import SystemNetworkWireguard as SystemNetworkWireguard
+from pyincusd.models.system_network_wireguard_peer import SystemNetworkWireguardPeer as SystemNetworkWireguardPeer
+from pyincusd.models.system_network_wireguard_peer_state import SystemNetworkWireguardPeerState as SystemNetworkWireguardPeerState
+from pyincusd.models.system_network_wireguard_state import SystemNetworkWireguardState as SystemNetworkWireguardState
+from pyincusd.models.system_provider import SystemProvider as SystemProvider
+from pyincusd.models.system_provider_config import SystemProviderConfig as SystemProviderConfig
+from pyincusd.models.system_provider_state import SystemProviderState as SystemProviderState
+from pyincusd.models.system_security import SystemSecurity as SystemSecurity
+from pyincusd.models.system_security_config import SystemSecurityConfig as SystemSecurityConfig
+from pyincusd.models.system_security_encrypted_volume import SystemSecurityEncryptedVolume as SystemSecurityEncryptedVolume
+from pyincusd.models.system_security_secure_boot_certificate import SystemSecuritySecureBootCertificate as SystemSecuritySecureBootCertificate
+from pyincusd.models.system_security_state import SystemSecurityState as SystemSecurityState
+from pyincusd.models.system_storage import SystemStorage as SystemStorage
+from pyincusd.models.system_storage_config import SystemStorageConfig as SystemStorageConfig
+from pyincusd.models.system_storage_drive import SystemStorageDrive as SystemStorageDrive
+from pyincusd.models.system_storage_drive_smart import SystemStorageDriveSMART as SystemStorageDriveSMART
+from pyincusd.models.system_storage_encrypt import SystemStorageEncrypt as SystemStorageEncrypt
+from pyincusd.models.system_storage_import_encrypted_drive import SystemStorageImportEncryptedDrive as SystemStorageImportEncryptedDrive
+from pyincusd.models.system_storage_pool import SystemStoragePool as SystemStoragePool
+from pyincusd.models.system_storage_pool_key import SystemStoragePoolKey as SystemStoragePoolKey
+from pyincusd.models.system_storage_pool_scrub_status import SystemStoragePoolScrubStatus as SystemStoragePoolScrubStatus
+from pyincusd.models.system_storage_pool_special import SystemStoragePoolSpecial as SystemStoragePoolSpecial
+from pyincusd.models.system_storage_pool_volume import SystemStoragePoolVolume as SystemStoragePoolVolume
+from pyincusd.models.system_storage_root_partition import SystemStorageRootPartition as SystemStorageRootPartition
+from pyincusd.models.system_storage_state import SystemStorageState as SystemStorageState
+from pyincusd.models.system_storage_wipe import SystemStorageWipe as SystemStorageWipe
+from pyincusd.models.system_update import SystemUpdate as SystemUpdate
+from pyincusd.models.system_update_config import SystemUpdateConfig as SystemUpdateConfig
+from pyincusd.models.system_update_maintenance_window import SystemUpdateMaintenanceWindow as SystemUpdateMaintenanceWindow
+from pyincusd.models.system_update_state import SystemUpdateState as SystemUpdateState
 from pyincusd.models.warning import Warning as Warning
 from pyincusd.models.warning_get200_response import WarningGet200Response as WarningGet200Response
 from pyincusd.models.warning_put import WarningPut as WarningPut

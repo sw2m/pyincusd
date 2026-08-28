@@ -4,7 +4,7 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**metrics_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/MetricsApi.md#metrics_get) | **GET** /1.0/metrics | Get metrics
+[**metrics_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/MetricsApi.md#metrics_get) | **GET** /1.0/metrics | Get metrics
 
 
 # **metrics_get**
@@ -33,8 +33,8 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.MetricsApi(api_client)
-    project = 'project_example' # str | Project name (optional)
-    target = 'target_example' # str | Cluster member name (optional)
+    project = 'default' # str | Project name (optional)
+    target = 'server01' # str | Cluster member name (optional)
 
     try:
         # Get metrics

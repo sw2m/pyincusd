@@ -39,8 +39,9 @@ class InstancePost(BaseModel):
     name: Optional[StrictStr] = Field(default=None, description="New name for the instance", json_schema_extra={"examples": ["bar"]})
     pool: Optional[StrictStr] = Field(default=None, description="Target pool for local cross-pool move  API extension: instance_pool_move", json_schema_extra={"examples": ["baz"]})
     project: Optional[StrictStr] = Field(default=None, description="Target project for local cross-project move  API extension: instance_project_move", json_schema_extra={"examples": ["foo"]})
+    refresh: Optional[StrictBool] = Field(default=None, description="Whether to transfer a running instance incrementally  API extension: instance_refresh_migration", json_schema_extra={"examples": [False]})
     target: Optional[InstancePostTarget] = None
-    __properties: ClassVar[List[str]] = ["Config", "Devices", "Profiles", "allow_inconsistent", "instance_only", "live", "migration", "name", "pool", "project", "target"]
+    __properties: ClassVar[List[str]] = ["Config", "Devices", "Profiles", "allow_inconsistent", "instance_only", "live", "migration", "name", "pool", "project", "refresh", "target"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -106,6 +107,7 @@ class InstancePost(BaseModel):
             "name": obj.get("name"),
             "pool": obj.get("pool"),
             "project": obj.get("project"),
+            "refresh": obj.get("refresh"),
             "target": InstancePostTarget.from_dict(obj["target"]) if obj.get("target") is not None else None
         })
         return _obj

@@ -40,6 +40,7 @@ class Image(BaseModel):
     filename: Optional[StrictStr] = Field(default=None, description="Original filename", json_schema_extra={"examples": ["06b86454720d36b20f94e31c6812e05ec51c1b568cf3a8abd273769d213394bb.rootfs"]})
     fingerprint: Optional[StrictStr] = Field(default=None, description="Full SHA-256 fingerprint", json_schema_extra={"examples": ["06b86454720d36b20f94e31c6812e05ec51c1b568cf3a8abd273769d213394bb"]})
     last_used_at: Optional[datetime] = Field(default=None, description="Last time the image was used", json_schema_extra={"examples": ["2021-03-22T20:39:00.575185384-04:00"]})
+    locations: Optional[List[StrictStr]] = Field(default=None, description="List of cluster members with a local copy of the image  API extension: image_locations", json_schema_extra={"examples": [["server01", "server02"]]})
     profiles: Optional[List[StrictStr]] = Field(default=None, description="List of profiles to use when creating from this image (if none provided by user)  API extension: image_profiles", json_schema_extra={"examples": [["default"]]})
     project: Optional[StrictStr] = Field(default=None, description="Project name  API extension: images_all_projects", json_schema_extra={"examples": ["project1"]})
     properties: Optional[Dict[str, StrictStr]] = Field(default=None, description="Descriptive properties", json_schema_extra={"examples": [{"os": "Ubuntu", "release": "jammy", "variant": "cloud"}]})
@@ -48,7 +49,7 @@ class Image(BaseModel):
     type: Optional[StrictStr] = Field(default=None, description="Type of image (container or virtual-machine)  API extension: image_types", json_schema_extra={"examples": ["container"]})
     update_source: Optional[ImageSource] = None
     uploaded_at: Optional[datetime] = Field(default=None, description="When the image was added to this server", json_schema_extra={"examples": ["2021-03-24T14:18:15.115036787-04:00"]})
-    __properties: ClassVar[List[str]] = ["aliases", "architecture", "auto_update", "cached", "created_at", "expires_at", "filename", "fingerprint", "last_used_at", "profiles", "project", "properties", "public", "size", "type", "update_source", "uploaded_at"]
+    __properties: ClassVar[List[str]] = ["aliases", "architecture", "auto_update", "cached", "created_at", "expires_at", "filename", "fingerprint", "last_used_at", "locations", "profiles", "project", "properties", "public", "size", "type", "update_source", "uploaded_at"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -119,6 +120,7 @@ class Image(BaseModel):
             "filename": obj.get("filename"),
             "fingerprint": obj.get("fingerprint"),
             "last_used_at": obj.get("last_used_at"),
+            "locations": obj.get("locations"),
             "profiles": obj.get("profiles"),
             "project": obj.get("project"),
             "properties": obj.get("properties"),

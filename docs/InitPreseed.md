@@ -5,15 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**certificates** | [**List[CertificatesPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/CertificatesPost.md) | Certificates to add  API extension: init_preseed_certificates. | [optional] 
-**cluster** | [**InitClusterPreseed**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InitClusterPreseed.md) |  | [optional] 
-**cluster_groups** | [**List[ClusterGroupsPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ClusterGroupsPost.md) | Cluster groups to add  API extension: init_preseed_cluster_groups. | [optional] 
+**certificates** | [**List[CertificatesPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost.md) | Certificates to add  API extension: init_preseed_certificates. | [optional] 
+**cluster** | [**InitClusterPreseed**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InitClusterPreseed.md) |  | [optional] 
+**cluster_groups** | [**List[ClusterGroupsPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ClusterGroupsPost.md) | Cluster groups to add  API extension: init_preseed_cluster_groups. | [optional] 
 **config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
-**networks** | [**List[InitNetworksProjectPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InitNetworksProjectPost.md) | Networks by project to add | [optional] 
-**profiles** | [**List[InitProfileProjectPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InitProfileProjectPost.md) | Profiles to add | [optional] 
-**projects** | [**List[ProjectsPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ProjectsPost.md) | Projects to add | [optional] 
-**storage_pools** | [**List[StoragePoolsPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/StoragePoolsPost.md) | Storage Pools to add | [optional] 
-**storage_volumes** | [**List[InitStorageVolumesProjectPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/InitStorageVolumesProjectPost.md) | Storage Volumes to add  API extension: init_preseed_storage_volumes. | [optional] 
+**networks** | [**List[InitNetworksProjectPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InitNetworksProjectPost.md) | Networks by project to add | [optional] 
+**profiles** | [**List[InitProfileProjectPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InitProfileProjectPost.md) | Profiles to add | [optional] 
+**projects** | [**List[ProjectsPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsPost.md) | Projects to add | [optional] 
+**storage_pools** | [**List[StoragePoolsPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolsPost.md) | Storage Pools to add | [optional] 
+**storage_volumes** | [**List[InitStorageVolumesProjectPost]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InitStorageVolumesProjectPost.md) | Storage Volumes to add  API extension: init_preseed_storage_volumes. | [optional] 
 
 ## Example
 

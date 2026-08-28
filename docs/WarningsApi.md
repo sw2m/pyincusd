@@ -4,12 +4,12 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**warning_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warning_delete) | **DELETE** /1.0/warnings/{uuid} | Delete the warning
-[**warning_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warning_get) | **GET** /1.0/warnings/{uuid} | Get the warning
-[**warning_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warning_patch) | **PATCH** /1.0/warnings/{uuid} | Partially update the warning
-[**warning_put**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warning_put) | **PUT** /1.0/warnings/{uuid} | Update the warning
-[**warnings_get**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warnings_get) | **GET** /1.0/warnings | List the warnings
-[**warnings_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsApi.md#warnings_get_recursion1) | **GET** /1.0/warnings?recursion&#x3D;1 | Get the warnings
+[**warning_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningsApi.md#warning_delete) | **DELETE** /1.0/warnings/{uuid} | Delete the warning
+[**warning_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningsApi.md#warning_get) | **GET** /1.0/warnings/{uuid} | Get the warning
+[**warning_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningsApi.md#warning_patch) | **PATCH** /1.0/warnings/{uuid} | Partially update the warning
+[**warning_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningsApi.md#warning_put) | **PUT** /1.0/warnings/{uuid} | Update the warning
+[**warnings_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningsApi.md#warnings_get) | **GET** /1.0/warnings | List the warnings
+[**warnings_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningsApi.md#warnings_get_recursion1) | **GET** /1.0/warnings?recursion&#x3D;1 | Get the warnings
 
 
 # **warning_delete**
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WarningGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningGet200Response.md)
+[**WarningGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningGet200Response.md)
 
 ### Authorization
 
@@ -206,11 +206,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| UUID | 
- **warning** | [**WarningPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningPut.md)| Warning status | 
+ **warning** | [**WarningPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningPut.md)| Warning status | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -282,11 +282,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| UUID | 
- **warning** | [**WarningPut**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningPut.md)| Warning status | 
+ **warning** | [**WarningPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningPut.md)| Warning status | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.WarningsApi(api_client)
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # List the warnings
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WarningsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsGet200Response.md)
+[**WarningsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningsGet200Response.md)
 
 ### Authorization
 
@@ -410,7 +410,7 @@ configuration = pyincusd.Configuration(
 async with pyincusd.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = pyincusd.WarningsApi(api_client)
-    project = 'project_example' # str | Project name (optional)
+    project = 'default' # str | Project name (optional)
 
     try:
         # Get the warnings
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WarningsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.3.0/docs/WarningsGetRecursion1200Response.md)
+[**WarningsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/WarningsGetRecursion1200Response.md)
 
 ### Authorization
 

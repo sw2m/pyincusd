@@ -28,7 +28,7 @@ class InstanceNvramGetRecursion1200Response(BaseModel):
     """
     Sync response
     """ # noqa: E501
-    metadata: Optional[Dict[str, List[StrictStr]]] = Field(default=None, description="UEFI variables", json_schema_extra={"examples": ["{\n  \"8be4df61-93ca-11d2-aa0d-00e098032b8c\": [\n    \"/1.0/instances/foo/nvram/8be4df61-93ca-11d2-aa0d-00e098032b8c/Boot0000\",\n    \"/1.0/instances/foo/nvram/8be4df61-93ca-11d2-aa0d-00e098032b8c/BootOrder\"\n  ]\n}"]})
+    metadata: Optional[Dict[str, List[StrictStr]]] = Field(default=None, description="UEFI variables", json_schema_extra={"examples": [{"8be4df61-93ca-11d2-aa0d-00e098032b8c": ["/1.0/instances/foo/nvram/8be4df61-93ca-11d2-aa0d-00e098032b8c/Boot0000", "/1.0/instances/foo/nvram/8be4df61-93ca-11d2-aa0d-00e098032b8c/BootOrder"]}]})
     status: Optional[StrictStr] = Field(default=None, description="Status description", json_schema_extra={"examples": ["Success"]})
     status_code: Optional[StrictInt] = Field(default=None, description="Status code", json_schema_extra={"examples": [200]})
     type: Optional[StrictStr] = Field(default=None, description="Response type", json_schema_extra={"examples": ["sync"]})
