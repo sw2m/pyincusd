@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **listen_address** | **str** |  | [optional] 
+**persistent** | **bool** |  | [optional] 
 **trusted_client_certificates** | **List[str]** |  | [optional] 
 
 ## Example

@@ -4,77 +4,77 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**storage_pool_bucket_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_delete) | **DELETE** /1.0/storage-pools/{name}/buckets/{bucketName} | Delete the storage bucket
-[**storage_pool_bucket_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName} | Get the storage pool bucket
-[**storage_pool_bucket_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}?recursion&#x3D;1 | Get the full storage pool bucket details
-[**storage_pool_bucket_key_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_key_delete) | **DELETE** /1.0/storage-pools/{name}/buckets/{bucketName}/keys/{keyName} | Delete the storage bucket key
-[**storage_pool_bucket_key_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_key_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/keys/{keyName} | Get the storage pool bucket key
-[**storage_pool_bucket_key_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_key_post) | **POST** /1.0/storage-pools/{poolName}/buckets/{bucketName}/keys | Add a storage pool bucket key.
-[**storage_pool_bucket_key_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_key_put) | **PUT** /1.0/storage-pools/{name}/buckets/{bucketName}/keys/{keyName} | Update the storage bucket key
-[**storage_pool_bucket_keys_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_keys_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/keys | Get the storage pool bucket keys
-[**storage_pool_bucket_keys_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_keys_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/keys?recursion&#x3D;1 | Get the storage pool bucket keys
-[**storage_pool_bucket_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_patch) | **PATCH** /1.0/storage-pools/{name}/buckets/{bucketName} | Partially update the storage bucket.
-[**storage_pool_bucket_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_post) | **POST** /1.0/storage-pools/{poolName}/buckets | Add a storage pool bucket.
-[**storage_pool_bucket_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_bucket_put) | **PUT** /1.0/storage-pools/{name}/buckets/{bucketName} | Update the storage bucket
-[**storage_pool_buckets_backup_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_backup_delete) | **DELETE** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups/{backupName} | Delete a storage bucket backup
-[**storage_pool_buckets_backup_export_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_backup_export_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups/{backupName}/export | Get the raw backup file
-[**storage_pool_buckets_backup_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_backup_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups/{backupName} | Get the storage bucket backup
-[**storage_pool_buckets_backup_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_backup_post) | **POST** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups/{backupName} | Rename a storage bucket backup
-[**storage_pool_buckets_backups_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_backups_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups | Get the storage bucket backups
-[**storage_pool_buckets_backups_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_backups_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups?recursion&#x3D;1 | Get the storage bucket backups
-[**storage_pool_buckets_backups_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_backups_post) | **POST** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups | Create a storage bucket backup
-[**storage_pool_buckets_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_get) | **GET** /1.0/storage-pools/{poolName}/buckets | Get the storage pool buckets
-[**storage_pool_buckets_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/buckets?recursion&#x3D;1 | Get the storage pool buckets
-[**storage_pool_buckets_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_buckets_get_recursion2) | **GET** /1.0/storage-pools/{poolName}/buckets?recursion&#x3D;2 | Get the storage pool bucket details
-[**storage_pool_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_get) | **GET** /1.0/storage-pools/{poolName} | Get the storage pool
-[**storage_pool_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_patch) | **PATCH** /1.0/storage-pools/{poolName} | Partially update the storage pool
-[**storage_pool_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_put) | **PUT** /1.0/storage-pools/{poolName} | Update the storage pool
-[**storage_pool_resources**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_resources) | **GET** /1.0/storage-pools/{name}/resources | Get storage pool resources information
-[**storage_pool_volume_type_bitmap_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_bitmap_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps/{bitmapName} | Get the storage volume dirty bitmap
-[**storage_pool_volume_type_bitmaps_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_bitmaps_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps | Get the storage volume dirty bitmaps
-[**storage_pool_volume_type_bitmaps_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_bitmaps_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps?recursion&#x3D;1 | Get the storage volume dirty bitmaps
-[**storage_pool_volume_type_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Delete the storage volume
-[**storage_pool_volume_type_files_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_files_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/files | Delete a file
-[**storage_pool_volume_type_files_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_files_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/files | Get a file
-[**storage_pool_volume_type_files_head**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_files_head) | **HEAD** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/files | Get metadata for a file
-[**storage_pool_volume_type_files_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_files_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/files | Create or replace a file
-[**storage_pool_volume_type_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Get the storage volume
-[**storage_pool_volume_type_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}?recursion&#x3D;1 | Get the full storage volume details
-[**storage_pool_volume_type_nbd_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_nbd_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/nbd | Get the storage volume NBD connection
-[**storage_pool_volume_type_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_patch) | **PATCH** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Partially update the storage volume
-[**storage_pool_volume_type_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Rename or move/migrate a storage volume
-[**storage_pool_volume_type_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_put) | **PUT** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Update the storage volume
-[**storage_pool_volume_type_rebuild_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_rebuild_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/rebuild | Rebuild the storage volume
-[**storage_pool_volume_type_sftp_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_sftp_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/sftp | Get the storage volume SFTP connection
-[**storage_pool_volume_type_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volume_type_state_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/state | Get the storage volume state
-[**storage_pool_volumes_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_get) | **GET** /1.0/storage-pools/{poolName}/volumes | Get the storage volumes
-[**storage_pool_volumes_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes?recursion&#x3D;1 | Get the storage volumes
-[**storage_pool_volumes_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_post) | **POST** /1.0/storage-pools/{poolName}/volumes | Add a storage volume
-[**storage_pool_volumes_type_backup_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_backup_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName} | Delete a storage volume backup
-[**storage_pool_volumes_type_backup_export_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_backup_export_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName}/export | Get the raw backup file
-[**storage_pool_volumes_type_backup_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_backup_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName} | Get the storage volume backup
-[**storage_pool_volumes_type_backup_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_backup_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName} | Rename a storage volume backup
-[**storage_pool_volumes_type_backups_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_backups_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups | Get the storage volume backups
-[**storage_pool_volumes_type_backups_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_backups_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups?recursion&#x3D;1 | Get the storage volume backups
-[**storage_pool_volumes_type_backups_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_backups_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups | Create a storage volume backup
-[**storage_pool_volumes_type_bitmap_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_bitmap_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps/{bitmapName} | Delete a storage volume bitmap
-[**storage_pool_volumes_type_bitmaps_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_bitmaps_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps | Create a storage volume bitmap
-[**storage_pool_volumes_type_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type} | Get the storage volumes
-[**storage_pool_volumes_type_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}?recursion&#x3D;1 | Get the storage volumes
-[**storage_pool_volumes_type_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_get_recursion2) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}?recursion&#x3D;2 | Get the storage volumes with all details
-[**storage_pool_volumes_type_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type} | Add a storage volume
-[**storage_pool_volumes_type_snapshot_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_snapshot_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Delete a storage volume snapshot
-[**storage_pool_volumes_type_snapshot_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_snapshot_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Get the storage volume snapshot
-[**storage_pool_volumes_type_snapshot_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_snapshot_patch) | **PATCH** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Partially update the storage volume snapshot
-[**storage_pool_volumes_type_snapshot_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_snapshot_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Rename a storage volume snapshot
-[**storage_pool_volumes_type_snapshot_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_snapshot_put) | **PUT** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Update the storage volume snapshot
-[**storage_pool_volumes_type_snapshots_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_snapshots_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots | Get the storage volume snapshots
-[**storage_pool_volumes_type_snapshots_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_snapshots_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots?recursion&#x3D;1 | Get the storage volume snapshots
-[**storage_pool_volumes_type_snapshots_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pool_volumes_type_snapshots_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots | Create a storage volume snapshot
-[**storage_pools_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pools_delete) | **DELETE** /1.0/storage-pools/{poolName} | Delete the storage pool
-[**storage_pools_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pools_get) | **GET** /1.0/storage-pools | Get the storage pools
-[**storage_pools_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pools_get_recursion1) | **GET** /1.0/storage-pools?recursion&#x3D;1 | Get the storage pools
-[**storage_pools_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageApi.md#storage_pools_post) | **POST** /1.0/storage-pools | Add a storage pool
+[**storage_pool_bucket_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_delete) | **DELETE** /1.0/storage-pools/{name}/buckets/{bucketName} | Delete the storage bucket
+[**storage_pool_bucket_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName} | Get the storage pool bucket
+[**storage_pool_bucket_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}?recursion&#x3D;1 | Get the full storage pool bucket details
+[**storage_pool_bucket_key_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_key_delete) | **DELETE** /1.0/storage-pools/{name}/buckets/{bucketName}/keys/{keyName} | Delete the storage bucket key
+[**storage_pool_bucket_key_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_key_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/keys/{keyName} | Get the storage pool bucket key
+[**storage_pool_bucket_key_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_key_post) | **POST** /1.0/storage-pools/{poolName}/buckets/{bucketName}/keys | Add a storage pool bucket key.
+[**storage_pool_bucket_key_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_key_put) | **PUT** /1.0/storage-pools/{name}/buckets/{bucketName}/keys/{keyName} | Update the storage bucket key
+[**storage_pool_bucket_keys_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_keys_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/keys | Get the storage pool bucket keys
+[**storage_pool_bucket_keys_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_keys_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/keys?recursion&#x3D;1 | Get the storage pool bucket keys
+[**storage_pool_bucket_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_patch) | **PATCH** /1.0/storage-pools/{name}/buckets/{bucketName} | Partially update the storage bucket.
+[**storage_pool_bucket_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_post) | **POST** /1.0/storage-pools/{poolName}/buckets | Add a storage pool bucket.
+[**storage_pool_bucket_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_bucket_put) | **PUT** /1.0/storage-pools/{name}/buckets/{bucketName} | Update the storage bucket
+[**storage_pool_buckets_backup_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_backup_delete) | **DELETE** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups/{backupName} | Delete a storage bucket backup
+[**storage_pool_buckets_backup_export_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_backup_export_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups/{backupName}/export | Get the raw backup file
+[**storage_pool_buckets_backup_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_backup_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups/{backupName} | Get the storage bucket backup
+[**storage_pool_buckets_backup_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_backup_post) | **POST** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups/{backupName} | Rename a storage bucket backup
+[**storage_pool_buckets_backups_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_backups_get) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups | Get the storage bucket backups
+[**storage_pool_buckets_backups_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_backups_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups?recursion&#x3D;1 | Get the storage bucket backups
+[**storage_pool_buckets_backups_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_backups_post) | **POST** /1.0/storage-pools/{poolName}/buckets/{bucketName}/backups | Create a storage bucket backup
+[**storage_pool_buckets_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_get) | **GET** /1.0/storage-pools/{poolName}/buckets | Get the storage pool buckets
+[**storage_pool_buckets_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/buckets?recursion&#x3D;1 | Get the storage pool buckets
+[**storage_pool_buckets_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_buckets_get_recursion2) | **GET** /1.0/storage-pools/{poolName}/buckets?recursion&#x3D;2 | Get the storage pool bucket details
+[**storage_pool_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_get) | **GET** /1.0/storage-pools/{poolName} | Get the storage pool
+[**storage_pool_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_patch) | **PATCH** /1.0/storage-pools/{poolName} | Partially update the storage pool
+[**storage_pool_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_put) | **PUT** /1.0/storage-pools/{poolName} | Update the storage pool
+[**storage_pool_resources**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_resources) | **GET** /1.0/storage-pools/{name}/resources | Get storage pool resources information
+[**storage_pool_volume_type_bitmap_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_bitmap_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps/{bitmapName} | Get the storage volume dirty bitmap
+[**storage_pool_volume_type_bitmaps_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_bitmaps_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps | Get the storage volume dirty bitmaps
+[**storage_pool_volume_type_bitmaps_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_bitmaps_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps?recursion&#x3D;1 | Get the storage volume dirty bitmaps
+[**storage_pool_volume_type_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Delete the storage volume
+[**storage_pool_volume_type_files_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_files_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/files | Delete a file
+[**storage_pool_volume_type_files_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_files_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/files | Get a file
+[**storage_pool_volume_type_files_head**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_files_head) | **HEAD** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/files | Get metadata for a file
+[**storage_pool_volume_type_files_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_files_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/files | Create or replace a file
+[**storage_pool_volume_type_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Get the storage volume
+[**storage_pool_volume_type_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}?recursion&#x3D;1 | Get the full storage volume details
+[**storage_pool_volume_type_nbd_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_nbd_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/nbd | Get the storage volume NBD connection
+[**storage_pool_volume_type_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_patch) | **PATCH** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Partially update the storage volume
+[**storage_pool_volume_type_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Rename or move/migrate a storage volume
+[**storage_pool_volume_type_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_put) | **PUT** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName} | Update the storage volume
+[**storage_pool_volume_type_rebuild_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_rebuild_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/rebuild | Rebuild the storage volume
+[**storage_pool_volume_type_sftp_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_sftp_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/sftp | Get the storage volume SFTP connection
+[**storage_pool_volume_type_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volume_type_state_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/state | Get the storage volume state
+[**storage_pool_volumes_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_get) | **GET** /1.0/storage-pools/{poolName}/volumes | Get the storage volumes
+[**storage_pool_volumes_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes?recursion&#x3D;1 | Get the storage volumes
+[**storage_pool_volumes_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_post) | **POST** /1.0/storage-pools/{poolName}/volumes | Add a storage volume
+[**storage_pool_volumes_type_backup_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_backup_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName} | Delete a storage volume backup
+[**storage_pool_volumes_type_backup_export_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_backup_export_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName}/export | Get the raw backup file
+[**storage_pool_volumes_type_backup_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_backup_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName} | Get the storage volume backup
+[**storage_pool_volumes_type_backup_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_backup_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups/{backupName} | Rename a storage volume backup
+[**storage_pool_volumes_type_backups_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_backups_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups | Get the storage volume backups
+[**storage_pool_volumes_type_backups_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_backups_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups?recursion&#x3D;1 | Get the storage volume backups
+[**storage_pool_volumes_type_backups_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_backups_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/backups | Create a storage volume backup
+[**storage_pool_volumes_type_bitmap_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_bitmap_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps/{bitmapName} | Delete a storage volume bitmap
+[**storage_pool_volumes_type_bitmaps_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_bitmaps_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/bitmaps | Create a storage volume bitmap
+[**storage_pool_volumes_type_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type} | Get the storage volumes
+[**storage_pool_volumes_type_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}?recursion&#x3D;1 | Get the storage volumes
+[**storage_pool_volumes_type_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_get_recursion2) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}?recursion&#x3D;2 | Get the storage volumes with all details
+[**storage_pool_volumes_type_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type} | Add a storage volume
+[**storage_pool_volumes_type_snapshot_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_snapshot_delete) | **DELETE** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Delete a storage volume snapshot
+[**storage_pool_volumes_type_snapshot_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_snapshot_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Get the storage volume snapshot
+[**storage_pool_volumes_type_snapshot_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_snapshot_patch) | **PATCH** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Partially update the storage volume snapshot
+[**storage_pool_volumes_type_snapshot_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_snapshot_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Rename a storage volume snapshot
+[**storage_pool_volumes_type_snapshot_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_snapshot_put) | **PUT** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots/{snapshotName} | Update the storage volume snapshot
+[**storage_pool_volumes_type_snapshots_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_snapshots_get) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots | Get the storage volume snapshots
+[**storage_pool_volumes_type_snapshots_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_snapshots_get_recursion1) | **GET** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots?recursion&#x3D;1 | Get the storage volume snapshots
+[**storage_pool_volumes_type_snapshots_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pool_volumes_type_snapshots_post) | **POST** /1.0/storage-pools/{poolName}/volumes/{type}/{volumeName}/snapshots | Create a storage volume snapshot
+[**storage_pools_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pools_delete) | **DELETE** /1.0/storage-pools/{poolName} | Delete the storage pool
+[**storage_pools_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pools_get) | **GET** /1.0/storage-pools | Get the storage pools
+[**storage_pools_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pools_get_recursion1) | **GET** /1.0/storage-pools?recursion&#x3D;1 | Get the storage pools
+[**storage_pools_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageApi.md#storage_pools_post) | **POST** /1.0/storage-pools | Add a storage pool
 
 
 # **storage_pool_bucket_delete**
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketGet200Response.md)
+[**StoragePoolBucketGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketGet200Response.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketGetRecursion1200Response.md)
+[**StoragePoolBucketGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -446,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketKeyGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketKeyGet200Response.md)
+[**StoragePoolBucketKeyGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketKeyGet200Response.md)
 
 ### Authorization
 
@@ -518,7 +518,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pool_name** | **str**| Storage pool name | 
  **bucket_name** | **str**| Storage bucket name | 
- **bucket** | [**StorageBucketKeysPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketKeysPost.md)| Bucket | 
+ **bucket** | [**StorageBucketKeysPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageBucketKeysPost.md)| Bucket | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
@@ -601,13 +601,13 @@ Name | Type | Description  | Notes
  **name** | **str**| Resource name | 
  **bucket_name** | **str**| Storage bucket name | 
  **key_name** | **str**| Storage bucket key name | 
- **storage_bucket** | [**StorageBucketKeyPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketKeyPut.md)| Storage bucket key configuration | 
+ **storage_bucket** | [**StorageBucketKeyPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageBucketKeyPut.md)| Storage bucket key configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -685,7 +685,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketKeysGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketKeysGet200Response.md)
+[**StoragePoolBucketKeysGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketKeysGet200Response.md)
 
 ### Authorization
 
@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketKeysGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketKeysGetRecursion1200Response.md)
+[**StoragePoolBucketKeysGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketKeysGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -838,13 +838,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Resource name | 
  **bucket_name** | **str**| Storage bucket name | 
- **storage_bucket** | [**StorageBucketPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketPut.md)| Storage bucket configuration | 
+ **storage_bucket** | [**StorageBucketPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageBucketPut.md)| Storage bucket configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -915,7 +915,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pool_name** | **str**| Storage pool name | 
- **bucket** | [**StorageBucketsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketsPost.md)| Bucket | 
+ **bucket** | [**StorageBucketsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageBucketsPost.md)| Bucket | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
@@ -997,13 +997,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Resource name | 
  **bucket_name** | **str**| Storage bucket name | 
- **storage_bucket** | [**StorageBucketPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketPut.md)| Storage bucket configuration | 
+ **storage_bucket** | [**StorageBucketPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageBucketPut.md)| Storage bucket configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1085,7 +1085,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -1244,7 +1244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketsBackupGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketsBackupGet200Response.md)
+[**StoragePoolBucketsBackupGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketsBackupGet200Response.md)
 
 ### Authorization
 
@@ -1322,13 +1322,13 @@ Name | Type | Description  | Notes
  **pool_name** | **str**| Storage pool name | 
  **bucket_name** | **str**| Storage bucket name | 
  **backup_name** | **str**| Backup name | 
- **bucket_rename** | [**StorageBucketBackupPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketBackupPost.md)| Storage bucket backup | 
+ **bucket_rename** | [**StorageBucketBackupPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageBucketBackupPost.md)| Storage bucket backup | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -1407,7 +1407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketsBackupsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketsBackupsGet200Response.md)
+[**StoragePoolBucketsBackupsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketsBackupsGet200Response.md)
 
 ### Authorization
 
@@ -1486,7 +1486,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketsBackupsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketsBackupsGetRecursion1200Response.md)
+[**StoragePoolBucketsBackupsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketsBackupsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -1565,13 +1565,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pool_name** | **str**| Storage pool name | 
  **bucket_name** | **str**| Storage bucket name | 
- **bucket** | [**StorageBucketBackupsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageBucketBackupsPost.md)| Storage bucket backup | 
+ **bucket** | [**StorageBucketBackupsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageBucketBackupsPost.md)| Storage bucket backup | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -1650,7 +1650,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketsGet200Response.md)
+[**StoragePoolBucketsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketsGet200Response.md)
 
 ### Authorization
 
@@ -1729,7 +1729,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketsGetRecursion1200Response.md)
+[**StoragePoolBucketsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -1808,7 +1808,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolBucketsGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolBucketsGetRecursion2200Response.md)
+[**StoragePoolBucketsGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolBucketsGetRecursion2200Response.md)
 
 ### Authorization
 
@@ -1885,7 +1885,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolGet200Response.md)
+[**StoragePoolGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolGet200Response.md)
 
 ### Authorization
 
@@ -1959,13 +1959,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pool_name** | **str**| Storage pool name | 
- **storage_pool** | [**StoragePoolPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolPut.md)| Storage pool configuration | 
+ **storage_pool** | [**StoragePoolPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolPut.md)| Storage pool configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2040,13 +2040,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pool_name** | **str**| Storage pool name | 
- **storage_pool** | [**StoragePoolPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolPut.md)| Storage pool configuration | 
+ **storage_pool** | [**StoragePoolPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolPut.md)| Storage pool configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2122,7 +2122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolResources200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolResources200Response.md)
+[**StoragePoolResources200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolResources200Response.md)
 
 ### Authorization
 
@@ -2205,7 +2205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumeTypeBitmapGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumeTypeBitmapGet200Response.md)
+[**StoragePoolVolumeTypeBitmapGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumeTypeBitmapGet200Response.md)
 
 ### Authorization
 
@@ -2286,7 +2286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumeTypeBitmapsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumeTypeBitmapsGet200Response.md)
+[**StoragePoolVolumeTypeBitmapsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumeTypeBitmapsGet200Response.md)
 
 ### Authorization
 
@@ -2367,7 +2367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumeTypeBitmapsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumeTypeBitmapsGetRecursion1200Response.md)
+[**StoragePoolVolumeTypeBitmapsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumeTypeBitmapsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -2448,7 +2448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2531,7 +2531,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2780,7 +2780,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2861,7 +2861,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumeTypeGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumeTypeGet200Response.md)
+[**StoragePoolVolumeTypeGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumeTypeGet200Response.md)
 
 ### Authorization
 
@@ -2942,7 +2942,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumeTypeGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumeTypeGetRecursion1200Response.md)
+[**StoragePoolVolumeTypeGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumeTypeGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -3098,13 +3098,13 @@ Name | Type | Description  | Notes
  **pool_name** | **str**| Storage pool name | 
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
- **storage_volume** | [**StorageVolumePut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumePut.md)| Storage volume configuration | 
+ **storage_volume** | [**StorageVolumePut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumePut.md)| Storage volume configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -3191,11 +3191,11 @@ Name | Type | Description  | Notes
  **volume_name** | **str**| Storage volume name | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
- **migration** | [**StorageVolumePost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumePost.md)| Migration request | [optional] 
+ **migration** | [**StorageVolumePost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumePost.md)| Migration request | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -3274,13 +3274,13 @@ Name | Type | Description  | Notes
  **pool_name** | **str**| Storage pool name | 
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
- **storage_volume** | [**StorageVolumePut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumePut.md)| Storage volume configuration | 
+ **storage_volume** | [**StorageVolumePut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumePut.md)| Storage volume configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -3365,7 +3365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3520,7 +3520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumeTypeStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumeTypeStateGet200Response.md)
+[**StoragePoolVolumeTypeStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumeTypeStateGet200Response.md)
 
 ### Authorization
 
@@ -3599,7 +3599,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesGet200Response.md)
+[**StoragePoolVolumesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesGet200Response.md)
 
 ### Authorization
 
@@ -3678,7 +3678,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeGetRecursion1200Response.md)
+[**StoragePoolVolumesTypeGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -3753,13 +3753,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pool_name** | **str**| Storage pool name | 
- **volume** | [**StorageVolumesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumesPost.md)| Storage volume | 
+ **volume** | [**StorageVolumesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumesPost.md)| Storage volume | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -3843,7 +3843,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4006,7 +4006,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeBackupGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeBackupGet200Response.md)
+[**StoragePoolVolumesTypeBackupGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeBackupGet200Response.md)
 
 ### Authorization
 
@@ -4086,13 +4086,13 @@ Name | Type | Description  | Notes
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
  **backup_name** | **str**| Backup name | 
- **volume_rename** | [**StorageVolumeBackupPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeBackupPost.md)| Storage volume backup | 
+ **volume_rename** | [**StorageVolumeBackupPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumeBackupPost.md)| Storage volume backup | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4173,7 +4173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeBackupsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeBackupsGet200Response.md)
+[**StoragePoolVolumesTypeBackupsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeBackupsGet200Response.md)
 
 ### Authorization
 
@@ -4254,7 +4254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeBackupsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeBackupsGetRecursion1200Response.md)
+[**StoragePoolVolumesTypeBackupsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeBackupsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -4335,13 +4335,13 @@ Name | Type | Description  | Notes
  **pool_name** | **str**| Storage pool name | 
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
- **volume** | [**StorageVolumeBackupsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeBackupsPost.md)| Storage volume backup | 
+ **volume** | [**StorageVolumeBackupsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumeBackupsPost.md)| Storage volume backup | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4424,7 +4424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -4502,13 +4502,13 @@ Name | Type | Description  | Notes
  **pool_name** | **str**| Storage pool name | 
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
- **volume** | [**StorageVolumeBitmapsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeBitmapsPost.md)| Storage volume bitmap | 
+ **volume** | [**StorageVolumeBitmapsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumeBitmapsPost.md)| Storage volume bitmap | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -4587,7 +4587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeGet200Response.md)
+[**StoragePoolVolumesTypeGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeGet200Response.md)
 
 ### Authorization
 
@@ -4666,7 +4666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeGetRecursion1200Response.md)
+[**StoragePoolVolumesTypeGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -4745,7 +4745,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeGetRecursion2200Response.md)
+[**StoragePoolVolumesTypeGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeGetRecursion2200Response.md)
 
 ### Authorization
 
@@ -4822,13 +4822,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pool_name** | **str**| Storage pool name | 
  **type** | **str**| Storage volume type | 
- **volume** | [**StorageVolumesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumesPost.md)| Storage volume | 
+ **volume** | [**StorageVolumesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumesPost.md)| Storage volume | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -4912,7 +4912,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4995,7 +4995,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeSnapshotGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeSnapshotGet200Response.md)
+[**StoragePoolVolumesTypeSnapshotGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeSnapshotGet200Response.md)
 
 ### Authorization
 
@@ -5075,13 +5075,13 @@ Name | Type | Description  | Notes
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
  **snapshot_name** | **str**| Snapshot name | 
- **storage_volume_snapshot** | [**StorageVolumeSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeSnapshotPut.md)| Storage volume snapshot configuration | 
+ **storage_volume_snapshot** | [**StorageVolumeSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumeSnapshotPut.md)| Storage volume snapshot configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -5162,13 +5162,13 @@ Name | Type | Description  | Notes
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
  **snapshot_name** | **str**| Snapshot name | 
- **volume_rename** | [**StorageVolumeSnapshotPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeSnapshotPost.md)| Storage volume snapshot | 
+ **volume_rename** | [**StorageVolumeSnapshotPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumeSnapshotPost.md)| Storage volume snapshot | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -5248,13 +5248,13 @@ Name | Type | Description  | Notes
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
  **snapshot_name** | **str**| Snapshot name | 
- **storage_volume_snapshot** | [**StorageVolumeSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeSnapshotPut.md)| Storage volume snapshot configuration | 
+ **storage_volume_snapshot** | [**StorageVolumeSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumeSnapshotPut.md)| Storage volume snapshot configuration | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -5336,7 +5336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeSnapshotsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeSnapshotsGet200Response.md)
+[**StoragePoolVolumesTypeSnapshotsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeSnapshotsGet200Response.md)
 
 ### Authorization
 
@@ -5417,7 +5417,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolVolumesTypeSnapshotsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolVolumesTypeSnapshotsGetRecursion1200Response.md)
+[**StoragePoolVolumesTypeSnapshotsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolVolumesTypeSnapshotsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -5495,13 +5495,13 @@ Name | Type | Description  | Notes
  **pool_name** | **str**| Storage pool name | 
  **type** | **str**| Storage volume type | 
  **volume_name** | **str**| Storage volume name | 
- **volume** | [**StorageVolumeSnapshotsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeSnapshotsPost.md)| Storage volume snapshot | 
+ **volume** | [**StorageVolumeSnapshotsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumeSnapshotsPost.md)| Storage volume snapshot | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -5576,7 +5576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -5651,7 +5651,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolsGet200Response.md)
+[**StoragePoolsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolsGet200Response.md)
 
 ### Authorization
 
@@ -5726,7 +5726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoragePoolsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolsGetRecursion1200Response.md)
+[**StoragePoolsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -5799,13 +5799,13 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storage** | [**StoragePoolsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolsPost.md)| Storage pool | 
+ **storage** | [**StoragePoolsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolsPost.md)| Storage pool | 
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 

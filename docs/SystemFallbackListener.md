@@ -6,8 +6,8 @@ SystemFallbackListener defines a struct to configure the fallback HTTPS listener
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**SystemFallbackListenerConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemFallbackListenerConfig.md) |  | [optional] 
-**state** | [**SystemFallbackListenerState**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemFallbackListenerState.md) |  | [optional] 
+**config** | [**SystemFallbackListenerConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemFallbackListenerConfig.md) |  | [optional] 
+**state** | [**SystemFallbackListenerState**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemFallbackListenerState.md) |  | [optional] 
 
 ## Example
 

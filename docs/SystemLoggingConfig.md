@@ -5,7 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**syslog** | [**SystemLoggingSyslog**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemLoggingSyslog.md) |  | [optional] 
+**journal_upload** | [**SystemLoggingJournalUpload**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemLoggingJournalUpload.md) |  | [optional] 
+**syslog** | [**SystemLoggingSyslog**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemLoggingSyslog.md) |  | [optional] 
 
 ## Example
 

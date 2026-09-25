@@ -18,20 +18,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
-class SystemFallbackListenerConfig(BaseModel):
+class SystemLoggingJournalUpload(BaseModel):
     """
-    SystemFallbackListenerConfig
+    SystemLoggingJournalUpload
     """ # noqa: E501
-    listen_address: Optional[StrictStr] = None
-    persistent: Optional[StrictBool] = None
-    trusted_client_certificates: Optional[List[StrictStr]] = None
-    __properties: ClassVar[List[str]] = ["listen_address", "persistent", "trusted_client_certificates"]
+    tls_ca_certificate: Optional[StrictStr] = None
+    tls_client_certificate: Optional[StrictStr] = None
+    tls_client_key: Optional[StrictStr] = None
+    url: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["tls_ca_certificate", "tls_client_certificate", "tls_client_key", "url"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -51,7 +52,7 @@ class SystemFallbackListenerConfig(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of SystemFallbackListenerConfig from a JSON string"""
+        """Create an instance of SystemLoggingJournalUpload from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -76,7 +77,7 @@ class SystemFallbackListenerConfig(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of SystemFallbackListenerConfig from a dict"""
+        """Create an instance of SystemLoggingJournalUpload from a dict"""
         if obj is None:
             return None
 
@@ -84,9 +85,10 @@ class SystemFallbackListenerConfig(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "listen_address": obj.get("listen_address"),
-            "persistent": obj.get("persistent"),
-            "trusted_client_certificates": obj.get("trusted_client_certificates")
+            "tls_ca_certificate": obj.get("tls_ca_certificate"),
+            "tls_client_certificate": obj.get("tls_client_certificate"),
+            "tls_client_key": obj.get("tls_client_key"),
+            "url": obj.get("url")
         })
         return _obj
 

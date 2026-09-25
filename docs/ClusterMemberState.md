@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**storage_pools** | [**Dict[str, StoragePoolState]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StoragePoolState.md) |  | [optional] 
-**sysinfo** | [**ClusterMemberSysInfo**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ClusterMemberSysInfo.md) |  | [optional] 
+**storage_pools** | [**Dict[str, StoragePoolState]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StoragePoolState.md) |  | [optional] 
+**sysinfo** | [**ClusterMemberSysInfo**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ClusterMemberSysInfo.md) |  | [optional] 
 
 ## Example
 

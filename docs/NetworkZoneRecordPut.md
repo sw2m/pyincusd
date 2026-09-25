@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the record | [optional] 
-**entries** | [**List[NetworkZoneRecordEntry]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/NetworkZoneRecordEntry.md) | Entries in the record | [optional] 
+**entries** | [**List[NetworkZoneRecordEntry]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/NetworkZoneRecordEntry.md) | Entries in the record | [optional] 
 
 ## Example
 

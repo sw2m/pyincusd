@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **remote** | **bool** |  | [optional] 
 **removable** | **bool** |  | [optional] 
 **serial_number** | **str** |  | [optional] 
-**smart** | [**SystemStorageDriveSMART**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemStorageDriveSMART.md) |  | [optional] 
+**smart** | [**SystemStorageDriveSMART**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemStorageDriveSMART.md) |  | [optional] 
 **wwn** | **str** |  | [optional] 
 **wwn_id** | **str** |  | [optional] 
 

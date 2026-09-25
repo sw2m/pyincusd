@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **auto_reboot** | **bool** |  | [optional] 
 **channel** | **str** |  | [optional] 
 **check_frequency** | **str** |  | [optional] 
-**maintenance_windows** | [**List[SystemUpdateMaintenanceWindow]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemUpdateMaintenanceWindow.md) |  | [optional] 
+**maintenance_windows** | [**List[SystemUpdateMaintenanceWindow]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemUpdateMaintenanceWindow.md) |  | [optional] 
 
 ## Example
 

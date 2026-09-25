@@ -6,7 +6,7 @@ Sync response
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**List[ClusterMember]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ClusterMember.md) | List of cluster members | [optional] 
+**metadata** | [**List[ClusterMember]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ClusterMember.md) | List of cluster members | [optional] 
 **status** | **str** | Status description | [optional] 
 **status_code** | **int** | Status code | [optional] 
 **type** | **str** | Response type | [optional] 

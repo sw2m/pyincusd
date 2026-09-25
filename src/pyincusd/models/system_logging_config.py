@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
+from pyincusd.models.system_logging_journal_upload import SystemLoggingJournalUpload
 from pyincusd.models.system_logging_syslog import SystemLoggingSyslog
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,8 +30,9 @@ class SystemLoggingConfig(BaseModel):
     """
     SystemLoggingConfig
     """ # noqa: E501
+    journal_upload: Optional[SystemLoggingJournalUpload] = None
     syslog: Optional[SystemLoggingSyslog] = None
-    __properties: ClassVar[List[str]] = ["syslog"]
+    __properties: ClassVar[List[str]] = ["journal_upload", "syslog"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -71,6 +73,9 @@ class SystemLoggingConfig(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of journal_upload
+        if self.journal_upload:
+            _dict['journal_upload'] = self.journal_upload.to_dict()
         # override the default output from pydantic by calling `to_dict()` of syslog
         if self.syslog:
             _dict['syslog'] = self.syslog.to_dict()
@@ -86,6 +91,7 @@ class SystemLoggingConfig(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "journal_upload": SystemLoggingJournalUpload.from_dict(obj["journal_upload"]) if obj.get("journal_upload") is not None else None,
             "syslog": SystemLoggingSyslog.from_dict(obj["syslog"]) if obj.get("syslog") is not None else None
         })
         return _obj

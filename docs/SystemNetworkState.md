@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **configuration_in_process** | **bool** |  | [optional] 
-**interfaces** | [**Dict[str, SystemNetworkInterfaceState]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemNetworkInterfaceState.md) |  | [optional] 
+**interfaces** | [**Dict[str, SystemNetworkInterfaceState]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkInterfaceState.md) |  | [optional] 
 
 ## Example
 

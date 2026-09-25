@@ -4,14 +4,14 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**certificate_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesApi.md#certificate_delete) | **DELETE** /1.0/certificates/{fingerprint} | Delete the trusted certificate
-[**certificate_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesApi.md#certificate_get) | **GET** /1.0/certificates/{fingerprint} | Get the trusted certificate
-[**certificate_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesApi.md#certificate_patch) | **PATCH** /1.0/certificates/{fingerprint} | Partially update the trusted certificate
-[**certificate_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesApi.md#certificate_put) | **PUT** /1.0/certificates/{fingerprint} | Update the trusted certificate
-[**certificates_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesApi.md#certificates_get) | **GET** /1.0/certificates | Get the trusted certificates
-[**certificates_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesApi.md#certificates_get_recursion1) | **GET** /1.0/certificates?recursion&#x3D;1 | Get the trusted certificates
-[**certificates_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesApi.md#certificates_post) | **POST** /1.0/certificates | Add a trusted certificate
-[**certificates_post_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesApi.md#certificates_post_untrusted) | **POST** /1.0/certificates?public | Add a trusted certificate
+[**certificate_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesApi.md#certificate_delete) | **DELETE** /1.0/certificates/{fingerprint} | Delete the trusted certificate
+[**certificate_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesApi.md#certificate_get) | **GET** /1.0/certificates/{fingerprint} | Get the trusted certificate
+[**certificate_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesApi.md#certificate_patch) | **PATCH** /1.0/certificates/{fingerprint} | Partially update the trusted certificate
+[**certificate_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesApi.md#certificate_put) | **PUT** /1.0/certificates/{fingerprint} | Update the trusted certificate
+[**certificates_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesApi.md#certificates_get) | **GET** /1.0/certificates | Get the trusted certificates
+[**certificates_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesApi.md#certificates_get_recursion1) | **GET** /1.0/certificates?recursion&#x3D;1 | Get the trusted certificates
+[**certificates_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesApi.md#certificates_post) | **POST** /1.0/certificates | Add a trusted certificate
+[**certificates_post_untrusted**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesApi.md#certificates_post_untrusted) | **POST** /1.0/certificates?public | Add a trusted certificate
 
 
 # **certificate_delete**
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificateGet200Response.md)
+[**CertificateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificateGet200Response.md)
 
 ### Authorization
 
@@ -208,11 +208,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fingerprint** | **str**| Fingerprint | 
- **certificate** | [**CertificatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatePut.md)| Certificate configuration | 
+ **certificate** | [**CertificatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatePut.md)| Certificate configuration | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -285,11 +285,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fingerprint** | **str**| Fingerprint | 
- **certificate** | [**CertificatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatePut.md)| Certificate configuration | 
+ **certificate** | [**CertificatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatePut.md)| Certificate configuration | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesGet200Response.md)
+[**CertificatesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesGet200Response.md)
 
 ### Authorization
 
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesGetRecursion1200Response.md)
+[**CertificatesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -507,11 +507,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **certificate** | [**CertificatesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost.md)| Certificate | 
+ **certificate** | [**CertificatesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost.md)| Certificate | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -590,11 +590,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **certificate** | [**CertificatesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost.md)| Certificate | 
+ **certificate** | [**CertificatesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost.md)| Certificate | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 

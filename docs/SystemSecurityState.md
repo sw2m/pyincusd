@@ -6,10 +6,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **drive_recovery_keys** | **Dict[str, str]** |  | [optional] 
-**encrypted_volumes** | [**List[SystemSecurityEncryptedVolume]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemSecurityEncryptedVolume.md) |  | [optional] 
+**encrypted_volumes** | [**List[SystemSecurityEncryptedVolume]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemSecurityEncryptedVolume.md) |  | [optional] 
 **encryption_recovery_keys_retrieved** | **bool** |  | [optional] 
 **pool_recovery_keys** | **Dict[str, str]** |  | [optional] 
-**secure_boot_certificates** | [**List[SystemSecuritySecureBootCertificate]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemSecuritySecureBootCertificate.md) |  | [optional] 
+**secure_boot_certificates** | [**List[SystemSecuritySecureBootCertificate]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemSecuritySecureBootCertificate.md) |  | [optional] 
 **secure_boot_enabled** | **bool** |  | [optional] 
 **system_state_is_trusted** | **bool** |  | [optional] 
 **system_state_status** | **str** |  | [optional] 

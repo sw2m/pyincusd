@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **die** | **int** | What die the CPU is a part of (for chiplet designs)  API extension: resources_cpu_core_die | [optional] 
 **flags** | **List[str]** | List of CPU flags  API extension: resources_cpu_flags | [optional] 
 **frequency** | **int** | Current frequency | [optional] 
-**threads** | [**List[ResourcesCPUThread]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ResourcesCPUThread.md) | List of threads | [optional] 
+**threads** | [**List[ResourcesCPUThread]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ResourcesCPUThread.md) | List of threads | [optional] 
 
 ## Example
 

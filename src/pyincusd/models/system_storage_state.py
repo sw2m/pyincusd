@@ -21,7 +21,6 @@ import json
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
 from pyincusd.models.system_storage_drive import SystemStorageDrive
-from pyincusd.models.system_storage_pool import SystemStoragePool
 from pyincusd.models.system_storage_root_partition import SystemStorageRootPartition
 from typing import Optional, Set
 from typing_extensions import Self
@@ -32,9 +31,8 @@ class SystemStorageState(BaseModel):
     SystemStorageState
     """ # noqa: E501
     drives: Optional[List[SystemStorageDrive]] = None
-    pools: Optional[List[SystemStoragePool]] = None
     root_partition: Optional[SystemStorageRootPartition] = None
-    __properties: ClassVar[List[str]] = ["drives", "pools", "root_partition"]
+    __properties: ClassVar[List[str]] = ["drives", "root_partition"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -81,12 +79,6 @@ class SystemStorageState(BaseModel):
             for _item_drives in self.drives:
                 _items.append(_item_drives.to_dict() if _item_drives is not None else None)
             _dict['drives'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in pools (list)
-        _items = []
-        if self.pools:
-            for _item_pools in self.pools:
-                _items.append(_item_pools.to_dict() if _item_pools is not None else None)
-            _dict['pools'] = _items
         # override the default output from pydantic by calling `to_dict()` of root_partition
         if self.root_partition:
             _dict['root_partition'] = self.root_partition.to_dict()
@@ -103,7 +95,6 @@ class SystemStorageState(BaseModel):
 
         _obj = cls.model_validate({
             "drives": [SystemStorageDrive.from_dict(_item) for _item in obj["drives"]] if obj.get("drives") is not None else None,
-            "pools": [SystemStoragePool.from_dict(_item) for _item in obj["pools"]] if obj.get("pools") is not None else None,
             "root_partition": SystemStorageRootPartition.from_dict(obj["root_partition"]) if obj.get("root_partition") is not None else None
         })
         return _obj

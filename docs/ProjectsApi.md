@@ -4,16 +4,16 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**project_access**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#project_access) | **GET** /1.0/projects/{name}/access | Get who has access to a project
-[**project_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#project_delete) | **DELETE** /1.0/projects/{name} | Delete the project
-[**project_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#project_get) | **GET** /1.0/projects/{name} | Get the project
-[**project_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#project_patch) | **PATCH** /1.0/projects/{name} | Partially update the project
-[**project_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#project_post) | **POST** /1.0/projects/{name} | Rename the project
-[**project_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#project_put) | **PUT** /1.0/projects/{name} | Update the project
-[**project_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#project_state_get) | **GET** /1.0/projects/{name}/state | Get the project state
-[**projects_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#projects_get) | **GET** /1.0/projects | Get the projects
-[**projects_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#projects_get_recursion1) | **GET** /1.0/projects?recursion&#x3D;1 | Get the projects
-[**projects_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsApi.md#projects_post) | **POST** /1.0/projects | Add a project
+[**project_access**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#project_access) | **GET** /1.0/projects/{name}/access | Get who has access to a project
+[**project_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#project_delete) | **DELETE** /1.0/projects/{name} | Delete the project
+[**project_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#project_get) | **GET** /1.0/projects/{name} | Get the project
+[**project_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#project_patch) | **PATCH** /1.0/projects/{name} | Partially update the project
+[**project_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#project_post) | **POST** /1.0/projects/{name} | Rename the project
+[**project_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#project_put) | **PUT** /1.0/projects/{name} | Update the project
+[**project_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#project_state_get) | **GET** /1.0/projects/{name}/state | Get the project state
+[**projects_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#projects_get) | **GET** /1.0/projects | Get the projects
+[**projects_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#projects_get_recursion1) | **GET** /1.0/projects?recursion&#x3D;1 | Get the projects
+[**projects_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsApi.md#projects_post) | **POST** /1.0/projects | Add a project
 
 
 # **project_access**
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceAccess200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceAccess200Response.md)
+[**InstanceAccess200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceAccess200Response.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectGet200Response.md)
+[**ProjectGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectGet200Response.md)
 
 ### Authorization
 
@@ -285,11 +285,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Project name | 
- **project** | [**ProjectPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectPut.md)| Project configuration | 
+ **project** | [**ProjectPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectPut.md)| Project configuration | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -362,11 +362,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Project name | 
- **project** | [**ProjectPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectPost.md)| Project rename request | 
+ **project** | [**ProjectPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectPost.md)| Project rename request | 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -438,11 +438,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Project name | 
- **project** | [**ProjectPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectPut.md)| Project configuration | 
+ **project** | [**ProjectPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectPut.md)| Project configuration | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectStateGet200Response.md)
+[**ProjectStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectStateGet200Response.md)
 
 ### Authorization
 
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsGet200Response.md)
+[**ProjectsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsGet200Response.md)
 
 ### Authorization
 
@@ -662,7 +662,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsGetRecursion1200Response.md)
+[**ProjectsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -732,11 +732,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project** | [**ProjectsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ProjectsPost.md)| Project | 
+ **project** | [**ProjectsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ProjectsPost.md)| Project | 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 

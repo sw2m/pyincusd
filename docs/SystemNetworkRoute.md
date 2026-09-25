@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**onlink** | **bool** |  | [optional] 
 **to** | **str** |  | [optional] 
 **via** | **str** |  | [optional] 
 

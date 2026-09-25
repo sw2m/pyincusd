@@ -371,6 +371,7 @@ from pyincusd.models.system_kernel_state_memory import SystemKernelStateMemory
 from pyincusd.models.system_kernel_state_memory_zram_swap import SystemKernelStateMemoryZramSwap
 from pyincusd.models.system_logging import SystemLogging
 from pyincusd.models.system_logging_config import SystemLoggingConfig
+from pyincusd.models.system_logging_journal_upload import SystemLoggingJournalUpload
 from pyincusd.models.system_logging_syslog import SystemLoggingSyslog
 from pyincusd.models.system_network import SystemNetwork
 from pyincusd.models.system_network_bond import SystemNetworkBond
@@ -414,6 +415,7 @@ from pyincusd.models.system_storage_pool import SystemStoragePool
 from pyincusd.models.system_storage_pool_key import SystemStoragePoolKey
 from pyincusd.models.system_storage_pool_scrub_status import SystemStoragePoolScrubStatus
 from pyincusd.models.system_storage_pool_special import SystemStoragePoolSpecial
+from pyincusd.models.system_storage_pool_trim_status import SystemStoragePoolTrimStatus
 from pyincusd.models.system_storage_pool_volume import SystemStoragePoolVolume
 from pyincusd.models.system_storage_root_partition import SystemStorageRootPartition
 from pyincusd.models.system_storage_state import SystemStorageState

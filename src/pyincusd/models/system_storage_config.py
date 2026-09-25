@@ -31,7 +31,8 @@ class SystemStorageConfig(BaseModel):
     """ # noqa: E501
     pools: Optional[List[SystemStoragePool]] = None
     scrub_schedule: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["pools", "scrub_schedule"]
+    trim_schedule: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["pools", "scrub_schedule", "trim_schedule"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -91,7 +92,8 @@ class SystemStorageConfig(BaseModel):
 
         _obj = cls.model_validate({
             "pools": [SystemStoragePool.from_dict(_item) for _item in obj["pools"]] if obj.get("pools") is not None else None,
-            "scrub_schedule": obj.get("scrub_schedule")
+            "scrub_schedule": obj.get("scrub_schedule"),
+            "trim_schedule": obj.get("trim_schedule")
         })
         return _obj
 

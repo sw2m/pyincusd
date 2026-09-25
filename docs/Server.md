@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **auth_user_method** | **str** | The current API user login method  API extension: auth_user | [optional] [readonly] 
 **auth_user_name** | **str** | The current API user identifier  API extension: auth_user | [optional] [readonly] 
 **config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
-**environment** | [**ServerEnvironment**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerEnvironment.md) |  | [optional] 
+**environment** | [**ServerEnvironment**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerEnvironment.md) |  | [optional] 
 **public** | **bool** | Whether the server is public-only (only public endpoints are implemented) | [optional] [readonly] 
 
 ## Example

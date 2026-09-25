@@ -4,71 +4,71 @@ All URIs are relative to the incusd API (unix socket or https). See [Incus REST 
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**instance_access**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_access) | **GET** /1.0/instances/{name}/access | Get who has access to an instance
-[**instance_backup_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_backup_delete) | **DELETE** /1.0/instances/{name}/backups/{backup} | Delete a backup
-[**instance_backup_export**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_backup_export) | **GET** /1.0/instances/{name}/backups/{backup}/export | Get the raw backup file(s)
-[**instance_backup_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_backup_get) | **GET** /1.0/instances/{name}/backups/{backup} | Get the backup
-[**instance_backup_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_backup_post) | **POST** /1.0/instances/{name}/backups/{backup} | Rename a backup
-[**instance_backups_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_backups_get) | **GET** /1.0/instances/{name}/backups | Get the backups
-[**instance_backups_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_backups_get_recursion1) | **GET** /1.0/instances/{name}/backups?recursion&#x3D;1 | Get the backups
-[**instance_backups_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_backups_post) | **POST** /1.0/instances/{name}/backups | Create a backup
-[**instance_bitmaps_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_bitmaps_post) | **POST** /1.0/instances/{name}/bitmaps | Create a bitmap
-[**instance_console_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_console_delete) | **DELETE** /1.0/instances/{name}/console | Clear the console log
-[**instance_console_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_console_get) | **GET** /1.0/instances/{name}/console | Get console output
-[**instance_console_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_console_post) | **POST** /1.0/instances/{name}/console | Connect to console
-[**instance_debug_memory_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_debug_memory_get) | **GET** /1.0/instances/{name}/debug/memory | Get memory debug information of an instance
-[**instance_debug_repair_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_debug_repair_post) | **POST** /1.0/instances/{name}/debug/repair | Trigger a repair action on the instance.
-[**instance_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_delete) | **DELETE** /1.0/instances/{name} | Delete an instance
-[**instance_exec_output_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_exec_output_delete) | **DELETE** /1.0/instances/{name}/logs/exec-output/{filename} | Delete the exec record-output file
-[**instance_exec_output_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_exec_output_get) | **GET** /1.0/instances/{name}/logs/exec-output/{filename} | Get the exec-output log file
-[**instance_exec_outputs_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_exec_outputs_get) | **GET** /1.0/instances/{name}/logs/exec-output | Get the exec record-output files
-[**instance_exec_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_exec_post) | **POST** /1.0/instances/{name}/exec | Run a command
-[**instance_files_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_files_delete) | **DELETE** /1.0/instances/{name}/files | Delete a file
-[**instance_files_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_files_get) | **GET** /1.0/instances/{name}/files | Get a file
-[**instance_files_head**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_files_head) | **HEAD** /1.0/instances/{name}/files | Get metadata for a file
-[**instance_files_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_files_post) | **POST** /1.0/instances/{name}/files | Create or replace a file
-[**instance_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_get) | **GET** /1.0/instances/{name} | Get the instance
-[**instance_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_get_recursion1) | **GET** /1.0/instances/{name}?recursion&#x3D;1 | Get the instance
-[**instance_log_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_log_delete) | **DELETE** /1.0/instances/{name}/logs/{filename} | Delete the log file
-[**instance_log_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_log_get) | **GET** /1.0/instances/{name}/logs/{filename} | Get the log file
-[**instance_logs_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_logs_get) | **GET** /1.0/instances/{name}/logs | Get the log files
-[**instance_metadata_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_metadata_get) | **GET** /1.0/instances/{name}/metadata | Get the instance image metadata
-[**instance_metadata_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_metadata_patch) | **PATCH** /1.0/instances/{name}/metadata | Partially update the image metadata
-[**instance_metadata_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_metadata_put) | **PUT** /1.0/instances/{name}/metadata | Update the image metadata
-[**instance_metadata_templates_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_metadata_templates_delete) | **DELETE** /1.0/instances/{name}/metadata/templates | Delete a template file
-[**instance_metadata_templates_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_metadata_templates_get) | **GET** /1.0/instances/{name}/metadata/templates | Get the template file names or a specific
-[**instance_metadata_templates_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_metadata_templates_post) | **POST** /1.0/instances/{name}/metadata/templates | Create or replace a template file
-[**instance_nbd_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nbd_get) | **GET** /1.0/instances/{name}/nbd | Get an NBD connection for all of the instance&#39;s disks
-[**instance_nvram_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_get) | **GET** /1.0/instances/{name}/nvram | Get the NVRAM variable GUIDs
-[**instance_nvram_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_get_recursion1) | **GET** /1.0/instances/{name}/nvram?recursion&#x3D;1 | Get the NVRAM variable GUIDs and names
-[**instance_nvram_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_get_recursion2) | **GET** /1.0/instances/{name}/nvram?recursion&#x3D;2 | Get the NVRAM variables
-[**instance_nvram_guid_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_guid_get) | **GET** /1.0/instances/{name}/nvram/{guid} | Get the NVRAM variable names under the given GUID
-[**instance_nvram_guid_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_guid_get_recursion1) | **GET** /1.0/instances/{name}/nvram/{guid}?recursion&#x3D;1 | Get the NVRAM variables under the given GUID
-[**instance_nvram_guid_var_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_guid_var_delete) | **DELETE** /1.0/instances/{name}/nvram/{guid}/{var} | Delete the NVRAM variable
-[**instance_nvram_guid_var_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_guid_var_get) | **GET** /1.0/instances/{name}/nvram/{guid}/{var} | Get the NVRAM variable
-[**instance_nvram_guid_var_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_guid_var_put) | **PUT** /1.0/instances/{name}/nvram/{guid}/{var} | Update the NVRAM variable
-[**instance_nvram_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_nvram_patch) | **PATCH** /1.0/instances/{name}/nvram | Bulk modify NVRAM variables.
-[**instance_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_patch) | **PATCH** /1.0/instances/{name} | Partially update the instance
-[**instance_port_forward_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_port_forward_post) | **POST** /1.0/instances/{name}/port-forward | Connect to a TCP port inside the instance
-[**instance_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_post) | **POST** /1.0/instances/{name} | Rename or move/migrate an instance
-[**instance_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_put) | **PUT** /1.0/instances/{name} | Update the instance
-[**instance_rebuild_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_rebuild_post) | **POST** /1.0/instances/{name}/rebuild | Rebuild an instance
-[**instance_sftp**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_sftp) | **GET** /1.0/instances/{name}/sftp | Get the instance SFTP connection
-[**instance_snapshot_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_snapshot_delete) | **DELETE** /1.0/instances/{name}/snapshots/{snapshot} | Delete a snapshot
-[**instance_snapshot_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_snapshot_get) | **GET** /1.0/instances/{name}/snapshots/{snapshot} | Get the snapshot
-[**instance_snapshot_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_snapshot_patch) | **PATCH** /1.0/instances/{name}/snapshots/{snapshot} | Partially update snapshot
-[**instance_snapshot_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_snapshot_post) | **POST** /1.0/instances/{name}/snapshots/{snapshot} | Rename or move/migrate a snapshot
-[**instance_snapshot_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_snapshot_put) | **PUT** /1.0/instances/{name}/snapshots/{snapshot} | Update snapshot
-[**instance_snapshots_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_snapshots_get) | **GET** /1.0/instances/{name}/snapshots | Get the snapshots
-[**instance_snapshots_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_snapshots_get_recursion1) | **GET** /1.0/instances/{name}/snapshots?recursion&#x3D;1 | Get the snapshots
-[**instance_snapshots_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_snapshots_post) | **POST** /1.0/instances/{name}/snapshots | Create a snapshot
-[**instance_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_state_get) | **GET** /1.0/instances/{name}/state | Get the runtime state
-[**instance_state_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instance_state_put) | **PUT** /1.0/instances/{name}/state | Change the state
-[**instances_get**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instances_get) | **GET** /1.0/instances | Get the instances
-[**instances_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instances_get_recursion1) | **GET** /1.0/instances?recursion&#x3D;1 | Get the instances
-[**instances_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instances_get_recursion2) | **GET** /1.0/instances?recursion&#x3D;2 | Get the instances
-[**instances_post**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instances_post) | **POST** /1.0/instances | Create a new instance
-[**instances_put**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesApi.md#instances_put) | **PUT** /1.0/instances | Bulk instance state update
+[**instance_access**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_access) | **GET** /1.0/instances/{name}/access | Get who has access to an instance
+[**instance_backup_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_backup_delete) | **DELETE** /1.0/instances/{name}/backups/{backup} | Delete a backup
+[**instance_backup_export**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_backup_export) | **GET** /1.0/instances/{name}/backups/{backup}/export | Get the raw backup file(s)
+[**instance_backup_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_backup_get) | **GET** /1.0/instances/{name}/backups/{backup} | Get the backup
+[**instance_backup_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_backup_post) | **POST** /1.0/instances/{name}/backups/{backup} | Rename a backup
+[**instance_backups_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_backups_get) | **GET** /1.0/instances/{name}/backups | Get the backups
+[**instance_backups_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_backups_get_recursion1) | **GET** /1.0/instances/{name}/backups?recursion&#x3D;1 | Get the backups
+[**instance_backups_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_backups_post) | **POST** /1.0/instances/{name}/backups | Create a backup
+[**instance_bitmaps_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_bitmaps_post) | **POST** /1.0/instances/{name}/bitmaps | Create a bitmap
+[**instance_console_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_console_delete) | **DELETE** /1.0/instances/{name}/console | Clear the console log
+[**instance_console_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_console_get) | **GET** /1.0/instances/{name}/console | Get console output
+[**instance_console_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_console_post) | **POST** /1.0/instances/{name}/console | Connect to console
+[**instance_debug_memory_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_debug_memory_get) | **GET** /1.0/instances/{name}/debug/memory | Get memory debug information of an instance
+[**instance_debug_repair_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_debug_repair_post) | **POST** /1.0/instances/{name}/debug/repair | Trigger a repair action on the instance.
+[**instance_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_delete) | **DELETE** /1.0/instances/{name} | Delete an instance
+[**instance_exec_output_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_exec_output_delete) | **DELETE** /1.0/instances/{name}/logs/exec-output/{filename} | Delete the exec record-output file
+[**instance_exec_output_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_exec_output_get) | **GET** /1.0/instances/{name}/logs/exec-output/{filename} | Get the exec-output log file
+[**instance_exec_outputs_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_exec_outputs_get) | **GET** /1.0/instances/{name}/logs/exec-output | Get the exec record-output files
+[**instance_exec_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_exec_post) | **POST** /1.0/instances/{name}/exec | Run a command
+[**instance_files_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_files_delete) | **DELETE** /1.0/instances/{name}/files | Delete a file
+[**instance_files_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_files_get) | **GET** /1.0/instances/{name}/files | Get a file
+[**instance_files_head**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_files_head) | **HEAD** /1.0/instances/{name}/files | Get metadata for a file
+[**instance_files_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_files_post) | **POST** /1.0/instances/{name}/files | Create or replace a file
+[**instance_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_get) | **GET** /1.0/instances/{name} | Get the instance
+[**instance_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_get_recursion1) | **GET** /1.0/instances/{name}?recursion&#x3D;1 | Get the instance
+[**instance_log_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_log_delete) | **DELETE** /1.0/instances/{name}/logs/{filename} | Delete the log file
+[**instance_log_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_log_get) | **GET** /1.0/instances/{name}/logs/{filename} | Get the log file
+[**instance_logs_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_logs_get) | **GET** /1.0/instances/{name}/logs | Get the log files
+[**instance_metadata_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_metadata_get) | **GET** /1.0/instances/{name}/metadata | Get the instance image metadata
+[**instance_metadata_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_metadata_patch) | **PATCH** /1.0/instances/{name}/metadata | Partially update the image metadata
+[**instance_metadata_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_metadata_put) | **PUT** /1.0/instances/{name}/metadata | Update the image metadata
+[**instance_metadata_templates_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_metadata_templates_delete) | **DELETE** /1.0/instances/{name}/metadata/templates | Delete a template file
+[**instance_metadata_templates_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_metadata_templates_get) | **GET** /1.0/instances/{name}/metadata/templates | Get the template file names or a specific
+[**instance_metadata_templates_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_metadata_templates_post) | **POST** /1.0/instances/{name}/metadata/templates | Create or replace a template file
+[**instance_nbd_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nbd_get) | **GET** /1.0/instances/{name}/nbd | Get an NBD connection for all of the instance&#39;s disks
+[**instance_nvram_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_get) | **GET** /1.0/instances/{name}/nvram | Get the NVRAM variable GUIDs
+[**instance_nvram_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_get_recursion1) | **GET** /1.0/instances/{name}/nvram?recursion&#x3D;1 | Get the NVRAM variable GUIDs and names
+[**instance_nvram_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_get_recursion2) | **GET** /1.0/instances/{name}/nvram?recursion&#x3D;2 | Get the NVRAM variables
+[**instance_nvram_guid_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_guid_get) | **GET** /1.0/instances/{name}/nvram/{guid} | Get the NVRAM variable names under the given GUID
+[**instance_nvram_guid_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_guid_get_recursion1) | **GET** /1.0/instances/{name}/nvram/{guid}?recursion&#x3D;1 | Get the NVRAM variables under the given GUID
+[**instance_nvram_guid_var_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_guid_var_delete) | **DELETE** /1.0/instances/{name}/nvram/{guid}/{var} | Delete the NVRAM variable
+[**instance_nvram_guid_var_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_guid_var_get) | **GET** /1.0/instances/{name}/nvram/{guid}/{var} | Get the NVRAM variable
+[**instance_nvram_guid_var_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_guid_var_put) | **PUT** /1.0/instances/{name}/nvram/{guid}/{var} | Update the NVRAM variable
+[**instance_nvram_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_nvram_patch) | **PATCH** /1.0/instances/{name}/nvram | Bulk modify NVRAM variables.
+[**instance_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_patch) | **PATCH** /1.0/instances/{name} | Partially update the instance
+[**instance_port_forward_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_port_forward_post) | **POST** /1.0/instances/{name}/port-forward | Connect to a TCP port inside the instance
+[**instance_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_post) | **POST** /1.0/instances/{name} | Rename or move/migrate an instance
+[**instance_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_put) | **PUT** /1.0/instances/{name} | Update the instance
+[**instance_rebuild_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_rebuild_post) | **POST** /1.0/instances/{name}/rebuild | Rebuild an instance
+[**instance_sftp**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_sftp) | **GET** /1.0/instances/{name}/sftp | Get the instance SFTP connection
+[**instance_snapshot_delete**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_snapshot_delete) | **DELETE** /1.0/instances/{name}/snapshots/{snapshot} | Delete a snapshot
+[**instance_snapshot_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_snapshot_get) | **GET** /1.0/instances/{name}/snapshots/{snapshot} | Get the snapshot
+[**instance_snapshot_patch**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_snapshot_patch) | **PATCH** /1.0/instances/{name}/snapshots/{snapshot} | Partially update snapshot
+[**instance_snapshot_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_snapshot_post) | **POST** /1.0/instances/{name}/snapshots/{snapshot} | Rename or move/migrate a snapshot
+[**instance_snapshot_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_snapshot_put) | **PUT** /1.0/instances/{name}/snapshots/{snapshot} | Update snapshot
+[**instance_snapshots_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_snapshots_get) | **GET** /1.0/instances/{name}/snapshots | Get the snapshots
+[**instance_snapshots_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_snapshots_get_recursion1) | **GET** /1.0/instances/{name}/snapshots?recursion&#x3D;1 | Get the snapshots
+[**instance_snapshots_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_snapshots_post) | **POST** /1.0/instances/{name}/snapshots | Create a snapshot
+[**instance_state_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_state_get) | **GET** /1.0/instances/{name}/state | Get the runtime state
+[**instance_state_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instance_state_put) | **PUT** /1.0/instances/{name}/state | Change the state
+[**instances_get**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instances_get) | **GET** /1.0/instances | Get the instances
+[**instances_get_recursion1**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instances_get_recursion1) | **GET** /1.0/instances?recursion&#x3D;1 | Get the instances
+[**instances_get_recursion2**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instances_get_recursion2) | **GET** /1.0/instances?recursion&#x3D;2 | Get the instances
+[**instances_post**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instances_post) | **POST** /1.0/instances | Create a new instance
+[**instances_put**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesApi.md#instances_put) | **PUT** /1.0/instances | Bulk instance state update
 
 
 # **instance_access**
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceAccess200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceAccess200Response.md)
+[**InstanceAccess200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceAccess200Response.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceBackupGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceBackupGet200Response.md)
+[**InstanceBackupGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceBackupGet200Response.md)
 
 ### Authorization
 
@@ -426,11 +426,11 @@ Name | Type | Description  | Notes
  **name** | **str**| Instance name | 
  **backup** | **str**| Backup name | 
  **project** | **str**| Project name | [optional] 
- **backup2** | [**InstanceBackupPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceBackupPost.md)| Backup rename | [optional] 
+ **backup2** | [**InstanceBackupPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceBackupPost.md)| Backup rename | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceBackupsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceBackupsGet200Response.md)
+[**InstanceBackupsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceBackupsGet200Response.md)
 
 ### Authorization
 
@@ -580,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceBackupsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceBackupsGetRecursion1200Response.md)
+[**InstanceBackupsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceBackupsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -657,11 +657,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **backup** | [**InstanceBackupsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceBackupsPost.md)| Backup request | [optional] 
+ **backup** | [**InstanceBackupsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceBackupsPost.md)| Backup request | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -735,11 +735,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **bitmap** | [**StorageVolumeBitmapsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/StorageVolumeBitmapsPost.md)| Bitmap request | [optional] 
+ **bitmap** | [**StorageVolumeBitmapsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/StorageVolumeBitmapsPost.md)| Bitmap request | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -814,7 +814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -965,11 +965,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **console** | [**InstanceConsolePost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceConsolePost.md)| Console request | [optional] 
+ **console** | [**InstanceConsolePost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceConsolePost.md)| Console request | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -1118,11 +1118,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **state** | [**InstanceDebugRepairPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceDebugRepairPost.md)| State | [optional] 
+ **state** | [**InstanceDebugRepairPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceDebugRepairPost.md)| State | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1199,7 +1199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -1276,7 +1276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1425,7 +1425,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceExecOutputsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceExecOutputsGet200Response.md)
+[**InstanceExecOutputsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceExecOutputsGet200Response.md)
 
 ### Authorization
 
@@ -1506,11 +1506,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **var_exec** | [**InstanceExecPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceExecPost.md)| Exec request | [optional] 
+ **var_exec** | [**InstanceExecPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceExecPost.md)| Exec request | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -1589,7 +1589,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1826,7 +1826,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -1901,7 +1901,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceGet200Response.md)
+[**InstanceGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceGet200Response.md)
 
 ### Authorization
 
@@ -1978,7 +1978,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceGetRecursion1200Response.md)
+[**InstanceGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -2055,7 +2055,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2204,7 +2204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceLogsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceLogsGet200Response.md)
+[**InstanceLogsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceLogsGet200Response.md)
 
 ### Authorization
 
@@ -2279,7 +2279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceMetadataGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceMetadataGet200Response.md)
+[**InstanceMetadataGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceMetadataGet200Response.md)
 
 ### Authorization
 
@@ -2352,12 +2352,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
- **metadata** | [**ImageMetadata**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ImageMetadata.md)| Image metadata | 
+ **metadata** | [**ImageMetadata**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ImageMetadata.md)| Image metadata | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2431,12 +2431,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
- **metadata** | [**ImageMetadata**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ImageMetadata.md)| Image metadata | 
+ **metadata** | [**ImageMetadata**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ImageMetadata.md)| Image metadata | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2514,7 +2514,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2668,7 +2668,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -2826,7 +2826,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceNvramGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceNvramGet200Response.md)
+[**InstanceNvramGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceNvramGet200Response.md)
 
 ### Authorization
 
@@ -2903,7 +2903,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceNvramGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceNvramGetRecursion1200Response.md)
+[**InstanceNvramGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceNvramGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -2980,7 +2980,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceNvramGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceNvramGetRecursion2200Response.md)
+[**InstanceNvramGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceNvramGetRecursion2200Response.md)
 
 ### Authorization
 
@@ -3059,7 +3059,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceNvramGuidGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceNvramGuidGet200Response.md)
+[**InstanceNvramGuidGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceNvramGuidGet200Response.md)
 
 ### Authorization
 
@@ -3138,7 +3138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceNvramGuidGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceNvramGuidGetRecursion1200Response.md)
+[**InstanceNvramGuidGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceNvramGuidGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -3217,7 +3217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -3299,7 +3299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceNvramGuidVarGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceNvramGuidVarGet200Response.md)
+[**InstanceNvramGuidVarGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceNvramGuidVarGet200Response.md)
 
 ### Authorization
 
@@ -3385,7 +3385,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -3463,12 +3463,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
- **uefi_variables_map** | [**Dict[str, Dict[str, InstanceNVRAMVariablePut]]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/Dict.md)| Load Balancer | 
+ **uefi_variables_map** | [**Dict[str, Dict[str, InstanceNVRAMVariablePut]]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/Dict.md)| Load Balancer | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -3542,11 +3542,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **instance** | [**InstancePut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancePut.md)| Update request | [optional] 
+ **instance** | [**InstancePut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancePut.md)| Update request | [optional] 
 
 ### Return type
 
-[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/ServerPut200Response.md)
+[**ServerPut200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/ServerPut200Response.md)
 
 ### Authorization
 
@@ -3623,7 +3623,7 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
- **port_forward** | [**InstancePortForwardPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancePortForwardPost.md)| Port forwarding request | 
+ **port_forward** | [**InstancePortForwardPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancePortForwardPost.md)| Port forwarding request | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
@@ -3708,11 +3708,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **migration** | [**InstancePost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancePost.md)| Migration request | [optional] 
+ **migration** | [**InstancePost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancePost.md)| Migration request | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3786,11 +3786,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **instance** | [**InstancePut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancePut.md)| Update request | [optional] 
+ **instance** | [**InstancePut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancePut.md)| Update request | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -3864,12 +3864,12 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
- **instance** | [**InstanceRebuildPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceRebuildPost.md)| InstanceRebuild request | 
+ **instance** | [**InstanceRebuildPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceRebuildPost.md)| InstanceRebuild request | 
  **project** | **str**| Project name | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4016,7 +4016,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4093,7 +4093,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceSnapshotGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceSnapshotGet200Response.md)
+[**InstanceSnapshotGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceSnapshotGet200Response.md)
 
 ### Authorization
 
@@ -4169,11 +4169,11 @@ Name | Type | Description  | Notes
  **name** | **str**| Instance name | 
  **snapshot** | **str**| Snapshot name | 
  **project** | **str**| Project name | [optional] 
- **snapshot2** | [**InstanceSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceSnapshotPut.md)| Snapshot update | [optional] 
+ **snapshot2** | [**InstanceSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceSnapshotPut.md)| Snapshot update | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4256,11 +4256,11 @@ Name | Type | Description  | Notes
  **name** | **str**| Instance name | 
  **snapshot** | **str**| Snapshot name | 
  **project** | **str**| Project name | [optional] 
- **snapshot2** | [**InstanceSnapshotPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceSnapshotPost.md)| Snapshot migration | [optional] 
+ **snapshot2** | [**InstanceSnapshotPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceSnapshotPost.md)| Snapshot migration | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4336,11 +4336,11 @@ Name | Type | Description  | Notes
  **name** | **str**| Instance name | 
  **snapshot** | **str**| Snapshot name | 
  **project** | **str**| Project name | [optional] 
- **snapshot2** | [**InstanceSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceSnapshotPut.md)| Snapshot update | [optional] 
+ **snapshot2** | [**InstanceSnapshotPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceSnapshotPut.md)| Snapshot update | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4416,7 +4416,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceSnapshotsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceSnapshotsGet200Response.md)
+[**InstanceSnapshotsGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceSnapshotsGet200Response.md)
 
 ### Authorization
 
@@ -4491,7 +4491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceSnapshotsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceSnapshotsGetRecursion1200Response.md)
+[**InstanceSnapshotsGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceSnapshotsGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -4565,11 +4565,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **snapshot** | [**InstanceSnapshotsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceSnapshotsPost.md)| Snapshot request | [optional] 
+ **snapshot** | [**InstanceSnapshotsPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceSnapshotsPost.md)| Snapshot request | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4648,7 +4648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstanceStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceStateGet200Response.md)
+[**InstanceStateGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceStateGet200Response.md)
 
 ### Authorization
 
@@ -4722,11 +4722,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Instance name | 
  **project** | **str**| Project name | [optional] 
- **state** | [**InstanceStatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstanceStatePut.md)| State | [optional] 
+ **state** | [**InstanceStatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceStatePut.md)| State | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -4803,7 +4803,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstancesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesGet200Response.md)
+[**InstancesGet200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesGet200Response.md)
 
 ### Authorization
 
@@ -4880,7 +4880,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstancesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesGetRecursion1200Response.md)
+[**InstancesGetRecursion1200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesGetRecursion1200Response.md)
 
 ### Authorization
 
@@ -4961,7 +4961,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InstancesGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesGetRecursion2200Response.md)
+[**InstancesGetRecursion2200Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesGetRecursion2200Response.md)
 
 ### Authorization
 
@@ -5038,11 +5038,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project** | **str**| Project name | [optional] 
  **target** | **str**| Cluster member | [optional] 
- **instance** | [**InstancesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesPost.md)| Instance request (or raw backup file) | [optional] 
+ **instance** | [**InstancesPost**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesPost.md)| Instance request (or raw backup file) | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 
@@ -5114,11 +5114,11 @@ async with pyincusd.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project** | **str**| Project name | [optional] 
- **state** | [**InstancesPut**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/InstancesPut.md)| State | [optional] 
+ **state** | [**InstancesPut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstancesPut.md)| State | [optional] 
 
 ### Return type
 
-[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/CertificatesPost202Response.md)
+[**CertificatesPost202Response**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/CertificatesPost202Response.md)
 
 ### Authorization
 

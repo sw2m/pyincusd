@@ -6,16 +6,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addresses** | **List[str]** |  | [optional] 
-**bridge** | [**SystemNetworkBridge**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemNetworkBridge.md) |  | [optional] 
-**ethernet** | [**SystemNetworkEthernet**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemNetworkEthernet.md) |  | [optional] 
-**firewall_rules** | [**List[SystemNetworkFirewallRule]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemNetworkFirewallRule.md) |  | [optional] 
+**bridge** | [**SystemNetworkBridge**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkBridge.md) |  | [optional] 
+**ethernet** | [**SystemNetworkEthernet**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkEthernet.md) |  | [optional] 
+**firewall_rules** | [**List[SystemNetworkFirewallRule]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkFirewallRule.md) |  | [optional] 
 **hwaddr** | **str** |  | [optional] 
 **lldp** | **bool** |  | [optional] 
 **mtu** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **required_for_online** | **str** |  | [optional] 
 **roles** | **List[str]** |  | [optional] 
-**routes** | [**List[SystemNetworkRoute]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemNetworkRoute.md) |  | [optional] 
+**routes** | [**List[SystemNetworkRoute]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkRoute.md) |  | [optional] 
 **strict_hwaddr** | **bool** |  | [optional] 
 **vlan_tags** | **List[int]** |  | [optional] 
 

@@ -5,9 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**drives** | [**List[SystemStorageDrive]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemStorageDrive.md) |  | [optional] 
-**pools** | [**List[SystemStoragePool]**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemStoragePool.md) |  | [optional] 
-**root_partition** | [**SystemStorageRootPartition**](https://github.com/anonhostpi/pyincusd/blob/v7.4.0/docs/SystemStorageRootPartition.md) |  | [optional] 
+**drives** | [**List[SystemStorageDrive]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemStorageDrive.md) |  | [optional] 
+**root_partition** | [**SystemStorageRootPartition**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemStorageRootPartition.md) |  | [optional] 
 
 ## Example
 

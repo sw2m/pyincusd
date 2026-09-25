@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "7.4.0"
+__version__ = "7.5.1"
 
 # Define package exports
 __all__ = [
@@ -407,6 +407,7 @@ __all__ = [
     "SystemKernelStateMemoryZramSwap",
     "SystemLogging",
     "SystemLoggingConfig",
+    "SystemLoggingJournalUpload",
     "SystemLoggingSyslog",
     "SystemNetwork",
     "SystemNetworkBond",
@@ -450,6 +451,7 @@ __all__ = [
     "SystemStoragePoolKey",
     "SystemStoragePoolScrubStatus",
     "SystemStoragePoolSpecial",
+    "SystemStoragePoolTrimStatus",
     "SystemStoragePoolVolume",
     "SystemStorageRootPartition",
     "SystemStorageState",
@@ -858,6 +860,7 @@ from pyincusd.models.system_kernel_state_memory import SystemKernelStateMemory a
 from pyincusd.models.system_kernel_state_memory_zram_swap import SystemKernelStateMemoryZramSwap as SystemKernelStateMemoryZramSwap
 from pyincusd.models.system_logging import SystemLogging as SystemLogging
 from pyincusd.models.system_logging_config import SystemLoggingConfig as SystemLoggingConfig
+from pyincusd.models.system_logging_journal_upload import SystemLoggingJournalUpload as SystemLoggingJournalUpload
 from pyincusd.models.system_logging_syslog import SystemLoggingSyslog as SystemLoggingSyslog
 from pyincusd.models.system_network import SystemNetwork as SystemNetwork
 from pyincusd.models.system_network_bond import SystemNetworkBond as SystemNetworkBond
@@ -901,6 +904,7 @@ from pyincusd.models.system_storage_pool import SystemStoragePool as SystemStora
 from pyincusd.models.system_storage_pool_key import SystemStoragePoolKey as SystemStoragePoolKey
 from pyincusd.models.system_storage_pool_scrub_status import SystemStoragePoolScrubStatus as SystemStoragePoolScrubStatus
 from pyincusd.models.system_storage_pool_special import SystemStoragePoolSpecial as SystemStoragePoolSpecial
+from pyincusd.models.system_storage_pool_trim_status import SystemStoragePoolTrimStatus as SystemStoragePoolTrimStatus
 from pyincusd.models.system_storage_pool_volume import SystemStoragePoolVolume as SystemStoragePoolVolume
 from pyincusd.models.system_storage_root_partition import SystemStorageRootPartition as SystemStorageRootPartition
 from pyincusd.models.system_storage_state import SystemStorageState as SystemStorageState

@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, Strict
 from typing import Any, ClassVar, Dict, List, Optional
 from pyincusd.models.system_storage_pool_scrub_status import SystemStoragePoolScrubStatus
 from pyincusd.models.system_storage_pool_special import SystemStoragePoolSpecial
+from pyincusd.models.system_storage_pool_trim_status import SystemStoragePoolTrimStatus
 from pyincusd.models.system_storage_pool_volume import SystemStoragePoolVolume
 from typing import Optional, Set
 from typing_extensions import Self
@@ -31,6 +32,7 @@ class SystemStoragePool(BaseModel):
     """
     SystemStoragePool
     """ # noqa: E501
+    alignment: Optional[StrictInt] = Field(default=None, description="Optionally, configure the sector alignment size for the pool; defaults to 4096 byte sectors. Must be a power of two. Can only be specified when initially creating the pool.")
     allow_mixed_dev_sizes: Optional[StrictBool] = Field(default=None, description="If true, allow creation of a pool with devices of different sizes.")
     cache: Optional[List[StrictStr]] = None
     cache_degraded: Optional[List[StrictStr]] = None
@@ -38,6 +40,7 @@ class SystemStoragePool(BaseModel):
     devices_degraded: Optional[List[StrictStr]] = None
     encryption_key_status: Optional[StrictStr] = None
     last_scrub: Optional[SystemStoragePoolScrubStatus] = None
+    last_trim: Optional[SystemStoragePoolTrimStatus] = None
     log: Optional[List[StrictStr]] = None
     log_degraded: Optional[List[StrictStr]] = None
     managed: Optional[StrictBool] = Field(default=None, description="Read-only fields returned from the server with additional pool information.")
@@ -50,7 +53,7 @@ class SystemStoragePool(BaseModel):
     type: Optional[StrictStr] = Field(default=None, description="Supported pool types: zfs-raid0, zfs-raid1, zfs-raid10, zfs-raidz1, zfs-raidz2, zfs-raidz3.")
     usable_pool_size_in_bytes: Optional[StrictInt] = None
     volumes: Optional[List[SystemStoragePoolVolume]] = None
-    __properties: ClassVar[List[str]] = ["allow_mixed_dev_sizes", "cache", "cache_degraded", "devices", "devices_degraded", "encryption_key_status", "last_scrub", "log", "log_degraded", "managed", "name", "pool_allocated_space_in_bytes", "raw_pool_size_in_bytes", "special", "special_degraded", "state", "type", "usable_pool_size_in_bytes", "volumes"]
+    __properties: ClassVar[List[str]] = ["alignment", "allow_mixed_dev_sizes", "cache", "cache_degraded", "devices", "devices_degraded", "encryption_key_status", "last_scrub", "last_trim", "log", "log_degraded", "managed", "name", "pool_allocated_space_in_bytes", "raw_pool_size_in_bytes", "special", "special_degraded", "state", "type", "usable_pool_size_in_bytes", "volumes"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -94,6 +97,9 @@ class SystemStoragePool(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of last_scrub
         if self.last_scrub:
             _dict['last_scrub'] = self.last_scrub.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of last_trim
+        if self.last_trim:
+            _dict['last_trim'] = self.last_trim.to_dict()
         # override the default output from pydantic by calling `to_dict()` of special
         if self.special:
             _dict['special'] = self.special.to_dict()
@@ -115,6 +121,7 @@ class SystemStoragePool(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "alignment": obj.get("alignment"),
             "allow_mixed_dev_sizes": obj.get("allow_mixed_dev_sizes"),
             "cache": obj.get("cache"),
             "cache_degraded": obj.get("cache_degraded"),
@@ -122,6 +129,7 @@ class SystemStoragePool(BaseModel):
             "devices_degraded": obj.get("devices_degraded"),
             "encryption_key_status": obj.get("encryption_key_status"),
             "last_scrub": SystemStoragePoolScrubStatus.from_dict(obj["last_scrub"]) if obj.get("last_scrub") is not None else None,
+            "last_trim": SystemStoragePoolTrimStatus.from_dict(obj["last_trim"]) if obj.get("last_trim") is not None else None,
             "log": obj.get("log"),
             "log_degraded": obj.get("log_degraded"),
             "managed": obj.get("managed"),

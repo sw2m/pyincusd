@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,9 +28,10 @@ class SystemNetworkRoute(BaseModel):
     """
     SystemNetworkRoute
     """ # noqa: E501
+    onlink: Optional[StrictBool] = None
     to: Optional[StrictStr] = None
     via: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["to", "via"]
+    __properties: ClassVar[List[str]] = ["onlink", "to", "via"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -83,6 +84,7 @@ class SystemNetworkRoute(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "onlink": obj.get("onlink"),
             "to": obj.get("to"),
             "via": obj.get("via")
         })
