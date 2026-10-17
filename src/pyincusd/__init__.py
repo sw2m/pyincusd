@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "7.5.1"
+__version__ = "7.0.2"
 
 # Define package exports
 __all__ = [
@@ -88,6 +88,8 @@ __all__ = [
     "ClusterPut",
     "DebugKernel",
     "DebugKernelModule",
+    "DebugReport",
+    "DebugReportMetric",
     "Event",
     "Image",
     "ImageAlias",
@@ -541,6 +543,8 @@ from pyincusd.models.cluster_members_post import ClusterMembersPost as ClusterMe
 from pyincusd.models.cluster_put import ClusterPut as ClusterPut
 from pyincusd.models.debug_kernel import DebugKernel as DebugKernel
 from pyincusd.models.debug_kernel_module import DebugKernelModule as DebugKernelModule
+from pyincusd.models.debug_report import DebugReport as DebugReport
+from pyincusd.models.debug_report_metric import DebugReportMetric as DebugReportMetric
 from pyincusd.models.event import Event as Event
 from pyincusd.models.image import Image as Image
 from pyincusd.models.image_alias import ImageAlias as ImageAlias

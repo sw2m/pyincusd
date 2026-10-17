@@ -37,13 +37,14 @@ class SystemNetworkConfig(BaseModel):
     """ # noqa: E501
     bonds: Optional[List[SystemNetworkBond]] = None
     confirmation_timeout: Optional[StrictStr] = Field(default=None, description="If defined, automatically roll back the new network changes after the specified timeout has elapsed unless those changes are confirmed before then.")
+    default_confirmation_timeout: Optional[StrictStr] = Field(default=None, description="If defined and no confirmation timeout provided, automatically roll back the new network changes after the specified timeout has elapsed unless those changes are confirmed before then.")
     dns: Optional[SystemNetworkDNS] = None
     interfaces: Optional[List[SystemNetworkInterface]] = None
     proxy: Optional[SystemNetworkProxy] = None
     time: Optional[SystemNetworkTime] = None
     vlans: Optional[List[SystemNetworkVLAN]] = None
     wireguard: Optional[List[SystemNetworkWireguard]] = None
-    __properties: ClassVar[List[str]] = ["bonds", "confirmation_timeout", "dns", "interfaces", "proxy", "time", "vlans", "wireguard"]
+    __properties: ClassVar[List[str]] = ["bonds", "confirmation_timeout", "default_confirmation_timeout", "dns", "interfaces", "proxy", "time", "vlans", "wireguard"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -131,6 +132,7 @@ class SystemNetworkConfig(BaseModel):
         _obj = cls.model_validate({
             "bonds": [SystemNetworkBond.from_dict(_item) for _item in obj["bonds"]] if obj.get("bonds") is not None else None,
             "confirmation_timeout": obj.get("confirmation_timeout"),
+            "default_confirmation_timeout": obj.get("default_confirmation_timeout"),
             "dns": SystemNetworkDNS.from_dict(obj["dns"]) if obj.get("dns") is not None else None,
             "interfaces": [SystemNetworkInterface.from_dict(_item) for _item in obj["interfaces"]] if obj.get("interfaces") is not None else None,
             "proxy": SystemNetworkProxy.from_dict(obj["proxy"]) if obj.get("proxy") is not None else None,

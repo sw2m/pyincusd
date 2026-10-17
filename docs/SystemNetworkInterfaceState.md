@@ -7,17 +7,17 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addresses** | **List[str]** |  | [optional] 
 **hwaddr** | **str** |  | [optional] 
-**lacp** | [**SystemNetworkLACPState**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkLACPState.md) |  | [optional] 
-**lldp** | [**List[SystemNetworkLLDPState]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkLLDPState.md) |  | [optional] 
-**members** | [**Dict[str, SystemNetworkInterfaceState]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkInterfaceState.md) |  | [optional] 
+**lacp** | [**SystemNetworkLACPState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemNetworkLACPState.md) |  | [optional] 
+**lldp** | [**List[SystemNetworkLLDPState]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemNetworkLLDPState.md) |  | [optional] 
+**members** | [**Dict[str, SystemNetworkInterfaceState]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemNetworkInterfaceState.md) |  | [optional] 
 **mtu** | **int** |  | [optional] 
 **roles** | **List[str]** |  | [optional] 
-**routes** | [**List[SystemNetworkRoute]**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkRoute.md) |  | [optional] 
+**routes** | [**List[SystemNetworkRoute]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemNetworkRoute.md) |  | [optional] 
 **speed** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
-**stats** | [**SystemNetworkInterfaceStats**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkInterfaceStats.md) |  | [optional] 
+**stats** | [**SystemNetworkInterfaceStats**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemNetworkInterfaceStats.md) |  | [optional] 
 **type** | **str** |  | [optional] 
-**wireguard** | [**SystemNetworkWireguardState**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/SystemNetworkWireguardState.md) |  | [optional] 
+**wireguard** | [**SystemNetworkWireguardState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemNetworkWireguardState.md) |  | [optional] 
 
 ## Example
 

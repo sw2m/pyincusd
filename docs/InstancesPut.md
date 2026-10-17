@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**state** | [**InstanceStatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.5.1/docs/InstanceStatePut.md) |  | [optional] 
+**state** | [**InstanceStatePut**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/InstanceStatePut.md) |  | [optional] 
 
 ## Example
 

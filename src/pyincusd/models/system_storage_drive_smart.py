@@ -39,7 +39,8 @@ class SystemStorageDriveSMART(BaseModel):
     raw_read_error_rate: Optional[StrictInt] = None
     reallocated_sectors: Optional[StrictInt] = None
     seek_error_rate: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["available_spare", "data_units_read", "data_units_written", "enabled", "error", "passed", "percentage_used", "power_on_hours", "raw_read_error_rate", "reallocated_sectors", "seek_error_rate"]
+    temperature_celsius: Optional[StrictInt] = None
+    __properties: ClassVar[List[str]] = ["available_spare", "data_units_read", "data_units_written", "enabled", "error", "passed", "percentage_used", "power_on_hours", "raw_read_error_rate", "reallocated_sectors", "seek_error_rate", "temperature_celsius"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -102,7 +103,8 @@ class SystemStorageDriveSMART(BaseModel):
             "power_on_hours": obj.get("power_on_hours"),
             "raw_read_error_rate": obj.get("raw_read_error_rate"),
             "reallocated_sectors": obj.get("reallocated_sectors"),
-            "seek_error_rate": obj.get("seek_error_rate")
+            "seek_error_rate": obj.get("seek_error_rate"),
+            "temperature_celsius": obj.get("temperature_celsius")
         })
         return _obj
 

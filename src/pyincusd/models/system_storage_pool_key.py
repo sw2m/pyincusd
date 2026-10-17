@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,9 +29,10 @@ class SystemStoragePoolKey(BaseModel):
     Currently the only supported type is \"zfs\".
     """ # noqa: E501
     encryption_key: Optional[StrictStr] = None
+    force: Optional[StrictBool] = None
     name: Optional[StrictStr] = None
     type: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["encryption_key", "name", "type"]
+    __properties: ClassVar[List[str]] = ["encryption_key", "force", "name", "type"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -85,6 +86,7 @@ class SystemStoragePoolKey(BaseModel):
 
         _obj = cls.model_validate({
             "encryption_key": obj.get("encryption_key"),
+            "force": obj.get("force"),
             "name": obj.get("name"),
             "type": obj.get("type")
         })

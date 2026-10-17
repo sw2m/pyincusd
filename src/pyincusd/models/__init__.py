@@ -52,6 +52,8 @@ from pyincusd.models.cluster_members_post import ClusterMembersPost
 from pyincusd.models.cluster_put import ClusterPut
 from pyincusd.models.debug_kernel import DebugKernel
 from pyincusd.models.debug_kernel_module import DebugKernelModule
+from pyincusd.models.debug_report import DebugReport
+from pyincusd.models.debug_report_metric import DebugReportMetric
 from pyincusd.models.event import Event
 from pyincusd.models.image import Image
 from pyincusd.models.image_alias import ImageAlias

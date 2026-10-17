@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **raw_read_error_rate** | **int** |  | [optional] 
 **reallocated_sectors** | **int** |  | [optional] 
 **seek_error_rate** | **int** |  | [optional] 
+**temperature_celsius** | **int** |  | [optional] 
 
 ## Example
 

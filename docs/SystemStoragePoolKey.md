@@ -7,6 +7,7 @@ Currently the only supported type is \"zfs\".
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **encryption_key** | **str** |  | [optional] 
+**force** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 
