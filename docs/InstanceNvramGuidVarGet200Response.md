@@ -6,7 +6,7 @@ Sync response
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**InstanceNVRAMVariable**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/InstanceNVRAMVariable.md) |  | [optional] 
+**metadata** | [**InstanceNVRAMVariable**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post1/docs/InstanceNVRAMVariable.md) |  | [optional] 
 **status** | **str** | Status description | [optional] 
 **status_code** | **int** | Status code | [optional] 
 **type** | **str** | Response type | [optional] 

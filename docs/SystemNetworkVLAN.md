@@ -6,14 +6,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addresses** | **List[str]** |  | [optional] 
-**firewall_rules** | [**List[SystemNetworkFirewallRule]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemNetworkFirewallRule.md) |  | [optional] 
+**firewall_rules** | [**List[SystemNetworkFirewallRule]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post1/docs/SystemNetworkFirewallRule.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **mtu** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **parent** | **str** |  | [optional] 
 **required_for_online** | **str** |  | [optional] 
 **roles** | **List[str]** |  | [optional] 
-**routes** | [**List[SystemNetworkRoute]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemNetworkRoute.md) |  | [optional] 
+**routes** | [**List[SystemNetworkRoute]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post1/docs/SystemNetworkRoute.md) |  | [optional] 
 
 ## Example
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**SystemKernelConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemKernelConfig.md) |  | [optional] 
-**state** | [**SystemKernelState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2/docs/SystemKernelState.md) |  | [optional] 
+**config** | [**SystemKernelConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post1/docs/SystemKernelConfig.md) |  | [optional] 
+**state** | [**SystemKernelState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post1/docs/SystemKernelState.md) |  | [optional] 
 
 ## Example
 
