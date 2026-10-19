@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **media_type** | **str** |  | [optional] 
-**metrics** | [**List[DebugReportMetric]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post1/docs/DebugReportMetric.md) |  | [optional] 
+**metrics** | [**List[DebugReportMetric]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post2/docs/DebugReportMetric.md) |  | [optional] 
 **timestamp** | **str** |  | [optional] 
 
 ## Example

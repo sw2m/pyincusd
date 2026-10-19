@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pools** | [**List[SystemStoragePool]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post1/docs/SystemStoragePool.md) |  | [optional] 
+**pools** | [**List[SystemStoragePool]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post2/docs/SystemStoragePool.md) |  | [optional] 
 **scrub_schedule** | **str** |  | [optional] 
 **trim_schedule** | **str** |  | [optional] 
 
