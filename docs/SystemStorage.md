@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**SystemStorageConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post2/docs/SystemStorageConfig.md) |  | [optional] 
-**state** | [**SystemStorageState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post2/docs/SystemStorageState.md) |  | [optional] 
+**config** | [**SystemStorageConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post3/docs/SystemStorageConfig.md) |  | [optional] 
+**state** | [**SystemStorageState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post3/docs/SystemStorageState.md) |  | [optional] 
 
 ## Example
 

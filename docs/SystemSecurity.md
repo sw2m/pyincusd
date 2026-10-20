@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**SystemSecurityConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post2/docs/SystemSecurityConfig.md) |  | [optional] 
-**state** | [**SystemSecurityState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post2/docs/SystemSecurityState.md) |  | [optional] 
+**config** | [**SystemSecurityConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post3/docs/SystemSecurityConfig.md) |  | [optional] 
+**state** | [**SystemSecurityState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post3/docs/SystemSecurityState.md) |  | [optional] 
 
 ## Example
 

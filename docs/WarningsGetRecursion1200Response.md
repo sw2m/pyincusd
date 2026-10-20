@@ -6,7 +6,7 @@ Sync response
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**List[Warning]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post2/docs/Warning.md) | List of warnings | [optional] 
+**metadata** | [**List[Warning]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post3/docs/Warning.md) | List of warnings | [optional] 
 **status** | **str** | Status description | [optional] 
 **status_code** | **int** | Status code | [optional] 
 **type** | **str** | Response type | [optional] 
