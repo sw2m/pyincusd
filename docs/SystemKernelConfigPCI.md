@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**passthrough** | [**List[SystemKernelConfigPCIPassthrough]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post3/docs/SystemKernelConfigPCIPassthrough.md) |  | [optional] 
-**sriov** | [**List[SystemKernelConfigPCISRIOV]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post3/docs/SystemKernelConfigPCISRIOV.md) |  | [optional] 
+**passthrough** | [**List[SystemKernelConfigPCIPassthrough]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post4/docs/SystemKernelConfigPCIPassthrough.md) |  | [optional] 
+**sriov** | [**List[SystemKernelConfigPCISRIOV]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post4/docs/SystemKernelConfigPCISRIOV.md) |  | [optional] 
 
 ## Example
 
