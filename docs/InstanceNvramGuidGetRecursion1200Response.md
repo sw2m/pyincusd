@@ -6,7 +6,7 @@ Sync response
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**Dict[str, InstanceNVRAMVariable]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post5/docs/InstanceNVRAMVariable.md) | Namespaced UEFI variables | [optional] 
+**metadata** | [**Dict[str, InstanceNVRAMVariable]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post6/docs/InstanceNVRAMVariable.md) | Namespaced UEFI variables | [optional] 
 **status** | **str** | Status description | [optional] 
 **status_code** | **int** | Status code | [optional] 
 **type** | **str** | Response type | [optional] 

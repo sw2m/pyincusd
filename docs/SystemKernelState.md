@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**memory** | [**SystemKernelStateMemory**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post5/docs/SystemKernelStateMemory.md) |  | [optional] 
+**memory** | [**SystemKernelStateMemory**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post6/docs/SystemKernelStateMemory.md) |  | [optional] 
 
 ## Example
 
