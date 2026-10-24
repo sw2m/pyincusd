@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **architecture** | **str** |  | [optional] 
 **cpu_baseline** | **str** |  | [optional] 
-**modules** | [**List[DebugKernelModule]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post6/docs/DebugKernelModule.md) |  | [optional] 
+**modules** | [**List[DebugKernelModule]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/DebugKernelModule.md) |  | [optional] 
 **version** | **str** |  | [optional] 
 
 ## Example
