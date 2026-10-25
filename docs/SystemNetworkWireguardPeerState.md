@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **latest_handshake** | **str** |  | [optional] 
 **persistent_keepalive** | **str** |  | [optional] 
 **public_key** | **str** |  | [optional] 
-**stats** | [**SystemNetworkInterfaceStats**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/SystemNetworkInterfaceStats.md) |  | [optional] 
+**stats** | [**SystemNetworkInterfaceStats**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemNetworkInterfaceStats.md) |  | [optional] 
 
 ## Example
 

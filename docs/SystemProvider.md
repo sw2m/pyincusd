@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**SystemProviderConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/SystemProviderConfig.md) |  | [optional] 
-**state** | [**SystemProviderState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/SystemProviderState.md) |  | [optional] 
+**config** | [**SystemProviderConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemProviderConfig.md) |  | [optional] 
+**state** | [**SystemProviderState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemProviderState.md) |  | [optional] 
 
 ## Example
 

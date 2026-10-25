@@ -6,19 +6,19 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addresses** | **List[str]** |  | [optional] 
-**bridge** | [**SystemNetworkBridge**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/SystemNetworkBridge.md) |  | [optional] 
-**ethernet** | [**SystemNetworkEthernet**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/SystemNetworkEthernet.md) |  | [optional] 
-**firewall_rules** | [**List[SystemNetworkFirewallRule]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/SystemNetworkFirewallRule.md) |  | [optional] 
+**bridge** | [**SystemNetworkBridge**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemNetworkBridge.md) |  | [optional] 
+**ethernet** | [**SystemNetworkEthernet**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemNetworkEthernet.md) |  | [optional] 
+**firewall_rules** | [**List[SystemNetworkFirewallRule]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemNetworkFirewallRule.md) |  | [optional] 
 **hwaddr** | **str** |  | [optional] 
 **lldp** | **bool** |  | [optional] 
 **members** | **List[str]** |  | [optional] 
 **mode** | **str** |  | [optional] 
 **mtu** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
-**options** | [**SystemNetworkBondOptions**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/SystemNetworkBondOptions.md) |  | [optional] 
+**options** | [**SystemNetworkBondOptions**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemNetworkBondOptions.md) |  | [optional] 
 **required_for_online** | **str** |  | [optional] 
 **roles** | **List[str]** |  | [optional] 
-**routes** | [**List[SystemNetworkRoute]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post7/docs/SystemNetworkRoute.md) |  | [optional] 
+**routes** | [**List[SystemNetworkRoute]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemNetworkRoute.md) |  | [optional] 
 **vlan_tags** | **List[int]** |  | [optional] 
 
 ## Example
