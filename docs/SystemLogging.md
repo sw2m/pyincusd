@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**SystemLoggingConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemLoggingConfig.md) |  | [optional] 
+**config** | [**SystemLoggingConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemLoggingConfig.md) |  | [optional] 
 **state** | **object** |  | [optional] 
 
 ## Example

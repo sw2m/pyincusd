@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rules** | [**List[SystemNetworkProxyRule]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemNetworkProxyRule.md) |  | [optional] 
-**servers** | [**Dict[str, SystemNetworkProxyServer]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemNetworkProxyServer.md) |  | [optional] 
+**rules** | [**List[SystemNetworkProxyRule]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkProxyRule.md) |  | [optional] 
+**servers** | [**Dict[str, SystemNetworkProxyServer]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkProxyServer.md) |  | [optional] 
 
 ## Example
 

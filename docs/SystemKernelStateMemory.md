@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**zram_swap** | [**SystemKernelStateMemoryZramSwap**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post8/docs/SystemKernelStateMemoryZramSwap.md) |  | [optional] 
+**zram_swap** | [**SystemKernelStateMemoryZramSwap**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemKernelStateMemoryZramSwap.md) |  | [optional] 
 
 ## Example
 
