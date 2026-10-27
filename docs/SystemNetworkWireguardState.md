@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **listening_port** | **int** |  | [optional] 
-**peers** | [**List[SystemNetworkWireguardPeerState]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkWireguardPeerState.md) |  | [optional] 
+**peers** | [**List[SystemNetworkWireguardPeerState]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/SystemNetworkWireguardPeerState.md) |  | [optional] 
 **public_key** | **str** |  | [optional] 
 
 ## Example

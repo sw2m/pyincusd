@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **migration** | **bool** | Initiate volume snapshot migration  API extension: storage_api_remote_volume_snapshot_copy | [optional] 
 **name** | **str** | New snapshot name | [optional] 
-**target** | [**StorageVolumePostTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/StorageVolumePostTarget.md) |  | [optional] 
+**target** | [**StorageVolumePostTarget**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/StorageVolumePostTarget.md) |  | [optional] 
 
 ## Example
 

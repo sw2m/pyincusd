@@ -5,15 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bonds** | [**List[SystemNetworkBond]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkBond.md) |  | [optional] 
+**bonds** | [**List[SystemNetworkBond]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/SystemNetworkBond.md) |  | [optional] 
 **confirmation_timeout** | **str** | If defined, automatically roll back the new network changes after the specified timeout has elapsed unless those changes are confirmed before then. | [optional] 
 **default_confirmation_timeout** | **str** | If defined and no confirmation timeout provided, automatically roll back the new network changes after the specified timeout has elapsed unless those changes are confirmed before then. | [optional] 
-**dns** | [**SystemNetworkDNS**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkDNS.md) |  | [optional] 
-**interfaces** | [**List[SystemNetworkInterface]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkInterface.md) |  | [optional] 
-**proxy** | [**SystemNetworkProxy**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkProxy.md) |  | [optional] 
-**time** | [**SystemNetworkTime**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkTime.md) |  | [optional] 
-**vlans** | [**List[SystemNetworkVLAN]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkVLAN.md) |  | [optional] 
-**wireguard** | [**List[SystemNetworkWireguard]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post9/docs/SystemNetworkWireguard.md) |  | [optional] 
+**dns** | [**SystemNetworkDNS**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/SystemNetworkDNS.md) |  | [optional] 
+**interfaces** | [**List[SystemNetworkInterface]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/SystemNetworkInterface.md) |  | [optional] 
+**proxy** | [**SystemNetworkProxy**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/SystemNetworkProxy.md) |  | [optional] 
+**time** | [**SystemNetworkTime**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/SystemNetworkTime.md) |  | [optional] 
+**vlans** | [**List[SystemNetworkVLAN]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/SystemNetworkVLAN.md) |  | [optional] 
+**wireguard** | [**List[SystemNetworkWireguard]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post10/docs/SystemNetworkWireguard.md) |  | [optional] 
 
 ## Example
 
