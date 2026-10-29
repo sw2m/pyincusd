@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**SystemNetworkConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post11/docs/SystemNetworkConfig.md) |  | [optional] 
-**state** | [**SystemNetworkState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post11/docs/SystemNetworkState.md) |  | [optional] 
+**config** | [**SystemNetworkConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemNetworkConfig.md) |  | [optional] 
+**state** | [**SystemNetworkState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemNetworkState.md) |  | [optional] 
 
 ## Example
 
