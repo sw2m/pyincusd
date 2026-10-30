@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
+from pyincusd.models.instance_state_disk_counters import InstanceStateDiskCounters
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
@@ -28,9 +29,10 @@ class InstanceStateDisk(BaseModel):
     """
     InstanceStateDisk
     """ # noqa: E501
+    counters: Optional[InstanceStateDiskCounters] = None
     total: Optional[StrictInt] = Field(default=None, description="Total size in bytes  API extension: instances_state_total", json_schema_extra={"examples": [502239232]})
     usage: Optional[StrictInt] = Field(default=None, description="Disk usage in bytes", json_schema_extra={"examples": [502239232]})
-    __properties: ClassVar[List[str]] = ["total", "usage"]
+    __properties: ClassVar[List[str]] = ["counters", "total", "usage"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -71,6 +73,9 @@ class InstanceStateDisk(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of counters
+        if self.counters:
+            _dict['counters'] = self.counters.to_dict()
         return _dict
 
     @classmethod
@@ -83,6 +88,7 @@ class InstanceStateDisk(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "counters": InstanceStateDiskCounters.from_dict(obj["counters"]) if obj.get("counters") is not None else None,
             "total": obj.get("total"),
             "usage": obj.get("usage")
         })

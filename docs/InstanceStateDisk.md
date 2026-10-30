@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**counters** | [**InstanceStateDiskCounters**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/InstanceStateDiskCounters.md) |  | [optional] 
 **total** | **int** | Total size in bytes  API extension: instances_state_total | [optional] 
 **usage** | **int** | Disk usage in bytes | [optional] 
 

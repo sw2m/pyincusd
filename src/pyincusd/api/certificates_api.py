@@ -2070,7 +2070,7 @@ class CertificatesApi:
     ) -> ServerPut200Response:
         """Add a trusted certificate
 
-        Adds a certificate to the trust store as an untrusted user. In this mode, the `token` property must be set to the correct value.  The `certificate` field can be omitted in which case the TLS client certificate in use for the connection will be retrieved and added to the trust store.  The `?public` part of the URL isn't required, it's simply used to separate the two behaviors of this endpoint.
+        Adds a certificate to the trust store as an untrusted user. In this mode, the `trust_token` property must be set to the correct value.  The `certificate` field can be omitted in which case the TLS client certificate in use for the connection will be retrieved and added to the trust store.  The `?public` part of the URL isn't required, it's simply used to separate the two behaviors of this endpoint.
 
         :param certificate: Certificate (required)
         :type certificate: CertificatesPost
@@ -2142,7 +2142,7 @@ class CertificatesApi:
     ) -> ApiResponse[ServerPut200Response]:
         """Add a trusted certificate
 
-        Adds a certificate to the trust store as an untrusted user. In this mode, the `token` property must be set to the correct value.  The `certificate` field can be omitted in which case the TLS client certificate in use for the connection will be retrieved and added to the trust store.  The `?public` part of the URL isn't required, it's simply used to separate the two behaviors of this endpoint.
+        Adds a certificate to the trust store as an untrusted user. In this mode, the `trust_token` property must be set to the correct value.  The `certificate` field can be omitted in which case the TLS client certificate in use for the connection will be retrieved and added to the trust store.  The `?public` part of the URL isn't required, it's simply used to separate the two behaviors of this endpoint.
 
         :param certificate: Certificate (required)
         :type certificate: CertificatesPost
@@ -2214,7 +2214,7 @@ class CertificatesApi:
     ) -> RESTResponseType:
         """Add a trusted certificate
 
-        Adds a certificate to the trust store as an untrusted user. In this mode, the `token` property must be set to the correct value.  The `certificate` field can be omitted in which case the TLS client certificate in use for the connection will be retrieved and added to the trust store.  The `?public` part of the URL isn't required, it's simply used to separate the two behaviors of this endpoint.
+        Adds a certificate to the trust store as an untrusted user. In this mode, the `trust_token` property must be set to the correct value.  The `certificate` field can be omitted in which case the TLS client certificate in use for the connection will be retrieved and added to the trust store.  The `?public` part of the URL isn't required, it's simply used to separate the two behaviors of this endpoint.
 
         :param certificate: Certificate (required)
         :type certificate: CertificatesPost

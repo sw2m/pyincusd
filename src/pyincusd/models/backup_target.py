@@ -32,9 +32,10 @@ class BackupTarget(BaseModel):
     bucket_name: Optional[StrictStr] = Field(default=None, description="BucketName is the name of the S3 bucket.", json_schema_extra={"examples": ["my_bucket"]})
     path: Optional[StrictStr] = Field(default=None, description="Path is the target path.", json_schema_extra={"examples": ["foo/test.tar"]})
     protocol: Optional[StrictStr] = Field(default=None, description="Protocol is the upload protocol.", json_schema_extra={"examples": ["S3"]})
+    region: Optional[StrictStr] = Field(default=None, description="Region is the S3 region, derived from the URL when empty  API extension: backup_s3_region", json_schema_extra={"examples": ["eu-west-1"]})
     secret_key: Optional[StrictStr] = Field(default=None, description="SecretKey is the S3 API access key", json_schema_extra={"examples": ["secret123"]})
     url: Optional[StrictStr] = Field(default=None, description="URL is the HTTPS URL for the backup", json_schema_extra={"examples": ["https://storage.googleapis.com"]})
-    __properties: ClassVar[List[str]] = ["access_key", "bucket_name", "path", "protocol", "secret_key", "url"]
+    __properties: ClassVar[List[str]] = ["access_key", "bucket_name", "path", "protocol", "region", "secret_key", "url"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -91,6 +92,7 @@ class BackupTarget(BaseModel):
             "bucket_name": obj.get("bucket_name"),
             "path": obj.get("path"),
             "protocol": obj.get("protocol"),
+            "region": obj.get("region"),
             "secret_key": obj.get("secret_key"),
             "url": obj.get("url")
         })

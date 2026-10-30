@@ -6,12 +6,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blacklist_modules** | **List[str]** |  | [optional] 
-**console** | [**List[SystemKernelConfigConsole]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemKernelConfigConsole.md) |  | [optional] 
-**cpu** | [**SystemKernelConfigCPU**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemKernelConfigCPU.md) |  | [optional] 
-**memory** | [**SystemKernelConfigMemory**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemKernelConfigMemory.md) |  | [optional] 
-**network** | [**SystemKernelConfigNetwork**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemKernelConfigNetwork.md) |  | [optional] 
-**pci** | [**SystemKernelConfigPCI**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemKernelConfigPCI.md) |  | [optional] 
-**zfs** | [**SystemKernelConfigZFS**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemKernelConfigZFS.md) |  | [optional] 
+**console** | [**List[SystemKernelConfigConsole]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemKernelConfigConsole.md) |  | [optional] 
+**cpu** | [**SystemKernelConfigCPU**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemKernelConfigCPU.md) |  | [optional] 
+**memory** | [**SystemKernelConfigMemory**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemKernelConfigMemory.md) |  | [optional] 
+**network** | [**SystemKernelConfigNetwork**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemKernelConfigNetwork.md) |  | [optional] 
+**pci** | [**SystemKernelConfigPCI**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemKernelConfigPCI.md) |  | [optional] 
+**zfs** | [**SystemKernelConfigZFS**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemKernelConfigZFS.md) |  | [optional] 
 
 ## Example
 

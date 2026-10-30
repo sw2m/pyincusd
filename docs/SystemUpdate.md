@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | [**SystemUpdateConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemUpdateConfig.md) |  | [optional] 
-**state** | [**SystemUpdateState**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/SystemUpdateState.md) |  | [optional] 
+**config** | [**SystemUpdateConfig**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemUpdateConfig.md) |  | [optional] 
+**state** | [**SystemUpdateState**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemUpdateState.md) |  | [optional] 
 
 ## Example
 

@@ -5,16 +5,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cpu** | [**InstanceStateCPU**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/InstanceStateCPU.md) |  | [optional] 
-**disk** | [**Dict[str, InstanceStateDisk]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/InstanceStateDisk.md) | Disk usage key/value pairs | [optional] 
-**memory** | [**InstanceStateMemory**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/InstanceStateMemory.md) |  | [optional] 
-**network** | [**Dict[str, InstanceStateNetwork]**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/InstanceStateNetwork.md) | Network usage key/value pairs | [optional] 
-**os_info** | [**InstanceStateOSInfo**](https://github.com/anonhostpi/pyincusd/blob/v7.0.2.post12/docs/InstanceStateOSInfo.md) |  | [optional] 
+**cpu** | [**InstanceStateCPU**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/InstanceStateCPU.md) |  | [optional] 
+**disk** | [**Dict[str, InstanceStateDisk]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/InstanceStateDisk.md) | Disk usage key/value pairs | [optional] 
+**memory** | [**InstanceStateMemory**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/InstanceStateMemory.md) |  | [optional] 
+**network** | [**Dict[str, InstanceStateNetwork]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/InstanceStateNetwork.md) | Network usage key/value pairs | [optional] 
+**os_info** | [**InstanceStateOSInfo**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/InstanceStateOSInfo.md) |  | [optional] 
 **pid** | **int** | PID of the runtime | [optional] 
 **processes** | **int** | Number of processes in the instance | [optional] 
 **started_at** | **datetime** | The time that the instance started at  API extension: instance_state_started_at. | [optional] 
 **status** | **str** | Current status (Running, Stopped, Frozen or Error) | [optional] 
 **status_code** | **int** |  | [optional] 
+**tpm** | [**Dict[str, InstanceStateTPM]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/InstanceStateTPM.md) | TPM devices information.  API extension: instances_state_tpm. | [optional] 
 
 ## Example
 

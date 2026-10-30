@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **bucket_name** | **str** | BucketName is the name of the S3 bucket. | [optional] 
 **path** | **str** | Path is the target path. | [optional] 
 **protocol** | **str** | Protocol is the upload protocol. | [optional] 
+**region** | **str** | Region is the S3 region, derived from the URL when empty  API extension: backup_s3_region | [optional] 
 **secret_key** | **str** | SecretKey is the S3 API access key | [optional] 
 **url** | **str** | URL is the HTTPS URL for the backup | [optional] 
 

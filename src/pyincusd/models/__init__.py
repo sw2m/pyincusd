@@ -121,6 +121,7 @@ from pyincusd.models.instance_source import InstanceSource
 from pyincusd.models.instance_state import InstanceState
 from pyincusd.models.instance_state_cpu import InstanceStateCPU
 from pyincusd.models.instance_state_disk import InstanceStateDisk
+from pyincusd.models.instance_state_disk_counters import InstanceStateDiskCounters
 from pyincusd.models.instance_state_get200_response import InstanceStateGet200Response
 from pyincusd.models.instance_state_memory import InstanceStateMemory
 from pyincusd.models.instance_state_network import InstanceStateNetwork
@@ -128,6 +129,8 @@ from pyincusd.models.instance_state_network_address import InstanceStateNetworkA
 from pyincusd.models.instance_state_network_counters import InstanceStateNetworkCounters
 from pyincusd.models.instance_state_os_info import InstanceStateOSInfo
 from pyincusd.models.instance_state_put import InstanceStatePut
+from pyincusd.models.instance_state_tpm import InstanceStateTPM
+from pyincusd.models.instance_state_tpm_key import InstanceStateTPMKey
 from pyincusd.models.instances_get200_response import InstancesGet200Response
 from pyincusd.models.instances_get_recursion1200_response import InstancesGetRecursion1200Response
 from pyincusd.models.instances_get_recursion2200_response import InstancesGetRecursion2200Response

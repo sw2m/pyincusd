@@ -26,6 +26,7 @@ from pyincusd.models.instance_state_disk import InstanceStateDisk
 from pyincusd.models.instance_state_memory import InstanceStateMemory
 from pyincusd.models.instance_state_network import InstanceStateNetwork
 from pyincusd.models.instance_state_os_info import InstanceStateOSInfo
+from pyincusd.models.instance_state_tpm import InstanceStateTPM
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
@@ -44,7 +45,8 @@ class InstanceState(BaseModel):
     started_at: Optional[datetime] = Field(default=None, description="The time that the instance started at  API extension: instance_state_started_at.")
     status: Optional[StrictStr] = Field(default=None, description="Current status (Running, Stopped, Frozen or Error)", json_schema_extra={"examples": ["Running"]})
     status_code: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["cpu", "disk", "memory", "network", "os_info", "pid", "processes", "started_at", "status", "status_code"]
+    tpm: Optional[Dict[str, InstanceStateTPM]] = Field(default=None, description="TPM devices information.  API extension: instances_state_tpm.")
+    __properties: ClassVar[List[str]] = ["cpu", "disk", "memory", "network", "os_info", "pid", "processes", "started_at", "status", "status_code", "tpm"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -106,6 +108,12 @@ class InstanceState(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of os_info
         if self.os_info:
             _dict['os_info'] = self.os_info.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each value in tpm (dict)
+        _field_dict = {}
+        if self.tpm:
+            for _key_tpm in self.tpm:
+                _field_dict[_key_tpm] = self.tpm[_key_tpm].to_dict() if self.tpm[_key_tpm] is not None else None
+            _dict['tpm'] = _field_dict
         return _dict
 
     @classmethod
@@ -137,7 +145,13 @@ class InstanceState(BaseModel):
             "processes": obj.get("processes"),
             "started_at": obj.get("started_at"),
             "status": obj.get("status"),
-            "status_code": obj.get("status_code")
+            "status_code": obj.get("status_code"),
+            "tpm": dict(
+                (_k, InstanceStateTPM.from_dict(_v))
+                for _k, _v in obj["tpm"].items()
+            )
+            if obj.get("tpm") is not None
+            else None
         })
         return _obj
 
