@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from pyincusd.models.backup_source import BackupSource
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
@@ -28,6 +29,7 @@ class StorageVolumeSource(BaseModel):
     """
     StorageVolumeSource represents the creation source for a new storage volume
     """ # noqa: E501
+    backup: Optional[BackupSource] = None
     certificate: Optional[StrictStr] = Field(default=None, description="Certificate (for migration)  API extension: storage_api_remote_volume_handling", json_schema_extra={"examples": ["X509 PEM certificate"]})
     location: Optional[StrictStr] = Field(default=None, description="What cluster member this record was found on  API extension: cluster_internal_custom_volume_copy", json_schema_extra={"examples": ["server01"]})
     mode: Optional[StrictStr] = Field(default=None, description="Whether to use pull or push mode (for migration)  API extension: storage_api_remote_volume_handling", json_schema_extra={"examples": ["pull"]})
@@ -38,9 +40,9 @@ class StorageVolumeSource(BaseModel):
     refresh: Optional[StrictBool] = Field(default=None, description="Whether existing destination volume should be refreshed  API extension: custom_volume_refresh", json_schema_extra={"examples": [False]})
     refresh_exclude_older: Optional[StrictBool] = Field(default=None, description="Whether to exclude source snapshots earlier than latest target snapshot  API extension: custom_volume_refresh_exclude_older_snapshots", json_schema_extra={"examples": [False]})
     secrets: Optional[Dict[str, StrictStr]] = Field(default=None, description="Map of migration websockets (for migration)  API extension: storage_api_remote_volume_handling", json_schema_extra={"examples": [{"rsync": "RANDOM-STRING"}]})
-    type: Optional[StrictStr] = Field(default=None, description="Source type (copy or migration)", json_schema_extra={"examples": ["copy"]})
+    type: Optional[StrictStr] = Field(default=None, description="Source type (copy, migration or backup)", json_schema_extra={"examples": ["copy"]})
     volume_only: Optional[StrictBool] = Field(default=None, description="Whether snapshots should be discarded (for migration)  API extension: storage_api_volume_snapshots", json_schema_extra={"examples": [False]})
-    __properties: ClassVar[List[str]] = ["certificate", "location", "mode", "name", "operation", "pool", "project", "refresh", "refresh_exclude_older", "secrets", "type", "volume_only"]
+    __properties: ClassVar[List[str]] = ["backup", "certificate", "location", "mode", "name", "operation", "pool", "project", "refresh", "refresh_exclude_older", "secrets", "type", "volume_only"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -81,6 +83,9 @@ class StorageVolumeSource(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of backup
+        if self.backup:
+            _dict['backup'] = self.backup.to_dict()
         return _dict
 
     @classmethod
@@ -93,6 +98,7 @@ class StorageVolumeSource(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "backup": BackupSource.from_dict(obj["backup"]) if obj.get("backup") is not None else None,
             "certificate": obj.get("certificate"),
             "location": obj.get("location"),
             "mode": obj.get("mode"),

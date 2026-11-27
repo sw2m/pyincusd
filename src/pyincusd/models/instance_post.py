@@ -29,19 +29,20 @@ class InstancePost(BaseModel):
     """
     InstancePost
     """ # noqa: E501
-    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.", alias="Config")
-    devices: Optional[Dict[str, Any]] = Field(default=None, description="DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.", alias="Devices")
-    profiles: Optional[List[StrictStr]] = Field(default=None, description="List of profiles applied to the instance.  API extension: instance_move_config", alias="Profiles", json_schema_extra={"examples": [["default"]]})
     allow_inconsistent: Optional[StrictBool] = Field(default=None, description="AllowInconsistent allow inconsistent copies when migrating.  API extension: instance_allow_inconsistent_copy", json_schema_extra={"examples": [False]})
+    config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
+    devices: Optional[Dict[str, Any]] = Field(default=None, description="DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     instance_only: Optional[StrictBool] = Field(default=None, description="Whether snapshots should be discarded (migration only)", json_schema_extra={"examples": [False]})
+    keep_paused: Optional[StrictBool] = Field(default=None, description="Whether to leave the instance paused on the source once a live migration completes (migration only)  API extension: instance_migration_keep_paused", json_schema_extra={"examples": [False]})
     live: Optional[StrictBool] = Field(default=None, description="Whether to perform a live migration (migration only)", json_schema_extra={"examples": [False]})
     migration: Optional[StrictBool] = Field(default=None, description="Whether the instance is being migrated to another server", json_schema_extra={"examples": [False]})
     name: Optional[StrictStr] = Field(default=None, description="New name for the instance", json_schema_extra={"examples": ["bar"]})
     pool: Optional[StrictStr] = Field(default=None, description="Target pool for local cross-pool move  API extension: instance_pool_move", json_schema_extra={"examples": ["baz"]})
+    profiles: Optional[List[StrictStr]] = Field(default=None, description="List of profiles applied to the instance.  API extension: instance_move_config", json_schema_extra={"examples": [["default"]]})
     project: Optional[StrictStr] = Field(default=None, description="Target project for local cross-project move  API extension: instance_project_move", json_schema_extra={"examples": ["foo"]})
     refresh: Optional[StrictBool] = Field(default=None, description="Whether to transfer a running instance incrementally  API extension: instance_refresh_migration", json_schema_extra={"examples": [False]})
     target: Optional[InstancePostTarget] = None
-    __properties: ClassVar[List[str]] = ["Config", "Devices", "Profiles", "allow_inconsistent", "instance_only", "live", "migration", "name", "pool", "project", "refresh", "target"]
+    __properties: ClassVar[List[str]] = ["allow_inconsistent", "config", "devices", "instance_only", "keep_paused", "live", "migration", "name", "pool", "profiles", "project", "refresh", "target"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -97,15 +98,16 @@ class InstancePost(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "Config": obj.get("Config"),
-            "Devices": obj.get("Devices"),
-            "Profiles": obj.get("Profiles"),
             "allow_inconsistent": obj.get("allow_inconsistent"),
+            "config": obj.get("config"),
+            "devices": obj.get("devices"),
             "instance_only": obj.get("instance_only"),
+            "keep_paused": obj.get("keep_paused"),
             "live": obj.get("live"),
             "migration": obj.get("migration"),
             "name": obj.get("name"),
             "pool": obj.get("pool"),
+            "profiles": obj.get("profiles"),
             "project": obj.get("project"),
             "refresh": obj.get("refresh"),
             "target": InstancePostTarget.from_dict(obj["target"]) if obj.get("target") is not None else None

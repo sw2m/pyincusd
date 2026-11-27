@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,8 +28,8 @@ class SystemKernelConfigCPU(BaseModel):
     """
     SystemKernelConfigCPU
     """ # noqa: E501
-    scaling_governor: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["scaling_governor"]
+    disable_thermal_protection: Optional[StrictBool] = None
+    __properties: ClassVar[List[str]] = ["disable_thermal_protection"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -82,7 +82,7 @@ class SystemKernelConfigCPU(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "scaling_governor": obj.get("scaling_governor")
+            "disable_thermal_protection": obj.get("disable_thermal_protection")
         })
         return _obj
 

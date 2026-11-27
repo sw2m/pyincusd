@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**scaling_governor** | **str** |  | [optional] 
+**disable_thermal_protection** | **bool** |  | [optional] 
 
 ## Example
 

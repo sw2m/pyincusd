@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**project** | **str** | Project in which the network will reside | [optional] 
 **config** | **object** | ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools. | [optional] 
 **description** | **str** | Description of the profile  API extension: entity_description | [optional] 
 **name** | **str** | The name of the new network | [optional] 
+**project** | **str** | Project in which the network will reside | [optional] 
 **type** | **str** | The network type (refer to doc/networks.md) | [optional] 
 
 ## Example

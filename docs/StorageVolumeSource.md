@@ -6,6 +6,7 @@ StorageVolumeSource represents the creation source for a new storage volume
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**backup** | [**BackupSource**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/BackupSource.md) |  | [optional] 
 **certificate** | **str** | Certificate (for migration)  API extension: storage_api_remote_volume_handling | [optional] 
 **location** | **str** | What cluster member this record was found on  API extension: cluster_internal_custom_volume_copy | [optional] 
 **mode** | **str** | Whether to use pull or push mode (for migration)  API extension: storage_api_remote_volume_handling | [optional] 
@@ -16,7 +17,7 @@ Name | Type | Description | Notes
 **refresh** | **bool** | Whether existing destination volume should be refreshed  API extension: custom_volume_refresh | [optional] 
 **refresh_exclude_older** | **bool** | Whether to exclude source snapshots earlier than latest target snapshot  API extension: custom_volume_refresh_exclude_older_snapshots | [optional] 
 **secrets** | **Dict[str, str]** | Map of migration websockets (for migration)  API extension: storage_api_remote_volume_handling | [optional] 
-**type** | **str** | Source type (copy or migration) | [optional] 
+**type** | **str** | Source type (copy, migration or backup) | [optional] 
 **volume_only** | **bool** | Whether snapshots should be discarded (for migration)  API extension: storage_api_volume_snapshots | [optional] 
 
 ## Example

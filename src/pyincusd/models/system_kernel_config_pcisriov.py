@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,8 +29,9 @@ class SystemKernelConfigPCISRIOV(BaseModel):
     SystemKernelConfigPCISRIOV
     """ # noqa: E501
     pci_address: Optional[StrictStr] = None
+    switchdev: Optional[StrictBool] = None
     vf_count: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["pci_address", "vf_count"]
+    __properties: ClassVar[List[str]] = ["pci_address", "switchdev", "vf_count"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -84,6 +85,7 @@ class SystemKernelConfigPCISRIOV(BaseModel):
 
         _obj = cls.model_validate({
             "pci_address": obj.get("pci_address"),
+            "switchdev": obj.get("switchdev"),
             "vf_count": obj.get("vf_count")
         })
         return _obj

@@ -57,7 +57,7 @@ class NetworkAllocationsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> NetworkAllocationsGet200Response:
-        """Get the network allocations in use (`network`, `network-forward` and `load-balancer` and `instance`)
+        """Get the network allocations in use (`network`, `instance`, `uplink`, `network-forward` and `network-load-balancer`)
 
         Returns a list of network allocations.
 
@@ -133,7 +133,7 @@ class NetworkAllocationsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[NetworkAllocationsGet200Response]:
-        """Get the network allocations in use (`network`, `network-forward` and `load-balancer` and `instance`)
+        """Get the network allocations in use (`network`, `instance`, `uplink`, `network-forward` and `network-load-balancer`)
 
         Returns a list of network allocations.
 
@@ -209,7 +209,7 @@ class NetworkAllocationsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get the network allocations in use (`network`, `network-forward` and `load-balancer` and `instance`)
+        """Get the network allocations in use (`network`, `instance`, `uplink`, `network-forward` and `network-load-balancer`)
 
         Returns a list of network allocations.
 

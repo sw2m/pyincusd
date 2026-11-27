@@ -32,9 +32,10 @@ class NetworkAllocations(BaseModel):
     hwaddr: Optional[StrictStr] = Field(default=None, description="Hwaddr is the MAC address of the entity consuming the network address")
     nat: Optional[StrictBool] = Field(default=None, description="Whether the entity comes from a network that performs egress source NAT")
     network: Optional[StrictStr] = Field(default=None, description="Name of the network  API extension: network_allocations_network")
+    project: Optional[StrictStr] = Field(default=None, description="Project of the network  API extension: network_allocations_project")
     type: Optional[StrictStr] = Field(default=None, description="Type of the entity consuming the network address")
     used_by: Optional[StrictStr] = Field(default=None, description="Name of the entity consuming the network address")
-    __properties: ClassVar[List[str]] = ["addresses", "hwaddr", "nat", "network", "type", "used_by"]
+    __properties: ClassVar[List[str]] = ["addresses", "hwaddr", "nat", "network", "project", "type", "used_by"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -91,6 +92,7 @@ class NetworkAllocations(BaseModel):
             "hwaddr": obj.get("hwaddr"),
             "nat": obj.get("nat"),
             "network": obj.get("network"),
+            "project": obj.get("project"),
             "type": obj.get("type"),
             "used_by": obj.get("used_by")
         })

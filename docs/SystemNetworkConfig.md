@@ -5,15 +5,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bonds** | [**List[SystemNetworkBond]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemNetworkBond.md) |  | [optional] 
+**bonds** | [**List[SystemNetworkBond]**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/SystemNetworkBond.md) |  | [optional] 
 **confirmation_timeout** | **str** | If defined, automatically roll back the new network changes after the specified timeout has elapsed unless those changes are confirmed before then. | [optional] 
 **default_confirmation_timeout** | **str** | If defined and no confirmation timeout provided, automatically roll back the new network changes after the specified timeout has elapsed unless those changes are confirmed before then. | [optional] 
-**dns** | [**SystemNetworkDNS**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemNetworkDNS.md) |  | [optional] 
-**interfaces** | [**List[SystemNetworkInterface]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemNetworkInterface.md) |  | [optional] 
-**proxy** | [**SystemNetworkProxy**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemNetworkProxy.md) |  | [optional] 
-**time** | [**SystemNetworkTime**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemNetworkTime.md) |  | [optional] 
-**vlans** | [**List[SystemNetworkVLAN]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemNetworkVLAN.md) |  | [optional] 
-**wireguard** | [**List[SystemNetworkWireguard]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/SystemNetworkWireguard.md) |  | [optional] 
+**dns** | [**SystemNetworkDNS**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/SystemNetworkDNS.md) |  | [optional] 
+**ignore_service_checks** | **bool** | If true, when bringing up the network don&#39;t wait for DNS and NTP to be configured and available before continuing. Most systems shouldn&#39;t need to set this, and when enabled initial update checks may fail due to being unable to resolve hostnames. | [optional] 
+**interfaces** | [**List[SystemNetworkInterface]**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/SystemNetworkInterface.md) |  | [optional] 
+**proxy** | [**SystemNetworkProxy**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/SystemNetworkProxy.md) |  | [optional] 
+**time** | [**SystemNetworkTime**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/SystemNetworkTime.md) |  | [optional] 
+**vlans** | [**List[SystemNetworkVLAN]**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/SystemNetworkVLAN.md) |  | [optional] 
+**wireguard** | [**List[SystemNetworkWireguard]**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/SystemNetworkWireguard.md) |  | [optional] 
 
 ## Example
 

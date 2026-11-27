@@ -28,10 +28,10 @@ class ServerStorageDriverInfo(BaseModel):
     """
     ServerStorageDriverInfo represents the read-only info about a storage driver
     """ # noqa: E501
-    name: Optional[StrictStr] = Field(default=None, description="Name of the driver  API extension: server_supported_storage_drivers", alias="Name", json_schema_extra={"examples": ["zfs"]})
-    remote: Optional[StrictBool] = Field(default=None, description="Whether the driver has remote volumes  API extension: server_supported_storage_drivers", alias="Remote", json_schema_extra={"examples": [False]})
-    version: Optional[StrictStr] = Field(default=None, description="Version of the driver  API extension: server_supported_storage_drivers", alias="Version", json_schema_extra={"examples": ["0.8.4-1ubuntu11"]})
-    __properties: ClassVar[List[str]] = ["Name", "Remote", "Version"]
+    name: Optional[StrictStr] = Field(default=None, description="Name of the driver  API extension: server_supported_storage_drivers", json_schema_extra={"examples": ["zfs"]})
+    remote: Optional[StrictBool] = Field(default=None, description="Whether the driver has remote volumes  API extension: server_supported_storage_drivers", json_schema_extra={"examples": [False]})
+    version: Optional[StrictStr] = Field(default=None, description="Version of the driver  API extension: server_supported_storage_drivers", json_schema_extra={"examples": ["0.8.4-1ubuntu11"]})
+    __properties: ClassVar[List[str]] = ["name", "remote", "version"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -84,9 +84,9 @@ class ServerStorageDriverInfo(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "Name": obj.get("Name"),
-            "Remote": obj.get("Remote"),
-            "Version": obj.get("Version")
+            "name": obj.get("name"),
+            "remote": obj.get("remote"),
+            "version": obj.get("version")
         })
         return _obj
 

@@ -38,6 +38,7 @@ class SystemNetworkInterface(BaseModel):
     firewall_rules: Optional[List[SystemNetworkFirewallRule]] = None
     hwaddr: Optional[StrictStr] = None
     lldp: Optional[StrictBool] = None
+    lldp_receive_only: Optional[StrictBool] = None
     mtu: Optional[StrictInt] = None
     name: Optional[StrictStr] = None
     required_for_online: Optional[StrictStr] = None
@@ -45,7 +46,7 @@ class SystemNetworkInterface(BaseModel):
     routes: Optional[List[SystemNetworkRoute]] = None
     strict_hwaddr: Optional[StrictBool] = None
     vlan_tags: Optional[List[StrictInt]] = None
-    __properties: ClassVar[List[str]] = ["addresses", "bridge", "ethernet", "firewall_rules", "hwaddr", "lldp", "mtu", "name", "required_for_online", "roles", "routes", "strict_hwaddr", "vlan_tags"]
+    __properties: ClassVar[List[str]] = ["addresses", "bridge", "ethernet", "firewall_rules", "hwaddr", "lldp", "lldp_receive_only", "mtu", "name", "required_for_online", "roles", "routes", "strict_hwaddr", "vlan_tags"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -122,6 +123,7 @@ class SystemNetworkInterface(BaseModel):
             "firewall_rules": [SystemNetworkFirewallRule.from_dict(_item) for _item in obj["firewall_rules"]] if obj.get("firewall_rules") is not None else None,
             "hwaddr": obj.get("hwaddr"),
             "lldp": obj.get("lldp"),
+            "lldp_receive_only": obj.get("lldp_receive_only"),
             "mtu": obj.get("mtu"),
             "name": obj.get("name"),
             "required_for_online": obj.get("required_for_online"),

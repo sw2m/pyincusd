@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,11 +28,14 @@ class SystemNetworkLLDPState(BaseModel):
     """
     SystemNetworkLLDPState
     """ # noqa: E501
+    capabilities: Optional[List[StrictStr]] = None
     chassis_id: Optional[StrictStr] = None
+    description: Optional[StrictStr] = None
     name: Optional[StrictStr] = None
     port: Optional[StrictStr] = None
     port_id: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["chassis_id", "name", "port", "port_id"]
+    vlan: Optional[StrictInt] = None
+    __properties: ClassVar[List[str]] = ["capabilities", "chassis_id", "description", "name", "port", "port_id", "vlan"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -85,10 +88,13 @@ class SystemNetworkLLDPState(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "capabilities": obj.get("capabilities"),
             "chassis_id": obj.get("chassis_id"),
+            "description": obj.get("description"),
             "name": obj.get("name"),
             "port": obj.get("port"),
-            "port_id": obj.get("port_id")
+            "port_id": obj.get("port_id"),
+            "vlan": obj.get("vlan")
         })
         return _obj
 

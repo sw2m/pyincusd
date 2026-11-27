@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pci_address** | **str** |  | [optional] 
+**switchdev** | **bool** |  | [optional] 
 **vf_count** | **int** |  | [optional] 
 
 ## Example

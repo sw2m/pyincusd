@@ -28,12 +28,12 @@ class InitNetworksProjectPost(BaseModel):
     """
     InitNetworksProjectPost
     """ # noqa: E501
-    project: Optional[StrictStr] = Field(default=None, description="Project in which the network will reside", alias="Project", json_schema_extra={"examples": ["default"]})
     config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the profile  API extension: entity_description", json_schema_extra={"examples": ["My new bridge"]})
     name: Optional[StrictStr] = Field(default=None, description="The name of the new network", json_schema_extra={"examples": ["mybr1"]})
+    project: Optional[StrictStr] = Field(default=None, description="Project in which the network will reside", json_schema_extra={"examples": ["default"]})
     type: Optional[StrictStr] = Field(default=None, description="The network type (refer to doc/networks.md)", json_schema_extra={"examples": ["bridge"]})
-    __properties: ClassVar[List[str]] = ["Project", "config", "description", "name", "type"]
+    __properties: ClassVar[List[str]] = ["config", "description", "name", "project", "type"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -86,10 +86,10 @@ class InitNetworksProjectPost(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "Project": obj.get("Project"),
             "config": obj.get("config"),
             "description": obj.get("description"),
             "name": obj.get("name"),
+            "project": obj.get("project"),
             "type": obj.get("type")
         })
         return _obj

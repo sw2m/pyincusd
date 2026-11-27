@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,19 +28,22 @@ class SystemNetworkEthernet(BaseModel):
     """
     SystemNetworkEthernet
     """ # noqa: E501
+    advertise: Optional[List[StrictStr]] = None
     disable_energy_efficient: Optional[StrictBool] = None
     disable_gro: Optional[StrictBool] = None
     disable_gso: Optional[StrictBool] = None
     disable_ipv4_tso: Optional[StrictBool] = None
     disable_ipv6_tso: Optional[StrictBool] = None
+    half_duplex: Optional[StrictBool] = None
     rx_buffer_size: Optional[StrictStr] = None
     rx_jumbo_buffer_size: Optional[StrictStr] = None
     rx_mini_buffer_size: Optional[StrictStr] = None
+    speed: Optional[StrictInt] = None
     tx_buffer_size: Optional[StrictStr] = None
     wakeonlan: Optional[StrictBool] = None
     wakeonlan_modes: Optional[List[StrictStr]] = None
     wakeonlan_password: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["disable_energy_efficient", "disable_gro", "disable_gso", "disable_ipv4_tso", "disable_ipv6_tso", "rx_buffer_size", "rx_jumbo_buffer_size", "rx_mini_buffer_size", "tx_buffer_size", "wakeonlan", "wakeonlan_modes", "wakeonlan_password"]
+    __properties: ClassVar[List[str]] = ["advertise", "disable_energy_efficient", "disable_gro", "disable_gso", "disable_ipv4_tso", "disable_ipv6_tso", "half_duplex", "rx_buffer_size", "rx_jumbo_buffer_size", "rx_mini_buffer_size", "speed", "tx_buffer_size", "wakeonlan", "wakeonlan_modes", "wakeonlan_password"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -93,14 +96,17 @@ class SystemNetworkEthernet(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "advertise": obj.get("advertise"),
             "disable_energy_efficient": obj.get("disable_energy_efficient"),
             "disable_gro": obj.get("disable_gro"),
             "disable_gso": obj.get("disable_gso"),
             "disable_ipv4_tso": obj.get("disable_ipv4_tso"),
             "disable_ipv6_tso": obj.get("disable_ipv6_tso"),
+            "half_duplex": obj.get("half_duplex"),
             "rx_buffer_size": obj.get("rx_buffer_size"),
             "rx_jumbo_buffer_size": obj.get("rx_jumbo_buffer_size"),
             "rx_mini_buffer_size": obj.get("rx_mini_buffer_size"),
+            "speed": obj.get("speed"),
             "tx_buffer_size": obj.get("tx_buffer_size"),
             "wakeonlan": obj.get("wakeonlan"),
             "wakeonlan_modes": obj.get("wakeonlan_modes"),

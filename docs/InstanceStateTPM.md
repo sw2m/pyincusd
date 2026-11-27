@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**endorsement_keys** | [**List[InstanceStateTPMKey]**](https://github.com/anonhostpi/pyincusd/blob/v7.6.0/docs/InstanceStateTPMKey.md) | Endorsement keys, when known. | [optional] 
+**endorsement_keys** | [**List[InstanceStateTPMKey]**](https://github.com/anonhostpi/pyincusd/blob/v7.7.0/docs/InstanceStateTPMKey.md) | Endorsement keys, when known. | [optional] 
 
 ## Example
 

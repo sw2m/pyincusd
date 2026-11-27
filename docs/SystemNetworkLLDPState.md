@@ -5,10 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**capabilities** | **List[str]** |  | [optional] 
 **chassis_id** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **port** | **str** |  | [optional] 
 **port_id** | **str** |  | [optional] 
+**vlan** | **int** |  | [optional] 
 
 ## Example
 

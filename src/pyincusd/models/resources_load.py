@@ -28,11 +28,11 @@ class ResourcesLoad(BaseModel):
     """
     ResourcesLoad represents system load information
     """ # noqa: E501
-    average1_min: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Load average in the past minute", alias="Average1Min", json_schema_extra={"examples": [0.69]})
-    average5_min: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Load average in the past 5 minutes", alias="Average5Min", json_schema_extra={"examples": [1.1]})
-    average10_min: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Load average in the past 10 minutes", alias="Average10Min", json_schema_extra={"examples": [1.29]})
-    processes: Optional[StrictInt] = Field(default=None, description="The number of active processes", alias="Processes", json_schema_extra={"examples": [1234]})
-    __properties: ClassVar[List[str]] = ["Average1Min", "Average5Min", "Average10Min", "Processes"]
+    average1min: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Load average in the past minute", json_schema_extra={"examples": [0.69]})
+    average5min: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Load average in the past 5 minutes", json_schema_extra={"examples": [1.1]})
+    average10min: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Load average in the past 10 minutes", json_schema_extra={"examples": [1.29]})
+    processes: Optional[StrictInt] = Field(default=None, description="The number of active processes", json_schema_extra={"examples": [1234]})
+    __properties: ClassVar[List[str]] = ["average1min", "average5min", "average10min", "processes"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -85,10 +85,10 @@ class ResourcesLoad(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "Average1Min": obj.get("Average1Min"),
-            "Average5Min": obj.get("Average5Min"),
-            "Average10Min": obj.get("Average10Min"),
-            "Processes": obj.get("Processes")
+            "average1min": obj.get("average1min"),
+            "average5min": obj.get("average5min"),
+            "average10min": obj.get("average10min"),
+            "processes": obj.get("processes")
         })
         return _obj
 

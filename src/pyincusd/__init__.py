@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "7.6.0"
+__version__ = "7.7.0"
 
 # Define package exports
 __all__ = [
@@ -53,6 +53,7 @@ __all__ = [
     "AccessEntry",
     "ApiGet200Response",
     "ApplicationAction",
+    "BackupSource",
     "BackupTarget",
     "Certificate",
     "CertificateAddToken",
@@ -88,8 +89,15 @@ __all__ = [
     "ClusterPut",
     "DebugKernel",
     "DebugKernelModule",
+    "DebugLVM",
+    "DebugNetworkDumpTraffic",
+    "DebugNetworkPing",
+    "DebugNetworkRoutes",
+    "DebugNetworkSpeedTest",
+    "DebugNetworkTrace",
     "DebugReport",
     "DebugReportMetric",
+    "DebugStorageTrace",
     "Event",
     "Image",
     "ImageAlias",
@@ -172,6 +180,7 @@ __all__ = [
     "InstancesGetRecursion2200Response",
     "InstancesPost",
     "InstancesPut",
+    "License",
     "MetadataConfigGroup",
     "MetadataConfigKey",
     "MetadataConfiguration",
@@ -331,6 +340,7 @@ __all__ = [
     "ServerPut412Response",
     "ServerStorageDriverInfo",
     "ServerUntrusted",
+    "ServiceAction",
     "StorageBucket",
     "StorageBucketBackup",
     "StorageBucketBackupPost",
@@ -408,6 +418,7 @@ __all__ = [
     "SystemKernelConfigPCISRIOV",
     "SystemKernelConfigZFS",
     "SystemKernelState",
+    "SystemKernelStateClock",
     "SystemKernelStateMemory",
     "SystemKernelStateMemoryZramSwap",
     "SystemLogging",
@@ -427,6 +438,7 @@ __all__ = [
     "SystemNetworkInterfaceStats",
     "SystemNetworkLACPState",
     "SystemNetworkLLDPState",
+    "SystemNetworkLink",
     "SystemNetworkProxy",
     "SystemNetworkProxyRule",
     "SystemNetworkProxyServer",
@@ -438,6 +450,14 @@ __all__ = [
     "SystemNetworkWireguardPeer",
     "SystemNetworkWireguardPeerState",
     "SystemNetworkWireguardState",
+    "SystemNextBootVersion",
+    "SystemPower",
+    "SystemPowerConfig",
+    "SystemPowerConfigCPU",
+    "SystemPowerConfigScreen",
+    "SystemPowerState",
+    "SystemPowerStateCPU",
+    "SystemPowerStateScreen",
     "SystemProvider",
     "SystemProviderConfig",
     "SystemProviderState",
@@ -511,6 +531,7 @@ from pyincusd.exceptions import ApiException as ApiException
 from pyincusd.models.access_entry import AccessEntry as AccessEntry
 from pyincusd.models.api_get200_response import ApiGet200Response as ApiGet200Response
 from pyincusd.models.application_action import ApplicationAction as ApplicationAction
+from pyincusd.models.backup_source import BackupSource as BackupSource
 from pyincusd.models.backup_target import BackupTarget as BackupTarget
 from pyincusd.models.certificate import Certificate as Certificate
 from pyincusd.models.certificate_add_token import CertificateAddToken as CertificateAddToken
@@ -546,8 +567,15 @@ from pyincusd.models.cluster_members_post import ClusterMembersPost as ClusterMe
 from pyincusd.models.cluster_put import ClusterPut as ClusterPut
 from pyincusd.models.debug_kernel import DebugKernel as DebugKernel
 from pyincusd.models.debug_kernel_module import DebugKernelModule as DebugKernelModule
+from pyincusd.models.debug_lvm import DebugLVM as DebugLVM
+from pyincusd.models.debug_network_dump_traffic import DebugNetworkDumpTraffic as DebugNetworkDumpTraffic
+from pyincusd.models.debug_network_ping import DebugNetworkPing as DebugNetworkPing
+from pyincusd.models.debug_network_routes import DebugNetworkRoutes as DebugNetworkRoutes
+from pyincusd.models.debug_network_speed_test import DebugNetworkSpeedTest as DebugNetworkSpeedTest
+from pyincusd.models.debug_network_trace import DebugNetworkTrace as DebugNetworkTrace
 from pyincusd.models.debug_report import DebugReport as DebugReport
 from pyincusd.models.debug_report_metric import DebugReportMetric as DebugReportMetric
+from pyincusd.models.debug_storage_trace import DebugStorageTrace as DebugStorageTrace
 from pyincusd.models.event import Event as Event
 from pyincusd.models.image import Image as Image
 from pyincusd.models.image_alias import ImageAlias as ImageAlias
@@ -630,6 +658,7 @@ from pyincusd.models.instances_get_recursion1200_response import InstancesGetRec
 from pyincusd.models.instances_get_recursion2200_response import InstancesGetRecursion2200Response as InstancesGetRecursion2200Response
 from pyincusd.models.instances_post import InstancesPost as InstancesPost
 from pyincusd.models.instances_put import InstancesPut as InstancesPut
+from pyincusd.models.license import License as License
 from pyincusd.models.metadata_config_group import MetadataConfigGroup as MetadataConfigGroup
 from pyincusd.models.metadata_config_key import MetadataConfigKey as MetadataConfigKey
 from pyincusd.models.metadata_configuration import MetadataConfiguration as MetadataConfiguration
@@ -789,6 +818,7 @@ from pyincusd.models.server_put200_response import ServerPut200Response as Serve
 from pyincusd.models.server_put412_response import ServerPut412Response as ServerPut412Response
 from pyincusd.models.server_storage_driver_info import ServerStorageDriverInfo as ServerStorageDriverInfo
 from pyincusd.models.server_untrusted import ServerUntrusted as ServerUntrusted
+from pyincusd.models.service_action import ServiceAction as ServiceAction
 from pyincusd.models.storage_bucket import StorageBucket as StorageBucket
 from pyincusd.models.storage_bucket_backup import StorageBucketBackup as StorageBucketBackup
 from pyincusd.models.storage_bucket_backup_post import StorageBucketBackupPost as StorageBucketBackupPost
@@ -866,6 +896,7 @@ from pyincusd.models.system_kernel_config_pci_passthrough import SystemKernelCon
 from pyincusd.models.system_kernel_config_pcisriov import SystemKernelConfigPCISRIOV as SystemKernelConfigPCISRIOV
 from pyincusd.models.system_kernel_config_zfs import SystemKernelConfigZFS as SystemKernelConfigZFS
 from pyincusd.models.system_kernel_state import SystemKernelState as SystemKernelState
+from pyincusd.models.system_kernel_state_clock import SystemKernelStateClock as SystemKernelStateClock
 from pyincusd.models.system_kernel_state_memory import SystemKernelStateMemory as SystemKernelStateMemory
 from pyincusd.models.system_kernel_state_memory_zram_swap import SystemKernelStateMemoryZramSwap as SystemKernelStateMemoryZramSwap
 from pyincusd.models.system_logging import SystemLogging as SystemLogging
@@ -885,6 +916,7 @@ from pyincusd.models.system_network_interface_state import SystemNetworkInterfac
 from pyincusd.models.system_network_interface_stats import SystemNetworkInterfaceStats as SystemNetworkInterfaceStats
 from pyincusd.models.system_network_lacp_state import SystemNetworkLACPState as SystemNetworkLACPState
 from pyincusd.models.system_network_lldp_state import SystemNetworkLLDPState as SystemNetworkLLDPState
+from pyincusd.models.system_network_link import SystemNetworkLink as SystemNetworkLink
 from pyincusd.models.system_network_proxy import SystemNetworkProxy as SystemNetworkProxy
 from pyincusd.models.system_network_proxy_rule import SystemNetworkProxyRule as SystemNetworkProxyRule
 from pyincusd.models.system_network_proxy_server import SystemNetworkProxyServer as SystemNetworkProxyServer
@@ -896,6 +928,14 @@ from pyincusd.models.system_network_wireguard import SystemNetworkWireguard as S
 from pyincusd.models.system_network_wireguard_peer import SystemNetworkWireguardPeer as SystemNetworkWireguardPeer
 from pyincusd.models.system_network_wireguard_peer_state import SystemNetworkWireguardPeerState as SystemNetworkWireguardPeerState
 from pyincusd.models.system_network_wireguard_state import SystemNetworkWireguardState as SystemNetworkWireguardState
+from pyincusd.models.system_next_boot_version import SystemNextBootVersion as SystemNextBootVersion
+from pyincusd.models.system_power import SystemPower as SystemPower
+from pyincusd.models.system_power_config import SystemPowerConfig as SystemPowerConfig
+from pyincusd.models.system_power_config_cpu import SystemPowerConfigCPU as SystemPowerConfigCPU
+from pyincusd.models.system_power_config_screen import SystemPowerConfigScreen as SystemPowerConfigScreen
+from pyincusd.models.system_power_state import SystemPowerState as SystemPowerState
+from pyincusd.models.system_power_state_cpu import SystemPowerStateCPU as SystemPowerStateCPU
+from pyincusd.models.system_power_state_screen import SystemPowerStateScreen as SystemPowerStateScreen
 from pyincusd.models.system_provider import SystemProvider as SystemProvider
 from pyincusd.models.system_provider_config import SystemProviderConfig as SystemProviderConfig
 from pyincusd.models.system_provider_state import SystemProviderState as SystemProviderState

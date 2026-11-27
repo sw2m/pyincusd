@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **hwaddr** | **str** | Hwaddr is the MAC address of the entity consuming the network address | [optional] 
 **nat** | **bool** | Whether the entity comes from a network that performs egress source NAT | [optional] 
 **network** | **str** | Name of the network  API extension: network_allocations_network | [optional] 
+**project** | **str** | Project of the network  API extension: network_allocations_project | [optional] 
 **type** | **str** | Type of the entity consuming the network address | [optional] 
 **used_by** | **str** | Name of the entity consuming the network address | [optional] 
 

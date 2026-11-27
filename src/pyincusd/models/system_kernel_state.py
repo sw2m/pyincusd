@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
+from pyincusd.models.system_kernel_state_clock import SystemKernelStateClock
 from pyincusd.models.system_kernel_state_memory import SystemKernelStateMemory
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,8 +30,9 @@ class SystemKernelState(BaseModel):
     """
     SystemKernelState
     """ # noqa: E501
+    clock: Optional[SystemKernelStateClock] = None
     memory: Optional[SystemKernelStateMemory] = None
-    __properties: ClassVar[List[str]] = ["memory"]
+    __properties: ClassVar[List[str]] = ["clock", "memory"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -71,6 +73,9 @@ class SystemKernelState(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of clock
+        if self.clock:
+            _dict['clock'] = self.clock.to_dict()
         # override the default output from pydantic by calling `to_dict()` of memory
         if self.memory:
             _dict['memory'] = self.memory.to_dict()
@@ -86,6 +91,7 @@ class SystemKernelState(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "clock": SystemKernelStateClock.from_dict(obj["clock"]) if obj.get("clock") is not None else None,
             "memory": SystemKernelStateMemory.from_dict(obj["memory"]) if obj.get("memory") is not None else None
         })
         return _obj

@@ -295,6 +295,7 @@ class ServerApi:
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         type: Annotated[Optional[StrictStr], Field(description="Event type(s), comma separated (valid types are logging, operation or lifecycle)")] = None,
         all_projects: Annotated[Optional[StrictBool], Field(description="Retrieve instances from all projects")] = None,
+        target: Annotated[Optional[StrictStr], Field(description="Cluster member")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -318,6 +319,8 @@ class ServerApi:
         :type type: str
         :param all_projects: Retrieve instances from all projects
         :type all_projects: bool
+        :param target: Cluster member
+        :type target: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -344,6 +347,7 @@ class ServerApi:
             project=project,
             type=type,
             all_projects=all_projects,
+            target=target,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -372,6 +376,7 @@ class ServerApi:
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         type: Annotated[Optional[StrictStr], Field(description="Event type(s), comma separated (valid types are logging, operation or lifecycle)")] = None,
         all_projects: Annotated[Optional[StrictBool], Field(description="Retrieve instances from all projects")] = None,
+        target: Annotated[Optional[StrictStr], Field(description="Cluster member")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -395,6 +400,8 @@ class ServerApi:
         :type type: str
         :param all_projects: Retrieve instances from all projects
         :type all_projects: bool
+        :param target: Cluster member
+        :type target: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -421,6 +428,7 @@ class ServerApi:
             project=project,
             type=type,
             all_projects=all_projects,
+            target=target,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -449,6 +457,7 @@ class ServerApi:
         project: Annotated[Optional[StrictStr], Field(description="Project name")] = None,
         type: Annotated[Optional[StrictStr], Field(description="Event type(s), comma separated (valid types are logging, operation or lifecycle)")] = None,
         all_projects: Annotated[Optional[StrictBool], Field(description="Retrieve instances from all projects")] = None,
+        target: Annotated[Optional[StrictStr], Field(description="Cluster member")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -472,6 +481,8 @@ class ServerApi:
         :type type: str
         :param all_projects: Retrieve instances from all projects
         :type all_projects: bool
+        :param target: Cluster member
+        :type target: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -498,6 +509,7 @@ class ServerApi:
             project=project,
             type=type,
             all_projects=all_projects,
+            target=target,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -521,6 +533,7 @@ class ServerApi:
         project,
         type,
         all_projects,
+        target,
         _request_auth,
         _content_type,
         _headers,
@@ -554,6 +567,10 @@ class ServerApi:
         if all_projects is not None:
             
             _query_params.append(('all-projects', all_projects))
+            
+        if target is not None:
+            
+            _query_params.append(('target', target))
             
         # process the header parameters
         # process the form parameters

@@ -15343,7 +15343,7 @@ class StorageApi:
     ) -> ServerPut200Response:
         """Add a storage volume
 
-        Creates a new storage volume. Will return an empty sync response on simple volume creation but an operation on copy or migration.
+        Creates a new storage volume. Will return an empty sync response on simple volume creation but an operation on copy, migration or backup import.
 
         :param pool_name: Storage pool name (required)
         :type pool_name: str
@@ -15428,7 +15428,7 @@ class StorageApi:
     ) -> ApiResponse[ServerPut200Response]:
         """Add a storage volume
 
-        Creates a new storage volume. Will return an empty sync response on simple volume creation but an operation on copy or migration.
+        Creates a new storage volume. Will return an empty sync response on simple volume creation but an operation on copy, migration or backup import.
 
         :param pool_name: Storage pool name (required)
         :type pool_name: str
@@ -15513,7 +15513,7 @@ class StorageApi:
     ) -> RESTResponseType:
         """Add a storage volume
 
-        Creates a new storage volume. Will return an empty sync response on simple volume creation but an operation on copy or migration.
+        Creates a new storage volume. Will return an empty sync response on simple volume creation but an operation on copy, migration or backup import.
 
         :param pool_name: Storage pool name (required)
         :type pool_name: str
@@ -19868,7 +19868,7 @@ class StorageApi:
     ) -> ServerPut200Response:
         """Add a storage volume
 
-        Creates a new storage volume (type specific endpoint). Will return an empty sync response on simple volume creation but an operation on copy or migration.
+        Creates a new storage volume (type specific endpoint). Will return an empty sync response on simple volume creation but an operation on copy, migration or backup import.
 
         :param pool_name: Storage pool name (required)
         :type pool_name: str
@@ -19957,7 +19957,7 @@ class StorageApi:
     ) -> ApiResponse[ServerPut200Response]:
         """Add a storage volume
 
-        Creates a new storage volume (type specific endpoint). Will return an empty sync response on simple volume creation but an operation on copy or migration.
+        Creates a new storage volume (type specific endpoint). Will return an empty sync response on simple volume creation but an operation on copy, migration or backup import.
 
         :param pool_name: Storage pool name (required)
         :type pool_name: str
@@ -20046,7 +20046,7 @@ class StorageApi:
     ) -> RESTResponseType:
         """Add a storage volume
 
-        Creates a new storage volume (type specific endpoint). Will return an empty sync response on simple volume creation but an operation on copy or migration.
+        Creates a new storage volume (type specific endpoint). Will return an empty sync response on simple volume creation but an operation on copy, migration or backup import.
 
         :param pool_name: Storage pool name (required)
         :type pool_name: str

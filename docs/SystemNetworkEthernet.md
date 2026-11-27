@@ -5,14 +5,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**advertise** | **List[str]** |  | [optional] 
 **disable_energy_efficient** | **bool** |  | [optional] 
 **disable_gro** | **bool** |  | [optional] 
 **disable_gso** | **bool** |  | [optional] 
 **disable_ipv4_tso** | **bool** |  | [optional] 
 **disable_ipv6_tso** | **bool** |  | [optional] 
+**half_duplex** | **bool** |  | [optional] 
 **rx_buffer_size** | **str** |  | [optional] 
 **rx_jumbo_buffer_size** | **str** |  | [optional] 
 **rx_mini_buffer_size** | **str** |  | [optional] 
+**speed** | **int** |  | [optional] 
 **tx_buffer_size** | **str** |  | [optional] 
 **wakeonlan** | **bool** |  | [optional] 
 **wakeonlan_modes** | **List[str]** |  | [optional] 

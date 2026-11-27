@@ -6,9 +6,9 @@ ResourcesLoad represents system load information
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**average1_min** | **float** | Load average in the past minute | [optional] 
-**average5_min** | **float** | Load average in the past 5 minutes | [optional] 
-**average10_min** | **float** | Load average in the past 10 minutes | [optional] 
+**average1min** | **float** | Load average in the past minute | [optional] 
+**average5min** | **float** | Load average in the past 5 minutes | [optional] 
+**average10min** | **float** | Load average in the past 10 minutes | [optional] 
 **processes** | **int** | The number of active processes | [optional] 
 
 ## Example

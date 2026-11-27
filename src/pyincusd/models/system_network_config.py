@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from pyincusd.models.system_network_bond import SystemNetworkBond
 from pyincusd.models.system_network_dns import SystemNetworkDNS
@@ -39,12 +39,13 @@ class SystemNetworkConfig(BaseModel):
     confirmation_timeout: Optional[StrictStr] = Field(default=None, description="If defined, automatically roll back the new network changes after the specified timeout has elapsed unless those changes are confirmed before then.")
     default_confirmation_timeout: Optional[StrictStr] = Field(default=None, description="If defined and no confirmation timeout provided, automatically roll back the new network changes after the specified timeout has elapsed unless those changes are confirmed before then.")
     dns: Optional[SystemNetworkDNS] = None
+    ignore_service_checks: Optional[StrictBool] = Field(default=None, description="If true, when bringing up the network don't wait for DNS and NTP to be configured and available before continuing. Most systems shouldn't need to set this, and when enabled initial update checks may fail due to being unable to resolve hostnames.")
     interfaces: Optional[List[SystemNetworkInterface]] = None
     proxy: Optional[SystemNetworkProxy] = None
     time: Optional[SystemNetworkTime] = None
     vlans: Optional[List[SystemNetworkVLAN]] = None
     wireguard: Optional[List[SystemNetworkWireguard]] = None
-    __properties: ClassVar[List[str]] = ["bonds", "confirmation_timeout", "default_confirmation_timeout", "dns", "interfaces", "proxy", "time", "vlans", "wireguard"]
+    __properties: ClassVar[List[str]] = ["bonds", "confirmation_timeout", "default_confirmation_timeout", "dns", "ignore_service_checks", "interfaces", "proxy", "time", "vlans", "wireguard"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -134,6 +135,7 @@ class SystemNetworkConfig(BaseModel):
             "confirmation_timeout": obj.get("confirmation_timeout"),
             "default_confirmation_timeout": obj.get("default_confirmation_timeout"),
             "dns": SystemNetworkDNS.from_dict(obj["dns"]) if obj.get("dns") is not None else None,
+            "ignore_service_checks": obj.get("ignore_service_checks"),
             "interfaces": [SystemNetworkInterface.from_dict(_item) for _item in obj["interfaces"]] if obj.get("interfaces") is not None else None,
             "proxy": SystemNetworkProxy.from_dict(obj["proxy"]) if obj.get("proxy") is not None else None,
             "time": SystemNetworkTime.from_dict(obj["time"]) if obj.get("time") is not None else None,

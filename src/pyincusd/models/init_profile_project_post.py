@@ -28,12 +28,12 @@ class InitProfileProjectPost(BaseModel):
     """
     InitProfileProjectPost
     """ # noqa: E501
-    project: Optional[StrictStr] = Field(default=None, description="Project in which the profile will reside", alias="Project", json_schema_extra={"examples": ["default"]})
     config: Optional[Dict[str, Any]] = Field(default=None, description="ConfigMap type is used to hold incus config. In contrast to plain map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     description: Optional[StrictStr] = Field(default=None, description="Description of the profile", json_schema_extra={"examples": ["Medium size instances"]})
     devices: Optional[Dict[str, Any]] = Field(default=None, description="DevicesMap type is used to hold incus devices configurations. In contrast to plain map[string]map[string]string it provides unmarshal methods for JSON and YAML, which gracefully handle numbers and bools.")
     name: Optional[StrictStr] = Field(default=None, description="The name of the new profile", json_schema_extra={"examples": ["foo"]})
-    __properties: ClassVar[List[str]] = ["Project", "config", "description", "devices", "name"]
+    project: Optional[StrictStr] = Field(default=None, description="Project in which the profile will reside", json_schema_extra={"examples": ["default"]})
+    __properties: ClassVar[List[str]] = ["config", "description", "devices", "name", "project"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -86,11 +86,11 @@ class InitProfileProjectPost(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "Project": obj.get("Project"),
             "config": obj.get("config"),
             "description": obj.get("description"),
             "devices": obj.get("devices"),
-            "name": obj.get("name")
+            "name": obj.get("name"),
+            "project": obj.get("project")
         })
         return _obj
 

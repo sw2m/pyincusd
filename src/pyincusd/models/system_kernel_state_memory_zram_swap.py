@@ -31,9 +31,9 @@ class SystemKernelStateMemoryZramSwap(BaseModel):
     compressed_size: Optional[StrictInt] = None
     compression_ratio: Optional[Union[StrictFloat, StrictInt]] = None
     disk_size: Optional[StrictInt] = None
-    incompressed_size: Optional[StrictInt] = None
     total_memory_use: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["compressed_size", "compression_ratio", "disk_size", "incompressed_size", "total_memory_use"]
+    uncompressed_size: Optional[StrictInt] = None
+    __properties: ClassVar[List[str]] = ["compressed_size", "compression_ratio", "disk_size", "total_memory_use", "uncompressed_size"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -89,8 +89,8 @@ class SystemKernelStateMemoryZramSwap(BaseModel):
             "compressed_size": obj.get("compressed_size"),
             "compression_ratio": obj.get("compression_ratio"),
             "disk_size": obj.get("disk_size"),
-            "incompressed_size": obj.get("incompressed_size"),
-            "total_memory_use": obj.get("total_memory_use")
+            "total_memory_use": obj.get("total_memory_use"),
+            "uncompressed_size": obj.get("uncompressed_size")
         })
         return _obj
 

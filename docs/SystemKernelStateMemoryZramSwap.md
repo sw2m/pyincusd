@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **compressed_size** | **int** |  | [optional] 
 **compression_ratio** | **float** |  | [optional] 
 **disk_size** | **int** |  | [optional] 
-**incompressed_size** | **int** |  | [optional] 
 **total_memory_use** | **int** |  | [optional] 
+**uncompressed_size** | **int** |  | [optional] 
 
 ## Example
 
